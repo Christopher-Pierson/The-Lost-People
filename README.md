@@ -2,6 +2,6 @@
 
 ### TeamMembers
 
-*Josh Seibel
-*Christopher Pierson
-*Hayley Corson-Dosch
+* Josh Seibel
+* Christopher Pierson
+* Hayley Corson-Dosch
