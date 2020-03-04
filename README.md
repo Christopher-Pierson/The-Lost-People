@@ -3,3 +3,4 @@
 ### TeamMembers
 
 Josh Seibel
+Christopher Pierson
