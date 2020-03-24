@@ -8,16 +8,16 @@
 
 ### Final Project
 1. Persona/Scenario
-  1. Target User Profile (Persona)
+  A. Target User Profile (Persona)
       * Person 1: public user interested in missing persons
       * Name:
       * Background Description: 
-  2. User Case Scenarios
+  B. User Case Scenarios
       * Scenario 1: Person wants to see who is missing from their home state.
       * Scenario 2: Person is curious about what states are required to report missing/unidentified persons
       * Scenario 3: Person is curious which age groups, or demographics, are most likely to go missing
 2. Requirements Document
-  1. Representations
+  A. Representations
       * Basemap: outline of the US (state boundaries needed, counties needed, urban area)
       * Missing Person Locations: 
       * Timeline: streamgraph or stacked bar graph
@@ -25,7 +25,7 @@
       * More statistics : 
       * Legend
       * Overview: Documentation on background and user guideline
-  2. Interactions
+  B. Interactions
       * Search
       * Filter
       * Zoom
