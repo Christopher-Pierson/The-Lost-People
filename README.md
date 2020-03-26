@@ -60,4 +60,4 @@
         * _[STRETCH GOAL: **Census Data** - Overlay: object. General demographic info]_. 
 
 4. Wireframes
-* Similar to Eviction Lab. See folder in repository.
+    * Similar to Eviction Lab. See folder in repository.
