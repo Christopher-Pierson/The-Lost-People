@@ -44,7 +44,7 @@
         * **Data Menu** - Filter: object. Change data that is displayed by proportional symbols (Missing Person, Unidentified Person, Unclaimed Person). 
         * **Map Level Menu** - Reexpress: object. Change enumeration unit of data (state, county, or city). The city option is only available beyond a certain zoom level. _[STRETCH GOAL: resymbolize to point map with actual case location (for missing persons: last known location, for unidentified persons: location found, for unclaimed persons: location found)]_. 
         * **Advanced Filter** - Filter: attribute or time. Missing Person: Age when missing, Sex, Ethnicity, When Gone Missing (year and/or month). Unidentified Person: Approximate Age, Sex, Ethnicity, Date Body Found. Unclaimed Person: Age, Sex, Ethnicity, Date Body Found. 
-        * **Search By** - Search: location or attribute. By Place (state, county, or city). _[STRETCH GOAL: By individual (name or case number)]._ 
+        * **Search By** - Search: location. By Place (state, county, or city). _[STRETCH GOAL: By individual (name or case number)]._ 
         * **Pan** - Scroll around map with mouse. 
         * **Zoom** - Zoom into a location with mouse or buttons on side. 
         * **Proportional Symbol Click** – Retrieve: object. Click on proportional symbol to display an pop-up window (see above for pop-up content). _[STRETCH GOAL: This would also trigger the appearance of a ‘View case information’ button at the bottom of a page that, when clicked, scrolls to this additional information]._
