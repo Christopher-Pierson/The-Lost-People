@@ -3,26 +3,161 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-            <title></title>
+            <title>The Lost People</title>
 
-        <!--put your external stylesheet links here-->
+        <!--External stylesheet links here-->
         <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-
-         <!--you can also place internal styles here;
-             place these within <style> tags-->
         
     </head>
 
     <body>
-        <!--put your initial page content here-->
+        <!-- Title Navebar -->
+        <div class="navbar title-navbar">
+            <div id="title">The Lost People</div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button type="button" class="btn info-button" data-toggle="modal" data-target="#splash-screen"></button>
+        </div>
 
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
+        <!-- Splash Screen Modal -->
+        <div class="modal fade" id="splash-screen" tabindex="-1" role="dialog" aria-labelledby="splash-screen" aria-hidden="true" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">The Missing People</h5>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Container for Everything Else. Row 1: Filter, Map. Row 2: Names List -->
+        <div class="page-content">
 
-        <!--put your external script links here-->
+            <!-- First Row for the filter and map -->
+            <div class="row main">
+                <!-- Filter Container -->
+                <div id="filter-panel">
+
+                    <div class="accordion" id="filter-accordian">
+
+                        <!-- Database Tab -->
+                        <div class="card">
+                            <div class="card-header" id="database">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Data
+                                </button>
+                                </h2>
+                            </div>
+                      
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#filter-accordian">
+                                <!-- Data Contents -->
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="database" id="missing-persons" value="option1">
+                                        <label class="form-check-label" for="missing-person">
+                                            Missing Persons
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="database" id="unidentified-persons" value="option2">
+                                        <label class="form-check-label" for="unidentified-persons">
+                                            Unidentified Persons
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="database" id="unclaimed-persons" value="option3">
+                                        <label class="form-check-label" for="unclaimed-persons">
+                                            Unclaimed Persons
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Scale Tab -->
+                        <div class="card">
+                            <div class="card-header" id="map-scale">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Map Scale
+                                </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#filter-accordian">
+                                <!-- Map Scale Contents -->
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mapScale" id="state-scale" value="option1">
+                                        <label class="form-check-label" for="state-scale">
+                                            State
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mapScale" id="county-scale" value="option2">
+                                        <label class="form-check-label" for="county-scale">
+                                            County
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="mapScale" id="city-scale" value="option3">
+                                        <label class="form-check-label" for="city-scale">
+                                            City
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advance Filter Tab -->
+                        <div class="card">
+                            <div class="card-header" id="advance-filter">
+                                <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Advanced Filters
+                                </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#filter-accordian">
+                                <!-- Advance Filter Contents -->
+                                <div class="card-body">
+                                    Advanced Filter Options
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Map Container -->
+                <div id="map"></div>
+            </div>
+
+            <!-- Second Row for the Output data -->
+            <div class="row secondary">
+                <!-- Name Output Container -->
+                <div id="names-list">
+                    List of names will go here.
+                </div>
+            </div>
+        </div>
+        
+
+        <!--Internal scripts; place these within <script> tags-->
+
+        <!--External script links here-->
         <script type="text/javascript" src="lib/jquery-3.4.1.js"></script>
         <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

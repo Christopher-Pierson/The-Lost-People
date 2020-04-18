@@ -1,0 +1,62 @@
+
+/*** Title Navbar ***/
+.title-navbar {
+    height: 10vh;
+    padding: 0 10px 0 20px; /* top, right, bottom, left */
+    font-size: 42px;
+    font-weight: bold;
+    font-family: "Arial";
+    color: black;
+    background-color: gray;
+    border: 3px solid black;
+}
+.form-inline {
+    float: right;
+}
+
+/*** Splash Screen ***/
+.info-button {
+    font-size: 10px;
+    cursor:pointer;
+    width: 34px;
+    height: 34px;
+    border-radius: 3px;
+    color:black;
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    background: white url('../img/info-circle.svg') no-repeat;
+}
+
+
+/*** Primary Containers ***/
+/* Filter and Map Div */
+.main {
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* List of Names Div */
+.secondary {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*** Filter ***/
+#filter-panel {
+    width: 20%;
+    flex: 0 0 20%; /* do not grow, do not shrink, start at 20% */
+    background-color: lightgrey;
+}
+
+/*** Map Area ***/
+#map {
+    flex: 1;
+}
+
+/*** List of Names Div ***/
+#names-list {
+    padding: 20px;
+    font-size: 24px;
+}
