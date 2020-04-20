@@ -10,12 +10,16 @@
     background-color: gray;
     border: 3px solid black;
 }
-.form-inline {
-    float: right;
+.search-bar {
+    
 }
-
-/*** Splash Screen ***/
+.search-btn {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
 .info-button {
+    margin: 0 0 0 20px;
     font-size: 10px;
     cursor:pointer;
     width: 34px;
@@ -26,12 +30,15 @@
     background: white url('../img/info-circle.svg') no-repeat;
 }
 
+/*** Splash Screen ***/
+
+
 
 /*** Primary Containers ***/
 /* Filter and Map Div */
 .main {
     /* width: 100%; */
-    height: 100vh;
+    height: 90vh;
     display: flex;
     margin-left: 0;
     margin-right: 0;
@@ -48,6 +55,14 @@
     width: 20%;
     flex: 0 0 20%; /* do not grow, do not shrink, start at 20% */
     background-color: lightgrey;
+}
+.adv-filter-row {
+    margin: 0 0 20px 0;
+    display:block;
+}
+.adv-filter-card {
+    max-height: 65vh;
+    overflow: auto;
 }
 
 /*** Map Area ***/

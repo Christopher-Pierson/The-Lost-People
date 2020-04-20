@@ -17,10 +17,11 @@
         <div class="navbar title-navbar">
             <div id="title">The Lost People</div>
             <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <input class="form-control mr-sm-2 search-text" type="search" placeholder="Search a Place" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="submit">Search</button>
+                <button type="button" class="btn info-button" data-toggle="modal" data-target="#splash-screen"></button>
             </form>
-            <button type="button" class="btn info-button" data-toggle="modal" data-target="#splash-screen"></button>
+            
         </div>
 
         <!-- Splash Screen Modal -->
@@ -64,19 +65,25 @@
                                 <!-- Data Contents -->
                                 <div class="card-body">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="missing-persons" value="option1">
-                                        <label class="form-check-label" for="missing-person">
+                                        <input class="form-check-input" type="radio" name="database" id="combined" value="option1" checked="checked">
+                                        <label class="form-check-label" for="combined">
+                                            Combined Database <br> (limited filter options)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="database" id="missing-persons" value="option2">
+                                        <label class="form-check-label" for="missing-persons">
                                             Missing Persons
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="unidentified-persons" value="option2">
+                                        <input class="form-check-input" type="radio" name="database" id="unidentified-persons" value="option3">
                                         <label class="form-check-label" for="unidentified-persons">
                                             Unidentified Persons
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="unclaimed-persons" value="option3">
+                                        <input class="form-check-input" type="radio" name="database" id="unclaimed-persons" value="option4">
                                         <label class="form-check-label" for="unclaimed-persons">
                                             Unclaimed Persons
                                         </label>
@@ -98,7 +105,7 @@
                                 <!-- Map Scale Contents -->
                                 <div class="card-body">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="mapScale" id="state-scale" value="option1">
+                                        <input class="form-check-input" type="radio" name="mapScale" id="state-scale" value="option1" checked="checked">
                                         <label class="form-check-label" for="state-scale">
                                             State
                                         </label>
@@ -129,9 +136,173 @@
                                 </h2>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#filter-accordian">
+                                
                                 <!-- Advance Filter Contents -->
-                                <div class="card-body">
-                                    Advanced Filter Options
+                                <div class="card-body adv-filter-card">
+                                    <!-- Buttons -->
+                                    <div class="row adv-filter-row">
+                                        <button class="btn btn-outline-success reset-btn" type="submit">Reset</button>
+                                        <button class="btn btn-outline-success submit-btn" type="submit">Submit</button>
+                                    </div>
+                                    <hr>
+
+                                    <!-- Gender Options -->
+                                    <div class="row adv-filter-row">
+                                        <strong>Gender</strong>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="gender-all" value="option1" checked="checked">
+                                            <label class="form-check-label" for="gender-all">
+                                                All
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="gender-female" value="option2">
+                                            <label class="form-check-label" for="gender-female">
+                                                Female
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="gender-male" value="option3">
+                                            <label class="form-check-label" for="gender-male">
+                                                Male
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <!-- Age -->
+                                    <strong>Age</strong>
+                                    <div class="form-group row">
+                                        <label for="ageFrom" class="col-sm-6 col-form-label">Age From: </label>
+                                        <div class="col-sm-4">
+                                          <input type="age" class="form-control" id="ageFrom" placeholder="0">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                        <label for="ageTo" class="col-sm-6 col-form-label">Age To: </label>
+                                        <div class="col-sm-4">
+                                          <input type="age" class="form-control" id="ageTo" placeholder="100">
+                                        </div>
+                                      </div>
+                                      <hr>
+
+                                    <!-- Ethnicity -->
+                                    <strong>Ethnicity</strong>
+                                    <div class="row adv-filter-row">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-all" checked="checked">
+                                            <label class="form-check-label active" for="ethnicity-all">
+                                              All
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-asian">
+                                            <label class="form-check-label" for="ethnicity-asian">
+                                              Asian
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-black">
+                                            <label class="form-check-label" for="ethnicity-black">
+                                              Black
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-hispanic">
+                                            <label class="form-check-label" for="ethnicity-hispanic">
+                                              Hispanic
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-native">
+                                            <label class="form-check-label" for="ethnicity-native">
+                                              Native American
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-white">
+                                            <label class="form-check-label" for="ethnicity-white">
+                                              White
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <!-- When Gone Missing/Found -->
+                                    <strong>When Gone/Found</strong>
+                                    <br>
+                                    --Year--
+                                    <br>
+                                    <div class="form-group row">
+                                        <label for="ageFrom" class="col-sm-6 col-form-label">From: </label>
+                                        <div class="col-sm-5">
+                                          <input type="age" class="form-control" id="yearFrom" placeholder="1900">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="ageTo" class="col-sm-6 col-form-label">To: </label>
+                                        <div class="col-sm-5">
+                                          <input type="age" class="form-control" id="yearTo" placeholder="2020">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    --Month--
+                                    <br>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="month-all" checked="checked">
+                                        <label class="form-check-label active" for="month-all">
+                                          All
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Jan</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Feb</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                        <label class="form-check-label" for="inlineCheckbox3">March</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option4">
+                                        <label class="form-check-label" for="inlineCheckbox4">April</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
+                                        <label class="form-check-label" for="inlineCheckbox5">May</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option6">
+                                        <label class="form-check-label" for="inlineCheckbox6">June</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option7">
+                                        <label class="form-check-label" for="inlineCheckbox7">July</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option8">
+                                        <label class="form-check-label" for="inlineCheckbox8">Aug</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option9">
+                                        <label class="form-check-label" for="inlineCheckbox9">Sept</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option10">
+                                        <label class="form-check-label" for="inlineCheckbox10">Oct</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option11">
+                                        <label class="form-check-label" for="inlineCheckbox11">Nov</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option12">
+                                        <label class="form-check-label" for="inlineCheckbox12">Dec</label>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
