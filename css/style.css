@@ -69,6 +69,17 @@
 #map {
     flex: 1;
 }
+.legend-control-container {
+    width: auto;
+    height: auto;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 5px;
+    text-align: center;
+    border: solid gray 1px;
+    font-family: "Arial";
+}
 
 /*** List of Names Div ***/
 #names-list {
