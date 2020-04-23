@@ -65,25 +65,25 @@
                                 <!-- Data Contents -->
                                 <div class="card-body">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="combined" value="option1" checked="checked">
+                                        <input class="database-check" type="radio" name="database" id="combined" value="combined" checked="checked">
                                         <label class="form-check-label" for="combined">
-                                            Combined Database <br> (limited filter options)
+                                            Combined Database
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="missing-persons" value="option2">
+                                        <input class="database-check" type="radio" name="database" id="missing-persons" value="missing-persons">
                                         <label class="form-check-label" for="missing-persons">
                                             Missing Persons
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="unidentified-persons" value="option3">
+                                        <input class="database-check" type="radio" name="database" id="unidentified-persons" value="unidentified-persons">
                                         <label class="form-check-label" for="unidentified-persons">
                                             Unidentified Persons
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="database" id="unclaimed-persons" value="option4">
+                                        <input class="database-check" type="radio" name="database" id="unclaimed-persons" value="unclaimed-persons">
                                         <label class="form-check-label" for="unclaimed-persons">
                                             Unclaimed Persons
                                         </label>
@@ -105,19 +105,19 @@
                                 <!-- Map Scale Contents -->
                                 <div class="card-body">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="mapScale" id="state-scale" value="option1" checked="checked">
+                                        <input class="mapScale-check" type="radio" name="mapScale" id="state-scale" value="state-scale" checked="checked">
                                         <label class="form-check-label" for="state-scale">
                                             State
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="mapScale" id="county-scale" value="option2">
+                                        <input class="mapScale-check" type="radio" name="mapScale" id="county-scale" value="county-scale">
                                         <label class="form-check-label" for="county-scale">
                                             County
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="mapScale" id="city-scale" value="option3">
+                                        <input class="mapScale-check" type="radio" name="mapScale" id="city-scale" value="city-scale">
                                         <label class="form-check-label" for="city-scale">
                                             City
                                         </label>
@@ -135,36 +135,50 @@
                                 </button>
                                 </h2>
                             </div>
+
+                            <!-- <form name="advanced-filter" id="advanced-filter"> -->
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#filter-accordian">
+                                <!-- Buttons -->
+                                <div class="row adv-filter-buttons">
+                                    <button class="btn btn-outline-success reset-btn" type="reset">Reset</button>
+                                    <button class="btn btn-outline-success submit-btn" type="submit">Submit</button>
+                                </div>
+                                <hr>
                                 
                                 <!-- Advance Filter Contents -->
                                 <div class="card-body adv-filter-card">
-                                    <!-- Buttons -->
-                                    <div class="row adv-filter-row">
-                                        <button class="btn btn-outline-success reset-btn" type="submit">Reset</button>
-                                        <button class="btn btn-outline-success submit-btn" type="submit">Submit</button>
-                                    </div>
-                                    <hr>
 
                                     <!-- Gender Options -->
                                     <div class="row adv-filter-row">
                                         <strong>Gender</strong>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="gender-all" value="option1" checked="checked">
+                                            <input class="gender-check" type="radio" name="gender" id="gender-all" value="all" checked="checked">
                                             <label class="form-check-label" for="gender-all">
                                                 All
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="gender-female" value="option2">
+                                            <input class="gender-check" type="radio" name="gender" id="gender-female" value="female">
                                             <label class="form-check-label" for="gender-female">
                                                 Female
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="gender-male" value="option3">
+                                            <input class="gender-check" type="radio" name="gender" id="gender-male" value="male">
                                             <label class="form-check-label" for="gender-male">
                                                 Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="gender-check" type="radio" name="gender" id="gender-other" value="other">
+                                            <label class="form-check-label" for="gender-other">
+                                                Other
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="gender-check" type="radio" name="gender" id="gender-unsure" value="unsure">
+                                            <label class="form-check-label" for="gender-unsure">
+                                                Unsure
                                             </label>
                                         </div>
                                     </div>
@@ -174,14 +188,14 @@
                                     <strong>Age</strong>
                                     <div class="form-group row">
                                         <label for="ageFrom" class="col-sm-6 col-form-label">Age From: </label>
-                                        <div class="col-sm-4">
-                                          <input type="age" class="form-control" id="ageFrom" placeholder="0">
+                                        <div class="col-sm-5">
+                                          <input type="number" class="form-control ageFrom-check" id="ageFrom-check" min="0" max="100" placeholder="0" value="0">
                                         </div>
                                       </div>
                                       <div class="form-group row">
                                         <label for="ageTo" class="col-sm-6 col-form-label">Age To: </label>
-                                        <div class="col-sm-4">
-                                          <input type="age" class="form-control" id="ageTo" placeholder="100">
+                                        <div class="col-sm-5">
+                                          <input type="number" class="form-control ageTo-check" id="ageTo-check" min="1" max="110" placeholder="110" value="110">
                                         </div>
                                       </div>
                                       <hr>
@@ -190,39 +204,57 @@
                                     <strong>Ethnicity</strong>
                                     <div class="row adv-filter-row">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-all" checked="checked">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-all" id="ethnicity-all" checked="checked">
                                             <label class="form-check-label active" for="ethnicity-all">
-                                              All
+                                                Select All
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-asian">
-                                            <label class="form-check-label" for="ethnicity-asian">
-                                              Asian
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-black">
-                                            <label class="form-check-label" for="ethnicity-black">
-                                              Black
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-hispanic">
-                                            <label class="form-check-label" for="ethnicity-hispanic">
-                                              Hispanic
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-native">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="American Indian / Alaska Native" id="ethnicity-native" checked="checked">
                                             <label class="form-check-label" for="ethnicity-native">
-                                              Native American
+                                                American Indian / Alaska Native
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="ethnicity-white">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Asian" id="ethnicity-asian" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-asian">
+                                                Asian
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Black / African American" id="ethnicity-black" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-black">
+                                                Black / African American
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Hawaiian / Pacific Islander" id="ethnicity-hawaiian" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-hawaiian">
+                                                Hawaiian / Pacific Islander
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Hispanic / Latino" id="ethnicity-hispanic" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-hispanic">
+                                                Hispanic / Latino
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="White / Caucasian" id="ethnicity-white" checked="checked">
                                             <label class="form-check-label" for="ethnicity-white">
-                                              White
+                                                White / Caucasian
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Other" id="ethnicity-other" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-other">
+                                                Other
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input ethnicity-check" type="checkbox" name="ethnicity-check" value="Uncertain" id="ethnicity-uncertain" checked="checked">
+                                            <label class="form-check-label" for="ethnicity-uncertain">
+                                                Uncertain
                                             </label>
                                         </div>
                                     </div>
@@ -234,77 +266,78 @@
                                     --Year--
                                     <br>
                                     <div class="form-group row">
-                                        <label for="ageFrom" class="col-sm-6 col-form-label">From: </label>
-                                        <div class="col-sm-5">
-                                          <input type="age" class="form-control" id="yearFrom" placeholder="1900">
+                                        <label for="yearFrom" class="col-sm-6 col-form-label">From: </label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control yearFrom-check" id="yearFrom-check" placeholder="1900" value="1900">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="ageTo" class="col-sm-6 col-form-label">To: </label>
-                                        <div class="col-sm-5">
-                                          <input type="age" class="form-control" id="yearTo" placeholder="2020">
+                                        <label for="yearTo" class="col-sm-6 col-form-label">To: </label>
+                                        <div class="col-sm-6">
+                                          <input type="number" class="form-control yearTo-check" id="yearTo-check" placeholder="2020" value="2020">
                                         </div>
                                     </div>
                                     <br>
                                     --Month--
                                     <br>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="month-all" checked="checked">
+                                        <input class="form-check-input month-check" type="checkbox" id="month-all" name="month-all" checked="checked">
                                         <label class="form-check-label active" for="month-all">
-                                          All
+                                          Select All
                                         </label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                        <label class="form-check-label" for="inlineCheckbox1">Jan</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-jan" name="month-check" value="1" checked="checked">
+                                        <label class="form-check-label" for="month-jan">Jan</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                        <label class="form-check-label" for="inlineCheckbox2">Feb</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-feb" name="month-check" value="2" checked="checked">
+                                        <label class="form-check-label" for="month-feb">Feb</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                                        <label class="form-check-label" for="inlineCheckbox3">March</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-march" name="month-check" value="3" checked="checked">
+                                        <label class="form-check-label" for="month-march">March</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option4">
-                                        <label class="form-check-label" for="inlineCheckbox4">April</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-april" name="month-check" value="4" checked="checked">
+                                        <label class="form-check-label" for="month-april">April</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option5">
-                                        <label class="form-check-label" for="inlineCheckbox5">May</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-may" name="month-check" value="5" checked="checked">
+                                        <label class="form-check-label" for="month-may">May</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option6">
-                                        <label class="form-check-label" for="inlineCheckbox6">June</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-june" name="month-check" value="6" checked="checked">
+                                        <label class="form-check-label" for="month-june">June</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option7">
-                                        <label class="form-check-label" for="inlineCheckbox7">July</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-july" name="month-check" value="7" checked="checked">
+                                        <label class="form-check-label" for="month-july">July</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option8">
-                                        <label class="form-check-label" for="inlineCheckbox8">Aug</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-aug" name="month-check" value="8" checked="checked">
+                                        <label class="form-check-label" for="month-aug">Aug</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option9">
-                                        <label class="form-check-label" for="inlineCheckbox9">Sept</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-sept" name="month-check" value="9" checked="checked">
+                                        <label class="form-check-label" for="month-sept">Sept</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option10">
-                                        <label class="form-check-label" for="inlineCheckbox10">Oct</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-oct" name="month-check" value="10" checked="checked">
+                                        <label class="form-check-label" for="month-oct">Oct</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option11">
-                                        <label class="form-check-label" for="inlineCheckbox11">Nov</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-nov" name="month-check" value="11" checked="checked">
+                                        <label class="form-check-label" for="month-nov">Nov</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option12">
-                                        <label class="form-check-label" for="inlineCheckbox12">Dec</label>
+                                        <input class="form-check-input month-check" type="checkbox" id="month-dec" name="month-check" value="12" checked="checked">
+                                        <label class="form-check-label" for="month-dec">Dec</label>
                                     </div>
 
                                 </div>
                             </div>
+                            <!-- </form> -->
                         </div>
                     </div>
                 </div>

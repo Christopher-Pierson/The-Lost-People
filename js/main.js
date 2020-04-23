@@ -1,10 +1,20 @@
-// Map of GeoJSON data from StatesFireData.geojson */
-
 //declare map var in global scope
 var map;
-var dataStats = {min:50, max:7000, mean:700}; //manually created values for the total combined numbers
+var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
+
+//Declare Filter option global variables
+var database = "combined-database";
+var mapScale = "state-scale";
+var gender = "all";
+var ageFrom = 0;
+var ageTo = 100;
+var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
+var yearFrom = 1900;
+var yearTo = 2020;
+var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 
+///// Functions for Map
 //Function to instantiate the Leaflet map
 function createMap(){
     //create the map
@@ -15,7 +25,7 @@ function createMap(){
         zoom: 4,
         minZoom: 3,
         maxZoom: 12,
-        maxBounds: [[75, -180], [0, -10]],
+        maxBounds: [[75, -180], [-30, -10]], // [top, left], [bottom, right]
     });
 
     // Add zoom control (but in top right)
@@ -45,7 +55,6 @@ function getData(map){
         // calcStats(response);
         createPropSymbols(response, attributes);
         createLegend(attributes[0]);
-        // createDataControl(attributes, attributes2);
     });
 };
 
@@ -218,7 +227,7 @@ function createLegend(attribute){
                 var textY = i * 40 + 50; //spacing + y value
 
                 //text string
-                svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " acres" + '</text>';
+                svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
             };
 
             //close svg string
@@ -236,7 +245,157 @@ function createLegend(attribute){
 };
 
 
+/////  Filter Functions  /////
+// Retrieve which database is selected
+function getDatabase(){
+    console.log( document.querySelector('.database-check:checked').value );
+    database = document.querySelector('.database-check:checked').value;
+}
+
+// Retrieve which map scale is selected
+function getMapScale(){
+    console.log( document.querySelector('.mapScale-check:checked').value );
+    mapScale = document.querySelector('.mapScale-check:checked').value;
+}
+
+// Function to Select All/Deselect All Ethnicity Boxes
+function checkAllEthnicity(){
+    // Check or Uncheck All checkboxes
+    $("#ethnicity-all").change(function(){
+        var checked = $(this).is(':checked');
+        if(checked){
+          $(".ethnicity-check").each(function(){
+            $(this).prop("checked",true);
+          });
+        }else{
+          $(".ethnicity-check").each(function(){
+            $(this).prop("checked",false);
+          });
+        }
+      });
+    
+     // Changing state of CheckAll checkbox 
+     $(".ethnicity-check").click(function(){
+    
+       if($(".ethnicity-check").length == $(".ethnicity-check:checked").length) {
+         $("#ethnicity-all").prop("checked", true);
+       } else {
+         $("#ethnicity-all").removeAttr("checked");
+       }
+   
+     });
+}
+
+// Function to Select All/Deselect All Month Boxes
+function checkAllMonths(){
+    // Check or Uncheck All checkboxes
+    $("#month-all").change(function(){
+        var checked = $(this).is(':checked');
+        if(checked){
+          $(".month-check").each(function(){
+            $(this).prop("checked",true);
+          });
+        }else{
+          $(".month-check").each(function(){
+            $(this).prop("checked",false);
+          });
+        }
+      });
+    
+     // Changing state of CheckAll checkbox 
+     $(".month-check").click(function(){
+    
+       if($(".month-check").length == $(".month-check:checked").length) {
+         $("#month-all").prop("checked", true);
+       } else {
+         $("#month-all").removeAttr("checked");
+       }
+   
+     });
+}
+
+// Get the list of ethnicity checkboxes checked
+function getCheckedEthnicity() {
+    var checkboxes = document.getElementsByName('ethnicity-check');
+    var checkboxesChecked = [];
+    // loop over them all
+    for (var i=0; i<checkboxes.length; i++) {
+       // And stick the checked ones onto an array...
+       if (checkboxes[i].checked) {
+          checkboxesChecked.push(checkboxes[i].value);
+       }
+    }
+    // Return the array if it is non-empty, or default to all
+    return checkboxesChecked.length > 0 ? checkboxesChecked : ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
+}
+
+// Get the list of month checkboxes checked
+function getCheckedMonth() {
+    var checkboxes = document.getElementsByName('month-check');
+    var checkboxesChecked = [];
+    // loop over them all
+    for (var i=0; i<checkboxes.length; i++) {
+       // And stick the checked ones onto an array...
+       if (checkboxes[i].checked) {
+          checkboxesChecked.push(Number(checkboxes[i].value));
+       }
+    }
+    // Return the array if it is non-empty, or default to all
+    return checkboxesChecked.length > 0 ? checkboxesChecked : [1,2,3,4,5,6,7,8,9,10,11,12];
+}
+
+//Reset the Advanced Filter Options to Default
+function resetFilterOptions() {
+    $("#advanced-filter").trigger("reset");
+
+    gender = "all";
+    ageFrom = 0;
+    ageTo = 100;
+    ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
+    yearFrom = 1900;
+    yearTo = 2020;
+    Month = [1,2,3,4,5,6,7,8,9,10,11,12]
+}
+
+// Retrieve which advanced filter options are selected
+function getFilterOptions(){
+    gender = document.querySelector('.gender-check:checked').value; //$('.gender-check:checked').val())
+    ageFrom = document.querySelector('#ageFrom-check').value;
+    ageTo = document.querySelector('#ageTo-check').value;
+    ethnicity = getCheckedEthnicity();
+    yearFrom = document.querySelector('#yearFrom-check').value;
+    yearTo = document.querySelector('#yearTo-check').value;
+    month = getCheckedMonth();
+
+    console.log(gender);
+    console.log(ageFrom);
+    console.log(ageTo);
+    console.log(ethnicity);
+    console.log(yearFrom);
+    console.log(yearTo);
+    console.log(month);
+}
+
+
+/////  Event Listeners for Filters  /////
+
+// Database
+document.querySelectorAll(".database-check").forEach( input => input.addEventListener('click', getDatabase) );
+//Map Scale
+document.querySelectorAll(".mapScale-check").forEach( input => input.addEventListener('click', getMapScale) );
+// Reset Button
+document.querySelectorAll(".reset-btn").forEach( input => input.addEventListener('click', resetFilterOptions) );
+// Submit Button
+document.querySelectorAll(".submit-btn").forEach( input => input.addEventListener('click', getFilterOptions) );
+//Select All Ethnicity Button
+$(document).ready(checkAllEthnicity);
+//Select All Months Button
+$(document).ready(checkAllMonths);
+
+
+//Splash Screen
 $(window).on('load',function(){
     $('#splash-screen').modal('show');
 });
+//Create Mape
 $(document).ready(createMap);

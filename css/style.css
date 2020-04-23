@@ -56,12 +56,18 @@
     flex: 0 0 20%; /* do not grow, do not shrink, start at 20% */
     background-color: lightgrey;
 }
+.adv-filter-buttons {
+    margin: 20px 0 0 15%;
+}
+.submit-btn {
+    margin: 0 0 0 15%;
+}
 .adv-filter-row {
     margin: 0 0 20px 0;
     display:block;
 }
 .adv-filter-card {
-    max-height: 65vh;
+    max-height: 55vh;
     overflow: auto;
 }
 
