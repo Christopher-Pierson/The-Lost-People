@@ -301,7 +301,7 @@ UP56434,2/7/2019,,,Grand Prarie,Dallas,Texas,Male,Black / African American,3/3/2
 UP55514,2/7/2019,20,40,Gila Bend,Maricopa,Arizona,Male,Hispanic / Latino,1/23/2020
 UP56876,2/2/2019,35,45,Derwood,Montgomery,Maryland,Male,White / Caucasian,3/4/2020
 UP60001,2/2/2019,18,99,Asbury Park,Monmouth,New Jersey,Male,Other,1/24/2020
-UP56497,1/29/2019,20,41,Carson City,Carson,Nevada,Male,White / Caucasian,1/23/2020
+UP56497,1/29/2019,20,41,Carson City,Carson City,Nevada,Male,White / Caucasian,1/23/2020
 UP56435,1/29/2019,40,60,Irving,Dallas,Texas,Male,White / Caucasian,3/3/2020
 UP55648,1/28/2019,30,45,Brooklyn,Kings,New York,Male,Hispanic / Latino,9/30/2019
 UP58485,1/26/2019,20,50,,Cochise,Arizona,Male,Hispanic / Latino,1/15/2020
@@ -810,7 +810,7 @@ UP16649,4/12/2017,,,,Cook,Illinois,Male,White / Caucasian,3/19/2018
 UP17582,4/10/2017,18,28,Las Vegas,Clark,Nevada,Male,Uncertain,9/28/2018
 UP51860,4/9/2017,,,SAN JUAN,All,Puerto Rico,Male,"Hispanic / Latino, Other",4/2/2020
 UP16714,4/9/2017,,,Eufaula,McIntosh,Oklahoma,Male,Hispanic / Latino,3/20/2020
-UP16646,4/7/2017,,,Alsip,,Illinois,Male,White / Caucasian,9/14/2018
+UP16646,4/7/2017,,,Alsip,Cook,Illinois,Male,White / Caucasian,9/14/2018
 UP50572,4/3/2017,18,99,Greenwich Township,Gloucester,New Jersey,Male,Uncertain,2/21/2020
 UP17012,3/29/2017,55,55,Norwalk,Los Angeles,California,Male,"White / Caucasian, Hispanic / Latino",4/5/2019
 UP16527,3/29/2017,18,25,Laveen,Maricopa,Arizona,Male,"White / Caucasian, Hispanic / Latino",3/8/2018
@@ -980,7 +980,7 @@ UP15927,9/12/2016,18,90,Madison,Jefferson,Indiana,Male,Uncertain,6/1/2017
 UP16478,9/12/2016,28,40,near Choulic Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP16477,9/12/2016,28,45,near Ventana,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP16476,9/11/2016,25,40,near Eloy,Pinal,Arizona,Male,Uncertain,1/29/2020
-UP16052,9/9/2016,51,60,Chicago,,Illinois,Male,White / Caucasian,3/11/2020
+UP16052,9/9/2016,51,60,Chicago,Cook,Illinois,Male,White / Caucasian,3/11/2020
 UP17410,9/9/2016,35,60,Comobabi,Pima,Arizona,Male,Other,2/3/2020
 UP16180,9/7/2016,25,99,Tucson,Pima,Arizona,Male,Other,8/29/2019
 UP16143,9/4/2016,30,50,Seattle,King,Washington,Male,White / Caucasian,10/31/2019
@@ -1093,7 +1093,7 @@ UP16742,4/1/2016,40,60,Ocoee,Orange,Florida,Male,Black / African American,2/14/2
 UP15857,4/1/2016,18,99,Ajo,Pima,Arizona,Male,Uncertain,1/23/2020
 UP53461,3/30/2016,50,60,San Diego,San Diego,California,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
 UP16114,3/23/2016,30,60,Pisinemo Village,Pima,Arizona,Male,Uncertain,7/1/2019
-UP15140,3/23/2016,50,100,Washington,,District of Columbia,Male,Uncertain,9/19/2018
+UP15140,3/23/2016,50,100,Washington,District of Columbia,District of Columbia,Male,Uncertain,9/19/2018
 UP56596,3/22/2016,,,Naranjito,All,Puerto Rico,Male,Hispanic / Latino,4/2/2020
 UP57796,3/19/2016,,,Haleiwa,Honolulu,Hawaii,Male,Uncertain,3/13/2020
 UP15727,3/19/2016,30,30,Los Angeles,Los Angeles,California,Male,Uncertain,6/24/2019
@@ -2255,7 +2255,7 @@ UP8838,4/18/2011,32,48,Papago Farms,Pima,Arizona,Male,Hispanic / Latino,11/19/20
 UP8751,4/17/2011,35,50,Rio Rico,Santa Cruz,Arizona,Male,Hispanic / Latino,1/17/2019
 UP13912,4/16/2011,35,55,Columbia,Richland,South Carolina,Male,"White / Caucasian, Hispanic / Latino",9/6/2019
 UP14733,4/13/2011,30,50,Ore City,Upshur,Texas,Male,Uncertain,2/3/2016
-UP9453,4/7/2011,40,60,Washington,,District of Columbia,Male,Black / African American,9/13/2019
+UP9453,4/7/2011,40,60,Washington,District of Columbia,District of Columbia,Male,Black / African American,9/13/2019
 UP10613,4/5/2011,18,99,Rio Grande,All,Puerto Rico,Male,"Hispanic / Latino, Uncertain",4/4/2018
 UP9306,4/5/2011,18,59,El Cenizo,Webb,Texas,Male,White / Caucasian,8/9/2012
 UP9355,4/4/2011,17,23,Gilgo Beach,Suffolk,New York,Male,Asian,2/28/2019
@@ -2551,7 +2551,7 @@ UP6395,10/20/2009,27,37,Lukeville,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
 UP8592,10/20/2009,30,39,Morgantown,Monongalia,West Virginia,Male,Hispanic / Latino,1/15/2020
 UP6396,10/20/2009,25,32,Lukeville,Pima,Arizona,Male,White / Caucasian,1/16/2020
 UP6393,10/15/2009,30,44,Charco Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
-UP12113,10/8/2009,,,Nunivak Island,,Alaska,Male,Uncertain,2/13/2020
+UP12113,10/8/2009,,,Mekoryuk,Bethel,Alaska,Male,Uncertain,2/13/2020
 UP8602,10/7/2009,40,79,Tucson,Pima,Arizona,Male,Hispanic / Latino,2/11/2020
 UP6294,10/7/2009,18,30,Miami,Miami-Dade,Florida,Male,White / Caucasian,5/4/2017
 UP10979,10/7/2009,23,46,Newburyport,Essex,Massachusetts,Male,Uncertain,8/8/2018
@@ -2678,7 +2678,7 @@ UP6527,4/24/2009,30,45,New York,New York,New York,Male,White / Caucasian,11/5/20
 UP5189,4/22/2009,18,40,Gila Bend,Maricopa,Arizona,Male,Uncertain,12/19/2019
 UP5531,4/22/2009,25,40,Bronx,Bronx,New York,Male,Hispanic / Latino,3/17/2020
 UP5224,4/15/2009,40,65,Farmingdale,Nassau,New York,Male,"Hispanic / Latino, Uncertain",8/10/2017
-UP6302,4/13/2009,50,70,Washington,,District of Columbia,Male,Black / African American,8/1/2019
+UP6302,4/13/2009,50,70,Washington,District of Columbia,District of Columbia,Male,Black / African American,8/1/2019
 UP16781,4/10/2009,55,70,Visalia,Tulare,California,Male,Uncertain,11/1/2018
 UP16914,4/10/2009,,,Yarnell,Yavapai,Arizona,Male,Uncertain,4/2/2020
 UP10471,4/9/2009,54,99,Columbus,Muscogee,Georgia,Male,"White / Caucasian, Hispanic / Latino",2/25/2019
@@ -3150,7 +3150,7 @@ UP3159,3/21/2007,,,El Paso,El Paso,Texas,Male,"White / Caucasian, Hispanic / Lat
 UP9899,3/19/2007,28,65,Mundelein,Lake,Illinois,Male,Black / African American,6/6/2012
 UP3161,3/16/2007,,,Frisco,Collin,Texas,Male,Uncertain,3/24/2015
 UP15259,3/15/2007,71,73,Groton,Middlesex,Massachusetts,Male,White / Caucasian,4/8/2020
-UP2884,3/13/2007,30,50,Washington,,District of Columbia,Male,Uncertain,2/20/2020
+UP2884,3/13/2007,30,50,Washington,District of Columbia,District of Columbia,Male,Uncertain,2/20/2020
 UP477,3/11/2007,0,1,Sandy Springs,Fulton,Georgia,Male,Uncertain,11/26/2019
 UP5362,3/10/2007,35,55,Ajo,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
 UP5588,3/8/2007,30,40,Quartzsite,La Paz,Arizona,Male,Hispanic / Latino,1/15/2020
@@ -3207,7 +3207,7 @@ UP6721,12/20/2006,50,75,Miami,Miami-Dade,Florida,Male,White / Caucasian,11/5/201
 UP1611,12/19/2006,16,22,Atlantic City,Atlantic,New Jersey,Male,Uncertain,4/17/2020
 UP5341,12/19/2006,18,28,Robles Junction,Pima,Arizona,Male,Hispanic / Latino,3/27/2020
 UP6967,12/16/2006,20,35,Coachella,Riverside,California,Male,Black / African American,5/23/2014
-UP13869,12/15/2006,40,60,Washington,,District of Columbia,Male,Hispanic / Latino,7/18/2018
+UP13869,12/15/2006,40,60,Washington,District of Columbia,District of Columbia,Male,Hispanic / Latino,7/18/2018
 UP447,12/15/2006,25,35,Southwest Philadelphia,Philadelphia,Pennsylvania,Male,Asian,4/22/2019
 UP7083,12/12/2006,17,25,Sausalito,Marin,California,Male,White / Caucasian,11/6/2018
 UP1404,12/10/2006,30,35,Irving,Dallas,Texas,Male,Hispanic / Latino,3/3/2020
@@ -3421,7 +3421,7 @@ UP1892,2/10/2006,50,80,New York,New York,New York,Male,Black / African American,
 UP9193,2/9/2006,25,99,,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/27/2020
 UP13787,2/6/2006,18,50,Langley Park,Prince George's,Maryland,Male,Hispanic / Latino,4/29/2015
 UP14254,2/6/2006,30,40,Langley Park,Prince George's,Maryland,Male,Hispanic / Latino,12/11/2019
-UP13784,2/6/2006,,,Washington,,District of Columbia,Male,Black / African American,10/6/2015
+UP13784,2/6/2006,,,Washington,District of Columbia,District of Columbia,Male,Black / African American,10/6/2015
 UP3046,2/5/2006,19,35,Los Angeles,Los Angeles,California,Male,"White / Caucasian, Hispanic / Latino",4/5/2019
 UP455,2/2/2006,50,70,Houston,Harris,Texas,Male,Asian,3/30/2020
 UP1021,1/27/2006,20,45,Ormond Beach,Volusia,Florida,Male,White / Caucasian,4/15/2020
@@ -3460,7 +3460,7 @@ UP11822,12/17/2005,30,40,Detroit,Wayne,Michigan,Male,"White / Caucasian, Hispani
 UP13167,12/17/2005,18,99,Winterhaven,Imperial,California,Male,Uncertain,5/18/2015
 UP1022,12/16/2005,30,50,Plantation,Broward,Florida,Male,Uncertain,9/17/2018
 UP8772,12/16/2005,20,35,Spring Grove,Houston,Minnesota,Male,White / Caucasian,1/24/2020
-UP13781,12/11/2005,18,70,Washington,,District of Columbia,Male,White / Caucasian,4/29/2015
+UP13781,12/11/2005,18,70,Washington,District of Columbia,District of Columbia,Male,White / Caucasian,4/29/2015
 UP7798,12/10/2005,20,29,North Palm Beach,Palm Beach,Florida,Male,Black / African American,3/3/2020
 UP5642,12/9/2005,17,22,Brooklyn,Kings,New York,Male,Hispanic / Latino,10/31/2018
 UP9411,12/8/2005,30,99,,Brooks,Texas,Male,Uncertain,3/27/2020
@@ -3512,7 +3512,7 @@ UP3075,10/4/2005,50,70,Los Angeles,Los Angeles,California,Male,"White / Caucasia
 UP16030,10/1/2005,83,83,Medford,Middlesex,Massachusetts,Male,White / Caucasian,4/24/2019
 UP9410,9/30/2005,30,99,,Brooks,Texas,Male,White / Caucasian,3/27/2020
 UP16548,9/29/2005,25,30,Kennett Township,Chester,Pennsylvania,Male,"White / Caucasian, Hispanic / Latino",3/27/2020
-UP14266,9/28/2005,40,50,Washington,,District of Columbia,Male,Uncertain,2/18/2020
+UP14266,9/28/2005,40,50,Washington,District of Columbia,District of Columbia,Male,Uncertain,2/18/2020
 UP6855,9/27/2005,28,35,Rio Rico,Santa Cruz,Arizona,Male,Hispanic / Latino,1/28/2020
 UP7797,9/25/2005,25,49,West Palm Beach,Palm Beach,Florida,Male,White / Caucasian,1/17/2018
 UP1519,9/24/2005,16,25,Dallas,Dallas,Texas,Male,White / Caucasian,4/17/2020
@@ -3692,7 +3692,7 @@ UP6553,12/19/2004,45,60,Portland,Multnomah,Oregon,Male,White / Caucasian,3/18/20
 UP8843,12/18/2004,40,50,Pensacola,Escambia,Florida,Male,Black / African American,10/26/2018
 UP5959,12/12/2004,0,0,San Francisco,San Francisco,California,Male,Uncertain,3/5/2020
 UP5687,12/10/2004,35,50,Brooklyn,Kings,New York,Male,Uncertain,12/14/2018
-UP13436,12/8/2004,,,Washington,,District of Columbia,Male,White / Caucasian,1/23/2015
+UP13436,12/8/2004,,,Washington,District of Columbia,District of Columbia,Male,White / Caucasian,1/23/2015
 UP1027,12/8/2004,36,45,Winter Garden,Orange,Florida,Male,"White / Caucasian, Hispanic / Latino",7/6/2019
 UP8988,12/7/2004,35,45,Sierra Vista,Cochise,Arizona,Male,Hispanic / Latino,8/23/2019
 UP7541,12/7/2004,30,50,Wauchula,Hardee,Florida,Male,Hispanic / Latino,12/14/2016
@@ -3704,7 +3704,7 @@ UP7359,11/25/2004,36,66,,Webb,Texas,Male,"White / Caucasian, Hispanic / Latino",
 UP5486,11/20/2004,20,30,Gu Vo Village,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
 UP55708,11/20/2004,25,40,Boulevard,San Diego,California,Male,"Hispanic / Latino, Uncertain",4/14/2020
 UP5485,11/20/2004,22,34,Gu Vo Village,Pima,Arizona,Male,Uncertain,4/6/2020
-UP14525,11/15/2004,,,Washington,,District of Columbia,Male,Uncertain,11/23/2015
+UP14525,11/15/2004,,,Washington,District of Columbia,District of Columbia,Male,Uncertain,11/23/2015
 UP5487,11/15/2004,26,44,,Santa Cruz,Arizona,Male,Hispanic / Latino,4/6/2020
 UP55715,11/14/2004,,,Chula Vista,San Diego,California,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
 UP5488,11/14/2004,26,44,AJO,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
@@ -3942,7 +3942,7 @@ UP3251,11/8/2003,29,45,,Kerr,Texas,Male,White / Caucasian,1/6/2015
 UP6271,11/6/2003,40,75,Leland,Brunswick,North Carolina,Male,White / Caucasian,8/28/2019
 UP5344,11/2/2003,23,43,montauk,Suffolk,New York,Male,White / Caucasian,3/9/2018
 UP604,10/31/2003,40,50,Houston,Harris,Texas,Male,Black / African American,3/30/2020
-UP13383,10/30/2003,30,50,Washington,,District of Columbia,Male,Other,8/1/2019
+UP13383,10/30/2003,30,50,Washington,District of Columbia,District of Columbia,Male,Other,8/1/2019
 UP6439,10/29/2003,23,35,Yuma,Yuma,Arizona,Male,Uncertain,3/11/2020
 UP3253,10/27/2003,0,0,,El Paso,Texas,Male,Black / African American,1/11/2013
 UP1034,10/26/2003,54,71,Miami,Miami-Dade,Florida,Male,White / Caucasian,10/1/2018
@@ -3951,7 +3951,7 @@ UP13894,10/25/2003,29,39,Orangeburg,Rockland,New York,Male,Black / African Ameri
 UP5727,10/23/2003,55,70,New York,New York,New York,Male,White / Caucasian,10/31/2018
 UP2760,10/22/2003,40,49,Barstow,San Bernardino,California,Male,White / Caucasian,2/27/2020
 UP3254,10/21/2003,30,36,,Hidalgo,Texas,Male,White / Caucasian,1/11/2013
-UP14414,10/20/2003,,,,,District of Columbia,Male,Black / African American,11/14/2018
+UP14414,10/20/2003,,,,District of Columbia,District of Columbia,Male,Black / African American,11/14/2018
 UP2030,10/20/2003,24,35,Gila Bend,Maricopa,Arizona,Male,Hispanic / Latino,6/4/2014
 UP2241,10/19/2003,30,40,Bensalem,Bucks,Pennsylvania,Male,White / Caucasian,3/14/2018
 UP5955,10/14/2003,18,50,San Francisco,San Francisco,California,Male,"White / Caucasian, Hispanic / Latino",3/5/2020
@@ -4050,8 +4050,8 @@ UP1747,6/2/2003,42,57,Newark,Essex,New Jersey,Male,Black / African American,4/16
 UP938,6/1/2003,40,60,Baltimore,Baltimore,Maryland,Male,Black / African American,10/12/2017
 UP5717,5/30/2003,30,40,New York,New York,New York,Male,"White / Caucasian, Hispanic / Latino",10/31/2018
 UP59150,5/30/2003,,,Washington,District of Columbia,District of Columbia,Male,Hispanic / Latino,8/5/2019
-UP13363,5/30/2003,40,50,,,District of Columbia,Male,Hispanic / Latino,1/15/2015
-UP13435,5/27/2003,35,45,Nome,,Alaska,Male,American Indian / Alaska Native,7/26/2018
+UP13363,5/30/2003,40,50,,District of Columbia,District of Columbia,Male,Hispanic / Latino,1/15/2015
+UP13435,5/27/2003,35,45,Nome,Nome,Alaska,Male,American Indian / Alaska Native,7/26/2018
 UP6540,5/27/2003,32,56,Cowlic Village,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
 UP6541,5/24/2003,26,44,,Pinal,Arizona,Male,Hispanic / Latino,1/29/2020
 UP300,5/23/2003,15,18,Memphis,Shelby,Tennessee,Male,"White / Caucasian, Hispanic / Latino",3/27/2020
@@ -4086,7 +4086,7 @@ UP3267,4/8/2003,23,33,,Hidalgo,Texas,Male,White / Caucasian,1/11/2013
 UP6547,4/6/2003,25,80,Santo Domingo Pueblo,Sandoval,New Mexico,Male,American Indian / Alaska Native,7/29/2014
 UP2041,4/6/2003,20,40,Phoenix,Maricopa,Arizona,Male,"White / Caucasian, Hispanic / Latino",10/10/2018
 UP13275,4/4/2003,30,50,Salton City,Imperial,California,Male,"White / Caucasian, Hispanic / Latino",12/29/2014
-UP13808,3/31/2003,55,55,,,District of Columbia,Male,Black / African American,5/11/2015
+UP13808,3/31/2003,55,55,,District of Columbia,District of Columbia,Male,Black / African American,5/11/2015
 UP59411,3/24/2003,,,Washington,District of Columbia,District of Columbia,Male,Black / African American,8/16/2019
 UP14480,3/22/2003,18,99,Stone Harbor,Cape May,New Jersey,Male,Uncertain,4/16/2020
 UP6562,3/22/2003,18,40,Topawa,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
@@ -4765,7 +4765,7 @@ UP17107,2/21/2000,20,35,,Pima,Arizona,Male,Other,10/11/2017
 UP11458,2/19/2000,20,25,St. Onge,Lawrence,South Dakota,Male,Uncertain,6/6/2019
 UP12470,2/18/2000,30,50,,Monroe,New York,Male,Uncertain,6/23/2016
 UP56619,2/18/2000,,,Campo,San Diego,California,Male,Hispanic / Latino,4/14/2020
-UP14249,2/16/2000,18,25,Washington,,District of Columbia,Male,Black / African American,11/19/2018
+UP14249,2/16/2000,18,25,Washington,District of Columbia,District of Columbia,Male,Black / African American,11/19/2018
 UP7689,2/15/2000,40,55,Orange,Orange,California,Male,Hispanic / Latino,11/21/2019
 UP10379,2/13/2000,35,50,Greeley,Weld,Colorado,Male,White / Caucasian,9/12/2012
 UP1072,2/11/2000,30,50,,Miami-Dade,Florida,Male,White / Caucasian,12/20/2018
@@ -4809,7 +4809,7 @@ UP3522,12/6/1999,25,30,,Liberty,Texas,Male,White / Caucasian,1/11/2013
 UP6145,12/5/1999,60,80,,New York,New York,Male,Black / African American,10/3/2017
 UP2370,12/4/1999,60,90,Sacramento,Sacramento,California,Male,White / Caucasian,4/10/2020
 UP3383,12/3/1999,60,70,LOS ANGELES,Los Angeles,California,Male,Uncertain,4/5/2019
-UP16546,12/3/1999,60,80,Washington,,District of Columbia,Male,Black / African American,11/19/2018
+UP16546,12/3/1999,60,80,Washington,District of Columbia,District of Columbia,Male,Black / African American,11/19/2018
 UP745,11/28/1999,22,48,Jacksonville,Duval,Florida,Male,White / Caucasian,10/30/2019
 UP15163,11/26/1999,20,30,Winterhaven,Imperial,California,Male,American Indian / Alaska Native,2/27/2020
 UP17797,11/26/1999,,,Gila Bend,Maricopa,Arizona,Male,Uncertain,4/26/2018
@@ -5153,7 +5153,7 @@ UP8560,5/27/1998,20,35,Austin,Travis,Texas,Male,White / Caucasian,3/20/2020
 UP2714,5/25/1998,30,35,Baltimore,Baltimore,Maryland,Male,White / Caucasian,10/12/2017
 UP2141,5/25/1998,20,40,Youngstown,Niagara,New York,Male,White / Caucasian,2/6/2020
 UP14455,5/23/1998,0,0,Evansville,Vanderburgh,Indiana,Male,White / Caucasian,10/29/2015
-UP13580,5/21/1998,20,39,Bethel,,Alaska,Male,American Indian / Alaska Native,3/12/2019
+UP13580,5/21/1998,20,39,Bethel,Bethel,Alaska,Male,American Indian / Alaska Native,3/12/2019
 UP2925,5/20/1998,15,17,Brentwood,Suffolk,New York,Male,White / Caucasian,5/19/2015
 UP11110,5/13/1998,34,60,,Clayton,Georgia,Male,Hispanic / Latino,2/26/2019
 UP2130,5/12/1998,50,65,Marion,Union,Louisiana,Male,Black / African American,4/10/2020
@@ -6562,7 +6562,7 @@ UP8316,3/3/1992,55,75,New York,New York,New York,Male,White / Caucasian,10/3/201
 UP11885,3/3/1992,65,75,Detroit,Wayne,Michigan,Male,White / Caucasian,3/19/2020
 UP12641,3/2/1992,26,70,Westerly,Washington,Rhode Island,Male,Uncertain,12/20/2019
 UP3787,2/28/1992,30,40,,Los Angeles,California,Male,White / Caucasian,4/5/2019
-UP7580,2/26/1992,60,70,Carson City,Carson,Nevada,Male,White / Caucasian,9/20/2019
+UP7580,2/26/1992,60,70,Carson City,Carson City,Nevada,Male,White / Caucasian,9/20/2019
 UP5934,2/25/1992,30,50,San Francisco,San Francisco,California,Male,Black / African American,3/5/2020
 UP8418,2/24/1992,35,55,,Henrico,Virginia,Male,Uncertain,4/9/2020
 UP3788,2/23/1992,40,60,,Los Angeles,California,Male,Uncertain,4/5/2019
@@ -8191,8 +8191,8 @@ UP207,5/24/1985,40,60,Adamsville,Hillsborough,Florida,Male,White / Caucasian,6/6
 UP58081,5/21/1985,50,70,Philadelphia,Philadelphia,Pennsylvania,Male,Black / African American,4/8/2020
 UP4201,5/20/1985,37,47,,Los Angeles,California,Male,Asian,4/5/2019
 UP14295,5/17/1985,90,95,Chicago,Cook,Illinois,Male,White / Caucasian,3/14/2017
-UP11054,5/14/1985,15,59,,All,Guam,Male,Uncertain,10/31/2017
-UP11055,5/14/1985,16,21,,All,Guam,Male,Uncertain,10/31/2017
+UP11054,5/14/1985,15,59,,Guam,Guam,Male,Uncertain,10/31/2017
+UP11055,5/14/1985,16,21,,Guam,Guam,Male,Uncertain,10/31/2017
 UP7165,5/13/1985,18,25,Houston,Harris,Texas,Male,"White / Caucasian, Hispanic / Latino",3/30/2020
 UP4500,5/12/1985,55,65,Fort Worth,Tarrant,Texas,Male,White / Caucasian,9/1/2011
 UP1239,5/5/1985,40,50,Miami,Miami-Dade,Florida,Male,White / Caucasian,1/29/2020
@@ -9484,7 +9484,7 @@ UP4557,8/5/1975,30,40,Houston,Harris,Texas,Male,White / Caucasian,3/30/2020
 UP5843,8/3/1975,20,40,San Francisco,San Francisco,California,Male,White / Caucasian,3/5/2020
 UP7710,7/9/1975,25,90,Milwaukee,Milwaukee,Wisconsin,Male,White / Caucasian,9/4/2018
 UP6700,7/1/1975,30,55,,Amherst,Virginia,Male,White / Caucasian,4/9/2020
-UP16755,6/10/1975,15,35,Port Clarence,,Alaska,Male,American Indian / Alaska Native,4/14/2020
+UP16755,6/10/1975,15,35,Port Clarence,Nome,Alaska,Male,American Indian / Alaska Native,4/14/2020
 UP16974,6/2/1975,40,70,Philadelphia,Philadelphia,Pennsylvania,Male,White / Caucasian,4/8/2020
 UP13364,5/26/1975,60,80,Bethel,Pitt,North Carolina,Male,White / Caucasian,1/13/2015
 UP14005,5/22/1975,,,Burlington,Middlesex,Massachusetts,Male,White / Caucasian,6/5/2016
@@ -9812,7 +9812,7 @@ UP12108,6/9/1968,55,65,Detroit,Wayne,Michigan,Male,White / Caucasian,6/26/2019
 UP12107,6/6/1968,20,30,Grosse Isle,Wayne,Michigan,Male,White / Caucasian,3/19/2020
 UP16983,6/3/1968,30,60,Philadelphia,Philadelphia,Pennsylvania,Male,Black / African American,4/8/2020
 UP12039,5/24/1968,,,Sumpter Twp.,Wayne,Michigan,Male,Black / African American,3/19/2020
-UP9980,5/16/1968,30,50,Wasilla,,Alaska,Male,Uncertain,4/14/2020
+UP9980,5/16/1968,30,50,Wasilla,Matanuska-Susitna,Alaska,Male,Uncertain,4/14/2020
 UP59204,5/13/1968,,,178th Street and Collins Ave,Miami-Dade,Florida,Male,"White / Caucasian, Hispanic / Latino, Other, Uncertain",4/13/2020
 UP55806,4/28/1968,45,60,Willow Creek,Humboldt,California,Male,White / Caucasian,1/22/2020
 UP9209,4/10/1968,50,80,San Francisco,San Francisco,California,Male,White / Caucasian,3/5/2020
@@ -10358,7 +10358,7 @@ UP14286,6/10/2015,20,50,,Pima,Arizona,Female,Uncertain,12/6/2016
 UP54710,5/29/2015,,,Baltimore,Baltimore,Maryland,Female,Uncertain,12/30/2019
 UP14084,5/29/2015,60,80,Seattle,King,Washington,Female,White / Caucasian,8/27/2018
 UP14083,5/27/2015,40,60,Kent,King,Washington,Female,White / Caucasian,2/1/2019
-UP14309,5/23/2015,,,Unalakleet,,Alaska,Unsure,Uncertain,2/13/2020
+UP14309,5/23/2015,,,Unalakleet,Nome,Alaska,Unsure,Uncertain,2/13/2020
 UP15135,5/22/2015,30,50,Portland,Cumberland,Maine,Female,Asian,3/26/2019
 UP13900,5/20/2015,,,,Pulaski,Arkansas,Unsure,Uncertain,4/10/2020
 UP14139,5/19/2015,35,65,Gatesville,Coryell,Texas,Unsure,White / Caucasian,11/9/2016
@@ -10379,7 +10379,7 @@ UP13889,4/1/2015,76,78,Boston,Suffolk,Massachusetts,Female,Black / African Ameri
 UP13888,4/1/2015,71,72,Boston,Suffolk,Massachusetts,Female,Black / African American,4/8/2020
 UP13980,3/31/2015,,,Asheville,Buncombe,North Carolina,Unsure,Uncertain,11/20/2019
 UP13776,3/22/2015,30,50,Setauket,Suffolk,New York,Female,White / Caucasian,2/18/2020
-UP13838,3/17/2015,42,71,Carson City,Carson,Nevada,Female,White / Caucasian,9/20/2019
+UP13838,3/17/2015,42,71,Carson City,Carson City,Nevada,Female,White / Caucasian,9/20/2019
 UP13969,3/17/2015,0,99,Atlanta,Clayton,Georgia,Female,Uncertain,1/9/2020
 UP14604,2/19/2015,65,80,Los Angeles,Los Angeles,California,Female,White / Caucasian,1/14/2020
 UP13937,2/6/2015,19,67,,Brooks,Texas,Female,Uncertain,6/16/2016
@@ -10423,7 +10423,7 @@ UP13348,8/25/2014,,,Hillsboro Beach,Broward,Florida,Female,Black / African Ameri
 UP13086,8/22/2014,,,Dawsonville,Dawson,Georgia,Unsure,Uncertain,11/10/2014
 UP13962,8/11/2014,,,Phillipsburg,Granite,Montana,Unsure,Uncertain,3/24/2020
 UP12958,7/20/2014,13,18,Rush,Monroe,New York,Unsure,Uncertain,3/26/2019
-UP13126,7/17/2014,,,Kvichak,,Alaska,Unsure,Uncertain,2/13/2020
+UP13126,7/17/2014,,,Kvichak,Lake and Peninsula,Alaska,Unsure,Uncertain,2/13/2020
 UP13662,7/13/2014,18,40,Sells,Pima,Arizona,Female,Uncertain,11/19/2019
 UP61270,7/7/2014,,,Bakersfield,Kern,California,Unsure,Uncertain,2/26/2020
 UP12726,7/1/2014,18,90,Wilmington,New Castle,Delaware,Unsure,Uncertain,4/8/2020
@@ -10668,7 +10668,7 @@ UP10076,1/20/2012,18,89,,Pinal,Arizona,Female,Uncertain,1/29/2020
 UP13974,1/16/2012,30,58,,Jim Hogg,Texas,Female,Hispanic / Latino,9/27/2016
 UP9848,1/16/2012,30,45,College Park,Fulton,Georgia,Female,Uncertain,4/3/2017
 UP10253,1/16/2012,20,30,Niland,Imperial,California,Female,"White / Caucasian, Hispanic / Latino",6/9/2015
-UP13343,1/16/2012,0,1,WASHINGTON,,District of Columbia,Female,Black / African American,12/2/2015
+UP13343,1/16/2012,0,1,Washington,District of Columbia,District of Columbia,Female,Black / African American,12/2/2015
 UP10392,1/15/2012,45,65,Detroit,Wayne,Michigan,Female,Black / African American,3/19/2020
 UP11232,1/11/2012,,,,Yuma,Arizona,Unsure,Uncertain,3/11/2020
 UP10024,1/11/2012,18,99,Palmdale,Los Angeles,California,Unsure,Uncertain,4/5/2019
@@ -10936,7 +10936,7 @@ UP9076,3/12/2008,18,99,Seaside Heights,Ocean,New Jersey,Unsure,Uncertain,5/28/20
 UP5815,3/2/2008,25,35,Benson,Cochise,Arizona,Female,White / Caucasian,10/22/2019
 UP11261,3/1/2008,50,70,Newark,Essex,New Jersey,Female,Black / African American,5/30/2019
 UP2184,2/21/2008,40,50,Philadelphia,Philadelphia,Pennsylvania,Female,Uncertain,2/20/2019
-UP871,2/21/2008,40,60,Washington,,District of Columbia,Female,Asian,8/19/2019
+UP871,2/21/2008,40,60,Washington,District of Columbia,District of Columbia,Female,Asian,8/19/2019
 UP5072,2/19/2008,25,40,Sells,Pima,Arizona,Female,Hispanic / Latino,4/9/2020
 UP1457,2/14/2008,35,45,Old Bridge,Middlesex,New Jersey,Female,White / Caucasian,2/18/2020
 UP55400,2/13/2008,,,Jamul,San Diego,California,Unsure,"Hispanic / Latino, Other",4/14/2020
@@ -10998,7 +10998,7 @@ UP5543,6/17/2007,50,70,New York,New York,New York,Female,White / Caucasian,10/31
 UP5351,6/15/2007,17,20,Ajo,Pima,Arizona,Female,Hispanic / Latino,11/6/2017
 UP12724,6/10/2007,,,Nikiski,Kenai Peninsula,Alaska,Unsure,Uncertain,2/13/2020
 UP2842,6/2/2007,35,45,Hot Springs,Garland,Arkansas,Female,White / Caucasian,4/10/2020
-UP13493,6/1/2007,5,9,Houston,,Alaska,Unsure,Uncertain,4/14/2020
+UP13493,6/1/2007,5,9,Houston,Matanuska-Susitna,Alaska,Unsure,Uncertain,4/14/2020
 UP5353,5/24/2007,20,32,Robles Junction,Pima,Arizona,Female,Uncertain,4/9/2020
 UP9620,5/22/2007,40,70,Boise City,Cimarron,Oklahoma,Female,Hispanic / Latino,3/20/2020
 UP2982,5/22/2007,20,40,,El Paso,Texas,Female,"White / Caucasian, Hispanic / Latino",6/28/2016
@@ -11060,7 +11060,7 @@ UP10358,7/1/2006,15,23,Brigantine,Atlantic,New Jersey,Female,Uncertain,8/29/2019
 UP5400,6/27/2006,11,14,Sells,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP8859,6/15/2006,18,99,Kansas City,Jackson,Missouri,Unsure,Uncertain,7/11/2011
 UP15939,6/13/2006,60,60,Braintree,Norfolk,Massachusetts,Female,White / Caucasian,4/12/2019
-UP12715,6/12/2006,8,14,Shishmaref,,Alaska,Female,American Indian / Alaska Native,2/13/2020
+UP12715,6/12/2006,8,14,Shishmaref,Nome,Alaska,Female,American Indian / Alaska Native,2/13/2020
 UP15433,6/8/2006,30,45,,Lake,Indiana,Female,Black / African American,9/11/2018
 UP7935,6/5/2006,20,30,Detroit,Wayne,Michigan,Female,Black / African American,3/19/2020
 UP3027,5/24/2006,35,45,,Los Angeles,California,Female,White / Caucasian,4/5/2019
@@ -11079,7 +11079,7 @@ UP11423,4/5/2006,0,0,Mt Kisco,Westchester,New York,Female,Uncertain,7/31/2019
 UP5419,4/2/2006,18,30,Pisinemo Village,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP11569,3/28/2006,0,1,Norfolk,Norfolk,Virginia,Female,Black / African American,4/9/2020
 UP9597,3/26/2006,5,7,San Gregorio,San Mateo,California,Unsure,Uncertain,3/31/2020
-UP16484,3/16/2006,40,50,Washington,,District of Columbia,Female,Black / African American,4/12/2017
+UP16484,3/16/2006,40,50,Washington,District of Columbia,District of Columbia,Female,Black / African American,4/12/2017
 UP3033,3/12/2006,1,1,ALHAMBRA,Los Angeles,California,Female,"White / Caucasian, Hispanic / Latino",4/5/2019
 UP15951,3/8/2006,69,69,Brighton,Suffolk,Massachusetts,Female,White / Caucasian,4/8/2020
 UP5428,3/7/2006,25,40,Guvo Village,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
@@ -11141,7 +11141,7 @@ UP5471,6/26/2005,28,48,Three Points,Pima,Arizona,Female,Hispanic / Latino,4/6/20
 UP14852,6/22/2005,,,,Brooks,Texas,Female,Hispanic / Latino,3/9/2020
 UP13389,6/17/2005,,,Kivalina,Northwest Arctic,Alaska,Unsure,Uncertain,4/14/2020
 UP6766,6/13/2005,30,99,N Komelic Village,Pima,Arizona,Female,American Indian / Alaska Native,1/15/2020
-UP13390,5/31/2005,,,Dillingham,,Alaska,Unsure,Uncertain,2/13/2020
+UP13390,5/31/2005,,,Dillingham,Dillingham,Alaska,Unsure,Uncertain,2/13/2020
 UP1599,5/28/2005,18,99,Avalon,Cape May,New Jersey,Female,Uncertain,4/17/2020
 UP5479,5/22/2005,28,48,Vail,Pima,Arizona,Female,Hispanic / Latino,10/31/2018
 UP13760,5/4/2005,9,99,Leesburg,Loudoun,Virginia,Unsure,Uncertain,4/7/2020
@@ -11160,7 +11160,7 @@ UP27,2/25/2005,25,45,,Fulton,Georgia,Female,Uncertain,1/14/2020
 UP3093,2/12/2005,30,50,PASADENA,Los Angeles,California,Unsure,Uncertain,4/5/2019
 UP2361,2/10/2005,50,60,,Sacramento,California,Female,White / Caucasian,2/27/2020
 UP1454,2/9/2005,24,34,Hoboken,Hudson,New Jersey,Female,White / Caucasian,4/17/2020
-UP16571,2/6/2005,40,50,Washington,,District of Columbia,Female,White / Caucasian,2/18/2020
+UP16571,2/6/2005,40,50,Washington,District of Columbia,District of Columbia,Female,White / Caucasian,2/18/2020
 UP8732,2/3/2005,14,18,,Hidalgo,Texas,Female,Uncertain,12/13/2012
 UP28,2/1/2005,20,50,Atlanta,Fulton,Georgia,Unsure,Uncertain,11/26/2019
 UP5232,1/25/2005,28,43,unknown,Bernalillo,New Mexico,Female,Black / African American,7/29/2014
@@ -11277,8 +11277,8 @@ UP6529,6/4/2003,18,99,Sasabe,Pima,Arizona,Female,Uncertain,1/16/2020
 UP6531,6/4/2003,20,29,Sasabe,Pima,Arizona,Female,Hispanic / Latino,1/16/2020
 UP10671,6/1/2003,18,40,Hood River,Hood River,Oregon,Female,White / Caucasian,3/18/2020
 UP8950,5/29/2003,18,99,,Cochise,Arizona,Female,Uncertain,8/26/2019
-UP13442,5/27/2003,13,17,Nome,,Alaska,Female,American Indian / Alaska Native,9/26/2019
-UP13434,5/27/2003,20,25,Nome,,Alaska,Female,American Indian / Alaska Native,2/13/2020
+UP13442,5/27/2003,13,17,Nome,Nome,Alaska,Female,American Indian / Alaska Native,9/26/2019
+UP13434,5/27/2003,20,25,Nome,Nome,Alaska,Female,American Indian / Alaska Native,2/13/2020
 UP52627,5/26/2003,20,40,Mammoth Lakes,Mono,California,Female,Uncertain,5/10/2019
 UP7740,5/26/2003,19,35,St. Clair Township,St. Clair,Michigan,Female,Black / African American,2/4/2019
 UP16186,5/6/2003,,,Millvale,Allegheny,Pennsylvania,Unsure,Uncertain,12/18/2019
@@ -12571,7 +12571,7 @@ UP11097,5/24/1985,15,35,Newton,Baker,Georgia,Female,White / Caucasian,2/3/2020
 UP4705,5/24/1985,25,30,,Appling,Georgia,Female,White / Caucasian,2/19/2018
 UP7832,5/22/1985,16,20,Douglas,Cochise,Arizona,Female,Hispanic / Latino,4/3/2020
 UP10474,5/19/1985,30,40,Westport,Fairfield,Connecticut,Female,Black / African American,10/9/2019
-UP11056,5/14/1985,18,59,,All,Guam,Unsure,Uncertain,8/15/2018
+UP11056,5/14/1985,18,59,,Guam,Guam,Unsure,Uncertain,8/15/2018
 UP11892,5/14/1985,16,25,Detroit,Wayne,Michigan,Female,Uncertain,3/19/2020
 UP7890,5/2/1985,40,60,Ft Myers,Lee,Florida,Female,Black / African American,4/7/2020
 UP60116,4/28/1985,,,,Kern,California,Female,White / Caucasian,2/26/2020
@@ -12583,7 +12583,7 @@ UP3036,4/10/1985,30,50,Crescent Beach,St. Johns,Florida,Female,White / Caucasian
 UP14596,4/3/1985,50,60,,Adams,Colorado,Female,White / Caucasian,7/12/2019
 UP1577,4/3/1985,10,14,,Campbell,Tennessee,Female,White / Caucasian,3/18/2020
 UP1578,3/31/1985,31,40,Pleasant View,Cheatham,Tennessee,Female,White / Caucasian,3/18/2020
-UP8314,3/10/1985,16,20,Dona Ana,,New Mexico,Female,White / Caucasian,2/8/2020
+UP8314,3/10/1985,16,20,Doña Ana,Doña Ana,New Mexico,Female,White / Caucasian,2/8/2020
 UP4204,3/4/1985,35,55,Carson,Los Angeles,California,Female,Black / African American,4/5/2019
 UP2606,2/27/1985,22,32,Nipton,San Bernardino,California,Female,White / Caucasian,4/27/2018
 UP17352,2/25/1985,40,60,Long Branch,Monmouth,New Jersey,Female,White / Caucasian,2/5/2020
@@ -12637,7 +12637,7 @@ UP4786,5/4/1984,50,63,Westby,Vernon,Wisconsin,Female,White / Caucasian,12/3/2019
 UP4231,5/2/1984,2,4,ARCADIA,Los Angeles,California,Unsure,White / Caucasian,4/5/2019
 UP13028,4/27/1984,45,55,Keyes,Stanislaus,California,Female,White / Caucasian,1/29/2020
 UP2429,4/26/1984,20,45,Kansas City,Wyandotte,Kansas,Female,"White / Caucasian, Hispanic / Latino, Asian, American Indian / Alaska Native",1/23/2020
-UP12846,4/25/1984,19,20,Palmer,,Alaska,Female,White / Caucasian,2/13/2020
+UP12846,4/25/1984,19,20,Palmer,Matanuska-Susitna,Alaska,Female,White / Caucasian,2/13/2020
 UP6037,4/18/1984,17,20,Altoona,Lake,Florida,Female,White / Caucasian,11/26/2018
 UP16845,4/7/1984,15,20,Wildwood Crest,Cape May,New Jersey,Unsure,Uncertain,4/14/2020
 UP4245,4/4/1984,48,60,,Los Angeles,California,Unsure,Asian,10/7/2019
@@ -13056,7 +13056,7 @@ UP10796,8/16/1975,18,28,East Haven,New Haven,Connecticut,Female,White / Caucasia
 UP4459,8/2/1975,17,21,LOS ANGELES,Los Angeles,California,Female,White / Caucasian,1/8/2020
 UP13000,7/30/1975,25,30,Modesto,Stanislaus,California,Female,White / Caucasian,12/26/2019
 UP58393,7/14/1975,25,30,Westport,Fairfield,Connecticut,Female,White / Caucasian,10/9/2019
-UP13446,6/26/1975,,,Nome,,Alaska,Unsure,Uncertain,7/26/2018
+UP13446,6/26/1975,,,Nome,Nome,Alaska,Unsure,Uncertain,7/26/2018
 UP16999,6/11/1975,25,60,Philadelphia,Philadelphia,Pennsylvania,Female,Uncertain,4/8/2020
 UP2622,4/11/1975,12,23,,Clinton,Iowa,Female,Black / African American,8/17/2018
 UP15399,3/15/1975,30,40,,Monroe,Florida,Female,White / Caucasian,2/4/2020

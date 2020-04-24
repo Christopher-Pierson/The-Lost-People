@@ -436,8 +436,8 @@ MP30183,8/13/1992,Adili,Dervish,35,Tok,Fairbanks North Star,Alaska,Male,White / 
 MP54673,8/26/1981,Miettunen,Jason,10,Tok,Fairbanks North Star,Alaska,Male,White / Caucasian,4/14/2020
 MP23009,9/28/1985,O'Keefe,Kevin,36,Glacier Bay National Park,Haines,Alaska,Male,White / Caucasian,4/14/2020
 MP17984,10/23/2012,Lynch,Theodore,61,Haines,Haines,Alaska,Male,Other,6/18/2019
-MP55571,9/12/2018,Bealer,Eric,58,Pelican Bay,Hoonah–Angoon,Alaska,Male,White / Caucasian,4/14/2020
-MP55570,9/12/2018,Bealer,Pamela,58,Pelican Bay,Hoonah–Angoon,Alaska,Female,White / Caucasian,4/14/2020
+MP55571,9/12/2018,Bealer,Eric,58,Pelican,Hoonah-Angoon,Alaska,Male,White / Caucasian,4/14/2020
+MP55570,9/12/2018,Bealer,Pamela,58,Pelican,Hoonah-Angoon,Alaska,Female,White / Caucasian,4/14/2020
 MP61699,9/15/2014,Keithahn,Paul,52,Auke Bay,Juneau,Alaska,Male,White / Caucasian,4/14/2020
 MP61713,8/2/2018,Monteroso,Rezan,35,Biorka Island,Juneau,Alaska,Male,Asian,4/14/2020
 MP58298,9/8/2016,Molina Valenzuela,Natalia,24,Funter Bay,Juneau,Alaska,Female,Hispanic / Latino,4/14/2020
@@ -668,22 +668,22 @@ MP68186,8/10/1986,Howarth,Rodney,39,Kotzebue,Northwest Arctic,Alaska,Male,Americ
 MP58783,5/12/2019,Barr,Ronald,19,Noorvik,Northwest Arctic,Alaska,Male,American Indian / Alaska Native,4/14/2020
 MP52891,9/27/2018,Pettitt,Nicolas,38,St. Matthew Island,Northwest Arctic,Alaska,Male,White / Caucasian,4/14/2020
 MP61717,8/4/2007,Rodriguez,Miguel,43,Zarembo Island,Petersburg,Alaska,Male,Hispanic / Latino,4/14/2020
-MP61302,4/15/2011,O'Connor,Clinton,44,Craig,Prince of Wales – Hyder,Alaska,Male,White / Caucasian,4/14/2020
-MP55349,1/29/2019,Coyle,Patrick,63,Kake,Prince of Wales – Hyder,Alaska,Male,White / Caucasian,4/14/2020
-MP52469,9/19/2018,"Skeek, Jr.",Reginald,55,Kake,Prince of Wales – Hyder,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP55352,1/29/2019,Morse,Stacie,30,Kake,Prince of Wales – Hyder,Alaska,Female,White / Caucasian,4/14/2020
-MP55351,1/29/2019,Langston,Margaret,43,Kake,Prince of Wales – Hyder,Alaska,Female,White / Caucasian,4/14/2020
-MP61081,5/29/1989,Yates,Louis,19,Klawock,Prince of Wales – Hyder,Alaska,Male,American Indian / Alaska Native,4/15/2020
-MP63869,5/28/1980,Childress,William,42,Point Baker,Prince of Wales – Hyder,Alaska,Male,White / Caucasian,4/14/2020
-MP38923,6/22/2017,Charles,Francis,21,Hydaburg,Prince of Wales-Outer Ketchikan,Alaska,Male,American Indian / Alaska Native,1/17/2018
-MP66781,1/10/1980,Haines,Thomas,21,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,White / Caucasian,4/14/2020
-MP66740,5/6/1978,Kelley,Delbert,31,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,White / Caucasian,4/15/2020
-MP66786,5/6/1978,Cook,Glenn,27,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,White / Caucasian,4/15/2020
-MP66919,4/18/1983,Bakken,John,36,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,Black / African American,4/14/2020
-MP66676,5/6/1978,Burgess Jr.,Victor,23,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,American Indian / Alaska Native,4/15/2020
-MP66955,5/6/1978,"Edenshaw, Jr.",Verne,20,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,American Indian / Alaska Native,4/15/2020
-MP67265,5/6/1978,"Hamilton, Jr",William,18,Prince of Wales,Prince of Wales-Outer Ketchikan,Alaska,Male,American Indian / Alaska Native,4/15/2020
-MP41529,12/1/2016,Perez,Christerpher,47,Prince of Whales,Prince of Wales-Outer Ketchikan,Alaska,Male,White / Caucasian,4/14/2020
+MP61302,4/15/2011,O'Connor,Clinton,44,Craig,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/14/2020
+MP55349,1/29/2019,Coyle,Patrick,63,Kake,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/14/2020
+MP52469,9/19/2018,"Skeek, Jr.",Reginald,55,Kake,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP55352,1/29/2019,Morse,Stacie,30,Kake,Prince of Wales-Hyder,Alaska,Female,White / Caucasian,4/14/2020
+MP55351,1/29/2019,Langston,Margaret,43,Kake,Prince of Wales-Hyder,Alaska,Female,White / Caucasian,4/14/2020
+MP61081,5/29/1989,Yates,Louis,19,Klawock,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,4/15/2020
+MP63869,5/28/1980,Childress,William,42,Point Baker,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/14/2020
+MP38923,6/22/2017,Charles,Francis,21,Hydaburg,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,1/17/2018
+MP66781,1/10/1980,Haines,Thomas,21,,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/14/2020
+MP66740,5/6/1978,Kelley,Delbert,31,,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/15/2020
+MP66786,5/6/1978,Cook,Glenn,27,,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/15/2020
+MP66919,4/18/1983,Bakken,John,36,,Prince of Wales-Hyder,Alaska,Male,Black / African American,4/14/2020
+MP66676,5/6/1978,Burgess Jr.,Victor,23,,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,4/15/2020
+MP66955,5/6/1978,"Edenshaw, Jr.",Verne,20,,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,4/15/2020
+MP67265,5/6/1978,"Hamilton, Jr",William,18,,Prince of Wales-Hyder,Alaska,Male,American Indian / Alaska Native,4/15/2020
+MP41529,12/1/2016,Perez,Christerpher,47,,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,4/14/2020
 MP52734,9/28/2018,Pepperd,Joshua,42,Lituya Bay,Sitka,Alaska,Male,White / Caucasian,4/14/2020
 MP65871,1/5/2020,Pastel,Kale,36,Sitka,Sitka,Alaska,Male,White / Caucasian,4/14/2020
 MP43007,3/31/2018,Poffenbarger,Sean,45,Sitka,Sitka,Alaska,Male,White / Caucasian,4/14/2020
@@ -708,62 +708,62 @@ MP64167,1/5/1986,Knutson,Joseph,26,Sitka,Sitka,Alaska,Male,White / Caucasian,4/1
 MP67209,6/29/1984,Lane,Victor,33,Sitka,Sitka,Alaska,Male,White / Caucasian,4/14/2020
 MP22592,10/15/2012,Grant,Lael,33,Sitka,Sitka,Alaska,Female,White / Caucasian,4/14/2020
 MP50289,10/26/1994,Rowe-Simonsen,Vicki,39,Sitka,Sitka,Alaska,Female,White / Caucasian,4/14/2020
-MP37040,1/1/2006,O'Brien,Kevin,36,Angoon,Skagway Yakutat Angoon,Alaska,Male,White / Caucasian,4/14/2020
-MP6708,6/11/1986,Tackett,Virgil,17,Pelican,Skagway Yakutat Angoon,Alaska,Male,White / Caucasian,4/14/2020
-MP42120,2/6/2018,Bissaco,Anthony,30,Skagway,Skagway Yakutat Angoon,Alaska,Male,White / Caucasian,12/4/2018
-MP34740,9/26/2000,Gay,Charles,28,Skagway,Skagway Yakutat Angoon,Alaska,Male,White / Caucasian,4/17/2018
+MP37040,1/1/2006,O'Brien,Kevin,36,Angoon,Hoonah-Angoon,Alaska,Male,White / Caucasian,4/14/2020
+MP6708,6/11/1986,Tackett,Virgil,17,Pelican,Hoonah-Angoon,Alaska,Male,White / Caucasian,4/14/2020
+MP42120,2/6/2018,Bissaco,Anthony,30,Skagway,Skagway,Alaska,Male,White / Caucasian,12/4/2018
+MP34740,9/26/2000,Gay,Charles,28,Skagway,Skagway,Alaska,Male,White / Caucasian,4/17/2018
 MP61371,7/8/2012,Hosier,Emmanuel,20,Delta Junction,Southeast Fairbanks,Alaska,Male,White / Caucasian,4/14/2020
 MP64604,7/28/1993,Brooks,Joseph,17,Delta Junction,Southeast Fairbanks,Alaska,Male,White / Caucasian,4/14/2020
-MP53032,6/3/1994,Mark,Michael,47,Chitina,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56672,6/17/1983,Fowler,Preston,29,Chitina,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP53029,6/14/2000,Aumoeualogo,Aisa,50,Chitina,Valdez–Cordova,Alaska,Male,Asian,4/14/2020
-MP55834,8/13/1990,Mitter,Susan,43,Chitina,Valdez–Cordova,Alaska,Female,White / Caucasian,4/14/2020
-MP52762,5/3/2003,Sisco,Michael,50,Columbia Bay,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP54001,7/5/1998,Anderson,Krist,24,Copper Center,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56120,6/24/1992,Marstall,Paul,64,Copper Center,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55753,6/21/1991,Kosa,Loren,62,Copper River,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55755,6/21/1991,Rocheleau,Harry,69,Copper River,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55754,6/21/1991,Kosa,Monte,41,Copper River,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP42644,7/21/2017,Brewster,John,29,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP51811,3/6/2008,Kassahn,Norman,63,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP53740,6/9/1998,Roberts,Michael,46,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56349,10/5/1996,Ritter,Michael,38,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP18435,5/26/1993,Ivanov,Pavel,30,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56000,9/4/1987,De Estrada,Manuel,43,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP58751,7/6/1984,"Treffers, Jr.",Ralph,51,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP50605,11/24/1981,Geoit,Robert,32,Cordova,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP51809,3/6/2008,Kassahn,Melody,53,Cordova,Valdez–Cordova,Alaska,Female,White / Caucasian,4/14/2020
-MP55761,4/8/1992,Keiner,Steve,46,Glennallen,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP66578,7/5/1986,Connell,James,31,Glennallen,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP66803,8/13/1985,Alcantra,Daniel,36,Glennallen,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP67242,9/22/1983,Ochoa,George,30,Glennallen,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP66927,7/2/1979,"Napier, Sr.",Virgil,36,Glennallen,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP61370,2/7/1977,Goodlataw,Alvin,38,Glennallen,Valdez–Cordova,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP56032,8/17/1992,Johnson,Richard,67,Gulkana,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56034,8/17/1992,Roth,Franklin,65,Gulkana,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55854,6/20/1988,Mansfield,Gregory,39,Gulkana River,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60550,7/29/1995,Gelin,Allen,61,Middleton Island,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60575,7/29/1995,Lindner,Richard,20,Middleton Island,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60577,7/29/1995,Pickar,Mark,32,Middleton Island,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP56344,9/28/1990,Day,James,50,Montegue Island,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP54538,8/25/1989,Farrell,Russell,60,Prince William Sound,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55963,8/17/1989,Johnson,Michael,31,Prince William Sound,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP54540,8/25/1989,Hvatum,Sandra,36,Prince William Sound,Valdez–Cordova,Alaska,Female,White / Caucasian,4/14/2020
-MP54539,8/25/1989,Hvatum,Kristen,3,Prince William Sound,Valdez–Cordova,Alaska,Female,White / Caucasian,4/14/2020
-MP53741,8/27/2005,Richardson,Gary,59,Valdez,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55838,8/2/1977,Schroeter,Kent,22,Valdez,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP66548,7/12/1981,Devlin,Joseph,18,Valdez,Valdez–Cordova,Alaska,Male,Uncertain,4/14/2020
-MP50770,12/3/2007,Brabham,Lance,42,Whittier,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP36521,12/3/2007,Carter,Cameron,24,Whittier,Valdez–Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP50771,12/3/2007,McDowell,Gaye,60,Whittier,Valdez–Cordova,Alaska,Female,White / Caucasian,4/14/2020
-MP55869,6/16/1988,Ogawa,Shigeo,49,Wrangell St. Elias,Valdez–Cordova,Alaska,Male,Asian,4/14/2020
-MP55867,6/16/1988,Mashiko,Toshiaki,30,Wrangell St. Elias,Valdez–Cordova,Alaska,Male,Asian,4/14/2020
-MP34139,11/16/2006,Agathluk,Albert,36,Emmonak,Wade Hampton,Alaska,Male,American Indian / Alaska Native,5/9/2018
-MP25280,9/3/2011,Oney,Nathan,22,Saint Mary's,Wade Hampton,Alaska,Male,American Indian / Alaska Native,5/8/2018
-MP42420,6/29/2009,Butler,Samuel,24,Coffman Cove,Wrangell Petersburg,Alaska,Male,White / Caucasian,11/20/2018
-MP36995,2/4/2010,Crawford II,James,25,Mitkof Island,Wrangell Petersburg,Alaska,Male,White / Caucasian,4/17/2018
-MP34159,12/13/2015,Peterson,Brandon,38,Wrangell,Wrangell Petersburg,Alaska,Male,White / Caucasian,12/26/2017
-MP35067,5/4/2004,Harper,Jason,27,Wrangell,Wrangell Petersburg,Alaska,Male,White / Caucasian,12/12/2018
+MP53032,6/3/1994,Mark,Michael,47,Chitina,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56672,6/17/1983,Fowler,Preston,29,Chitina,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP53029,6/14/2000,Aumoeualogo,Aisa,50,Chitina,Valdez-Cordova,Alaska,Male,Asian,4/14/2020
+MP55834,8/13/1990,Mitter,Susan,43,Chitina,Valdez-Cordova,Alaska,Female,White / Caucasian,4/14/2020
+MP52762,5/3/2003,Sisco,Michael,50,Columbia Bay,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP54001,7/5/1998,Anderson,Krist,24,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56120,6/24/1992,Marstall,Paul,64,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55753,6/21/1991,Kosa,Loren,62,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55755,6/21/1991,Rocheleau,Harry,69,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55754,6/21/1991,Kosa,Monte,41,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP42644,7/21/2017,Brewster,John,29,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP51811,3/6/2008,Kassahn,Norman,63,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP53740,6/9/1998,Roberts,Michael,46,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56349,10/5/1996,Ritter,Michael,38,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP18435,5/26/1993,Ivanov,Pavel,30,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56000,9/4/1987,De Estrada,Manuel,43,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP58751,7/6/1984,"Treffers, Jr.",Ralph,51,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP50605,11/24/1981,Geoit,Robert,32,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP51809,3/6/2008,Kassahn,Melody,53,Cordova,Valdez-Cordova,Alaska,Female,White / Caucasian,4/14/2020
+MP55761,4/8/1992,Keiner,Steve,46,Glennallen,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP66578,7/5/1986,Connell,James,31,Glennallen,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP66803,8/13/1985,Alcantra,Daniel,36,Glennallen,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP67242,9/22/1983,Ochoa,George,30,Glennallen,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP66927,7/2/1979,"Napier, Sr.",Virgil,36,Glennallen,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP61370,2/7/1977,Goodlataw,Alvin,38,Glennallen,Valdez-Cordova,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP56032,8/17/1992,Johnson,Richard,67,Gulkana,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56034,8/17/1992,Roth,Franklin,65,Gulkana,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55854,6/20/1988,Mansfield,Gregory,39,Gulkana River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60550,7/29/1995,Gelin,Allen,61,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60575,7/29/1995,Lindner,Richard,20,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60577,7/29/1995,Pickar,Mark,32,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP56344,9/28/1990,Day,James,50,Montegue Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP54538,8/25/1989,Farrell,Russell,60,Prince William Sound,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55963,8/17/1989,Johnson,Michael,31,Prince William Sound,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP54540,8/25/1989,Hvatum,Sandra,36,Prince William Sound,Valdez-Cordova,Alaska,Female,White / Caucasian,4/14/2020
+MP54539,8/25/1989,Hvatum,Kristen,3,Prince William Sound,Valdez-Cordova,Alaska,Female,White / Caucasian,4/14/2020
+MP53741,8/27/2005,Richardson,Gary,59,Valdez,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55838,8/2/1977,Schroeter,Kent,22,Valdez,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP66548,7/12/1981,Devlin,Joseph,18,Valdez,Valdez-Cordova,Alaska,Male,Uncertain,4/14/2020
+MP50770,12/3/2007,Brabham,Lance,42,Whittier,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP36521,12/3/2007,Carter,Cameron,24,Whittier,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP50771,12/3/2007,McDowell,Gaye,60,Whittier,Valdez-Cordova,Alaska,Female,White / Caucasian,4/14/2020
+MP55869,6/16/1988,Ogawa,Shigeo,49,Wrangell St. Elias,Valdez-Cordova,Alaska,Male,Asian,4/14/2020
+MP55867,6/16/1988,Mashiko,Toshiaki,30,Wrangell St. Elias,Valdez-Cordova,Alaska,Male,Asian,4/14/2020
+MP34139,11/16/2006,Agathluk,Albert,36,Emmonak,Kusilvak,Alaska,Male,American Indian / Alaska Native,5/9/2018
+MP25280,9/3/2011,Oney,Nathan,22,Saint Marys,Kusilvak,Alaska,Male,American Indian / Alaska Native,5/8/2018
+MP42420,6/29/2009,Butler,Samuel,24,Coffman Cove,Prince of Wales-Hyder,Alaska,Male,White / Caucasian,11/20/2018
+MP36995,2/4/2010,Crawford II,James,25,Petersburg,Petersburg,Alaska,Male,White / Caucasian,4/17/2018
+MP34159,12/13/2015,Peterson,Brandon,38,Wrangell,Wrangell,Alaska,Male,White / Caucasian,12/26/2017
+MP35067,5/4/2004,Harper,Jason,27,Wrangell,Wrangell,Alaska,Male,White / Caucasian,12/12/2018
 MP50281,7/30/1993,Love,Gary,51,Dry Bay,Yakutat,Alaska,Male,White / Caucasian,4/14/2020
 MP50284,7/30/1993,Sacco,Virginia,36,Dry Bay,Yakutat,Alaska,Female,White / Caucasian,4/14/2020
 MP41217,8/16/2011,Stoltzfus,Richard,68,Yakutat,Yakutat,Alaska,Male,White / Caucasian,2/27/2019
@@ -771,54 +771,54 @@ MP64332,9/2/1981,Lohman,Robert,53,Yakutat,Yakutat,Alaska,Male,White / Caucasian,
 MP61380,9/10/2013,Foster,Alan,47,Yakutat,Yakutat,Alaska,Male,American Indian / Alaska Native,4/14/2020
 MP64331,9/2/1981,Herman,Robert,32,Yakutat,Yakutat,Alaska,Male,Uncertain,4/14/2020
 MP66656,9/13/1984,Breseman,Anna,57,Yakutat,Yakutat,Alaska,Female,American Indian / Alaska Native,4/14/2020
-MP52903,10/4/2018,Ginnis,Lorraine,62,Fort Yukon,Yukon–Koyukuk,Alaska,Female,American Indian / Alaska Native,4/14/2020
-MP67136,6/3/1984,Korth,Colleen,2,Fort Yukon,Yukon–Koyukuk,Alaska,Female,American Indian / Alaska Native,4/17/2020
-MP67202,6/26/1986,Minano,Walter,76,Nenana,Yukon–Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP66473,8/15/1997,Anderson,Lauren,1,Nenana,Yukon–Koyukuk,Alaska,Female,White / Caucasian,4/14/2020
-MP52878,9/7/2016,Hamilton,Alfred,18,Shageluk,Yukon–Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP26415,9/1/1993,Mark,Robert,35,Aniak,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP39021,5/20/2017,Adams,Ai,38,Beaver,,Alaska,Female,Asian,3/3/2020
-MP37021,7/26/2010,Lupie,Nick,32,Bethel,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP36487,8/26/2007,Venes Jr.,Donald,28,Bethel,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP41443,12/16/1978,Ayagalria,Roy,19,Bethel,,Alaska,Male,American Indian / Alaska Native,3/14/2018
-MP29053,9/8/1975,Olick,Alfred,31,Bethel,,Alaska,Male,American Indian / Alaska Native,4/15/2020
-MP4482,8/26/1996,Evon,Stella,17,Bethel,,Alaska,Female,American Indian / Alaska Native,2/12/2019
-MP29022,10/19/1969,Olanna,Archie,40,Brevig Mission,,Alaska,Male,American Indian / Alaska Native,2/16/2018
-MP42364,6/1/1961,Esenituk,Tuck,30,Brevig Mission,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP29023,10/19/1969,Olanna,Fanny,35,Brevig Mission,,Alaska,Female,American Indian / Alaska Native,4/14/2020
-MP37039,9/27/2003,Heiser,Jurgen,37,Circle,,Alaska,Male,White / Caucasian,6/7/2018
-MP41241,6/19/1987,Banks,Thomas,33,Cordova,,Alaska,Male,White / Caucasian,5/10/2018
-MP43140,11/11/1984,Lewis,Gary,29,Cordova,,Alaska,Male,White / Caucasian,4/14/2020
-MP24199,5/7/1979,Clark,Raymond,23,Galena,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP36484,9/7/2007,Ungott,Gilbert,43,Gambell,,Alaska,Male,American Indian / Alaska Native,4/17/2018
-MP41590,11/16/2015,Dayton,Alvin,64,Huslia,,Alaska,Male,American Indian / Alaska Native,7/26/2018
-MP24437,10/2/1988,Williams,Michael,30,Kotlik,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP39342,12/10/2015,Graham,Casey,24,McGrath,,Alaska,Male,American Indian / Alaska Native,8/22/2017
-MP37032,8/16/2001,Edwards,Raymond,36,Mekoryuk,,Alaska,Male,American Indian / Alaska Native,4/17/2018
-MP26396,7/12/1990,Kephart,Bradley,35,Mount Yenlo,,Alaska,Male,White / Caucasian,4/14/2020
-MP7405,5/18/1998,Harbaugh,Steven,35,Nenana,,Alaska,Male,White / Caucasian,4/18/2018
-MP34145,7/21/2000,Chocknok,Charlie,84,New Stuyahok,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP35061,6/27/2016,Balderas,Joseph,36,Nome,,Alaska,Male,White / Caucasian,4/14/2020
-MP24185,10/18/1998,"Henry, Jr.",Archie,49,Nome,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP30191,9/23/1987,Saccheus,Ernest,24,Nome,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP42620,9/25/1960,Pitka,Harry,39,Nulato,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP42623,9/25/1960,"Demoski, Jr.",Leo,48,Nulato,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP42622,9/25/1960,Demoski,Claude,45,Nulato,,Alaska,Male,American Indian / Alaska Native,3/5/2019
-MP29026,9/25/1960,Nollner,Emmett,28,Nulato,,Alaska,Male,American Indian / Alaska Native,4/14/2020
-MP42621,9/25/1960,Demoski,Bertha,38,Nulato,,Alaska,Female,American Indian / Alaska Native,4/14/2020
-MP42491,6/20/2009,Patigler,Gerhard,68,Palmer,,Alaska,Male,White / Caucasian,3/7/2018
-MP42492,6/20/2009,Patigler,Ingrid,66,Palmer,,Alaska,Female,White / Caucasian,3/7/2018
-MP26083,9/2/1983,Fitzgerald,Thomas,28,Paxson,,Alaska,Male,White / Caucasian,4/14/2020
-MP41591,1/7/2016,Henry,Andrew,69,Ruby,,Alaska,Male,American Indian / Alaska Native,9/14/2018
-MP29024,10/1/1965,Pungowiyi,Dennis,32,Saint Lawrence Island,,Alaska,Male,American Indian / Alaska Native,3/14/2018
-MP34751,10/20/1999,Immergan,Lancelot,33,Savoonga,,Alaska,Male,American Indian / Alaska Native,4/17/2018
-MP36530,7/24/2006,Grissom,Thomas,42,St. Matthew Island,,Alaska,Male,White / Caucasian,4/14/2020
-MP36879,7/13/2016,Hawk,Walter,43,Tuluksak,,Alaska,Male,American Indian / Alaska Native,4/17/2018
-MP30184,11/29/1997,Maclin,Kevin,32,Unalaska,,Alaska,Male,Black / African American,4/14/2020
-MP43199,5/18/1988,Newman,William,40,Wasilla,,Alaska,Male,White / Caucasian,5/10/2018
-MP43198,5/18/1988,Melin,Jerry,33,Wasilla,,Alaska,Male,White / Caucasian,5/10/2018
-MP24429,8/5/1978,Rydholm,Stephan,24,Whittier,,Alaska,Male,White / Caucasian,4/14/2020
-MP5865,4/25/1989,Borer,David,8,Willow,,Alaska,Male,White / Caucasian,4/14/2020
+MP52903,10/4/2018,Ginnis,Lorraine,62,Fort Yukon,Yukon-Koyukuk,Alaska,Female,American Indian / Alaska Native,4/14/2020
+MP67136,6/3/1984,Korth,Colleen,2,Fort Yukon,Yukon-Koyukuk,Alaska,Female,American Indian / Alaska Native,4/17/2020
+MP67202,6/26/1986,Minano,Walter,76,Nenana,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP66473,8/15/1997,Anderson,Lauren,1,Nenana,Yukon-Koyukuk,Alaska,Female,White / Caucasian,4/14/2020
+MP52878,9/7/2016,Hamilton,Alfred,18,Shageluk,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP26415,9/1/1993,Mark,Robert,35,Aniak,Bethel,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP39021,5/20/2017,Adams,Ai,38,Beaver,Yukon-Koyukuk,Alaska,Female,Asian,3/3/2020
+MP37021,7/26/2010,Lupie,Nick,32,Bethel,Bethel,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP36487,8/26/2007,Venes Jr.,Donald,28,Bethel,Bethel,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP41443,12/16/1978,Ayagalria,Roy,19,Bethel,Bethel,Alaska,Male,American Indian / Alaska Native,3/14/2018
+MP29053,9/8/1975,Olick,Alfred,31,Bethel,Bethel,Alaska,Male,American Indian / Alaska Native,4/15/2020
+MP4482,8/26/1996,Evon,Stella,17,Bethel,Bethel,Alaska,Female,American Indian / Alaska Native,2/12/2019
+MP29022,10/19/1969,Olanna,Archie,40,Brevig Mission,Nome,Alaska,Male,American Indian / Alaska Native,2/16/2018
+MP42364,6/1/1961,Esenituk,Tuck,30,Brevig Mission,Nome,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP29023,10/19/1969,Olanna,Fanny,35,Brevig Mission,Nome,Alaska,Female,American Indian / Alaska Native,4/14/2020
+MP37039,9/27/2003,Heiser,Jurgen,37,Circle,Yukon-Koyukuk,Alaska,Male,White / Caucasian,6/7/2018
+MP41241,6/19/1987,Banks,Thomas,33,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,5/10/2018
+MP43140,11/11/1984,Lewis,Gary,29,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP24199,5/7/1979,Clark,Raymond,23,Galena,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP36484,9/7/2007,Ungott,Gilbert,43,Gambell,Nome,Alaska,Male,American Indian / Alaska Native,4/17/2018
+MP41590,11/16/2015,Dayton,Alvin,64,Huslia,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,7/26/2018
+MP24437,10/2/1988,Williams,Michael,30,Kotlik,Kusilvak,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP39342,12/10/2015,Graham,Casey,24,McGrath,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,8/22/2017
+MP37032,8/16/2001,Edwards,Raymond,36,Mekoryuk,Bethel,Alaska,Male,American Indian / Alaska Native,4/17/2018
+MP26396,7/12/1990,Kephart,Bradley,35,Skwentna,Matanuska-Susitna,Alaska,Male,White / Caucasian,4/14/2020
+MP7405,5/18/1998,Harbaugh,Steven,35,Nenana,Yukon-Koyukuk,Alaska,Male,White / Caucasian,4/18/2018
+MP34145,7/21/2000,Chocknok,Charlie,84,New Stuyahok,Dillingham,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP35061,6/27/2016,Balderas,Joseph,36,Nome,Nome,Alaska,Male,White / Caucasian,4/14/2020
+MP24185,10/18/1998,"Henry, Jr.",Archie,49,Nome,Nome,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP30191,9/23/1987,Saccheus,Ernest,24,Nome,Nome,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP42620,9/25/1960,Pitka,Harry,39,Nulato,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP42623,9/25/1960,"Demoski, Jr.",Leo,48,Nulato,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP42622,9/25/1960,Demoski,Claude,45,Nulato,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,3/5/2019
+MP29026,9/25/1960,Nollner,Emmett,28,Nulato,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,4/14/2020
+MP42621,9/25/1960,Demoski,Bertha,38,Nulato,Yukon-Koyukuk,Alaska,Female,American Indian / Alaska Native,4/14/2020
+MP42491,6/20/2009,Patigler,Gerhard,68,Palmer,Matanuska-Susitna,Alaska,Male,White / Caucasian,3/7/2018
+MP42492,6/20/2009,Patigler,Ingrid,66,Palmer,Matanuska-Susitna,Alaska,Female,White / Caucasian,3/7/2018
+MP26083,9/2/1983,Fitzgerald,Thomas,28,Paxson,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP41591,1/7/2016,Henry,Andrew,69,Ruby,Yukon-Koyukuk,Alaska,Male,American Indian / Alaska Native,9/14/2018
+MP29024,10/1/1965,Pungowiyi,Dennis,32,Savoonga,Nome,Alaska,Male,American Indian / Alaska Native,3/14/2018
+MP34751,10/20/1999,Immergan,Lancelot,33,Savoonga,Nome,Alaska,Male,American Indian / Alaska Native,4/17/2018
+MP36530,7/24/2006,Grissom,Thomas,42,St. Matthew Island,Bethel,Alaska,Male,White / Caucasian,4/14/2020
+MP36879,7/13/2016,Hawk,Walter,43,Tuluksak,Bethel,Alaska,Male,American Indian / Alaska Native,4/17/2018
+MP30184,11/29/1997,Maclin,Kevin,32,Unalaska,Aleutians West,Alaska,Male,Black / African American,4/14/2020
+MP43199,5/18/1988,Newman,William,40,Wasilla,Matanuska-Susitna,Alaska,Male,White / Caucasian,5/10/2018
+MP43198,5/18/1988,Melin,Jerry,33,Wasilla,Matanuska-Susitna,Alaska,Male,White / Caucasian,5/10/2018
+MP24429,8/5/1978,Rydholm,Stephan,24,Whittier,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP5865,4/25/1989,Borer,David,8,Willow,Matanuska-Susitna,Alaska,Male,White / Caucasian,4/14/2020
 MP60885,8/24/2019,Nez,Ervin,35,Chinle,Apache,Arizona,Male,American Indian / Alaska Native,10/16/2019
 MP28358,7/1/2014,Tsosie,Daniel,21,Chinle,Apache,Arizona,Male,American Indian / Alaska Native,8/15/2019
 MP53875,12/4/2008,Etsitty,Roy,76,Chinle,Apache,Arizona,Male,American Indian / Alaska Native,8/15/2019
@@ -8000,7 +8000,7 @@ MP80,12/31/1999,Nonemaker,Patsy,55,Shepherdville,Bullitt,Kentucky,Female,White /
 MP53425,12/4/2014,Tackwell,Tracy,42,Princeton,Caldwell,Kentucky,Female,White / Caucasian,9/9/2019
 MP7011,7/11/1992,Poole,James,39,Murray,Calloway,Kentucky,Male,White / Caucasian,3/15/2020
 MP7016,3/1/1989,Hafer,Steven,32,Grant's Lick,Campbell,Kentucky,Male,White / Caucasian,9/4/2019
-MP20803,7/18/1996,Fultz,Darrell,53,MELB0URN,Campbell,Kentucky,Male,White / Caucasian,9/4/2019
+MP20803,7/18/1996,Fultz,Darrell,53,Melbourne,Campbell,Kentucky,Male,White / Caucasian,9/4/2019
 MP22823,5/20/2011,Feltner,Jerry,33,Newport,Campbell,Kentucky,Male,White / Caucasian,3/17/2017
 MP7849,5/18/2010,Rithaler Jr,Robert,46,Newport,Campbell,Kentucky,Male,White / Caucasian,8/19/2019
 MP3003,4/3/1961,Hawkins,George,46,Newport,Campbell,Kentucky,Male,White / Caucasian,4/7/2020
@@ -8045,7 +8045,7 @@ MP1717,10/27/1993,Sons,Sharon,28,Lexington,Fayette,Kentucky,Female,White / Cauca
 MP1698,2/26/1977,Flynn,Melanie,24,Lexington,Fayette,Kentucky,Female,White / Caucasian,2/26/2020
 MP4930,3/16/1990,Manns,Mitchell,38,"Floyd County, Kentucky",Floyd,Kentucky,Male,White / Caucasian,2/27/2020
 MP2999,5/30/2001,Allen,Michael,26,Langley,Floyd,Kentucky,Male,White / Caucasian,2/27/2020
-MP65758,8/30/2019,GARRETT,KRISTA,32,PRESTONSBURG,Floyd,Kentucky,Female,White / Caucasian,3/20/2020
+MP65758,8/30/2019,GARRETT,KRISTA,32,Prestonsburg,Floyd,Kentucky,Female,White / Caucasian,3/20/2020
 MP54560,10/26/2018,Jackson,Kevin,25,Frankfort,Franklin,Kentucky,Male,White / Caucasian,11/22/2019
 MP9660,4/8/1972,McNeely,James,37,Frankfort,Franklin,Kentucky,Male,White / Caucasian,1/17/2020
 MP56794,10/22/2018,Adams,Julia,14,Berea,Garrard,Kentucky,Female,White / Caucasian,3/23/2020
@@ -8139,7 +8139,7 @@ MP4513,2/12/1982,Hollan Jr,Kelly,6,Larkslane,Knott,Kentucky,Male,White / Caucasi
 MP20776,1/7/2002,TRIPLETT,Paul,20,Pippa Passes,Knott,Kentucky,Male,White / Caucasian,9/16/2019
 MP11007,5/1/2011,Baker,Cecil,47,Barbourville,Knox,Kentucky,Male,White / Caucasian,8/19/2019
 MP40488,8/5/2015,Saunders,Kenneth,31,Heidrick,Knox,Kentucky,Male,White / Caucasian,8/14/2019
-MP36733,12/12/2015,Key,James,31,Hodgenville,LaRue,Kentucky,Male,White / Caucasian,4/30/2019
+MP36733,12/12/2015,Key,James,31,Hodgenville,Larue,Kentucky,Male,White / Caucasian,4/30/2019
 MP20815,7/16/1985,Tucker,Harold,53,Corbin,Laurel,Kentucky,Male,White / Caucasian,1/2/2020
 MP2224,7/6/2004,Collins,Michelle,21,East Bernstadt,Laurel,Kentucky,Female,White / Caucasian,3/13/2020
 MP18147,7/5/2012,Holmes,Clarence,32,London,Laurel,Kentucky,Male,White / Caucasian,4/16/2019
@@ -8165,14 +8165,14 @@ MP62304,10/20/2019,Jackson,Ella,47,Richmond,Madison,Kentucky,Female,"White / Cau
 MP56795,3/20/2017,Meza-Bradley,Destiney,14,Richmond,Madison,Kentucky,Female,"Hispanic / Latino, Other",3/23/2020
 MP20929,1/1/2000,Williams,Carson,43,Salyersville,Magoffin,Kentucky,Male,White / Caucasian,8/28/2019
 MP9733,7/17/2010,Rigdon,Kara,27,Gravel Switch,Marion,Kentucky,Female,White / Caucasian,11/19/2019
-MP40840,6/12/2017,TACEY,GARY,53,LORETTO,Marion,Kentucky,Male,White / Caucasian,8/16/2018
+MP40840,6/12/2017,TACEY,GARY,53,Loretto,Marion,Kentucky,Male,White / Caucasian,8/16/2018
 MP20920,12/30/2005,MILLER,Derryl,20,Inez,Martin,Kentucky,Male,White / Caucasian,8/9/2018
 MP53466,11/4/2018,Boggs,David,49,Paducah,McCracken,Kentucky,Male,White / Caucasian,9/18/2019
 MP9749,3/5/2004,Baker,Timothy,47,Paducah,McCracken,Kentucky,Male,White / Caucasian,8/27/2019
 MP7826,5/1/1985,Puckett,Joe,15,Paducah,McCracken,Kentucky,Male,White / Caucasian,3/15/2020
 MP24315,11/29/2004,Gray,Katie,0.5,Paducah,McCracken,Kentucky,Female,White / Caucasian,8/26/2019
 MP9746,10/10/1986,Cooper,Shelia,34,Paducah,McCracken,Kentucky,Female,White / Caucasian,9/4/2019
-MP50393,5/19/2018,Cross,William,29,whitley city,McCreary,Kentucky,Male,White / Caucasian,9/20/2019
+MP50393,5/19/2018,Cross,William,29,Whitley City,McCreary,Kentucky,Male,White / Caucasian,9/20/2019
 MP58134,5/24/2019,McCoy,Adam,40,Edmonrton,Metcalfe,Kentucky,Male,White / Caucasian,8/20/2019
 MP64535,10/1/2019,Cawthorn,Katie,20,Gamaliel,Monroe,Kentucky,Female,White / Caucasian,4/17/2020
 MP7898,9/24/1980,Hamilton,William,41,Mount Sterling,Montgomery,Kentucky,Male,Black / African American,9/16/2019
@@ -10531,7 +10531,7 @@ MP2513,4/23/1980,Butler,John,60,Gering,Scotts Bluff,Nebraska,Male,White / Caucas
 MP17177,7/22/1998,Girard,Kerry,36,Scottsbluff,Scotts Bluff,Nebraska,Female,White / Caucasian,11/4/2019
 MP59295,7/6/2019,Englebert,Chance,25,Terrytown,Scotts Bluff,Nebraska,Male,White / Caucasian,11/1/2019
 MP17172,9/30/1992,Lyons,Chauncey,43,Macy,Thurston,Nebraska,Male,American Indian / Alaska Native,8/23/2017
-MP28266,7/1/2013,Cash,Christopher,55,Carson City,Carson,Nevada,Male,White / Caucasian,9/20/2019
+MP28266,7/1/2013,Cash,Christopher,55,Carson City,Carson City,Nevada,Male,White / Caucasian,9/20/2019
 MP51138,1/1/1984,George,Walter,57,Fallon,Churchill,Nevada,Male,American Indian / Alaska Native,7/11/2019
 MP62265,8/21/2017,Posner,Jack,58,Boulder City,Clark,Nevada,Male,White / Caucasian,12/4/2019
 MP36811,6/11/2016,Jasinski,Julion,19,Boulder City,Clark,Nevada,Male,White / Caucasian,12/4/2019
@@ -14161,7 +14161,7 @@ MP67846,3/23/2020,Nightingale,Danielle,29,Etters,York,Pennsylvania,Female,White 
 MP42411,3/31/2014,Buhrman,Terrie,61,Hellam Township,York,Pennsylvania,Female,White / Caucasian,4/7/2020
 MP56286,,DELAHAY,Glenora,,York,York,Pennsylvania,Female,White / Caucasian,4/8/2020
 MP6736,7/6/1976,Torres-Irizarry,Angel,1,Adjuntas,Adjuntas,Puerto Rico,Male,White / Caucasian,7/23/2018
-MP39253,6/1/2016,Rodriguez Perez,Angel,16,Bayamon,Bayamon,Puerto Rico,Female,Hispanic / Latino,7/27/2017
+MP39253,6/1/2016,Rodriguez Perez,Angel,16,Bayamón,Bayamón,Puerto Rico,Female,Hispanic / Latino,7/27/2017
 MP11105,3/14/2011,Herrera,Bienvenido,56,Carolina,Carolina,Puerto Rico,Male,Hispanic / Latino,1/31/2015
 MP6533,11/26/2008,Pinero Morales,Stephanie,13,Ceiba,Ceiba,Puerto Rico,Female,Hispanic / Latino,8/6/2018
 MP4344,5/6/2004,Velazquez,Victor,28,Dorado,Dorado,Puerto Rico,Male,"White / Caucasian, Hispanic / Latino",4/19/2017
@@ -14169,9 +14169,9 @@ MP39056,6/14/2015,Garcia Valdes,Stephanie,15,Dorado,Dorado,Puerto Rico,Female,Hi
 MP6320,6/20/1998,Lopez Lugo,Luis,9,Guayanilla,Guayanilla,Puerto Rico,Male,Hispanic / Latino,5/22/2018
 MP6611,5/21/2006,Ruiz-Rodriguez,Cristina,13,Guayanilla,Guayanilla,Puerto Rico,Female,Hispanic / Latino,11/10/2017
 MP5810,9/9/1999,Aviles Colon,Diane,14,Guaynabo,Guaynabo,Puerto Rico,Female,Hispanic / Latino,11/15/2017
-MP5801,2/10/2001,Aponte-Soto,Yeritza,17,Juana Diaz,Juana Diaz,Puerto Rico,Female,Hispanic / Latino,11/10/2017
-MP59392,12/5/2018,Piacentino,Brenda,43,Loiza,Loiza,Puerto Rico,Female,White / Caucasian,9/16/2019
-MP4279,1/14/2004,Ramirez,Milton,44,Mayaguez,Mayaguez,Puerto Rico,Male,"White / Caucasian, Hispanic / Latino",8/23/2018
+MP5801,2/10/2001,Aponte-Soto,Yeritza,17,Juana Díaz,Juana Díaz,Puerto Rico,Female,Hispanic / Latino,11/10/2017
+MP59392,12/5/2018,Piacentino,Brenda,43,Loíza,Loíza,Puerto Rico,Female,White / Caucasian,9/16/2019
+MP4279,1/14/2004,Ramirez,Milton,44,Mayagüez,Mayagüez,Puerto Rico,Male,"White / Caucasian, Hispanic / Latino",8/23/2018
 MP2759,2/19/1995,Medina,Jose,15,Moca,Moca,Puerto Rico,Male,Hispanic / Latino,5/22/2018
 MP11913,10/9/2001,Garcia-Hernandez,Domingo,57,Ponce,Ponce,Puerto Rico,Male,"White / Caucasian, Hispanic / Latino",3/8/2018
 MP28563,10/31/2013,Escudero Gonzalez,Maria del Carmen,67,San Juan,San Juan,Puerto Rico,Female,"White / Caucasian, Hispanic / Latino",4/5/2018
@@ -14441,6 +14441,7 @@ MP31281,10/29/2015,Vasquez,Alejandro,24,Kyle,Oglala Lakota,South Dakota,Male,Ame
 MP65192,12/27/2019,Kills Enemy at Night,Robert,23,Manderson,Oglala Lakota,South Dakota,Male,American Indian / Alaska Native,3/20/2020
 MP65200,12/27/2019,Little Dog,Vincent,25,Manderson,Oglala Lakota,South Dakota,Male,American Indian / Alaska Native,3/20/2020
 MP42412,2/1/1974,Sits Poor,Delema,12,Pine Ridge,Oglala Lakota,South Dakota,Female,American Indian / Alaska Native,3/20/2020
+MP24046,4/1/1973,Robinson Jr.,Perry,35,Pine Ridge,Oglala Lakota,South Dakota,Male,Black / African American,4/4/2018
 MP51569,7/20/2017,Little Eagle,Neil,49,Porcupine,Oglala Lakota,South Dakota,Male,American Indian / Alaska Native,2/17/2020
 MP65729,9/1/1989,Jealous of Him,Lori,13,Porcupine,Oglala Lakota,South Dakota,Female,American Indian / Alaska Native,3/20/2020
 MP23488,7/13/2004,Whitecalf,Richard,71,Rapid City,Pennington,South Dakota,Male,American Indian / Alaska Native,9/19/2019
@@ -14449,7 +14450,6 @@ MP55257,2/3/2019,Dennard,Serenity,9,Rapid City,Pennington,South Dakota,Female,Wh
 MP35773,10/1/2016,Lonehill,Larissa,21,Rapid City,Pennington,South Dakota,Female,American Indian / Alaska Native,9/19/2019
 MP40010,11/17/1976,Larrabee,Donna,16,Rapid City,Pennington,South Dakota,Female,American Indian / Alaska Native,11/8/2019
 MP9404,4/7/2010,Lufkins,Andrew,23,Sisseton,Roberts,South Dakota,Male,American Indian / Alaska Native,6/6/2019
-MP24046,4/1/1973,Robinson Jr.,Perry,35,Pine Ridge,Oglala Lakota,South Dakota,Male,Black / African American,4/4/2018
 MP42764,5/6/2017,Parris,Garry,56,Clinton,Anderson,Tennessee,Male,White / Caucasian,10/1/2019
 MP10,2/4/2000,Toliver,Charles,30,Clinton,Anderson,Tennessee,Male,White / Caucasian,8/5/2019
 MP39265,9/29/2016,Contreras Lopez,Maria,16,Oak Ridge,Anderson,Tennessee,Female,Hispanic / Latino,2/4/2020
@@ -16427,6 +16427,7 @@ MP13761,12/10/2011,Shields,Candice,20,Graham,Young,Texas,Female,White / Caucasia
 MP34529,6/10/2010,Valadez,Jose,30,Zapata,Zapata,Texas,Male,"White / Caucasian, Hispanic / Latino",6/4/2018
 MP27569,6/15/2014,Jones,Don,23,Crystal City,Zavala,Texas,Male,"White / Caucasian, Hispanic / Latino",3/31/2019
 MP23631,7/13/1987,Gonzales,Josefina,40,Crystal City,Zavala,Texas,Female,"White / Caucasian, Hispanic / Latino",2/4/2020
+MP17289,11/30/2006,Brady,Carrel,41,La Grande Princesse,St. Croix,United States Virgin Islands,Male,Black / African American,9/17/2012
 MP17295,4/6/2011,Sharmouj,Musa-Raji,19,,St. Croix,United States Virgin Islands,Male,White / Caucasian,5/23/2018
 MP17306,3/21/2010,Garcia,Nicholas,85,,St. Croix,United States Virgin Islands,Male,White / Caucasian,9/17/2012
 MP2922,8/13/2000,Voss,David,35,,St. Croix,United States Virgin Islands,Male,White / Caucasian,2/12/2019
@@ -16442,7 +16443,6 @@ MP17287,10/31/2008,Joseph,Canute,43,,St. Thomas,United States Virgin Islands,Mal
 MP50503,9/14/2017,Upp,Hannah,32,,St. Thomas,United States Virgin Islands,Female,White / Caucasian,2/12/2019
 MP17288,8/12/2009,Charleswell,Akilah,27,,St. Thomas,United States Virgin Islands,Female,Black / African American,10/4/2019
 MP5504,5/2/2008,January,Penny,43,,St. Thomas,United States Virgin Islands,Female,Black / African American,12/8/2016
-MP17289,11/30/2006,Brady,Carrel,41,Little Plantation,,United States Virgin Islands,Male,Black / African American,9/17/2012
 MP15009,7/22/1981,Johnston,Michael,32,Brigham City,Box Elder,Utah,Male,White / Caucasian,11/22/2019
 MP18803,2/16/2012,Salazar,Maria,14,Snowville,Box Elder,Utah,Female,Hispanic / Latino,4/9/2020
 MP1560,7/23/2004,Gomez,Brenda,3,Logan,Cache,Utah,Female,Hispanic / Latino,8/26/2016
