@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="lib/leaflet/leaflet.css">
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        
+
     </head>
 
     <body>
@@ -21,7 +21,7 @@
                 <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="submit">Search</button>
                 <button type="button" class="btn info-button" data-toggle="modal" data-target="#splash-screen"></button>
             </form>
-            
+
         </div>
 
         <!-- Splash Screen Modal -->
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Container for Everything Else. Row 1: Filter, Map. Row 2: Names List -->
         <div class="page-content">
 
@@ -52,15 +52,17 @@
                     <div class="accordion" id="filter-accordion">
 
                         <!-- Database Tab -->
-                        <div class="card">
-                            <div class="card-header" id="database">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="card-header" role="tab" id="headingOne" >
+                                <h6 class="mb-0">
                                     Data
-                                </button>
-                                </h2>
+                                </h6>
+                                </div>
                             </div>
-                      
+                            </a>
+
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#filter-accordion">
                                 <!-- Data Contents -->
                                 <div class="card-body" for="headingOne">
@@ -93,14 +95,17 @@
                         </div>
 
                         <!-- Map Scale Tab -->
-                        <div class="card">
-                            <div class="card-header" id="map-scale">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <div class="card-header" role="tab" id="headingTwo" >
+                                <h6 class="mb-0">
                                     Map Scale
-                                </button>
-                                </h2>
+                                </h6>
+                                </div>
                             </div>
+                            </a>
+                            
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#filter-accordion">
                                 <!-- Map Scale Contents -->
                                 <div class="card-body">
@@ -127,14 +132,16 @@
                         </div>
 
                         <!-- Advance Filter Tab -->
-                        <div class="card">
-                            <div class="card-header" id="advance-filter">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" id="adv-filt" data-toggle="" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <div class="card-header" role="tab" id="headingThree" >
+                                <h6 class="mb-0">
                                     Advanced Filters
-                                </button>
-                                </h2>
+                                </h6>
+                                </div>
                             </div>
+                            </a>
 
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#filter-accordion">
                                 <!-- Buttons -->
@@ -143,7 +150,7 @@
                                     <button class="btn btn-outline-success submit-btn" type="submit">Submit</button>
                                 </div>
                                 <hr>
-                                <form name="advanced-filter" id="advanced-filter"> 
+                                <form name="advanced-filter" id="advanced-filter">
                                     <!-- Advance Filter Contents -->
                                     <div class="card-body adv-filter-card">
 
@@ -340,7 +347,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <!-- Map Container -->
                 <div id="map"></div>
             </div>
@@ -353,7 +360,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <!--Internal scripts; place these within <script> tags-->
 
