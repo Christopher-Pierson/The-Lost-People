@@ -1,11 +1,12 @@
 //declare map var in global scope
 var map;
+var dataSelected = ["combined-database", "state-scale"]
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
 
 //Declare Filter option global variables
 var database = "combined-database";
 var mapScale = "state-scale";
-var gender = "all";
+var gender = ["female", "male"];
 var ageFrom = 0;
 var ageTo = 100;
 var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
@@ -14,7 +15,7 @@ var yearTo = 2020;
 var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 
-///// Functions for Map
+///// Functions for Map /////
 //Function to instantiate the Leaflet map
 function createMap(){
     //create the map
@@ -40,25 +41,48 @@ function createMap(){
     }).addTo(map);
 
     //call getData function
-    getData();
+    getData(map);
 };
 
 //Import GeoJSON data
 function getData(map){
     ////////// Depending on what info is clicked, here is where we select which database
+    if (dataSelected[0] === "combined-database" && dataSelected[1] === "state-scale") {
+        //load the data
+        $.getJSON("data/JSON/summary_counts.json", function(response){
+            //create an attributes array
+            var attributes = processData(response, "Total_Count"); // attributes = Total Number
+                
+            // calcStats(response);
+            createPropSymbols(response, attributes);
+            createLegend(attributes[0]);
+        });
+    } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state") {
+        //load the data
+        $.getJSON("data/JSON/missing_states.json", function(response){
+            //create an attributes array
+            var attributes = processMoreData(response, "State"); 
+                
+            // calcStats(response);
+            createDiffPropSymbols(response, attributes);
+            // createDiffLegend(attributes[0]);
+        });
+    } else if (dataSelected[0] === "unidentified" && dataSelected[1] === "state") {
 
-    //load the data
-    $.getJSON("data/JSON/summary_counts.json", function(response){
-        //create an attributes array
-        var attributes = processData(response, "Total_Count"); // attributes = Total Number
-            
-        // calcStats(response);
-        createPropSymbols(response, attributes);
-        createLegend(attributes[0]);
-    });
+    } else if (dataSelected[0] === "unclaimed" && dataSelected[1] === "state") {
+
+    }
 };
 
-//Build an attributes array from the data
+//Build an attributes array from the special data
+function processMoreData(data, keyword){
+    //empty array to hold attributes
+    var attributes = [];
+
+    return attributes;
+};
+
+//Build an attributes array from the default data
 function processData(data, keyword){
     //empty array to hold attributes
     var attributes = [];
@@ -68,7 +92,7 @@ function processData(data, keyword){
 
     //push each attribute name into attributes array
     for (var attribute in properties){
-        //only take attributes with acres values
+        //only take attributes with keyword values
         if (attribute.indexOf(keyword) > -1){
             attributes.push(attribute);
         };
@@ -178,10 +202,10 @@ function calcStats(data){
     //create empty array to store all data values
     var allValues = [];
     
-    //loop through each state
-    for(var state of data.features){
+    //loop through each unit
+    for(var unit of data.features){
         //get number of records
-        var value = state.properties.Total_Count;
+        var value = unit.properties.Total_Count;
         //add value to array
         allValues.push(value);
     }
@@ -246,48 +270,101 @@ function createLegend(attribute){
 
 
 /////  Filter Functions  /////
-// Retrieve which database is selected and update advance filter labels
+// Retrieve which database is selected and update advance filter labels and map
 function getDatabase(){
-    console.log( document.querySelector('.database-check:checked').value );
     database = document.querySelector('.database-check:checked').value;
-
+    var container = L.DomUtil.get('map');
+    
     if (database === "missing-persons") {
         $('.data-header').html("Data: Missing Persons");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
+        dataSelected[0] = "missing-persons";
+        
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     } else if (database === "unidentified-persons") {
         $('.data-header').html("Data: Unidentified Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
+        dataSelected[0] = "unidentified-persons";
+        
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     } else if (database === "unclaimed-persons") {
         $('.data-header').html("Data: Unclaimed Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
+        dataSelected[0] = "unclaimed-persons";
+        
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     } else if (database === "combined-database") {
         $('.data-header').html("Data: Combined Database");
+        $('#collapseTwo').collapse('hide');
+        $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
+        dataSelected[0] = "combined-database";
+
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     }
+    console.log(database);
 }
 
-// Retrieve which map scale is selected
+// Retrieve which map scale is selected and update map
 function getMapScale(){
-    console.log( document.querySelector('.mapScale-check:checked').value );
     mapScale = document.querySelector('.mapScale-check:checked').value;
+    var container = L.DomUtil.get('map');
 
     if (mapScale === "state-scale") {
         $('.mapScale-header').html("Map Scale: State");
+        dataSelected[1] = "state-scale";
+
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     } else if (mapScale === "county-scale") {
         $('.mapScale-header').html("Map Scale: County");
+        dataSelected[1] = "county-scale";
+
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     } else if (mapScale === "city-scale") {
         $('.mapScale-header').html("Map Scale: City");
+        dataSelected[1] = "city-scale";
+
+        map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+        }
+        createMap();
     }
+    console.log(mapScale);
 }
 
 // Function to Select All/Deselect All Ethnicity Boxes
@@ -346,6 +423,23 @@ function checkAllMonths(){
      });
 }
 
+// Get the gender that was checked
+function getCheckedGender() {
+    var genderSelected = document.querySelector('.gender-check:checked').value; //$('.gender-check:checked').val())
+    if (genderSelected === "all") {
+        output = ["female", "male", "other", "unsure"]
+    } else if (genderSelected === "female") {
+        output = ["female"]
+    } else if (genderSelected === "male") {
+        output = ["male"]
+    } else if (genderSelected === "other") {
+        output = ["other"]
+    } else if (genderSelected === "unsure") {
+        output = ["unsure"]
+    }
+    return output;
+}
+
 // Get the list of ethnicity checkboxes checked
 function getCheckedEthnicity() {
     var checkboxes = document.getElementsByName('ethnicity-check');
@@ -391,8 +485,8 @@ function resetFilterOptions() {
 
 // Retrieve which advanced filter options are selected
 function getFilterOptions(){
-    gender = document.querySelector('.gender-check:checked').value; //$('.gender-check:checked').val())
-    ageFrom = document.querySelector('#ageFrom-check').value;
+    gender = getCheckedGender();
+    ageFrom = document.querySelector('#ageFrom-check').value; //$('#ageFrom-check').val())
     ageTo = document.querySelector('#ageTo-check').value;
     ethnicity = getCheckedEthnicity();
     yearFrom = document.querySelector('#yearFrom-check').value;
@@ -430,4 +524,4 @@ $(window).on('load',function(){
     $('#splash-screen').modal('show');
 });
 //Create Mape
-$(document).ready(createMap);
+$(document).ready(createMap());
