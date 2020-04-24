@@ -246,10 +246,30 @@ function createLegend(attribute){
 
 
 /////  Filter Functions  /////
-// Retrieve which database is selected
+// Retrieve which database is selected and update advance filter labels
 function getDatabase(){
     console.log( document.querySelector('.database-check:checked').value );
     database = document.querySelector('.database-check:checked').value;
+
+    if (database === "missing-persons") {
+        $('#date-gone-found').html("Date Last Seen");
+        $('#adv-filt').attr('data-toggle', "collapse");
+        $("#gender-other").attr('disabled', true);
+        $("#gender-unsure").attr('disabled', true);
+    } else if (database === "unidentified-persons") {
+        $('#date-gone-found').html("Date Body Found");
+        $('#adv-filt').attr('data-toggle', "collapse");
+        $("#gender-other").attr('disabled', false);
+        $("#gender-unsure").attr('disabled', false);
+    } else if (database === "unclaimed-persons") {
+        $('#date-gone-found').html("Date Body Found");
+        $('#adv-filt').attr('data-toggle', "collapse");
+        $("#gender-other").attr('disabled', true);
+        $("#gender-unsure").attr('disabled', true);
+    } else if (database === "combined-database") {
+        $('#date-gone-found').html("...");
+        $('#adv-filt').attr('data-toggle', "");
+    }
 }
 
 // Retrieve which map scale is selected
