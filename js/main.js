@@ -252,21 +252,25 @@ function getDatabase(){
     database = document.querySelector('.database-check:checked').value;
 
     if (database === "missing-persons") {
+        $('.data-header').html("Data: Missing Persons");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
     } else if (database === "unidentified-persons") {
+        $('.data-header').html("Data: Unidentified Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
     } else if (database === "unclaimed-persons") {
+        $('.data-header').html("Data: Unclaimed Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
     } else if (database === "combined-database") {
+        $('.data-header').html("Data: Combined Database");
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
     }
@@ -276,6 +280,14 @@ function getDatabase(){
 function getMapScale(){
     console.log( document.querySelector('.mapScale-check:checked').value );
     mapScale = document.querySelector('.mapScale-check:checked').value;
+
+    if (mapScale === "state-scale") {
+        $('.mapScale-header').html("Map Scale: State");
+    } else if (mapScale === "county-scale") {
+        $('.mapScale-header').html("Map Scale: County");
+    } else if (mapScale === "city-scale") {
+        $('.mapScale-header').html("Map Scale: City");
+    }
 }
 
 // Function to Select All/Deselect All Ethnicity Boxes

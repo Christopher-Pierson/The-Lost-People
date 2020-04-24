@@ -26,10 +26,10 @@
 
         <!-- Splash Screen Modal -->
         <div class="modal fade" id="splash-screen" tabindex="-1" role="dialog" aria-labelledby="splash-screen" aria-hidden="true" data-backdrop="static">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">The Missing People</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">The Lost People</h5>
                     </div>
                     <div class="modal-body">
                       <p>Welcome to The Lost People, the unofficial NamUs.gov spatial database viewer and querier. NamUs (National Missing and Unidentified Persons System) is a public database for searching cases of missing, unidentified, and unclaimed persons in the United States, including territories. The purpose of this website is to offer an alternative querying tool and to provide a spatial view of the number of cases by state, county, and city.</p>
@@ -60,9 +60,9 @@
                             <div class="card">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <div class="card-header" role="tab" id="headingOne" >
-                                <h6 class="mb-0">
-                                    Data
-                                </h6>
+                                <h5 class="mb-0 data-header">
+                                    Data: Combined Database
+                                </h5>
                                 </div>
                             </div>
                             </a>
@@ -103,9 +103,9 @@
                             <div class="card">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                 <div class="card-header" role="tab" id="headingTwo" >
-                                <h6 class="mb-0">
-                                    Map Scale
-                                </h6>
+                                <h5 class="mb-0 mapScale-header">
+                                    Map Scale: State
+                                </h5>
                                 </div>
                             </div>
                             </a>
@@ -116,19 +116,19 @@
                                     <div class="form-check">
                                         <input class="mapScale-check" type="radio" name="mapScale" id="state-scale" value="state-scale" checked="checked">
                                         <label class="form-check-label" for="state-scale">
-                                            State
+                                            State Level
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="mapScale-check" type="radio" name="mapScale" id="county-scale" value="county-scale">
                                         <label class="form-check-label" for="county-scale">
-                                            County
+                                            County Level
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="mapScale-check" type="radio" name="mapScale" id="city-scale" value="city-scale">
                                         <label class="form-check-label" for="city-scale">
-                                            City
+                                            City Level
                                         </label>
                                     </div>
                                 </div>
@@ -138,11 +138,11 @@
                         <!-- Advance Filter Tab -->
                         <div id="accordion" role="tablist" aria-multiselectable="true">
                             <div class="card">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                <div class="card-header" role="tab" id="headingThree" >
-                                <h6 class="mb-0">
+                            <a id="adv-filt" data-toggle="" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <div class="card-header" role="tab" id="headingThree">
+                                <h5 class="mb-0">
                                     Advanced Filters
-                                </h6>
+                                </h5>
                                 </div>
                             </div>
                             </a>
