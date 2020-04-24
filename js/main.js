@@ -46,7 +46,7 @@ function createMap(){
 
 //Import GeoJSON data
 function getData(map){
-    ////////// Depending on what info is clicked, here is where we select which database
+    // Depending on what info is clicked, select the correct data
     if (dataSelected[0] === "combined-database" && dataSelected[1] === "state-scale") {
         //load the data
         $.getJSON("data/JSON/summary_counts.json", function(response){
@@ -57,19 +57,37 @@ function getData(map){
             createPropSymbols(response, attributes);
             createLegend(attributes[0]);
         });
-    } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state") {
+    } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state-scale") {
         //load the data
-        $.getJSON("data/JSON/missing_states.json", function(response){
+        $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processMoreData(response, "State"); 
+            var attributes = processMoreData(response, "missing"); 
                 
             // calcStats(response);
-            createDiffPropSymbols(response, attributes);
+            createDiffPropSymbols(response, attributes, "missing");
             // createDiffLegend(attributes[0]);
         });
-    } else if (dataSelected[0] === "unidentified" && dataSelected[1] === "state") {
+    } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "state-scale") {
+        //load the data
+        $.getJSON("data/JSON/state_geojson.json", function(response){
+            //create an attributes array
+            var attributes = processMoreData(response, "unidentified"); 
+                
+            // calcStats(response);
+            createDiffPropSymbols(response, attributes, "unidentified");
+            // createDiffLegend(attributes[0]);
+        });
 
-    } else if (dataSelected[0] === "unclaimed" && dataSelected[1] === "state") {
+    } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "state-scale") {
+        //load the data
+        $.getJSON("data/JSON/state_geojson.json", function(response){
+            //create an attributes array
+            var attributes = processMoreData(response, "unclaimed"); 
+                
+            // calcStats(response);
+            createDiffPropSymbols(response, attributes, "unclaimed");
+            // createDiffLegend(attributes[0]);
+        });
 
     }
 };
@@ -78,6 +96,32 @@ function getData(map){
 function processMoreData(data, keyword){
     //empty array to hold attributes
     var attributes = [];
+    //set the database
+    var properties;
+
+    //properties of the first feature in the dataset
+    if (keyword === "missing") {
+        properties = data.features[0].properties.missing;
+
+        //push each attribute into attributes array
+        for (var attribute in properties){
+            attributes.push(attribute);
+        };
+    } else if (keyword === "unclaimed") {
+        properties = data.features[0].properties.unclaimed;
+
+        //push each attribute into attributes array
+        for (var attribute in properties){
+            attributes.push(attribute);
+        };
+    } else if (keyword === "unidentified") {
+        properties = data.features[0].properties.unidentified;
+
+        //push each attribute into attributes array
+        for (var attribute in properties){
+            attributes.push(attribute);
+        };
+    }
 
     return attributes;
 };
@@ -102,6 +146,16 @@ function processData(data, keyword){
 };
 
 // Add circle markers for point features to the map
+function createDiffPropSymbols(data, attributes, keyword){
+    //create a Leaflet GeoJSON layer and add it to the map
+    L.geoJson(data, {
+        pointToLayer: function(feature, latlng){
+            return pointToLayerComplex(feature, latlng, attributes, keyword);
+        }
+    }).addTo(map);
+};
+
+// Add circle markers for point features to the map
 function createPropSymbols(data, attributes){
     //create a Leaflet GeoJSON layer and add it to the map
     L.geoJson(data, {
@@ -109,6 +163,68 @@ function createPropSymbols(data, attributes){
             return pointToLayer(feature, latlng, attributes);
         }
     }).addTo(map);
+};
+
+//Convert markers to circle markers
+function pointToLayerComplex(feature, latlng, attributes, keyword){
+    // Determine which attribute to visualize with proportional symbols
+    //Assign the current attribute based on the first index of the attributes array
+    var attribute = attributes[0];
+
+    
+    if (keyword == "missing"){
+        //create marker options
+        var options = {
+            radius: 8,
+            fillColor: "#000066",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(feature.properties.missing.length);
+    } else if (keyword == "unidentified"){
+        //create marker options
+        var options = {
+            radius: 8,
+            fillColor: "#99000",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(feature.properties.unidentified.length);
+    } else if (keyword == "unclaimed"){
+        //create marker options
+        var options = {
+            radius: 8,
+            fillColor: "#800080",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(feature.properties.unclaimed.length);
+    } 
+
+    //Give each feature's circle marker a radius based on its attribute value
+    options.radius = calcPropRadius(attValue);
+
+    //create circle marker layer
+    var layer = L.circleMarker(latlng, options);
+
+    // var popupContent = createPopupContent(feature.properties, attribute);
+
+    //bind the popup to the circle marker
+    // layer.bindPopup(popupContent, {
+    //     offset: new L.Point(0,(-options.radius)/2) 
+    // });
+
+    //return the circle marker to the L.geoJson pointToLayer option
+    return layer;
 };
 
 //Convert markers to circle markers
