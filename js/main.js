@@ -26,7 +26,7 @@ function createMap(){
         zoom: 4,
         minZoom: 3,
         maxZoom: 12,
-        maxBounds: [[75, -180], [-30, -10]], // [top, left], [bottom, right]
+        maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
     });
 
     // Add zoom control (but in top right)
@@ -51,30 +51,30 @@ function getData(map){
         //load the data
         $.getJSON("data/JSON/summary_counts.json", function(response){
             //create an attributes array
-            var attributes = processData(response, "Total_Count"); // attributes = Total Number
+            var attributes = processData(response, "combined"); // attributes = Total Number
                 
             // calcStats(response);
-            createPropSymbols(response, attributes);
+            createPropSymbols(response, attributes, "combined");
             createLegend(attributes[0]);
         });
     } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state-scale") {
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processMoreData(response, "missing"); 
+            var attributes = processData(response, "missing"); 
                 
             // calcStats(response);
-            createDiffPropSymbols(response, attributes, "missing");
+            createPropSymbols(response, attributes, "missing");
             // createDiffLegend(attributes[0]);
         });
     } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "state-scale") {
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processMoreData(response, "unidentified"); 
+            var attributes = processData(response, "unidentified"); 
                 
             // calcStats(response);
-            createDiffPropSymbols(response, attributes, "unidentified");
+            createPropSymbols(response, attributes, "unidentified");
             // createDiffLegend(attributes[0]);
         });
 
@@ -82,10 +82,10 @@ function getData(map){
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processMoreData(response, "unclaimed"); 
+            var attributes = processData(response, "unclaimed"); 
                 
             // calcStats(response);
-            createDiffPropSymbols(response, attributes, "unclaimed");
+            createPropSymbols(response, attributes, "unclaimed");
             // createDiffLegend(attributes[0]);
         });
 
@@ -93,15 +93,27 @@ function getData(map){
 };
 
 //Build an attributes array from the special data
-function processMoreData(data, keyword){
+function processData(data, keyword){
     //empty array to hold attributes
     var attributes = [];
     //set the database
     var properties;
 
     //properties of the first feature in the dataset
-    if (keyword === "missing") {
+    if (keyword === "combined") {
+        //properties of the first feature in the dataset
+        properties = data.features[0].properties;
+
+        //push each attribute name into attributes array
+        for (var attribute in properties){
+            //only take attributes with keyword values
+            if (attribute.indexOf("Total_Count") > -1){
+                attributes.push(attribute);
+            };
+        };
+    } else if (keyword === "missing") {
         properties = data.features[0].properties.missing;
+        console.log(properties[0]["Case Number"]); // This syntax
 
         //push each attribute into attributes array
         for (var attribute in properties){
@@ -126,53 +138,38 @@ function processMoreData(data, keyword){
     return attributes;
 };
 
-//Build an attributes array from the default data
-function processData(data, keyword){
-    //empty array to hold attributes
-    var attributes = [];
-
-    //properties of the first feature in the dataset
-    var properties = data.features[0].properties;
-
-    //push each attribute name into attributes array
-    for (var attribute in properties){
-        //only take attributes with keyword values
-        if (attribute.indexOf(keyword) > -1){
-            attributes.push(attribute);
-        };
-    };
-
-    return attributes;
-};
-
 // Add circle markers for point features to the map
-function createDiffPropSymbols(data, attributes, keyword){
+function createPropSymbols(data, attributes, keyword){
     //create a Leaflet GeoJSON layer and add it to the map
     L.geoJson(data, {
         pointToLayer: function(feature, latlng){
-            return pointToLayerComplex(feature, latlng, attributes, keyword);
-        }
-    }).addTo(map);
-};
-
-// Add circle markers for point features to the map
-function createPropSymbols(data, attributes){
-    //create a Leaflet GeoJSON layer and add it to the map
-    L.geoJson(data, {
-        pointToLayer: function(feature, latlng){
-            return pointToLayer(feature, latlng, attributes);
+            return pointToLayer(feature, latlng, attributes, keyword);
         }
     }).addTo(map);
 };
 
 //Convert markers to circle markers
-function pointToLayerComplex(feature, latlng, attributes, keyword){
+function pointToLayer(feature, latlng, attributes, keyword){
     // Determine which attribute to visualize with proportional symbols
     //Assign the current attribute based on the first index of the attributes array
     var attribute = attributes[0];
 
-    
-    if (keyword == "missing"){
+    if (keyword == "combined"){
+        //create marker options
+        var options = {
+            radius: 8,
+            fillColor: "#3CB371",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(feature.properties[attribute]);
+        //Create the popup content for the combined dataset layer
+        var popupContent = createPopupContent(feature.properties, attribute);
+    } else if (keyword == "missing"){
         //create marker options
         var options = {
             radius: 8,
@@ -184,11 +181,13 @@ function pointToLayerComplex(feature, latlng, attributes, keyword){
         };
         //For each feature, determine its value for the selected attribute
         var attValue = Number(feature.properties.missing.length);
+
+        var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "unidentified"){
         //create marker options
         var options = {
             radius: 8,
-            fillColor: "#99000",
+            fillColor: "#990000",
             color: "#000",
             weight: 1,
             opacity: 1,
@@ -196,6 +195,8 @@ function pointToLayerComplex(feature, latlng, attributes, keyword){
         };
         //For each feature, determine its value for the selected attribute
         var attValue = Number(feature.properties.unidentified.length);
+
+        var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "unclaimed"){
         //create marker options
         var options = {
@@ -208,6 +209,8 @@ function pointToLayerComplex(feature, latlng, attributes, keyword){
         };
         //For each feature, determine its value for the selected attribute
         var attValue = Number(feature.properties.unclaimed.length);
+
+        var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } 
 
     //Give each feature's circle marker a radius based on its attribute value
@@ -216,44 +219,6 @@ function pointToLayerComplex(feature, latlng, attributes, keyword){
     //create circle marker layer
     var layer = L.circleMarker(latlng, options);
 
-    // var popupContent = createPopupContent(feature.properties, attribute);
-
-    //bind the popup to the circle marker
-    // layer.bindPopup(popupContent, {
-    //     offset: new L.Point(0,(-options.radius)/2) 
-    // });
-
-    //return the circle marker to the L.geoJson pointToLayer option
-    return layer;
-};
-
-//Convert markers to circle markers
-function pointToLayer(feature, latlng, attributes){
-    // Determine which attribute to visualize with proportional symbols
-    //Assign the current attribute based on the first index of the attributes array
-    var attribute = attributes[0];
-
-    //create marker options
-    var options = {
-        radius: 8,
-        fillColor: "#3CB371",
-        color: "#000",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.8
-    };
-
-    //For each feature, determine its value for the selected attribute
-    var attValue = Number(feature.properties[attribute]);
-
-    //Give each feature's circle marker a radius based on its attribute value
-    options.radius = calcPropRadius(attValue);
-
-    //create circle marker layer
-    var layer = L.circleMarker(latlng, options);
-
-    var popupContent = createPopupContent(feature.properties, attribute);
-
     //bind the popup to the circle marker
     layer.bindPopup(popupContent, {
         offset: new L.Point(0,(-options.radius)/2) 
@@ -261,6 +226,30 @@ function pointToLayer(feature, latlng, attributes){
 
     //return the circle marker to the L.geoJson pointToLayer option
     return layer;
+};
+
+// Creates text for the popups in the prop symbols
+function createPopupContentExtra(feature, attValue, keyword){
+    //add name to popup content string
+    var popupContent = "<p style='font-size: 20px'><b>" + feature.name + "</b></p>";
+
+    console.log(feature);
+    //add formatted attribute to panel content string
+    if (keyword === "missing") {
+        popupContent += "<p>Number of Missing Persons Records: <b>" +attValue + "</b></p>";
+
+        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+    } else if (keyword === "unidentified") {
+        popupContent += "<p>Number of Unidentifiesd Persons Records: <b>" +attValue + "</b></p>";
+
+        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+    }else if (keyword === "unclaimed") {
+        popupContent += "<p>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
+
+        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+    }
+
+    return popupContent;
 };
 
 // Creates text for the popups in the prop symbols
@@ -398,6 +387,7 @@ function getDatabase(){
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
         dataSelected[0] = "missing-persons";
+        resetFilterOptions();
         
         map.remove();
         if(container != null){
@@ -411,6 +401,7 @@ function getDatabase(){
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
         dataSelected[0] = "unidentified-persons";
+        resetFilterOptions();
         
         map.remove();
         if(container != null){
@@ -424,6 +415,7 @@ function getDatabase(){
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
         dataSelected[0] = "unclaimed-persons";
+        resetFilterOptions();
         
         map.remove();
         if(container != null){
@@ -437,6 +429,7 @@ function getDatabase(){
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
         dataSelected[0] = "combined-database";
+        resetFilterOptions();
 
         map.remove();
         if(container != null){
