@@ -79,7 +79,6 @@ function getData(map){
             createPropSymbols(response, attributes, "unidentified");
             // createDiffLegend(attributes[0]);
         });
-
     } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "state-scale") {
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -240,15 +239,15 @@ function createPopupContentExtra(feature, attValue, keyword){
     if (keyword === "missing") {
         popupContent += "<p>Number of Missing Persons Records: <b>" +attValue + "</b></p>";
 
-        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unidentified") {
-        popupContent += "<p>Number of Unidentifiesd Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
 
-        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     }else if (keyword === "unclaimed") {
         popupContent += "<p>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
 
-        popupContent += "<p>Click here to Retrieve List of Records<b></b>";
+        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     }
 
     return popupContent;
@@ -617,28 +616,34 @@ function doAdvanceFilter() {
     console.log(yearEnd);
     console.log(month);
 
-    // console.log(currentDB[0]["Case Number"]);
-    // for (each in currentDB){
-    //     console.log(currentDB[each].properties);
-    // }
-
     var filterConfig = '{ "Sex": "'+gender[0] +'"}';
+    console.log(currentDB);
 
+    //Loop through all of the records comparing the filtered options to the record
     if (database === "missing-persons") {
         for (each in currentDB){
             for (each2 in currentDB[each].properties.missing){
                 var currentVar = currentDB[each].properties.missing[each2];
                 
-                //compare gender first
+                //Compare gender first
                 for (eachGender in gender){
                     if(currentVar["Sex"] === gender[eachGender]){
-                        //compare age
+                        //Compare age
                         if(currentVar["Missing Age"] >= ageFrom && currentVar["Missing Age"] <= ageTo){
-                            //compare ethnicity
+                            //Compare ethnicity
                             for(eachEthnicity in ethnicity) {
                                 if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
-                                    console.log(currentVar);
-                                    //etc.....
+                                    //Compare Year
+                                    if(currentVar["DLC"].slice(-4) >= yearStart && currentVar["DLC"].slice(-4) <= yearEnd){
+                                        // console.log(currentVar["DLC"]);
+                                        //Compare Month
+                                        for (eachMonth in month){
+                                            if(currentVar["DLC"].substr(0, currentVar["DLC"].indexOf('/')) == month[eachMonth]){
+                                                // console.log(currentVar);
+                                                currentDB[each].properties.filtered.push(currentVar);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -656,6 +661,30 @@ function doAdvanceFilter() {
             console.log(currentDB[each].properties.unidentified);
     
         }
+    }
+    console.log(currentDB);
+}
+
+// Function to retrieve names from currentDB and print out the selected records of that prop symbol
+function getNames(){
+    if(database === "missing-persons"){
+        console.log(currentDB[0].properties.missing);
+        for (each in currentDB[0].properties.missing){
+        }
+
+        $('#names-list').html('Test: Missing Names Now Here')
+    } else if (database === "unclaimed-persons"){
+        console.log(currentDB[0].properties.unclaimed);
+
+        $('#names-list').html('Test: UnclaimedNames Now Here')
+    } else if (database === "unidentified-persons"){
+        console.log(currentDB[0].properties.unidentified);
+
+        $('#names-list').html('Test: Unidentified Names Now Here')
+    } else if (database === "filtered-persons"){
+        console.log(currentDB[0].properties.filtered);
+
+        $('#names-list').html('Test: Filtered Names Now Here')
     }
 }
 
@@ -675,6 +704,12 @@ $(document).ready(checkAllEthnicity);
 //Select All Months Button
 $(document).ready(checkAllMonths);
 
+//Retrieve names from within popup
+$("body").on('click','a.retrieveNames', function(e){
+    e.preventDefault();
+    getNames();
+});
+
 
 //Splash Screen
 $(window).on('load',function(){
@@ -682,3 +717,4 @@ $(window).on('load',function(){
 });
 //Create Mape
 $(document).ready(createMap());
+
