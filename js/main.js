@@ -1,17 +1,19 @@
 //declare map var in global scope
 var map;
-var dataSelected = ["combined-database", "state-scale"]
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
 
+//Declare Database global variables
+var currentDB; //current json on map
+var dataSelected = ["combined-database", "state-scale"]
 //Declare Filter option global variables
 var database = "combined-database";
 var mapScale = "state-scale";
-var gender = ["female", "male"];
+var gender = ["Female", "Male"];
 var ageFrom = 0;
 var ageTo = 100;
 var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
-var yearFrom = 1900;
-var yearTo = 2020;
+var yearStart = 1900;
+var yearEnd = 2020;
 var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 
 
@@ -94,43 +96,44 @@ function getData(map){
 
 //Build an attributes array from the special data
 function processData(data, keyword){
+    //assign current json to global variable for filtering
+    currentDB = data.features;
     //empty array to hold attributes
     var attributes = [];
-    //set the database
-    var properties;
+    //empty variable to store properties
+    var currentProperties; 
 
     //properties of the first feature in the dataset
     if (keyword === "combined") {
         //properties of the first feature in the dataset
-        properties = data.features[0].properties;
+        currentProperties = data.features[0].properties;
 
         //push each attribute name into attributes array
-        for (var attribute in properties){
+        for (var attribute in currentProperties){
             //only take attributes with keyword values
             if (attribute.indexOf("Total_Count") > -1){
                 attributes.push(attribute);
             };
         };
     } else if (keyword === "missing") {
-        properties = data.features[0].properties.missing;
-        console.log(properties[0]["Case Number"]); // This syntax
+        currentProperties = data.features[0].properties.missing;
 
         //push each attribute into attributes array
-        for (var attribute in properties){
+        for (var attribute in currentProperties){
             attributes.push(attribute);
         };
     } else if (keyword === "unclaimed") {
-        properties = data.features[0].properties.unclaimed;
+        currentProperties = data.features[0].properties.unclaimed;
 
         //push each attribute into attributes array
-        for (var attribute in properties){
+        for (var attribute in currentProperties){
             attributes.push(attribute);
         };
     } else if (keyword === "unidentified") {
-        properties = data.features[0].properties.unidentified;
+        currentProperties = data.features[0].properties.unidentified;
 
         //push each attribute into attributes array
-        for (var attribute in properties){
+        for (var attribute in currentProperties){
             attributes.push(attribute);
         };
     }
@@ -233,7 +236,6 @@ function createPopupContentExtra(feature, attValue, keyword){
     //add name to popup content string
     var popupContent = "<p style='font-size: 20px'><b>" + feature.name + "</b></p>";
 
-    console.log(feature);
     //add formatted attribute to panel content string
     if (keyword === "missing") {
         popupContent += "<p>Number of Missing Persons Records: <b>" +attValue + "</b></p>";
@@ -437,7 +439,6 @@ function getDatabase(){
         }
         createMap();
     }
-    console.log(database);
 }
 
 // Retrieve which map scale is selected and update map
@@ -473,7 +474,6 @@ function getMapScale(){
         }
         createMap();
     }
-    console.log(mapScale);
 }
 
 // Function to Select All/Deselect All Ethnicity Boxes
@@ -535,16 +535,16 @@ function checkAllMonths(){
 // Get the gender that was checked
 function getCheckedGender() {
     var genderSelected = document.querySelector('.gender-check:checked').value; //$('.gender-check:checked').val())
-    if (genderSelected === "all") {
-        output = ["female", "male", "other", "unsure"]
-    } else if (genderSelected === "female") {
-        output = ["female"]
-    } else if (genderSelected === "male") {
-        output = ["male"]
-    } else if (genderSelected === "other") {
-        output = ["other"]
-    } else if (genderSelected === "unsure") {
-        output = ["unsure"]
+    if (genderSelected === "All") {
+        var output = ["Female", "Male", "Other", "Unsure"]
+    } else if (genderSelected === "Female") {
+        var output = ["Female"]
+    } else if (genderSelected === "Male") {
+        var output = ["Male"]
+    } else if (genderSelected === "Other") {
+        var output = ["Other"]
+    } else if (genderSelected === "Unsure") {
+        var output = ["Unsure"]
     }
     return output;
 }
@@ -583,12 +583,12 @@ function getCheckedMonth() {
 function resetFilterOptions() {
     $("#advanced-filter").trigger("reset");
 
-    gender = "all";
+    gender = ["Female", "Male"];
     ageFrom = 0;
     ageTo = 100;
     ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
-    yearFrom = 1900;
-    yearTo = 2020;
+    yearStart = 1900;
+    yearEnd = 2020;
     Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 }
 
@@ -598,17 +598,65 @@ function getFilterOptions(){
     ageFrom = document.querySelector('#ageFrom-check').value; //$('#ageFrom-check').val())
     ageTo = document.querySelector('#ageTo-check').value;
     ethnicity = getCheckedEthnicity();
-    yearFrom = document.querySelector('#yearFrom-check').value;
-    yearTo = document.querySelector('#yearTo-check').value;
+    yearStart = document.querySelector('#yearStart-check').value;
+    yearEnd = document.querySelector('#yearEnd-check').value;
     month = getCheckedMonth();
 
+    doAdvanceFilter();
+}
+
+// Function to filter the data per the selected options
+function doAdvanceFilter() {
+    console.log(database);
+    console.log(mapScale);
     console.log(gender);
     console.log(ageFrom);
     console.log(ageTo);
     console.log(ethnicity);
-    console.log(yearFrom);
-    console.log(yearTo);
+    console.log(yearStart);
+    console.log(yearEnd);
     console.log(month);
+
+    // console.log(currentDB[0]["Case Number"]);
+    // for (each in currentDB){
+    //     console.log(currentDB[each].properties);
+    // }
+
+    var filterConfig = '{ "Sex": "'+gender[0] +'"}';
+
+    if (database === "missing-persons") {
+        for (each in currentDB){
+            for (each2 in currentDB[each].properties.missing){
+                var currentVar = currentDB[each].properties.missing[each2];
+                
+                //compare gender first
+                for (eachGender in gender){
+                    if(currentVar["Sex"] === gender[eachGender]){
+                        //compare age
+                        if(currentVar["Missing Age"] >= ageFrom && currentVar["Missing Age"] <= ageTo){
+                            //compare ethnicity
+                            for(eachEthnicity in ethnicity) {
+                                if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
+                                    console.log(currentVar);
+                                    //etc.....
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } else if (database === "unclaimed-persons") {
+        for (each in currentDB){
+            console.log(currentDB[each].properties.unclaimed);
+    
+        }
+    } else if (database === "unidentified-persons") {
+        for (each in currentDB){
+            console.log(currentDB[each].properties.unidentified);
+    
+        }
+    }
 }
 
 
