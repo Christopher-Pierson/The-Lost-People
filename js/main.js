@@ -91,6 +91,32 @@ function createMapFiltered(){
         position: 'topright'
     }).addTo(map);
 
+    // Add zoom buttons for non-contiguous states and territories
+    L.easyButton('<strong>AK</strong>', function(){
+        map.setView([65.144912, -152.541399], 3.5);
+    },'zoom to Alaska',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>HI</strong>', function(){
+        map.setView([20.891499, -157.959362], 6.29);
+    },'zoom to Hawaii',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>GU</strong>', function(){
+        map.setView([13.432056, 144.812821], 10.5);
+    },'zoom to Guam',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>MP</strong>', function(){
+        //map.setView([16.530659, 146.027901], 6.35); alternative view of all islands
+        map.setView([15.097820, 145.642088], 10.5);
+    },'zoom to North Mariana Islands',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>PR</strong>', function(){
+        map.setView([18.254990, -66.423918], 9.25);
+    },'zoom to Puerto Rico',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>VI</strong>', function(){
+        map.setView([17.970324, -64.727032], 10);
+    },'zoom to U.S. Virgin Islands',{ position: 'topright' }).addTo(map);
+
     //Add OSM base tilelayer
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
