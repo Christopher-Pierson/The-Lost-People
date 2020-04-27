@@ -64,9 +64,9 @@ function createMap(){
     },'zoom to U.S. Virgin Islands',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+	     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	     subdomains: 'abcd'
     }).addTo(map);
 
     //call getData function
@@ -85,6 +85,11 @@ function createMapFiltered(){
         maxZoom: 12,
         maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
     });
+
+    // Add zoom control (but in top right)
+    L.control.zoom({
+        position: 'topright'
+    }).addTo(map);
 
     // Add zoom control (but in top right)
     L.control.zoom({
@@ -117,10 +122,11 @@ function createMapFiltered(){
         map.setView([17.970324, -64.727032], 10);
     },'zoom to U.S. Virgin Islands',{ position: 'topright' }).addTo(map);
 
+
     //Add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	subdomains: 'abcd',
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	    ubdomains: 'abcd'
     }).addTo(map);
 
     //call getDataFiltered function
