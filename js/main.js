@@ -37,6 +37,32 @@ function createMap(){
         position: 'topright'
     }).addTo(map);
 
+    // Add zoom buttons for non-contiguous states and territories
+    L.easyButton('<strong>AK</strong>', function(){
+        map.setView([65.144912, -152.541399], 3.5);
+    },'zoom to Alaska',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>HI</strong>', function(){
+        map.setView([20.891499, -157.959362], 6.29);
+    },'zoom to Hawaii',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>GU</strong>', function(){
+        map.setView([13.432056, 144.812821], 10.5);
+    },'zoom to Guam',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>MP</strong>', function(){
+        //map.setView([16.530659, 146.027901], 6.35); alternative view of all islands
+        map.setView([15.097820, 145.642088], 10.5);
+    },'zoom to North Mariana Islands',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>PR</strong>', function(){
+        map.setView([18.254990, -66.423918], 9.25);
+    },'zoom to Puerto Rico',{ position: 'topright' }).addTo(map);
+
+    L.easyButton('<strong>VI</strong>', function(){
+        map.setView([17.970324, -64.727032], 10);
+    },'zoom to U.S. Virgin Islands',{ position: 'topright' }).addTo(map);
+
     //Add OSM base tilelayer
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -83,7 +109,7 @@ function getData(map){
         $.getJSON("data/JSON/summary_counts.json", function(response){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
-                
+
             // calcStats(response);
             createPropSymbols(response, attributes, "combined");
             createLegend(attributes[0], "combined");
@@ -92,8 +118,8 @@ function getData(map){
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processData(response, "missing"); 
-                
+            var attributes = processData(response, "missing");
+
             // calcStats(response);
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
@@ -102,8 +128,8 @@ function getData(map){
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processData(response, "unidentified"); 
-                
+            var attributes = processData(response, "unidentified");
+
             // calcStats(response);
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
@@ -112,23 +138,23 @@ function getData(map){
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
-            var attributes = processData(response, "unclaimed"); 
-                
+            var attributes = processData(response, "unclaimed");
+
             // calcStats(response);
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
-    } 
+    }
 
 
 };
 
-//Get Data for filtered 
+//Get Data for filtered
 function getDataFiltered(map){
     //load the data
         //create an attributes array
-        var attributes = processData(currentDB, "filtered"); 
-            
+        var attributes = processData(currentDB, "filtered");
+
         // calcStats(response);
         createPropSymbols(currentDB, attributes, "filtered");
         createLegend(currentDB[0], "filtered");
@@ -139,7 +165,7 @@ function processData(data, keyword){
     //empty array to hold attributes
     var attributes = [];
     //empty variable to store properties
-    var currentProperties; 
+    var currentProperties;
 
     //properties of the first feature in the dataset
     if (keyword === "combined") {
@@ -286,7 +312,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var attValue = Number(feature.properties.filtered.length);
 
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
-    } 
+    }
 
     //Give each feature's circle marker a radius based on its attribute value
     options.radius = calcPropRadius(attValue);
@@ -296,7 +322,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
     //bind the popup to the circle marker
     layer.bindPopup(popupContent, {
-        offset: new L.Point(0,(-options.radius)/2) 
+        offset: new L.Point(0,(-options.radius)/2)
     });
 
     //return the circle marker to the L.geoJson pointToLayer option
@@ -368,12 +394,12 @@ function createPopupContent(properties, attribute){
 };
 
 //calculate the radius of each proportional symbol
-function calcPropRadius(attValue) {  
+function calcPropRadius(attValue) {
     // Picked values that look normal
-    var minValue = 5; 
+    var minValue = 5;
     //constant factor adjusts symbol sizes evenly
     minRadius = 1;
-    
+
     //Flannery Appearance Compensation formula
     var radius = 1.0083 * Math.pow(attValue/minValue,0.5715) * minRadius;
 
@@ -384,7 +410,7 @@ function calcPropRadius(attValue) {
 function calcStats(data){
     //create empty array to store all data values
     var allValues = [];
-    
+
     //loop through each unit
     for(var unit of data.features){
         //get number of records
@@ -392,7 +418,7 @@ function calcStats(data){
         //add value to array
         allValues.push(value);
     }
-    
+
     //get min, max, mean stats for our array
     dataStats.min = Math.min(...allValues)
     dataStats.max = Math.max(...allValues);
@@ -442,7 +468,7 @@ function createLegend(attribute, keyword){
                 //close svg string
                 svg += "</svg>";
 
-                
+
             } else if (keyword === "missing"){
                 dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
                 $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
@@ -560,12 +586,12 @@ function createLegend(attribute, keyword){
                 //close svg string
                 svg += "</svg>";
             }
-            
+
             //add attribute legend svg to container
             $(container).append(svg);
 
             L.DomEvent.disableClickPropagation(container);
-            
+
             return container;
         }
     });
@@ -578,7 +604,7 @@ function createLegend(attribute, keyword){
 function getDatabase(){
     database = document.querySelector('.database-check:checked').value;
     var container = L.DomUtil.get('map');
-    
+
     if (database === "missing-persons") {
         $('.data-header').html("Data: Missing Persons");
         $('#date-gone-found').html("Date Last Seen");
@@ -587,7 +613,7 @@ function getDatabase(){
         $("#gender-unsure").attr('disabled', true);
         dataSelected[0] = "missing-persons";
         resetFilterOptions();
-        
+
         map.remove();
         if(container != null){
             container._leaflet_id = null;
@@ -601,7 +627,7 @@ function getDatabase(){
         $("#gender-unsure").attr('disabled', false);
         dataSelected[0] = "unidentified-persons";
         resetFilterOptions();
-        
+
         map.remove();
         if(container != null){
             container._leaflet_id = null;
@@ -615,7 +641,7 @@ function getDatabase(){
         $("#gender-unsure").attr('disabled', true);
         dataSelected[0] = "unclaimed-persons";
         resetFilterOptions();
-        
+
         map.remove();
         if(container != null){
             container._leaflet_id = null;
@@ -635,7 +661,7 @@ function getDatabase(){
             container._leaflet_id = null;
         }
         createMap();
-    } 
+    }
 }
 
 // Retrieve which map scale is selected and update map
@@ -688,16 +714,16 @@ function checkAllEthnicity(){
           });
         }
       });
-    
-     // Changing state of CheckAll checkbox 
+
+     // Changing state of CheckAll checkbox
      $(".ethnicity-check").click(function(){
-    
+
        if($(".ethnicity-check").length == $(".ethnicity-check:checked").length) {
          $("#ethnicity-all").prop("checked", true);
        } else {
          $("#ethnicity-all").removeAttr("checked");
        }
-   
+
      });
 }
 
@@ -716,16 +742,16 @@ function checkAllMonths(){
           });
         }
       });
-    
-     // Changing state of CheckAll checkbox 
+
+     // Changing state of CheckAll checkbox
      $(".month-check").click(function(){
-    
+
        if($(".month-check").length == $(".month-check:checked").length) {
          $("#month-all").prop("checked", true);
        } else {
          $("#month-all").removeAttr("checked");
        }
-   
+
      });
 }
 
@@ -835,7 +861,7 @@ function doAdvanceFilter() {
     // Make sure filter is empty before applying new filter
     for (eachArea in currentDB.features){
         currentDB.features[eachArea].properties.filtered = [];
-    }  
+    }
 
     //Loop through all of the records comparing the filtered options to the record
     if (database === "missing-persons") {
@@ -849,7 +875,7 @@ function doAdvanceFilter() {
                 for (eachGender in gender){
                     if(currentVar["Sex"] === gender[eachGender]){
                         //Compare age
-                        if(Number(currentVar["Missing Age"]) >= Number(ageFrom) && Number(currentVar["Missing Age"]) <= Number(ageTo)){                                    
+                        if(Number(currentVar["Missing Age"]) >= Number(ageFrom) && Number(currentVar["Missing Age"]) <= Number(ageTo)){
                             //Compare Year
                             if(currentVar["DLC"].slice(-4) >= yearStart && currentVar["DLC"].slice(-4) <= yearEnd){
                                 //Compare Month
@@ -863,7 +889,7 @@ function doAdvanceFilter() {
                                                 //First add the first record to the filtered so there a value to compare to if the records is already added
                                                 if(data[eachArea].properties.filtered.length < 1){
                                                     currentDB.features[eachArea].properties.filtered.push(currentVar);
-                                                    
+
                                                 } else {
                                                     // Then if the case is not already in the array, add it
                                                     if (!(currentVar["Case Number"] in data[eachArea].properties.filtered)){
@@ -885,12 +911,12 @@ function doAdvanceFilter() {
     } else if (database === "unclaimed-persons") {
         for (each in currentDB){
             console.log(currentDB[each].properties.unclaimed);
-    
+
         }
     } else if (database === "unidentified-persons") {
         for (each in currentDB){
             console.log(currentDB[each].properties.unidentified);
-    
+
         }
     }
 
@@ -958,4 +984,3 @@ $(window).on('load',function(){
 });
 //Create Mape
 $(document).ready(createMap());
-
