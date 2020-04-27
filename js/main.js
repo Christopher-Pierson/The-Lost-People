@@ -4,13 +4,14 @@ var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the
 
 //Declare Database global variables
 var currentDB; //current json on map
+var currentDBFiltered; //current filtered database if ther is one
 var dataSelected = ["combined-database", "state-scale"]
 //Declare Filter option global variables
 var database = "combined-database";
 var mapScale = "state-scale";
 var gender = ["Female", "Male"];
 var ageFrom = 0;
-var ageTo = 100;
+var ageTo = 120;
 var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
 var yearStart = 1900;
 var yearEnd = 2020;
@@ -44,6 +45,34 @@ function createMap(){
 
     //call getData function
     getData(map);
+};
+
+//Function to instantiate the Filtered Data Leaflet map
+function createMapFiltered(){
+    //create the map
+    myBounds = new L.LatLngBounds(new L.LatLng(60, 0), new L.LatLng(30, 0));
+    map = L.map('map', {
+        zoomControl: false,
+        center: [38, -93],
+        zoom: 4,
+        minZoom: 3,
+        maxZoom: 12,
+        maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
+    });
+
+    // Add zoom control (but in top right)
+    L.control.zoom({
+        position: 'topright'
+    }).addTo(map);
+
+    //Add OSM base tilelayer
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+    }).addTo(map);
+
+    //call getDataFiltered function
+    getDataFiltered(map);
 };
 
 //Import GeoJSON data
@@ -89,14 +118,24 @@ function getData(map){
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
+    } 
 
-    }
+
 };
+
+//Get Data for filtered 
+function getDataFiltered(map){
+    //load the data
+        //create an attributes array
+        var attributes = processData(currentDB, "filtered"); 
+            
+        // calcStats(response);
+        createPropSymbols(currentDB, attributes, "filtered");
+        createLegend(currentDB[0], "filtered");
+}
 
 //Build an attributes array from the special data
 function processData(data, keyword){
-    //assign current json to global variable for filtering
-    currentDB = data.features;
     //empty array to hold attributes
     var attributes = [];
     //empty variable to store properties
@@ -104,6 +143,9 @@ function processData(data, keyword){
 
     //properties of the first feature in the dataset
     if (keyword === "combined") {
+        //assign current json to global variable for filtering
+        currentDB = data;
+
         //properties of the first feature in the dataset
         currentProperties = data.features[0].properties;
 
@@ -115,6 +157,9 @@ function processData(data, keyword){
             };
         };
     } else if (keyword === "missing") {
+        //assign current json to global variable for filtering
+        currentDB = data;
+
         currentProperties = data.features[0].properties.missing;
 
         //push each attribute into attributes array
@@ -122,6 +167,9 @@ function processData(data, keyword){
             attributes.push(attribute);
         };
     } else if (keyword === "unclaimed") {
+        //assign current json to global variable for filtering
+        currentDB = data;
+
         currentProperties = data.features[0].properties.unclaimed;
 
         //push each attribute into attributes array
@@ -129,7 +177,18 @@ function processData(data, keyword){
             attributes.push(attribute);
         };
     } else if (keyword === "unidentified") {
+        //assign current json to global variable for filtering
+        currentDB = data;
+
         currentProperties = data.features[0].properties.unidentified;
+
+        //push each attribute into attributes array
+        for (var attribute in currentProperties){
+            attributes.push(attribute);
+        };
+    } else if (keyword === "filtered") {
+
+        currentProperties = data.features[0].properties.filtered;
 
         //push each attribute into attributes array
         for (var attribute in currentProperties){
@@ -213,6 +272,20 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var attValue = Number(feature.properties.unclaimed.length);
 
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
+    } else if (keyword == "filtered"){
+        //create marker options
+        var options = {
+            radius: 8,
+            fillColor: "#FF7F50",
+            color: "#000",
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.8
+        };
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(feature.properties.filtered.length);
+
+        var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } 
 
     //Give each feature's circle marker a radius based on its attribute value
@@ -244,8 +317,12 @@ function createPopupContentExtra(feature, attValue, keyword){
         popupContent += "<p>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
-    }else if (keyword === "unclaimed") {
+    } else if (keyword === "unclaimed") {
         popupContent += "<p>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
+
+        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
+    } else if (keyword === "filtered") {
+        popupContent += "<p>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     }
@@ -453,6 +530,35 @@ function createLegend(attribute, keyword){
 
                 //close svg string
                 svg += "</svg>";
+            } else if (keyword === "filtered"){
+                dataStats = {min:50, max:3000, mean:1500}; //manually created values for the total combined numbers
+                $(container).append('<h3 id="legend-title" ><b>Filtered Persons</b></h3>');
+                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                //Start attribute legend svg string
+                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+
+                //array of circle names to base loop on
+                var circles = ["max", "mean", "min"];
+
+                //Loop to add each circle and text to svg string
+                for (var i=0; i<circles.length; i++){
+                    //Assign the r and cy attributes
+                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
+                    var cy = (180 - radius) -40;
+
+                    //circle string
+                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#FF7F50" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                    //evenly space out labels
+                    var textY = i * 40 + 50; //spacing + y value
+
+                    //text string
+                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                };
+
+                //close svg string
+                svg += "</svg>";
             }
             
             //add attribute legend svg to container
@@ -529,7 +635,7 @@ function getDatabase(){
             container._leaflet_id = null;
         }
         createMap();
-    }
+    } 
 }
 
 // Retrieve which map scale is selected and update map
@@ -681,58 +787,91 @@ function resetFilterOptions() {
     yearStart = 1900;
     yearEnd = 2020;
     Month = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+    // var container = L.DomUtil.get('map');
+    // map.remove();
+    //     if(container != null){
+    //         container._leaflet_id = null;
+    // }
+    // createMap();
 }
 
 // Retrieve which advanced filter options are selected
 function getFilterOptions(){
-    gender = getCheckedGender();
-    ageFrom = document.querySelector('#ageFrom-check').value; //$('#ageFrom-check').val())
-    ageTo = document.querySelector('#ageTo-check').value;
-    ethnicity = getCheckedEthnicity();
-    yearStart = document.querySelector('#yearStart-check').value;
-    yearEnd = document.querySelector('#yearEnd-check').value;
-    month = getCheckedMonth();
+    //Check to make sure ageFrom is not older than ageTo and yearStart is not later than yearEnd
+    //If it passes those checks, than accept the form
+    if ($('#ageFrom-check').val() > $('#ageTo-check').val()){
+        alert("Submission not accepted. Age From is later than Age To.");
+    } else if ($('#yearStart-check').val() > $('#yearEnd-check').val()) {
+        alert("Submission not accepted. Year Start is later than Year End.");
+    } else {
+        gender = getCheckedGender();
+        ageFrom = document.querySelector('#ageFrom-check').value; //$('#ageFrom-check').val())
+        ageTo = document.querySelector('#ageTo-check').value;
+        ethnicity = getCheckedEthnicity();
+        yearStart = document.querySelector('#yearStart-check').value;
+        yearEnd = document.querySelector('#yearEnd-check').value;
+        month = getCheckedMonth();
 
-    doAdvanceFilter();
+        doAdvanceFilter();
+    }
 }
 
 // Function to filter the data per the selected options
 function doAdvanceFilter() {
-    console.log(database);
-    console.log(mapScale);
-    console.log(gender);
-    console.log(ageFrom);
-    console.log(ageTo);
-    console.log(ethnicity);
-    console.log(yearStart);
-    console.log(yearEnd);
-    console.log(month);
+    // console.log(database);
+    // console.log(mapScale);
+    // console.log(gender);
+    // console.log(ageFrom);
+    // console.log(ageTo);
+    // console.log(ethnicity);
+    // console.log(yearStart);
+    // console.log(yearEnd);
+    // console.log(month);
 
-    var filterConfig = '{ "Sex": "'+gender[0] +'"}';
-    console.log(currentDB);
+    // shortand for the filtering below
+    data = currentDB.features;
+
+    // Make sure filter is empty before applying new filter
+    for (eachArea in currentDB.features){
+        currentDB.features[eachArea].properties.filtered = [];
+    }  
 
     //Loop through all of the records comparing the filtered options to the record
     if (database === "missing-persons") {
-        for (each in currentDB){
-            for (each2 in currentDB[each].properties.missing){
-                var currentVar = currentDB[each].properties.missing[each2];
-                
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.missing){
+                var currentVar = data[eachArea].properties.missing[eachRecord];
+
                 //Compare gender first
                 for (eachGender in gender){
                     if(currentVar["Sex"] === gender[eachGender]){
                         //Compare age
-                        if(currentVar["Missing Age"] >= ageFrom && currentVar["Missing Age"] <= ageTo){
-                            //Compare ethnicity
-                            for(eachEthnicity in ethnicity) {
-                                if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
-                                    //Compare Year
-                                    if(currentVar["DLC"].slice(-4) >= yearStart && currentVar["DLC"].slice(-4) <= yearEnd){
-                                        // console.log(currentVar["DLC"]);
-                                        //Compare Month
-                                        for (eachMonth in month){
-                                            if(currentVar["DLC"].substr(0, currentVar["DLC"].indexOf('/')) == month[eachMonth]){
-                                                // console.log(currentVar);
-                                                currentDB[each].properties.filtered.push(currentVar);
+                        if(Number(currentVar["Missing Age"]) >= Number(ageFrom) && Number(currentVar["Missing Age"]) <= Number(ageTo)){                                    
+                            //Compare Year
+                            if(currentVar["DLC"].slice(-4) >= yearStart && currentVar["DLC"].slice(-4) <= yearEnd){
+                                //Compare Month
+                                for (eachMonth in month){
+                                    if(currentVar["DLC"].substr(0, currentVar["DLC"].indexOf('/')) == month[eachMonth]){
+                                        //Compare ethnicity
+                                        for(eachEthnicity in ethnicity) {
+                                            if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
+
+                                                //Only add records to new filtered list if it has not been added already, accounts for data issues in ethnicity
+                                                //First add the first record to the filtered so there a value to compare to if the records is already added
+                                                if(data[eachArea].properties.filtered.length < 1){
+                                                    currentDB.features[eachArea].properties.filtered.push(currentVar);
+                                                    
+                                                } else {
+                                                    // Then if the case is not already in the array, add it
+                                                    if (!(currentVar["Case Number"] in data[eachArea].properties.filtered)){
+                                                        currentDB.features[eachArea].properties.filtered.push(currentVar);
+                                                    }
+                                                }
+                                                // Break to stop comparing when record person has multiple ethnicities
+                                                break;
                                             }
                                         }
                                     }
@@ -754,7 +893,17 @@ function doAdvanceFilter() {
     
         }
     }
-    console.log(currentDB);
+
+    // Clear map before creating filtered view
+    var container = L.DomUtil.get('map');
+    map.remove();
+    if(container != null){
+        container._leaflet_id = null;
+    }
+
+    // Create Filtered Map
+    createMapFiltered();
+
 }
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
