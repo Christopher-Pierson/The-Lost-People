@@ -119,6 +119,36 @@ function getData(map){
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
+    } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "county-scale") {
+        //load the data
+        $.getJSON("data/JSON/county_geojson.json", function(response){
+            //create an attributes array
+            var attributes = processData(response, "missing");
+
+            // calcStats(response);
+            createPropSymbols(response, attributes, "missing");
+            createLegend(attributes[0], "missing");
+        });
+    } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "county-scale") {
+        //load the data
+        $.getJSON("data/JSON/county_geojson.json", function(response){
+            //create an attributes array
+            var attributes = processData(response, "unidentified");
+
+            // calcStats(response);
+            createPropSymbols(response, attributes, "unidentified");
+            createLegend(attributes[0], "unidentified");
+        });
+    } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "county-scale") {
+        //load the data
+        $.getJSON("data/JSON/county_geojson.json", function(response){
+            //create an attributes array
+            var attributes = processData(response, "unclaimed");
+
+            // calcStats(response);
+            createPropSymbols(response, attributes, "unclaimed");
+            createLegend(attributes[0], "unclaimed");
+        });
     }
 
 
@@ -235,7 +265,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         //create marker options
         var options = {
             radius: 8,
-            fillColor: "#000066",
+            fillColor: "#00ffff",
             color: "#000",
             weight: 1,
             opacity: 1,
@@ -249,7 +279,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         //create marker options
         var options = {
             radius: 8,
-            fillColor: "#990000",
+            fillColor: "#ffff00",
             color: "#000",
             weight: 1,
             opacity: 1,
@@ -263,7 +293,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         //create marker options
         var options = {
             radius: 8,
-            fillColor: "#800080",
+            fillColor: "#ff00ff",
             color: "#000",
             weight: 1,
             opacity: 1,
@@ -462,7 +492,7 @@ function createLegend(attribute, keyword){
                     var cy = (180 - radius) -40;
 
                     //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#000066" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#00ffff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
                     //evenly space out labels
                     var textY = i * 40 + 50; //spacing + y value
@@ -491,7 +521,7 @@ function createLegend(attribute, keyword){
                     var cy = (180 - radius) -40;
 
                     //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#990000" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ffff00" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
                     //evenly space out labels
                     var textY = i * 40 + 50; //spacing + y value
@@ -520,7 +550,7 @@ function createLegend(attribute, keyword){
                     var cy = (180 - radius) -40;
 
                     //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#800080" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ff00ff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
                     //evenly space out labels
                     var textY = i * 40 + 50; //spacing + y value
@@ -532,7 +562,7 @@ function createLegend(attribute, keyword){
                 //close svg string
                 svg += "</svg>";
             } else if (keyword === "filtered"){
-                dataStats = {min:50, max:3000, mean:1500}; //manually created values for the total combined numbers
+                dataStats = {min:1, max:1000, mean:500}; //manually created values for the total combined numbers
                 $(container).append('<h3 id="legend-title" ><b>Filtered Persons</b></h3>');
                 $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
@@ -836,6 +866,7 @@ function doAdvanceFilter() {
         currentDB.features[eachArea].properties.filtered = [];
     }
 
+    var count =0;
     //Loop through all of the records comparing the filtered options to the record
     if (dataSelected[0]=== "missing-persons") {
         //Loop through each enumeration area
@@ -882,16 +913,92 @@ function doAdvanceFilter() {
             }
         }
     } else if (dataSelected[0] === "unclaimed-persons") {
-        for (each in currentDB){
-            console.log(currentDB[each].properties.unclaimed);
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.unclaimed){
+                var currentVar = data[eachArea].properties.unclaimed[eachRecord];
 
+                //Compare gender first
+                for (eachGender in gender){
+                    if(currentVar["Sex"] === gender[eachGender]){
+                        //Compare Year
+                        if(currentVar["DBF"].slice(-4) >= yearStart && currentVar["DBF"].slice(-4) <= yearEnd){
+                            //Compare Month
+                            for (eachMonth in month){
+                                if(currentVar["DBF"].substr(0, currentVar["DBF"].indexOf('/')) == month[eachMonth]){
+                                    //Compare ethnicity
+                                    for(eachEthnicity in ethnicity) {
+                                        if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
+
+                                            //Only add records to new filtered list if it has not been added already, accounts for data issues in ethnicity
+                                            //First add the first record to the filtered so there a value to compare to if the records is already added
+                                            if(data[eachArea].properties.filtered.length < 1){
+                                                currentDB.features[eachArea].properties.filtered.push(currentVar);
+
+                                            } else {
+                                                // Then if the case is not already in the array, add it
+                                                if (!(currentVar["Case Number"] in data[eachArea].properties.filtered)){
+                                                    currentDB.features[eachArea].properties.filtered.push(currentVar);
+                                                }
+                                            }
+                                            // Break to stop comparing when record person has multiple ethnicities
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     } else if (dataSelected[0] === "unidentified-persons") {
-        for (each in currentDB){
-            console.log(currentDB[each].properties.unidentified);
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.unidentified){
+                var currentVar = data[eachArea].properties.unidentified[eachRecord];
 
+                //Compare gender first
+                for (eachGender in gender){
+                    if(currentVar["Sex"] === gender[eachGender]){
+                        //Compare age
+                        if(Number(currentVar["Age To"]) >= Number(ageFrom) && Number(currentVar["Age From"]) <= Number(ageTo)){
+                            //Compare Year
+                            if(currentVar["DBF"].slice(-4) >= yearStart && currentVar["DBF"].slice(-4) <= yearEnd){
+                                //Compare Month
+                                for (eachMonth in month){
+                                    if(currentVar["DBF"].substr(0, currentVar["DBF"].indexOf('/')) == month[eachMonth]){
+                                        //Compare ethnicity
+                                        for(eachEthnicity in ethnicity) {
+                                            if(currentVar["Race / Ethnicity"].includes(ethnicity[eachEthnicity])){
+
+                                                //Only add records to new filtered list if it has not been added already, accounts for data issues in ethnicity
+                                                //First add the first record to the filtered so there a value to compare to if the records is already added
+                                                if(data[eachArea].properties.filtered.length < 1){
+                                                    currentDB.features[eachArea].properties.filtered.push(currentVar);
+
+                                                } else {
+                                                    // Then if the case is not already in the array, add it
+                                                    if (!(currentVar["Case Number"] in data[eachArea].properties.filtered)){
+                                                        currentDB.features[eachArea].properties.filtered.push(currentVar);
+                                                    }
+                                                }
+                                                // Break to stop comparing when record person has multiple ethnicities
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
+    console.log(count);
 
     // Clear map before creating filtered view
     var container = L.DomUtil.get('map');
