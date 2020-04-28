@@ -7,8 +7,7 @@ var currentDB; //current json on map
 var currentDBFiltered; //current filtered database if ther is one
 var dataSelected = ["combined-database", "state-scale"]
 //Declare Filter option global variables
-var database = "combined-database";
-var mapScale = "state-scale";
+var dataFiltered = false;
 var gender = ["Female", "Male"];
 var ageFrom = 0;
 var ageTo = 120;
@@ -69,68 +68,12 @@ function createMap(){
 	     subdomains: 'abcd'
     }).addTo(map);
 
-    //call getData function
-    getData(map);
-};
-
-//Function to instantiate the Filtered Data Leaflet map
-function createMapFiltered(){
-    //create the map
-    myBounds = new L.LatLngBounds(new L.LatLng(60, 0), new L.LatLng(30, 0));
-    map = L.map('map', {
-        zoomControl: false,
-        center: [38, -93],
-        zoom: 4,
-        minZoom: 3,
-        maxZoom: 12,
-        maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
-    });
-
-    // Add zoom control (but in top right)
-    L.control.zoom({
-        position: 'topright'
-    }).addTo(map);
-
-    // Add zoom control (but in top right)
-    L.control.zoom({
-        position: 'topright'
-    }).addTo(map);
-
-    // Add zoom buttons for non-contiguous states and territories
-    L.easyButton('<strong>AK</strong>', function(){
-        map.setView([65.144912, -152.541399], 3.5);
-    },'zoom to Alaska',{ position: 'topright' }).addTo(map);
-
-    L.easyButton('<strong>HI</strong>', function(){
-        map.setView([20.891499, -157.959362], 6.29);
-    },'zoom to Hawaii',{ position: 'topright' }).addTo(map);
-
-    L.easyButton('<strong>GU</strong>', function(){
-        map.setView([13.432056, 144.812821], 10.5);
-    },'zoom to Guam',{ position: 'topright' }).addTo(map);
-
-    L.easyButton('<strong>MP</strong>', function(){
-        //map.setView([16.530659, 146.027901], 6.35); alternative view of all islands
-        map.setView([15.097820, 145.642088], 10.5);
-    },'zoom to North Mariana Islands',{ position: 'topright' }).addTo(map);
-
-    L.easyButton('<strong>PR</strong>', function(){
-        map.setView([18.254990, -66.423918], 9.25);
-    },'zoom to Puerto Rico',{ position: 'topright' }).addTo(map);
-
-    L.easyButton('<strong>VI</strong>', function(){
-        map.setView([17.970324, -64.727032], 10);
-    },'zoom to U.S. Virgin Islands',{ position: 'topright' }).addTo(map);
-
-
-    //Add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	    ubdomains: 'abcd'
-    }).addTo(map);
-
-    //call getDataFiltered function
-    getDataFiltered(map);
+    // Get data differently depending on if it is filtered or not
+    if (dataFiltered){
+        getDataFiltered(map);
+    } else {
+        getData(map);
+    }
 };
 
 //Import GeoJSON data
@@ -634,59 +577,59 @@ function createLegend(attribute, keyword){
 /////  Filter Functions  /////
 // Retrieve which database is selected and update advance filter labels and map
 function getDatabase(){
-    database = document.querySelector('.database-check:checked').value;
+    dataSelected[0] = document.querySelector('.database-check:checked').value;
     var container = L.DomUtil.get('map');
 
-    if (database === "missing-persons") {
+    if (dataSelected[0] === "missing-persons") {
         $('.data-header').html("Data: Missing Persons");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
-        dataSelected[0] = "missing-persons";
         resetFilterOptions();
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
             container._leaflet_id = null;
         }
         createMap();
-    } else if (database === "unidentified-persons") {
+    } else if (dataSelected[0] === "unidentified-persons") {
         $('.data-header').html("Data: Unidentified Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
-        dataSelected[0] = "unidentified-persons";
         resetFilterOptions();
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
             container._leaflet_id = null;
         }
         createMap();
-    } else if (database === "unclaimed-persons") {
+    } else if (dataSelected[0] === "unclaimed-persons") {
         $('.data-header').html("Data: Unclaimed Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
-        dataSelected[0] = "unclaimed-persons";
         resetFilterOptions();
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
             container._leaflet_id = null;
         }
         createMap();
-    } else if (database === "combined-database") {
+    } else if (dataSelected[0] === "combined-database") {
         $('.data-header').html("Data: Combined Database");
         $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
-        dataSelected[0] = "combined-database";
         resetFilterOptions();
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
@@ -698,30 +641,27 @@ function getDatabase(){
 
 // Retrieve which map scale is selected and update map
 function getMapScale(){
-    mapScale = document.querySelector('.mapScale-check:checked').value;
+    dataSelected[1] = document.querySelector('.mapScale-check:checked').value;
     var container = L.DomUtil.get('map');
 
-    if (mapScale === "state-scale") {
+    if (dataSelected[1] === "state-scale") {
         $('.mapScale-header').html("Map Scale: State");
-        dataSelected[1] = "state-scale";
 
         map.remove();
         if(container != null){
             container._leaflet_id = null;
         }
         createMap();
-    } else if (mapScale === "county-scale") {
+    } else if (dataSelected[1]=== "county-scale") {
         $('.mapScale-header').html("Map Scale: County");
-        dataSelected[1] = "county-scale";
 
         map.remove();
         if(container != null){
             container._leaflet_id = null;
         }
         createMap();
-    } else if (mapScale === "city-scale") {
+    } else if (dataSelected[1] === "city-scale") {
         $('.mapScale-header').html("Map Scale: City");
-        dataSelected[1] = "city-scale";
 
         map.remove();
         if(container != null){
@@ -858,17 +798,18 @@ function resetFilterOptions() {
 function getFilterOptions(){
     //Check to make sure ageFrom is not older than ageTo and yearStart is not later than yearEnd
     //If it passes those checks, than accept the form
-    if ($('#ageFrom-check').val() > $('#ageTo-check').val()){
+    if (Number($('#ageFrom-check').val()) > Number($('#ageTo-check').val())){
         alert("Submission not accepted. Age From is later than Age To.");
-    } else if ($('#yearStart-check').val() > $('#yearEnd-check').val()) {
+    } else if (Number($('#yearStart-check').val()) > Number($('#yearEnd-check').val())) {
         alert("Submission not accepted. Year Start is later than Year End.");
     } else {
+        dataFiltered = true;
         gender = getCheckedGender();
-        ageFrom = document.querySelector('#ageFrom-check').value; //$('#ageFrom-check').val())
-        ageTo = document.querySelector('#ageTo-check').value;
+        ageFrom = Number(document.querySelector('#ageFrom-check').value); //$('#ageFrom-check').val())
+        ageTo = Number(document.querySelector('#ageTo-check').value);
         ethnicity = getCheckedEthnicity();
-        yearStart = document.querySelector('#yearStart-check').value;
-        yearEnd = document.querySelector('#yearEnd-check').value;
+        yearStart = Number(document.querySelector('#yearStart-check').value);
+        yearEnd = Number(document.querySelector('#yearEnd-check').value);
         month = getCheckedMonth();
 
         doAdvanceFilter();
@@ -877,8 +818,8 @@ function getFilterOptions(){
 
 // Function to filter the data per the selected options
 function doAdvanceFilter() {
-    // console.log(database);
-    // console.log(mapScale);
+    // console.log(dataSelected[0]);
+    // console.log(dataSelected[1]);
     // console.log(gender);
     // console.log(ageFrom);
     // console.log(ageTo);
@@ -896,7 +837,7 @@ function doAdvanceFilter() {
     }
 
     //Loop through all of the records comparing the filtered options to the record
-    if (database === "missing-persons") {
+    if (dataSelected[0]=== "missing-persons") {
         //Loop through each enumeration area
         for (eachArea in data){
             //Loop through each record
@@ -940,12 +881,12 @@ function doAdvanceFilter() {
                 }
             }
         }
-    } else if (database === "unclaimed-persons") {
+    } else if (dataSelected[0] === "unclaimed-persons") {
         for (each in currentDB){
             console.log(currentDB[each].properties.unclaimed);
 
         }
-    } else if (database === "unidentified-persons") {
+    } else if (dataSelected[0] === "unidentified-persons") {
         for (each in currentDB){
             console.log(currentDB[each].properties.unidentified);
 
@@ -960,28 +901,61 @@ function doAdvanceFilter() {
     }
 
     // Create Filtered Map
-    createMapFiltered();
-
+    createMap();
 }
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
 function getNames(){
-    if(database === "missing-persons"){
-        console.log(currentDB[0].properties.missing);
-        for (each in currentDB[0].properties.missing){
+    if(dataSelected[0] === "missing-persons"){
+        // shortand for the filtering below
+        data = currentDB.features;
+
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.missing){
+                console.log(data[eachArea].properties.missing[eachRecord]);
+            }
         }
 
         $('#names-list').html('Test: Missing Names Now Here')
-    } else if (database === "unclaimed-persons"){
-        console.log(currentDB[0].properties.unclaimed);
+    } else if (dataSelected[0] === "unclaimed-persons"){
+        // shortand for the filtering below
+        data = currentDB.features;
+
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.unclaimed){
+                console.log(data[eachArea].properties.unclaimed[eachRecord]);
+            }
+        }
 
         $('#names-list').html('Test: UnclaimedNames Now Here')
-    } else if (database === "unidentified-persons"){
-        console.log(currentDB[0].properties.unidentified);
+    } else if (dataSelected[0] === "unidentified-persons"){
+        // shortand for the filtering below
+        data = currentDB.features;
+
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.unidentified){
+                console.log(data[eachArea].properties.unidentified[eachRecord]);
+            }
+        }
 
         $('#names-list').html('Test: Unidentified Names Now Here')
-    } else if (database === "filtered-persons"){
-        console.log(currentDB[0].properties.filtered);
+    } else {
+        // shortand for the filtering below
+        data = currentDB.features;
+
+        //Loop through each enumeration area
+        for (eachArea in data){
+            //Loop through each record
+            for (eachRecord in data[eachArea].properties.filtered){
+                console.log(data[eachArea].properties.filtered[eachRecord]);
+            }
+        }
 
         $('#names-list').html('Test: Filtered Names Now Here')
     }
