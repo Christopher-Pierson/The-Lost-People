@@ -15,6 +15,8 @@ var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African Am
 var yearStart = 1900;
 var yearEnd = 2020;
 var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
+//Retrieve Varaibles
+var unitSelected;
 
 
 ///// Functions for Map /////
@@ -85,7 +87,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
 
-            // calcStats(response);
+            // calcStats(response, "combined");
             createPropSymbols(response, attributes, "combined");
             createLegend(attributes[0], "combined");
         });
@@ -95,7 +97,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "missing");
 
-            // calcStats(response);
+            // calcStats(response, "missing");
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
         });
@@ -105,7 +107,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unidentified");
 
-            // calcStats(response);
+            // calcStats(response, "unidentified");
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
         });
@@ -115,7 +117,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unclaimed");
 
-            // calcStats(response);
+            // calcStats(response, "unclaimed");
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
@@ -125,7 +127,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "missing");
 
-            // calcStats(response);
+            // calcStats(response, "missing");
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
         });
@@ -135,7 +137,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unidentified");
 
-            // calcStats(response);
+            // calcStats(response, "unidentified");
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
         });
@@ -145,7 +147,7 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unclaimed");
 
-            // calcStats(response);
+            // calcStats(response, "unclaimed");
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
@@ -160,7 +162,7 @@ function getDataFiltered(map){
         //create an attributes array
         var attributes = processData(currentDB, "filtered");
 
-        // calcStats(response);
+        // calcStats(currentDB, "filtered");
         createPropSymbols(currentDB, attributes, "filtered");
         createLegend(currentDB[0], "filtered");
 }
@@ -305,14 +307,35 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "filtered"){
         //create marker options
-        var options = {
-            radius: 8,
-            fillColor: "#FF7F50",
-            color: "#000",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.8
-        };
+        if (dataSelected[0] === "missing-persons") {
+            var options = {
+                radius: 8,
+                fillColor: "#00ffff",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            };
+        } else if (dataSelected[0] === "unidentified-persons") {
+            var options = {
+                radius: 8,
+                fillColor: "#ffff00",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            };
+        } else if (dataSelected[0] === "unclaimed-persons") {
+            var options = {
+                radius: 8,
+                fillColor: "#ff00ff",
+                color: "#000",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            };
+        }
+
         //For each feature, determine its value for the selected attribute
         var attValue = Number(feature.properties.filtered.length);
 
@@ -320,7 +343,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
     }
 
     //Give each feature's circle marker a radius based on its attribute value
-    options.radius = calcPropRadius(attValue);
+    options.radius = calcPropRadius(attValue, keyword);
 
     //create circle marker layer
     var layer = L.circleMarker(latlng, options);
@@ -399,11 +422,63 @@ function createPopupContent(properties, attribute){
 };
 
 //calculate the radius of each proportional symbol
-function calcPropRadius(attValue) {
-    // Picked values that look normal
-    var minValue = 5;
-    //constant factor adjusts symbol sizes evenly
-    minRadius = 1;
+function calcPropRadius(attValue, keyword) {
+    if (dataSelected[1] === "state-scale") {
+        if (keyword === "combined"){
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1;
+        } else if (keyword === "missing") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1.5;
+        } else if (keyword === "unidentified") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1.7;
+        } else if (keyword === "unclaimed") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1.6;
+        } else {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1;
+        }
+    } else if (dataSelected[1] === "county-scale") {
+        if (keyword === "combined"){
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 1.8;
+        } else if (keyword === "missing") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 2;
+        } else if (keyword === "unidentified") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 2;
+        } else if (keyword === "unclaimed") {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 2;
+        } else {
+            // Picked values that look normal
+            var minValue = 5;
+            //constant factor adjusts symbol sizes evenly
+            var minRadius = 2;
+        }
+    }
+    
 
     //Flannery Appearance Compensation formula
     var radius = 1.0083 * Math.pow(attValue/minValue,0.5715) * minRadius;
@@ -412,16 +487,62 @@ function calcPropRadius(attValue) {
 };
 
 //Calculate the max, mean, min values of the dataset. Currently not being used as these values are hardcoded.
-function calcStats(data){
+function calcStats(data, keyword){
     //create empty array to store all data values
     var allValues = [];
 
-    //loop through each unit
-    for(var unit of data.features){
-        //get number of records
-        var value = unit.properties.Total_Count;
-        //add value to array
-        allValues.push(value);
+    if(keyword === "combined"){
+        //loop through each unit
+        for(var unit of data.features){
+            //get number of records
+            var value = unit.properties.Total_Count;
+            //add value to array
+            allValues.push(value);
+        }
+    } else if (keyword === "missing"){
+        //Loop through each enumeration area
+        for (eachArea in data.features){
+            //Loop through each record
+            for (eachRecord in data.features[eachArea].properties.missing){
+                //get number of records
+                var value = data.features[eachArea].properties.missing.length;
+                //add value to array
+                allValues.push(value);
+            }
+        }
+    } else if (keyword === "unidentified"){
+        //Loop through each enumeration area
+        for (eachArea in data.features){
+            //Loop through each record
+            for (eachRecord in data.features[eachArea].properties.unidentified){
+                //get number of records
+                var value = data.features[eachArea].properties.unidentified.length;
+                //add value to array
+                allValues.push(value);
+            }
+        }
+    } else if (keyword === "unclaimed"){
+        //Loop through each enumeration area
+        for (eachArea in data.features){
+            //Loop through each record
+            for (eachRecord in data.features[eachArea].properties.unclaimed){
+                //get number of records
+                var value = data.features[eachArea].properties.unclaimed.length;
+                //add value to array
+                allValues.push(value);
+            }
+        }
+    } else if (keyword === "filtered"){
+        //Loop through each enumeration area
+        for (eachArea in data.features){
+            //Loop through each record
+            for (eachRecord in data.features[eachArea].properties.filtered){
+                //get number of records
+                var value = data.features[eachArea].properties.unidentified.filtered;
+                //add value to array
+                allValues.push(value);
+            }
+        }
     }
 
     //get min, max, mean stats for our array
@@ -445,6 +566,7 @@ function createLegend(attribute, keyword){
             var container = L.DomUtil.create('div', 'legend-control-container');
 
             if (keyword === "combined"){
+                dataStats = {min:50, max:7000, mean:1000};
                 $(container).append('<h3 id="legend-title" ><b>Combined Database</b></h3>');
                 $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
@@ -457,7 +579,7 @@ function createLegend(attribute, keyword){
                 //Loop to add each circle and text to svg string
                 for (var i=0; i<circles.length; i++){
                     //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
+                    var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
                     var cy = (180 - radius) -40;
 
                     //circle string
@@ -475,121 +597,279 @@ function createLegend(attribute, keyword){
 
 
             } else if (keyword === "missing"){
-                dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
-                $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
-                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                if (dataSelected[1] === "state-scale") {
+                    dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
 
-                //Start attribute legend svg string
-                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+                    $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
-                //array of circle names to base loop on
-                var circles = ["max", "mean", "min"];
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="150px">';
 
-                //Loop to add each circle and text to svg string
-                for (var i=0; i<circles.length; i++){
-                    //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
-                    var cy = (180 - radius) -40;
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
 
-                    //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#00ffff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -40;
 
-                    //evenly space out labels
-                    var textY = i * 40 + 50; //spacing + y value
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#00ffff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
-                    //text string
-                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                };
+                        //evenly space out labels
+                        var textY = i * 40 + 50; //spacing + y value
 
-                //close svg string
-                svg += "</svg>";
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                } else if (dataSelected[1] === "county-scale"){
+                    dataStats = {min:10, max:600, mean:200}; //manually created values for the total combined numbers
+
+                    $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
+
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
+
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#00ffff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
+
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                }
             } else if (keyword === "unidentified"){
-                dataStats = {min:50, max:2700, mean:1000}; //manually created values for the total combined numbers
-                $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
-                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                if (dataSelected[1] === "state-scale") {
+                    dataStats = {min:10, max:2700, mean:1000}; //manually created values for the total combined numbers
 
-                //Start attribute legend svg string
-                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+                    $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
-                //array of circle names to base loop on
-                var circles = ["max", "mean", "min"];
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="150px">';
 
-                //Loop to add each circle and text to svg string
-                for (var i=0; i<circles.length; i++){
-                    //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
-                    var cy = (180 - radius) -40;
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
 
-                    //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ffff00" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -40;
 
-                    //evenly space out labels
-                    var textY = i * 40 + 50; //spacing + y value
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ffff00" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
-                    //text string
-                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                };
+                        //evenly space out labels
+                        var textY = i * 40 + 50; //spacing + y value
 
-                //close svg string
-                svg += "</svg>";
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                } else if (dataSelected[1] === "county-scale"){
+                    dataStats = {min:5, max:1000, mean:300}; //manually created values for the total combined numbers
+
+                    $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
+
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
+
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ffff00" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
+
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                    }
             } else if (keyword === "unclaimed"){
-                dataStats = {min:50, max:3000, mean:1500}; //manually created values for the total combined numbers
-                $(container).append('<h3 id="legend-title" ><b>Unclaimed Persons</b></h3>');
-                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                if (dataSelected[1] === "state-scale") {
+                    dataStats = {min:10, max:3000, mean:1500}; //manually created values for the total combined numbers
 
-                //Start attribute legend svg string
-                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+                    $(container).append('<h3 id="legend-title" ><b>Unclaimed Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
-                //array of circle names to base loop on
-                var circles = ["max", "mean", "min"];
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="150px">';
 
-                //Loop to add each circle and text to svg string
-                for (var i=0; i<circles.length; i++){
-                    //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
-                    var cy = (180 - radius) -40;
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
 
-                    //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ff00ff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -40;
 
-                    //evenly space out labels
-                    var textY = i * 40 + 50; //spacing + y value
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ff00ff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
-                    //text string
-                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                };
+                        //evenly space out labels
+                        var textY = i * 40 + 50; //spacing + y value
 
-                //close svg string
-                svg += "</svg>";
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                } else if (dataSelected[1] === "county-scale"){
+                    dataStats = {min:5, max:1000, mean:500}; //manually created values for the total combined numbers
+
+                    $(container).append('<h3 id="legend-title" ><b>Unclaimed Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
+
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
+
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ff00ff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
+
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                    }
             } else if (keyword === "filtered"){
-                dataStats = {min:1, max:1000, mean:500}; //manually created values for the total combined numbers
-                $(container).append('<h3 id="legend-title" ><b>Filtered Persons</b></h3>');
-                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                dataStats = {min:10, max:1000, mean:500}; //manually created values for the total combined numbers
 
-                //Start attribute legend svg string
-                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+                if (dataSelected[0] === "missing-persons"){
+                    $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
-                //array of circle names to base loop on
-                var circles = ["max", "mean", "min"];
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
 
-                //Loop to add each circle and text to svg string
-                for (var i=0; i<circles.length; i++){
-                    //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]]); //Manually set radius of circles
-                    var cy = (180 - radius) -40;
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
 
-                    //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#FF7F50" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
 
-                    //evenly space out labels
-                    var textY = i * 40 + 50; //spacing + y value
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#00ffff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
-                    //text string
-                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                };
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
 
-                //close svg string
-                svg += "</svg>";
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                } else if (dataSelected[0] === "unidentified-persons"){
+                    $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
+
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
+
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ffff00" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
+
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                } else if (dataSelected[0] === "unclaimed-persons"){
+                    $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
+
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
+
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#ff00ff" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
+
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
+
+                    //close svg string
+                    svg += "</svg>";
+                }
             }
 
             //add attribute legend svg to container
@@ -616,56 +896,35 @@ function getDatabase(){
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
-        resetFilterOptions();
         dataFiltered = false;
+        resetFilterOptions();
 
-        map.remove();
-        if(container != null){
-            container._leaflet_id = null;
-        }
-        createMap();
     } else if (dataSelected[0] === "unidentified-persons") {
         $('.data-header').html("Data: Unidentified Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
-        resetFilterOptions();
         dataFiltered = false;
+        resetFilterOptions();
 
-        map.remove();
-        if(container != null){
-            container._leaflet_id = null;
-        }
-        createMap();
     } else if (dataSelected[0] === "unclaimed-persons") {
         $('.data-header').html("Data: Unclaimed Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
-        resetFilterOptions();
         dataFiltered = false;
+        resetFilterOptions();
 
-        map.remove();
-        if(container != null){
-            container._leaflet_id = null;
-        }
-        createMap();
     } else if (dataSelected[0] === "combined-database") {
         $('.data-header').html("Data: Combined Database");
         $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
-        resetFilterOptions();
         dataFiltered = false;
-
-        map.remove();
-        if(container != null){
-            container._leaflet_id = null;
-        }
-        createMap();
+        resetFilterOptions();
     }
 }
 
@@ -676,6 +935,7 @@ function getMapScale(){
 
     if (dataSelected[1] === "state-scale") {
         $('.mapScale-header').html("Map Scale: State");
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
@@ -684,6 +944,7 @@ function getMapScale(){
         createMap();
     } else if (dataSelected[1]=== "county-scale") {
         $('.mapScale-header').html("Map Scale: County");
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
@@ -692,6 +953,7 @@ function getMapScale(){
         createMap();
     } else if (dataSelected[1] === "city-scale") {
         $('.mapScale-header').html("Map Scale: City");
+        dataFiltered = false;
 
         map.remove();
         if(container != null){
@@ -807,21 +1069,27 @@ function getCheckedMonth() {
 //Reset the Advanced Filter Options to Default
 function resetFilterOptions() {
     $("#advanced-filter").trigger("reset");
-
+    
+    dataFiltered = false;
     gender = ["Female", "Male"];
     ageFrom = 0;
-    ageTo = 100;
+    ageTo = 120;
     ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
     yearStart = 1900;
     yearEnd = 2020;
     Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 
-    // var container = L.DomUtil.get('map');
-    // map.remove();
-    //     if(container != null){
-    //         container._leaflet_id = null;
-    // }
-    // createMap();
+    resetMap();
+}
+
+//Clear the map and recreate it
+function resetMap(){
+    var container = L.DomUtil.get('map');
+    map.remove();
+        if(container != null){
+            container._leaflet_id = null;
+    }
+    createMap();
 }
 
 // Retrieve which advanced filter options are selected
@@ -998,7 +1266,6 @@ function doAdvanceFilter() {
             }
         }
     }
-    console.log(count);
 
     // Clear map before creating filtered view
     var container = L.DomUtil.get('map');
@@ -1013,6 +1280,8 @@ function doAdvanceFilter() {
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
 function getNames(){
+    console.log(unitSelected);
+
     if(dataSelected[0] === "missing-persons"){
         // shortand for the filtering below
         data = currentDB.features;
