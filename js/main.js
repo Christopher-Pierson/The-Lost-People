@@ -1,6 +1,8 @@
 //declare map var in global scope
 var map;
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
+var centerPoint = [38, -87];
+var zoomLevel = 4;
 
 //Declare Database global variables
 var currentDB; //current json on map
@@ -26,8 +28,8 @@ function createMap(){
     myBounds = new L.LatLngBounds(new L.LatLng(60, 0), new L.LatLng(30, 0));
     map = L.map('map', {
         zoomControl: false,
-        center: [38, -93],
-        zoom: 4,
+        center: centerPoint,
+        zoom: zoomLevel,
         minZoom: 3,
         maxZoom: 12,
         maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
@@ -432,9 +434,9 @@ function calcPropRadius(attValue, keyword) {
     if (dataSelected[1] === "state-scale") {
         if (keyword === "combined"){
             // Picked values that look normal
-            var minValue = 5;
+            var minValue = 10;
             //constant factor adjusts symbol sizes evenly
-            var minRadius = 1;
+            var minRadius = 1.5;
         } else if (keyword === "missing") {
             // Picked values that look normal
             var minValue = 5;
@@ -1042,19 +1044,16 @@ function getMapScale(){
         dataFiltered = false;
 
         resetMap();
-        createMap();
     } else if (dataSelected[1]=== "county-scale") {
         $('.mapScale-header').html("Map Scale: County");
         dataFiltered = false;
 
         resetMap();
-        createMap();
     } else if (dataSelected[1] === "city-scale") {
         $('.mapScale-header').html("Map Scale: City");
         dataFiltered = false;
 
         resetMap();
-        createMap();
     }
 }
 
@@ -1180,6 +1179,8 @@ function resetFilterOptions() {
 //Clear the map and recreate it
 function resetMap(){
     var container = L.DomUtil.get('map');
+    zoomLevel = map.getZoom();
+    centerPoint = map.getCenter();
     map.remove();
         if(container != null){
             container._leaflet_id = null;
@@ -1353,8 +1354,6 @@ function doAdvanceFilter() {
     }
 
     resetMap();
-    // Create Filtered Map
-    createMap();
 }
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
