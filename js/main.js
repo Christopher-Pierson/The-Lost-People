@@ -1,5 +1,7 @@
 //declare map var in global scope
-var map;
+var map; //Background map
+var mapLayer; // Proportional Symbols
+var LegendControl; // Legend
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
 var centerPoint = [38, -87];
 var zoomLevel = 4;
@@ -19,6 +21,7 @@ var yearEnd = 2020;
 var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
 //Retrieve Varaibles
 var unitSelected;
+
 //Declare API key and other options for OpenCageData geocoder
 var options = {
   key: 'c0a1ea5b826c49e0bdfb6831aa2c00b3',
@@ -97,12 +100,7 @@ function createMap(){
 	     subdomains: 'abcd'
     }).addTo(map);
 
-    // Get data differently depending on if it is filtered or not
-    if (dataFiltered){
-        getDataFiltered(map);
-    } else {
-        getData(map);
-    }
+    getData(map);
 };
 
 //Import GeoJSON data
@@ -111,6 +109,16 @@ function getData(map){
     if (dataSelected[0] === "combined-database" && dataSelected[1] === "state-scale") {
         //load the data
         $.getJSON("data/JSON/summary_counts.json", function(response){
+            //create an attributes array
+            var attributes = processData(response, "combined"); // attributes = Total Number
+
+            // calcStats(response, "combined");
+            createPropSymbols(response, attributes, "combined");
+            createLegend(attributes[0], "combined");
+        });
+    } else if (dataSelected[0] === "combined-database" && dataSelected[1] === "county-scale") {
+        //load the data
+        $.getJSON("data/JSON/county_counts.json", function(response){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
 
@@ -262,7 +270,7 @@ function processData(data, keyword){
 // Add circle markers for point features to the map
 function createPropSymbols(data, attributes, keyword){
     //create a Leaflet GeoJSON layer and add it to the map
-    L.geoJson(data, {
+    mapLayer = L.geoJson(data, {
         pointToLayer: function(feature, latlng){
             return pointToLayer(feature, latlng, attributes, keyword);
         }
@@ -280,7 +288,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var options = {
             fillColor: "#78BFA5",
             color: "#000",
-            weight: 1,
+            weight: 0.5,
             opacity: 1,
             fillOpacity: 0.8
         };
@@ -294,7 +302,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var options = {
             fillColor: "#66A3D9",
             color: "#000",
-            weight: 1,
+            weight: 0.5,
             opacity: 1,
             fillOpacity: 0.8
         };
@@ -307,7 +315,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var options = {
             fillColor: "#F2B872",
             color: "#000",
-            weight: 1,
+            weight: 0.5,
             opacity: 1,
             fillOpacity: 0.8
         };
@@ -320,7 +328,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
         var options = {
             fillColor: "#D96A6A",
             color: "#000",
-            weight: 1,
+            weight: 0.5,
             opacity: 1,
             fillOpacity: 0.8
         };
@@ -334,7 +342,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
             var options = {
                 fillColor: "#66A3D9",
                 color: "#000",
-                weight: 1,
+                weight: 0.5,
                 opacity: 1,
                 fillOpacity: 0.8
             };
@@ -342,7 +350,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
             var options = {
                 fillColor: "#F2B872",
                 color: "#000",
-                weight: 1,
+                weight: 0.5,
                 opacity: 1,
                 fillOpacity: 0.8
             };
@@ -350,7 +358,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
             var options = {
                 fillColor: "#D96A6A",
                 color: "#000",
-                weight: 1,
+                weight: 0.5,
                 opacity: 1,
                 fillOpacity: 0.8
             };
@@ -486,7 +494,7 @@ function calcPropRadius(attValue, keyword) {
     } else if (dataSelected[1] === "county-scale") {
         if (keyword === "combined"){
             // Picked values that look normal
-            var minValue = 5;
+            var minValue = 10;
             //constant factor adjusts symbol sizes evenly
             var minRadius = 1.8;
         } else if (keyword === "missing") {
@@ -588,7 +596,7 @@ function calcStats(data, keyword){
 
 //Create the legend of proportional symbols set to the defined max, min, mean in the "dataStats" global varaible
 function createLegend(attribute, keyword){
-    var LegendControl = L.Control.extend({
+    LegendControl = L.Control.extend({
         options: {
             position: 'bottomright'
         },
@@ -598,36 +606,63 @@ function createLegend(attribute, keyword){
             var container = L.DomUtil.create('div', 'legend-control-container');
 
             if (keyword === "combined"){
-                dataStats = {min:50, max:7000, mean:1000};
-                $(container).append('<h3 id="legend-title" ><b>Combined Database</b></h3>');
-                $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                if (dataSelected[1] === "state-scale") {
+                    dataStats = {min:50, max:7000, mean:2000};
+                    $(container).append('<h3 id="legend-title" ><b>Combined Database</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+    
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+    
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
+    
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -40;
+    
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+    
+                        //evenly space out labels
+                        var textY = i * 40 + 50; //spacing + y value
+    
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };    
+                } else if (dataSelected[1] === "county-scale"){
+                    dataStats = {min:10, max:1700, mean:300}; //manually created values for the total combined numbers
 
-                //Start attribute legend svg string
-                var svg = '<svg id="attribute-legend" width="270px" height="150px">';
+                    $(container).append('<h3 id="legend-title" ><b>Combined Databases</b></h3>');
+                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
-                //array of circle names to base loop on
-                var circles = ["max", "mean", "min"];
+                    //Start attribute legend svg string
+                    var svg = '<svg id="attribute-legend" width="270px" height="100px">';
 
-                //Loop to add each circle and text to svg string
-                for (var i=0; i<circles.length; i++){
-                    //Assign the r and cy attributes
-                    var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
-                    var cy = (180 - radius) -40;
+                    //array of circle names to base loop on
+                    var circles = ["max", "mean", "min"];
 
-                    //circle string
-                    svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                    //Loop to add each circle and text to svg string
+                    for (var i=0; i<circles.length; i++){
+                        //Assign the r and cy attributes
+                        var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
+                        var cy = (180 - radius) -90;
 
-                    //evenly space out labels
-                    var textY = i * 40 + 50; //spacing + y value
+                        //circle string
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
 
-                    //text string
-                    svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                };
+                        //evenly space out labels
+                        var textY = i * 30 + 30; //spacing + y value
 
-                //close svg string
-                svg += "</svg>";
+                        //text string
+                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                    };
 
-
+                    //close svg string
+                    svg += "</svg>";
+                }
             } else if (keyword === "missing"){
                 if (dataSelected[1] === "state-scale") {
                     dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
@@ -1203,14 +1238,16 @@ function resetFilterOptions() {
 
 //Clear the map and recreate it
 function resetMap(){
-    var container = L.DomUtil.get('map');
-    zoomLevel = map.getZoom();
-    centerPoint = map.getCenter();
-    map.remove();
-        if(container != null){
-            container._leaflet_id = null;
+    // Remove the Pop symbol layer and the legend
+    map.removeLayer(mapLayer);
+    $(".legend-control-container").remove();
+    
+    // Get data differently depending on if it is filtered or not
+    if (dataFiltered){
+        getDataFiltered(map);
+    } else {
+        getData(map);
     }
-    createMap();
 }
 
 // Retrieve which advanced filter options are selected
