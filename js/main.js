@@ -56,6 +56,10 @@ function createMap(){
     }).addTo(map);
 
     // Add zoom buttons for non-contiguous states and territories
+    L.easyButton('fa-home', function(){
+        map.setView([38, -87], 4);
+    },'zoom to Alaska',{ position: 'topright' }).addTo(map);
+
     L.easyButton('<strong>AK</strong>', function(){
         map.setView([65.144912, -152.541399], 3.5);
     },'zoom to Alaska',{ position: 'topright' }).addTo(map);
