@@ -38,6 +38,10 @@ var options = {
 
 // declage array of easy buttons for non-contiguous states & territories
 var buttons = [
+  L.easyButton('fa-home', function(){
+      map.setView([38, -87], 4);
+  },'zoom to original extent',{ position: 'topright' }),
+
   L.easyButton('<strong>AK</strong>', function(){
       map.setView([65.144912, -152.541399], 3.5);
   },'zoom to Alaska',{ position: 'topright' }),
@@ -610,28 +614,28 @@ function createLegend(attribute, keyword){
                     dataStats = {min:50, max:7000, mean:2000};
                     $(container).append('<h3 id="legend-title" ><b>Combined Database</b></h3>');
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
-    
+
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="270px" height="150px">';
-    
+
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
-    
+
                     //Loop to add each circle and text to svg string
                     for (var i=0; i<circles.length; i++){
                         //Assign the r and cy attributes
                         var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
                         var cy = (180 - radius) -40;
-    
+
                         //circle string
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
-    
+
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
-    
+
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
-                    };    
+                    };
                 } else if (dataSelected[1] === "county-scale"){
                     dataStats = {min:10, max:1700, mean:300}; //manually created values for the total combined numbers
 
@@ -1241,7 +1245,7 @@ function resetMap(){
     // Remove the Pop symbol layer and the legend
     map.removeLayer(mapLayer);
     $(".legend-control-container").remove();
-    
+
     // Get data differently depending on if it is filtered or not
     if (dataFiltered){
         getDataFiltered(map);
