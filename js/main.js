@@ -36,7 +36,7 @@ var options = {
   onResultClick: undefined, // callback with result as first parameter
 };
 
-// declage array of easy buttons for non-contiguous states & territories
+// declage array of easy buttons for home and non-contiguous states/territories set views
 var buttons = [
   L.easyButton('fa-home', function(){
       map.setView([38, -87], 4);
@@ -90,13 +90,13 @@ function createMap(){
         position: 'topright'
     }).addTo(map);
 
-    // Add zoom buttons for home
-    // L.easyButton('fa-home', function(){
-    //     map.setView([38, -87], 4);
-    // },'zoom to original extent',{ position: 'topright' }).addTo(map);
-
     // build easy bar from array of easy buttons
     L.easyBar(buttons).addTo(map);
+
+    // Add easy button to pull up splash screen
+    L.easyButton('fa-info-circle', function(){
+        map.setView([38, -87], 4);
+    },'zoom to original extent',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
