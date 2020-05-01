@@ -91,9 +91,9 @@ function createMap(){
     }).addTo(map);
 
     // Add zoom buttons for home
-    L.easyButton('fa-home', function(){
-        map.setView([38, -87], 4);
-    },'zoom to original extent',{ position: 'topright' }).addTo(map);
+    // L.easyButton('fa-home', function(){
+    //     map.setView([38, -87], 4);
+    // },'zoom to original extent',{ position: 'topright' }).addTo(map);
 
     // build easy bar from array of easy buttons
     L.easyBar(buttons).addTo(map);
