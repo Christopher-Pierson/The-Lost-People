@@ -628,7 +628,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -655,7 +655,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -90;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 30 + 30; //spacing + y value
@@ -687,7 +687,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -717,7 +717,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -90;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 30 + 30; //spacing + y value
@@ -749,7 +749,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -779,7 +779,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -811,7 +811,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -841,7 +841,7 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
@@ -874,7 +874,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -904,7 +904,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -90;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 30 + 30; //spacing + y value
@@ -936,7 +936,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -966,7 +966,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -998,7 +998,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -1071,31 +1071,31 @@ function getDatabase(){
         resetFilterOptions();
 
     } else if (dataSelected[0] === "unidentified-persons") {
+        dataFiltered = false;
+        resetFilterOptions();
         $('.data-header').html("Data: Unidentified Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
         $("#gender-unsure").attr('disabled', false);
-        dataFiltered = false;
-        resetFilterOptions();
 
     } else if (dataSelected[0] === "unclaimed-persons") {
+        dataFiltered = false;
+        resetFilterOptions();
         $('.data-header').html("Data: Unclaimed Persons");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
         $("#gender-unsure").attr('disabled', true);
-        dataFiltered = false;
-        resetFilterOptions();
 
     } else if (dataSelected[0] === "combined-database") {
+        dataFiltered = false;
+        resetFilterOptions();
         $('.data-header').html("Data: Combined Database");
-        $('#collapseTwo').collapse('hide');
+        // $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
         $('#adv-filt').attr('data-toggle', "");
-        dataFiltered = false;
-        resetFilterOptions();
     }
 }
 
