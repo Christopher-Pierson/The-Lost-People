@@ -2029,11 +2029,11 @@ UCP736,1/29/2014,Hersom,Lawrence,Male,White / Caucasian,Everett,Middlesex,Massac
 UCP269,1/23/2012,Gallagher,Brian ,Male,White / Caucasian,Everett,Middlesex,Massachusetts,4/30/2012
 UCP2136,12/19/2009,Dubois,James,Male,White / Caucasian,Everett,Snohomish,Washington,3/23/2016
 UCP2360,8/28/2009,Young,Philip,Male,White / Caucasian,Everett,Middlesex,Massachusetts,4/23/2019
-UCP2134,3/30/2009,Fulkerson,Robert,Male,White / Caucasian,Everett,Adams,Washington,3/23/2016
+UCP2134,3/30/2009,Fulkerson,Robert,Male,White / Caucasian,Everett,Snohomish,Washington,3/23/2016
 UCP2256,3/20/2009,Blankenship,Dayna,Female,White / Caucasian,Everett,Snohomish,Washington,4/1/2016
 UCP2133,2/22/2009,Trent,James,Male,White / Caucasian,Everett,Snohomish,Washington,3/23/2016
 UCP2132,2/16/2009,Moore,Thomas,Male,White / Caucasian,Everett,Snohomish,Washington,3/22/2016
-UCP2131,2/3/2009,Harris,Robert,Male,Black / African American,Everett,Adams,Washington,3/22/2016
+UCP2131,2/3/2009,Harris,Robert,Male,Black / African American,Everett,Snohomish,Washington,3/22/2016
 UCP2255,2/3/2009,Harris,Robert,Male,Black / African American,Everett,Snohomish,Washington,2/17/2020
 UCP2254,1/20/2009,Risley,Robert,Male,White / Caucasian,Everett,Snohomish,Washington,4/1/2016
 UCP2130,1/20/2009,Joslin,Holland,Male,White / Caucasian,Everett,Snohomish,Washington,3/22/2016
@@ -2048,7 +2048,7 @@ UCP2156,10/9/2004,Spencer,Edward,Male,White / Caucasian,Everett,Snohomish,Washin
 UCP2151,6/9/2004,Mills,Donald,Male,White / Caucasian,Everett,Snohomish,Washington,3/29/2016
 UCP1860,1/30/2004,Oaks,William,Male,White / Caucasian,Everett,Snohomish,Washington,2/17/2020
 UCP2115,,Neang,Him,Female,Asian,Everett,Snohomish,Washington,3/9/2016
-UCP1082,10/21/2001,O'Brien,Peggy,Female,White / Caucasian,Everettt,Snohomish,Washington,3/12/2015
+UCP1082,10/21/2001,O'Brien,Peggy,Female,White / Caucasian,Everett,Snohomish,Washington,3/12/2015
 UCP60564,10/1/2019,Schreiner,Richard,Male,White / Caucasian,Ewa Beach,Honolulu,Hawaii,3/13/2020
 UCP5099,3/2/2017,Luciano,Iris,Female,Hispanic / Latino,Ewa Beach,Honolulu,Hawaii,1/13/2020
 UCP5075,4/8/2016,EMOTO,Ronald,Male,Asian,Ewa Beach,Honolulu,Hawaii,2/28/2018
@@ -2068,7 +2068,7 @@ UCP65152,1/2/2020,Smith,Johnnie,Male,Black / African American,Far Rockaway,Queen
 UCP64806,12/29/2019,Peter,John,Male,White / Caucasian,Far Rockaway,Queens,New York,1/30/2020
 UCP65150,12/25/2019,Rhoden,Batsey,Male,Black / African American,Far Rockaway,Queens,New York,2/10/2020
 UCP64506,12/20/2019,Hernan,Charles,Male,White / Caucasian,Far Rockaway,Queens,New York,1/21/2020
-UCP67578,12/16/2019,Sanchez,Manuel,Male,Hispanic / Latino,Far Rockaway,New York,New York,3/26/2020
+UCP67578,12/16/2019,Sanchez,Manuel,Male,Hispanic / Latino,Far Rockaway,Queens,New York,3/26/2020
 UCP65147,12/16/2019,Yapo,Soweto,Male,Black / African American,Far Rockaway,Queens,New York,2/10/2020
 UCP64346,12/7/2019,Herrera,Carlos,Male,Hispanic / Latino,Far Rockaway,Queens,New York,1/15/2020
 UCP64505,11/30/2019,Puello,Jose,Male,Hispanic / Latino,Far Rockaway,Queens,New York,1/21/2020
@@ -2133,7 +2133,7 @@ UCP54445,5/12/2018,Gaines,Gerald,Male,Black / African American,Far Rockaway,Quee
 UCP55921,2/20/2018,Blont,Emmett,Male,Black / African American,Far Rockaway,Queens,New York,10/10/2019
 UCP57203,2/10/2018,Singh,Dalip,Male,Uncertain,Far Rockaway,Queens,New York,10/10/2019
 UCP56582,1/8/2018,Davis,Andre,Male,Black / African American,Far Rockaway,Queens,New York,10/10/2019
-UCP55913,12/28/2017,Sivukha,Nikolay,Male,White / Caucasian,Far Rockaway,New York,New York,10/10/2019
+UCP55913,12/28/2017,Sivukha,Nikolay,Male,White / Caucasian,Far Rockaway,Queens,New York,10/10/2019
 UCP1150,9/30/2014,Ciesnikowski,Andrzej,Male,White / Caucasian,Far Rockaway,Queens,New York,4/29/2015
 UCP1155,9/23/2014,Krackow,Barry,Male,White / Caucasian,Far Rockaway,Queens,New York,4/29/2015
 UCP65783,9/17/2018,Frye,Johnny,Male,Black / African American,Fayetteville,Washington,Arkansas,3/17/2020
@@ -3011,8 +3011,8 @@ UCP1914,8/10/2012,Scott,Jackie,Male,White / Caucasian,Knoxville,Knox,Tennessee,1
 UCP5249,3/5/2018,Person,William,Male,Black / African American,Kokomo,Howard,Indiana,4/16/2018
 UCP3379,7/12/2014,Zilnskis,Joseph,Male,White / Caucasian,Kuna,Ada,Idaho,9/18/2017
 UCP57772,3/26/2011,Hines,Junior,Male,White / Caucasian,Kuna,Ada,Idaho,2/10/2020
-UCP4951,10/12/2015,Graul,Terrance ,Male,White / Caucasian,La Connor,Skagit,Washington,1/24/2018
-UCP4952,8/20/2005,Turnley ,Vernon ,Male,White / Caucasian,La Connor,Skagit,Washington,1/24/2018
+UCP4951,10/12/2015,Graul,Terrance ,Male,White / Caucasian,La Conner,Skagit,Washington,1/24/2018
+UCP4952,8/20/2005,Turnley ,Vernon ,Male,White / Caucasian,La Conner,Skagit,Washington,1/24/2018
 UCP4044,2/27/2016,Tejada,Maria,Female,Hispanic / Latino,La Habra,Orange,California,5/16/2017
 UCP3715,9/17/2008,Shattuck,Gary ,Male,White / Caucasian,La Habra,Orange,California,5/2/2017
 UCP3802,1/28/2007,Gonzalez,John,Male,White / Caucasian,La Habra,Orange,California,5/4/2017
@@ -3135,9 +3135,9 @@ UCP59787,4/15/2019,Lopez-Morin,Juan,Male,Hispanic / Latino,Long Beach,Los Angele
 UCP2866,10/13/2016,MONTANEZ,Daniel,Male,White / Caucasian,Long Beach,Los Angeles,California,10/21/2016
 UCP3908,2/14/2009,Villa,Maria,Female,Hispanic / Latino,Long Beach,Los Angeles,California,5/11/2017
 UCP3907,2/14/2009,Villa,Maria,Female,Hispanic / Latino,Long Beach,Los Angeles,California,5/11/2017
-UCP3724,10/24/2008,Anaya,Mary,Female,White / Caucasian,Long Beach,Orange,California,5/2/2017
+UCP3724,10/24/2008,Anaya,Mary,Female,White / Caucasian,Long Beach,Los Angeles,California,5/2/2017
 UCP3740,11/26/2007,Horton,William,Male,White / Caucasian,Long Beach,Los Angeles,California,5/2/2017
-UCP3679,9/30/2006,Roas-Gomez,Robert,Male,White / Caucasian,Long Beach,Orange,California,5/2/2017
+UCP3679,9/30/2006,Roas-Gomez,Robert,Male,White / Caucasian,Long Beach,Los Angeles,California,5/2/2017
 UCP3505,5/2/2004,Ellis,Ellis,Male,White / Caucasian,Long Beach,Los Angeles,California,4/18/2017
 UCP3494,3/24/2004,Elkin,Arlene,Female,White / Caucasian,Long Beach,Los Angeles,California,4/18/2017
 UCP66437,2/18/1990,Cockrill,Benjamin,Male,White / Caucasian,Long Beach,Los Angeles,California,4/14/2020
@@ -3160,12 +3160,12 @@ UCP63933,3/11/2000,Willcuts,Edgar,Male,White / Caucasian,LOS ANGELES,Los Angeles
 UCP61768,2/7/2000,Lanza,Lawrence,Male,White / Caucasian,Los Angeles,Los Angeles,California,4/14/2020
 UCP65527,1/19/2020,Armer,Thomas,Male,White / Caucasian,Lovelock,Pershing,Nevada,2/21/2020
 UCP55142,12/24/2018,Diaz,Edrith,Male,"White / Caucasian, Hispanic / Latino",Lowell,Middlesex,Massachusetts,4/8/2020
-UCP4645,9/12/2017,Burke,Brian ,Male,White / Caucasian,Lowell,Barnstable,Massachusetts,10/13/2017
+UCP4645,9/12/2017,Burke,Brian ,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,10/13/2017
 UCP1197,3/31/2015,Mitchell,David,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,4/23/2019
 UCP983,12/15/2014,Dillon,Edward,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,4/8/2020
 UCP1958,12/1/2014,Huntress,Joseph,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,4/23/2019
 UCP1330,8/30/2014,Tran,Minh,Male,Asian,Lowell,Middlesex,Massachusetts,4/23/2019
-UCP772,4/26/2014,Bertrand,Michael,Male,White / Caucasian,Lowell,Barnstable,Massachusetts,4/23/2019
+UCP772,4/26/2014,Bertrand,Michael,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,4/23/2019
 UCP509,8/29/2013,Moralez,Jose,Male,"White / Caucasian, Hispanic / Latino",Lowell,Middlesex,Massachusetts,4/23/2019
 UCP2286,8/4/2011,Werkowski,stanley,Male,White / Caucasian,Lowell,Middlesex,Massachusetts,4/8/2020
 UCP2406,5/4/2009,Wright,Sandra,Female,White / Caucasian,Lowell,Middlesex,Massachusetts,4/23/2019
@@ -4738,10 +4738,10 @@ UCP3279,4/21/2003,Royse,Rachel,Female,White / Caucasian,Seal Beach,Orange,Califo
 UCP68261,1/8/2019,Farrall,Linda,Female,White / Caucasian,Seattle,King,Washington,4/17/2020
 UCP4920,1/17/2018,Kasian,Steven,Male,White / Caucasian,Seattle,King,Washington,4/17/2018
 UCP5405,12/20/2015,Blair,Michael,Male,,Seattle,King,Washington,5/8/2018
-UCP1263,3/20/2015,Walker,Diane,Female,White / Caucasian,Seattle,Snohomish,Washington,2/17/2020
+UCP1263,3/20/2015,Walker,Diane,Female,White / Caucasian,Seattle,King,Washington,2/17/2020
 UCP756,3/19/2014,Gleason,Jille,Female,White / Caucasian,Seattle,King,Washington,4/11/2014
 UCP754,3/13/2014,Nguyen,Hanna,Male,Asian,Seattle,King,Washington,4/11/2014
-UCP2210,2/15/2008,Howe,Robert,Male,White / Caucasian,Seattle,Snohomish,Washington,4/1/2016
+UCP2210,2/15/2008,Howe,Robert,Male,White / Caucasian,Seattle,King,Washington,4/1/2016
 UCP4985,12/14/2012,Sexton,Ronald,Male,White / Caucasian,Sedro Woolley,Skagit,Washington,2/2/2018
 UCP4986,12/14/2012,Sexton,Ronald,Male,White / Caucasian,Sedro Woolley,Skagit,Washington,2/2/2018
 UCP66001,11/22/2009,Collings,Robert,Male,White / Caucasian,Selah,Yakima,Washington,4/6/2020
@@ -5337,9 +5337,9 @@ UCP64402,5/29/2019,Ortega,Ruben,Male,Hispanic / Latino,Woodside,Queens,New York,
 UCP55074,12/11/2018,Pasiak AKA Heinrich,Linda,Female,White / Caucasian,Worcester,Worcester,Massachusetts,4/8/2020
 UCP55076,6/7/2018,Bova,Joseph,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/23/2019
 UCP54066,3/12/2018,Spirauskas,Vito,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/8/2020
-UCP4397,6/2/2017,Crisp,David,Male,White / Caucasian,Worcester,Barnstable,Massachusetts,4/23/2019
+UCP4397,6/2/2017,Crisp,David,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/23/2019
 UCP3603,3/10/2017,McDonald,Francis,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/23/2019
-UCP2788,9/16/2016,Niles,Florence,Female,White / Caucasian,Worcester,Barnstable,Massachusetts,9/22/2016
+UCP2788,9/16/2016,Niles,Florence,Female,White / Caucasian,Worcester,Worcester,Massachusetts,9/22/2016
 UCP1199,3/23/2015,Raymond,Howard,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/23/2019
 UCP1088,1/14/2015,Morales Silvestre,Antonio,Male,"White / Caucasian, Hispanic / Latino",Worcester,Worcester,Massachusetts,4/23/2019
 UCP1004,12/28/2014,Allman,Rodney,Male,White / Caucasian,Worcester,Worcester,Massachusetts,4/8/2020

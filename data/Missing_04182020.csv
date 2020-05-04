@@ -721,9 +721,9 @@ MP55834,8/13/1990,Mitter,Susan,43,Chitina,Valdez-Cordova,Alaska,Female,White / C
 MP52762,5/3/2003,Sisco,Michael,50,Columbia Bay,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP54001,7/5/1998,Anderson,Krist,24,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP56120,6/24/1992,Marstall,Paul,64,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55753,6/21/1991,Kosa,Loren,62,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55755,6/21/1991,Rocheleau,Harry,69,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP55754,6/21/1991,Kosa,Monte,41,Copper River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55753,6/21/1991,Kosa,Loren,62,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55755,6/21/1991,Rocheleau,Harry,69,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP55754,6/21/1991,Kosa,Monte,41,Copper Center,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP42644,7/21/2017,Brewster,John,29,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP51811,3/6/2008,Kassahn,Norman,63,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP53740,6/9/1998,Roberts,Michael,46,Cordova,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
@@ -742,9 +742,9 @@ MP61370,2/7/1977,Goodlataw,Alvin,38,Glennallen,Valdez-Cordova,Alaska,Male,Americ
 MP56032,8/17/1992,Johnson,Richard,67,Gulkana,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP56034,8/17/1992,Roth,Franklin,65,Gulkana,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP55854,6/20/1988,Mansfield,Gregory,39,Gulkana River,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60550,7/29/1995,Gelin,Allen,61,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60575,7/29/1995,Lindner,Richard,20,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
-MP60577,7/29/1995,Pickar,Mark,32,Middleton Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60550,7/29/1995,Gelin,Allen,61,,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60575,7/29/1995,Lindner,Richard,20,,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
+MP60577,7/29/1995,Pickar,Mark,32,,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP56344,9/28/1990,Day,James,50,Montegue Island,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP54538,8/25/1989,Farrell,Russell,60,Valdez,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
 MP55963,8/17/1989,Johnson,Michael,31,Valdez,Valdez-Cordova,Alaska,Male,White / Caucasian,4/14/2020
@@ -884,9 +884,9 @@ MP8304,6/26/2010,Sequeira,Cameron,32,Forest Lakes,Coconino,Arizona,Male,White / 
 MP29029,6/2/2015,HEIMER,MORGAN,22,Grand Canyon,Coconino,Arizona,Male,White / Caucasian,12/31/2019
 MP27663,2/1/2015,Kramer,Drake,21,Grand Canyon,Coconino,Arizona,Male,White / Caucasian,12/31/2019
 MP6566,7/2/2001,Richardson,Justin,13,Grand Canyon,Coconino,Arizona,Male,White / Caucasian,3/4/2020
-MP35453,4/5/2012,Ott,William,65,Grand Canyon National Park,Coconino,Arizona,Male,White / Caucasian,3/4/2020
-MP39937,8/1/1957,Begay,Mary,20,Grand Canyon National Park,Coconino,Arizona,Female,American Indian / Alaska Native,3/4/2020
-MP34305,11/1/1956,Lee,Ida,25,Grand Canyon National Park,Coconino,Arizona,Female,American Indian / Alaska Native,3/4/2020
+MP35453,4/5/2012,Ott,William,65,North Rim,Coconino,Arizona,Male,White / Caucasian,3/4/2020
+MP39937,8/1/1957,Begay,Mary,20,North Rim,Coconino,Arizona,Female,American Indian / Alaska Native,3/4/2020
+MP34305,11/1/1956,Lee,Ida,25,North Rim,Coconino,Arizona,Female,American Indian / Alaska Native,3/4/2020
 MP59889,7/22/2018,Portee,Raymond,43,Havasupai,Coconino,Arizona,Male,American Indian / Alaska Native,4/7/2020
 MP38260,5/12/2013,George,Glendon,37,Page,Coconino,Arizona,Male,American Indian / Alaska Native,5/30/2019
 MP57528,12/14/2015,Smallcanyon,Elaine,20,Page,Coconino,Arizona,Female,American Indian / Alaska Native,7/26/2019
@@ -2118,7 +2118,7 @@ MP22352,2/14/1990,Grant,Stephanie,37,Oakland,Alameda,California,Female,White / C
 MP50221,5/23/1980,Rains,Theresa,31,Oakland,Alameda,California,Female,White / Caucasian,3/31/2020
 MP5959,7/1/1973,Cole,Rose,16,Oakland,Alameda,California,Female,White / Caucasian,3/31/2020
 MP50967,9/8/2003,Anest,Shane,22,Pleasanton,Alameda,California,Male,White / Caucasian,1/10/2019
-MP2005,4/7/1999,Jacobson,Leonid,3,San Francisco,Alameda,California,Male,White / Caucasian,5/22/2018
+MP2005,4/7/1999,Jacobson,Leonid,3,San Francisco,San Francisco,California,Male,White / Caucasian,5/22/2018
 MP59155,7/5/2019,Steele,Paul,70,San Leandro,Alameda,California,Male,White / Caucasian,3/5/2020
 MP54069,10/10/2018,Otto,Robert,62,San Leandro,Alameda,California,Male,White / Caucasian,3/20/2020
 MP57965,1/1/2016,Kwit,Jerzy,46,San Leandro,Alameda,California,Male,White / Caucasian,3/5/2020
@@ -2355,7 +2355,7 @@ MP61360,7/17/2005,Gutierrez,Sandra,16,Calexico,Imperial,California,Female,Hispan
 MP10087,1/11/2001,Patlan,Yolanda,38,Calexico,Imperial,California,Female,"White / Caucasian, Hispanic / Latino",12/8/2016
 MP9187,1/1/1999,Cantua,Maria,29,Calexico,Imperial,California,Female,"White / Caucasian, Hispanic / Latino",11/15/2017
 MP19423,12/18/1995,Buendia,Maria,2,Calexico,Imperial,California,Female,Hispanic / Latino,11/16/2017
-MP16306,8/1/2009,Crespo Venegas,Jose,41,Calexico or Mexicali,Imperial,California,Male,Hispanic / Latino,2/1/2016
+MP16306,8/1/2009,Crespo Venegas,Jose,41,Calexico,Imperial,California,Male,Hispanic / Latino,2/1/2016
 MP64317,3/21/2003,Uribe,Javier,42,Calipatria,Imperial,California,Male,Hispanic / Latino,2/27/2020
 MP50648,5/19/2008,Vedder,Barry,51,Desert Shores,Imperial,California,Male,White / Caucasian,3/4/2020
 MP61451,1/24/2012,Lee,Dustin,16,El Centro,Imperial,California,Male,White / Caucasian,2/27/2020
@@ -2367,10 +2367,10 @@ MP31172,11/17/2015,Bromet,Nancy,37,El Centro,Imperial,California,Female,Hispanic
 MP65331,11/11/2019,Frantz,Brian,50,Holtville,Imperial,California,Male,White / Caucasian,2/27/2020
 MP59929,3/4/1996,Keesler,Thomas,40,Holtville,Imperial,California,Male,White / Caucasian,2/27/2020
 MP4534,9/22/1989,Rosales,Froilan,15,Holtville,Imperial,California,Male,Hispanic / Latino,2/27/2020
-MP60340,6/16/2003,Chavez Moreno,German,21,Mexicali,Imperial,California,Male,White / Caucasian,2/27/2020
-MP20697,5/31/2013,Machado,Jose Ramon,34,Mexicali,Imperial,California,Male,Hispanic / Latino,4/8/2020
-MP60217,3/1/2013,Zainos Beltran,Gerber,12,Mexicali,Imperial,California,Male,Hispanic / Latino,2/27/2020
-MP59931,9/13/1997,Quiroz Agrasanchez,Jorge,34,"mexicali, mexico",Imperial,California,Male,Hispanic / Latino,2/27/2020
+MP60340,6/16/2003,Chavez Moreno,German,21,Calexico,Imperial,California,Male,White / Caucasian,2/27/2020
+MP20697,5/31/2013,Machado,Jose Ramon,34,Calexico,Imperial,California,Male,Hispanic / Latino,4/8/2020
+MP60217,3/1/2013,Zainos Beltran,Gerber,12,Calexico,Imperial,California,Male,Hispanic / Latino,2/27/2020
+MP59931,9/13/1997,Quiroz Agrasanchez,Jorge,34,Calexico,Imperial,California,Male,Hispanic / Latino,2/27/2020
 MP60023,8/21/2019,Moroni,Michael,58,Niland,Imperial,California,Male,White / Caucasian,2/27/2020
 MP60034,4/9/2019,Neal,John,49,Niland,Imperial,California,Male,White / Caucasian,3/24/2020
 MP60284,6/23/2013,Steinert,Edward,52,Niland,Imperial,California,Male,White / Caucasian,2/27/2020
@@ -2387,9 +2387,9 @@ MP64233,3/8/2006,Valenzuela Reyes,Jesus,24,winterhaven,Imperial,California,Male,
 MP64336,6/15/2004,Diaz-Estrada,Edgar,21,Winterhaven,Imperial,California,Male,Hispanic / Latino,2/27/2020
 MP22383,9/13/2007,Dodges,Ashley,17,Bishop,Inyo,California,Female,White / Caucasian,9/20/2018
 MP24393,2/2/1996,Wyckoff,Jennie,90,Bishop,Inyo,California,Female,White / Caucasian,9/20/2018
-MP4466,7/22/1996,Weber,Georg,10,Death Valley,Inyo,California,Male,White / Caucasian,6/19/2018
-MP23008,4/26/1987,"LaPergola, Jr.",Robert,28,Death Valley,Inyo,California,Male,White / Caucasian,2/6/2018
-MP4464,7/26/1996,Meyer,Cornelia,27,Death Valley,Inyo,California,Female,White / Caucasian,11/5/2019
+MP4466,7/22/1996,Weber,Georg,10,Furnace Creek,Inyo,California,Male,White / Caucasian,6/19/2018
+MP23008,4/26/1987,"LaPergola, Jr.",Robert,28,Furnace Creek,Inyo,California,Male,White / Caucasian,2/6/2018
+MP4464,7/26/1996,Meyer,Cornelia,27,Furnace Creek,Inyo,California,Female,White / Caucasian,11/5/2019
 MP63564,2/23/2019,Kraft,Matthew,24,Independence,Inyo,California,Male,White / Caucasian,12/24/2019
 MP39800,6/12/2014,Isaacs,Michael,29,Valley Wells,Inyo,California,Male,White / Caucasian,3/31/2020
 MP15319,9/11/2011,Encarnacion,Luis,7,Arvin,Kern,California,Male,Hispanic / Latino,10/7/2019
@@ -3085,9 +3085,9 @@ MP12157,3/4/1981,Whitaker,Betty,64,Novato,Marin,California,Female,White / Caucas
 MP34646,5/9/2014,Wilson,Brian,35,Point Reyes Station,Marin,California,Male,White / Caucasian,8/24/2017
 MP11979,5/31/1990,Leese,Mark,29,Pt Reyes Station,Marin,California,Male,White / Caucasian,1/10/2020
 MP33048,2/18/1984,Schneider,Sally,26,San Anselmo,Marin,California,Female,White / Caucasian,3/27/2019
-MP38272,7/29/2016,Sears,John,53,San Francisco,Marin,California,Male,White / Caucasian,6/11/2018
-MP14355,9/26/1995,Nangle,Michael,37,San Francisco,Marin,California,Male,White / Caucasian,3/26/2020
-MP51247,6/30/2018,Daniels Jr,Anthony,26,San Francisco,Marin,California,Male,Black / African American,4/1/2020
+MP38272,7/29/2016,Sears,John,53,San Francisco,San Francisco,California,Male,White / Caucasian,6/11/2018
+MP14355,9/26/1995,Nangle,Michael,37,San Francisco,San Francisco,California,Male,White / Caucasian,3/26/2020
+MP51247,6/30/2018,Daniels Jr,Anthony,26,San Francisco,San Francisco,California,Male,Black / African American,4/1/2020
 MP12453,2/24/1993,Orr,Gregory,42,San Rafael,Marin,California,Male,White / Caucasian,5/30/2017
 MP9751,12/7/1992,Lye,Ronald,55,San Rafael,Marin,California,Male,White / Caucasian,3/14/2018
 MP12429,9/30/1985,Zarba,Philip,47,San Rafael,Marin,California,Male,White / Caucasian,4/17/2020
@@ -3335,7 +3335,7 @@ MP21150,5/1/2013,Jacobson,Susan,58,Roseville,Placer,California,Female,White / Ca
 MP3881,1/1/1980,Root,Alma,14,Sacramento,Placer,California,Female,White / Caucasian,6/8/2018
 MP3879,5/24/1977,Stewart,Kimberly,21,Sheridan,Placer,California,Female,White / Caucasian,3/2/2020
 MP38924,7/26/1968,Loe,Wanda,26,Tahoe City,Placer,California,Female,White / Caucasian,3/2/2020
-MP3893,3/25/1982,Garbowitz,Stuart,26,Truckee,Placer,California,Male,White / Caucasian,9/5/2018
+MP3893,3/25/1982,Garbowitz,Stuart,26,Truckee,Nevada,California,Male,White / Caucasian,9/5/2018
 MP55528,11/5/2018,Potts,Domonic,21,Chester,Plumas,California,Male,White / Caucasian,2/20/2020
 MP4442,4/11/1996,McKinney,Robert,65,Clio,Plumas,California,Male,White / Caucasian,2/13/2020
 MP65326,9/8/2017,Millard,William,73,Cromberg,Plumas,California,Male,White / Caucasian,2/13/2020
@@ -3822,7 +3822,7 @@ MP9353,10/10/1985,Rawlinson,Mary,18,San Diego,San Diego,California,Female,White 
 MP8501,9/13/1983,Jean,Chiu,45,San Diego,San Diego,California,Female,Asian,7/24/2019
 MP17932,1/24/1979,Vowell,Debra,21,San Diego,San Diego,California,Female,White / Caucasian,3/31/2020
 MP40263,8/12/2013,Harris-Zmudka,Katherine,51,San Diego (La Jolla-UCSD),San Diego,California,Female,White / Caucasian,3/4/2019
-MP5345,11/29/2005,Tang,Jerry,39,San Francisco,San Diego,California,Male,Asian,2/4/2020
+MP5345,11/29/2005,Tang,Jerry,39,San Francisco,San Francisco,California,Male,Asian,2/4/2020
 MP8887,11/26/2009,Guidry,Mickey,16,San Marcos,San Diego,California,Male,White / Caucasian,6/4/2018
 MP37336,3/21/1995,Davis,Douglas,39,San Marcos,San Diego,California,Male,White / Caucasian,7/25/2018
 MP64867,5/19/2015,Nilsson,Jacob,23,San Ysidro,San Diego,California,Male,White / Caucasian,2/7/2020
@@ -4158,7 +4158,7 @@ MP19678,2/22/1970,Bonick,Peter,17,San Mateo,San Mateo,California,Male,White / Ca
 MP20268,9/1/2008,Aguilar-Vasquez,Alex,28,San Mateo,San Mateo,California,Male,Hispanic / Latino,3/18/2020
 MP65872,2/19/2006,Lupian Garza,Arturo,29,San Mateo,San Mateo,California,Male,Hispanic / Latino,3/18/2020
 MP6579,6/8/1976,Roach,Sherry,17,San Mateo,San Mateo,California,Female,"White / Caucasian, American Indian / Alaska Native",3/19/2020
-MP17888,1/11/1982,Wright,Charles,26,South San Francisco,San Mateo,California,Male,"White / Caucasian, Hispanic / Latino",3/18/2019
+MP17888,1/11/1982,Wright,Charles,26,San Francisco,San Francisco,California,Male,"White / Caucasian, Hispanic / Latino",3/18/2019
 MP65819,1/24/2020,Rosenberg,Niles,50,,San Mateo,California,Male,White / Caucasian,3/2/2020
 MP58573,6/9/2019,Brusstar,Robert,68,Casmalia,Santa Barbara,California,Male,White / Caucasian,1/18/2020
 MP1164,7/15/2006,Cotton,Victoria,50,Goleta,Santa Barbara,California,Female,White / Caucasian,6/26/2017
@@ -4206,7 +4206,7 @@ MP1182,11/14/1999,Diaz,Terrence,45,Palo Alto,Santa Clara,California,Male,White /
 MP26846,4/1/1975,Armstrong,Douglas,19,Palo Alto,Santa Clara,California,Male,White / Caucasian,4/11/2019
 MP20915,8/4/2007,Kulshreshtha,Yashaswi,4,Sacramento,Santa Clara,California,Male,Asian,10/9/2015
 MP20914,8/4/2007,Kulshreshtha,Hemangini,1,Sacramento,Santa Clara,California,Female,Asian,10/9/2015
-MP7386,5/15/2010,Miller,Jackson,19,San Francisco,Santa Clara,California,Male,White / Caucasian,5/6/2019
+MP7386,5/15/2010,Miller,Jackson,19,San Francisco,San Francisco,California,Male,White / Caucasian,5/6/2019
 MP56793,3/25/2019,Sigal,Vsevolod,58,San Jose,Santa Clara,California,Male,White / Caucasian,2/26/2020
 MP32401,11/17/2013,Farias,Ronald,69,San Jose,Santa Clara,California,Male,White / Caucasian,3/30/2020
 MP25051,12/14/2012,Eklund,Anthony,7,San Jose,Santa Clara,California,Male,"Asian, White / Caucasian",3/30/2020
@@ -4345,7 +4345,7 @@ MP56331,12/11/1994,Vogel,Michael,44,I-80 Vallejo,Solano,California,Male,White / 
 MP56322,7/12/1990,Hansen,John,63,Napa River N/ SR37,Solano,California,Male,White / Caucasian,3/26/2020
 MP56341,8/18/2004,Grijalva,David,33,Sacramento,Solano,California,Male,Hispanic / Latino,3/26/2020
 MP56333,12/22/1996,Petersen,Larry,36,Sacramento Deep Water Channel,Solano,California,Male,White / Caucasian,3/26/2020
-MP14690,7/18/1987,Aragon,Frederick,28,San Francisco,Solano,California,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
+MP14690,7/18/1987,Aragon,Frederick,28,San Francisco,San Francisco,California,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
 MP56340,3/21/2000,Thompson,Wilburn,53,Suisun,Solano,California,Male,White / Caucasian,3/26/2020
 MP22800,3/19/1985,Baracosa,Donald,36,Suisun,Solano,California,Male,White / Caucasian,4/19/2018
 MP56339,3/21/2000,Washington Jr.,James,16,Suisun,Solano,California,Male,Black / African American,3/26/2020
@@ -6272,9 +6272,9 @@ MP6890,10/10/1999,Bryant,Patricia,48,Boynton Beach,Palm Beach,Florida,Female,Whi
 MP5898,2/9/1988,Burton,Hattie,19,Boynton Beach,Palm Beach,Florida,Female,Black / African American,2/20/2020
 MP31700,12/9/2004,Everett,Leon,70,Delray Beach,Palm Beach,Florida,Male,White / Caucasian,7/19/2018
 MP20104,9/24/2000,Pettersen,Matthew,21,Delray Beach,Palm Beach,Florida,Male,White / Caucasian,3/20/2018
-MP30418,7/2/2014,Harary,Donna,63,Greenacres,Palm Beach,Florida,Female,White / Caucasian,12/5/2019
-MP6327,5/27/1984,Luna,Marjorie,8,Greenacres,Palm Beach,Florida,Female,White / Caucasian,2/5/2019
-MP22798,5/2/1974,Lefler,Brenda,31,Greenacres,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
+MP30418,7/2/2014,Harary,Donna,63,Green Acres Mobile Estates,Palm Beach,Florida,Female,White / Caucasian,12/5/2019
+MP6327,5/27/1984,Luna,Marjorie,8,Green Acres Mobile Estates,Palm Beach,Florida,Female,White / Caucasian,2/5/2019
+MP22798,5/2/1974,Lefler,Brenda,31,Green Acres Mobile Estates,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
 MP2377,1/1/2006,Hoyt,Emillie,23,Highland Beach,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
 MP20353,5/5/2013,Patient,William,16,Juno Beach,Palm Beach,Florida,Male,White / Caucasian,12/19/2019
 MP31074,7/11/2014,Hawthorn,James,79,Jupiter,Palm Beach,Florida,Male,White / Caucasian,1/8/2020
@@ -6681,9 +6681,9 @@ MP60524,9/13/2019,Steele,Melanie,24,Savannah,Chatham,Georgia,Female,White / Cauc
 MP51401,2/23/2014,Jackson,Monica,45,Savannah,Chatham,Georgia,Female,Black / African American,3/17/2020
 MP42012,8/4/1999,Williams,Lisa,25,Savannah,Chatham,Georgia,Female,Black / African American,3/17/2020
 MP664,4/11/1997,Warren,Melanie,34,Savannah,Chatham,Georgia,Female,White / Caucasian,5/9/2019
-MP454,11/18/2004,Lankester-Cox,Stephen,38,Acworth,Cherokee,Georgia,Male,White / Caucasian,1/2/2020
-MP455,3/1/2001,"Martin, Jr.",James,34,Acworth,Cherokee,Georgia,Male,Black / African American,12/14/2011
-MP12599,8/6/1992,Norred,Belinda,36,Acworth,Cherokee,Georgia,Female,White / Caucasian,1/2/2020
+MP454,11/18/2004,Lankester-Cox,Stephen,38,Westwood Station,Cherokee,Georgia,Male,White / Caucasian,1/2/2020
+MP455,3/1/2001,"Martin, Jr.",James,34,Westwood Station,Cherokee,Georgia,Male,Black / African American,12/14/2011
+MP12599,8/6/1992,Norred,Belinda,36,Westwood Station,Cherokee,Georgia,Female,White / Caucasian,1/2/2020
 MP41718,12/31/2017,Ray,Maria,58,Athens,Clarke,Georgia,Female,"White / Caucasian, Hispanic / Latino",4/13/2020
 MP13981,2/11/2006,Cruz-Farias,Adrina,29,Forest Park,Clayton,Georgia,Female,"White / Caucasian, Hispanic / Latino",12/5/2014
 MP62367,4/11/2016,Turner,Corey,36,Jonesboro,Clayton,Georgia,Male,Black / African American,1/14/2020
@@ -7091,7 +7091,7 @@ MP56623,6/12/2011,White,Steven,58,Makena,Maui,Hawaii,Male,White / Caucasian,3/5/
 MP4274,1/10/2004,Evenstar,Astara,14,,Maui,Hawaii,Female,White / Caucasian,3/5/2020
 MP34387,7/13/2015,Oliveira,Billy,39,Nahiku,Maui,Hawaii,Male,Other,3/5/2020
 MP587,7/19/2002,Madigan III,John,52,Paia,Maui,Hawaii,Male,White / Caucasian,3/5/2020
-MP1265,3/14/2007,Castro,Antonio,75,South Kihei,Maui,Hawaii,Male,"White / Caucasian, Hispanic / Latino",3/5/2020
+MP1265,3/14/2007,Castro,Antonio,75,Kihei,Maui,Hawaii,Male,"White / Caucasian, Hispanic / Latino",3/5/2020
 MP60506,8/19/2019,Hoffman,Gary,43,Ulupalakua,Maui,Hawaii,Male,White / Caucasian,3/5/2020
 MP23732,1/12/2014,Monsalve,Moreira,46,Wailuku,Maui,Hawaii,Female,"White / Caucasian, Hispanic / Latino",3/5/2020
 MP64235,12/19/2019,Carhuas,Teodomiro,68,Boise,Ada,Idaho,Male,White / Caucasian,1/15/2020
@@ -7139,10 +7139,10 @@ MP2091,6/2/1999,Vest,Darwin,48,Idaho Falls,Bonneville,Idaho,Male,White / Caucasi
 MP7429,11/7/1980,Leach,Randall,20,Idaho Falls,Bonneville,Idaho,Male,White / Caucasian,9/6/2018
 MP94,9/14/2001,Hoopes,Amber,20,Idaho Falls,Bonneville,Idaho,Female,White / Caucasian,3/16/2020
 MP42326,4/22/1979,Butler,Donald,59,Irwin,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
-MP38548,5/24/1980,Hill,Rex,6,Palisades Res.,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
-MP38547,5/24/1980,Hill,Larry,38,Palisades Res.,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
-MP24353,5/24/1980,Schiess,Laddie,38,Palisades Res.,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
-MP29211,5/24/1980,Schiess,Toni,10,Palisades Reservoir,Bonneville,Idaho,Female,White / Caucasian,3/16/2020
+MP38548,5/24/1980,Hill,Rex,6,Palisades,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
+MP38547,5/24/1980,Hill,Larry,38,Palisades,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
+MP24353,5/24/1980,Schiess,Laddie,38,Palisades,Bonneville,Idaho,Male,White / Caucasian,3/16/2020
+MP29211,5/24/1980,Schiess,Toni,10,Palisades,Bonneville,Idaho,Female,White / Caucasian,3/16/2020
 MP38854,12/16/2015,Dowell,Aram,36,Naples,Boundary,Idaho,Male,White / Caucasian,3/4/2019
 MP23257,9/21/2010,Uhl,David,56,Priest Lake,Boundary,Idaho,Male,White / Caucasian,3/11/2020
 MP9780,8/22/2009,Brewer,Zackery,16,Nampa,Canyon,Idaho,Male,White / Caucasian,1/21/2020
@@ -7886,7 +7886,7 @@ MP22620,7/25/1986,Hedgers,Steven,27,El Dorado,Butler,Kansas,Male,White / Caucasi
 MP7302,7/28/1997,"Harrod, Jr.",Franklin,24,Rose Hill,Butler,Kansas,Male,White / Caucasian,5/7/2019
 MP5231,4/4/1999,Herrman,Adam,11,Towanda,Butler,Kansas,Male,White / Caucasian,5/17/2019
 MP386,8/31/1991,Sullens,Carol,18,Galena,Cherokee,Kansas,Female,White / Caucasian,4/18/2018
-MP36259,11/9/2016,Arnold,Baby Female,0.5,Kansas City,Clay,Kansas,Female,Black / African American,1/13/2017
+MP36259,11/9/2016,Arnold,Baby Female,0.5,Kansas City,Wyandotte,Kansas,Female,Black / African American,1/13/2017
 MP26586,12/28/2005,Andes,Jeffrey,36,Winfield,Cowley,Kansas,Male,White / Caucasian,8/17/2018
 MP379,8/19/1993,Hudson,Ginger,33,Pittsburg,Crawford,Kansas,Female,White / Caucasian,10/11/2019
 MP65801,1/15/2019,Head,Alex,31,Enterprise,Dickinson,Kansas,Male,White / Caucasian,4/2/2020
@@ -8656,7 +8656,7 @@ MP36859,12/23/2005,Chau,Siphat,19,Portland,Cumberland,Maine,Male,Asian,8/6/2019
 MP57341,4/1/2019,Pride,Cathy,63,Portland,Cumberland,Maine,Female,White / Caucasian,6/11/2019
 MP4428,3/17/1996,Tevanian,Margaret,65,Portland,Cumberland,Maine,Female,White / Caucasian,8/7/2019
 MP3977,9/24/1971,Moulton,Cathy,16,Portland,Cumberland,Maine,Female,White / Caucasian,7/12/2019
-MP53310,1/25/2000,Rich,Lawrence,54,South Portland,Cumberland,Maine,Male,White / Caucasian,5/6/2019
+MP53310,1/25/2000,Rich,Lawrence,54,Portland,Cumberland,Maine,Male,White / Caucasian,5/6/2019
 MP55186,8/4/1982,Baylor,Gary,30,Standish,Cumberland,Maine,Male,White / Caucasian,6/11/2019
 MP39311,6/17/2017,Kelley,Sebastian,30,Westbrook,Cumberland,Maine,Male,Black / African American,8/16/2019
 MP55095,2/26/1976,Ancona,Cynthia,37,Yarmouth,Cumberland,Maine,Female,White / Caucasian,1/31/2019
@@ -8736,18 +8736,18 @@ MP23580,10/5/2000,Boardman,George,70,Searsmont,Waldo,Maine,Male,White / Caucasia
 MP56348,10/20/2009,Jones,Joseph,28,Cobscook Bay,Washington,Maine,Male,White / Caucasian,3/30/2019
 MP39516,2/11/1991,Perkins,Shawn,20,Eastport,Washington,Maine,Male,White / Caucasian,10/7/2019
 MP23908,7/1/2002,Lehan,Marilyn,47,Eastport,Washington,Maine,Female,White / Caucasian,6/11/2019
-MP39512,3/25/1971,Sturgeon,Mack,42,Frenchman's Bay,Washington,Maine,Male,White / Caucasian,10/7/2019
-MP39523,3/25/1971,Smith,Donald,40,Frenchman's Bay,Washington,Maine,Male,White / Caucasian,2/4/2020
-MP39511,3/25/1971,Murphy,Melvin,49,Frenchman's Bay,Washington,Maine,Male,White / Caucasian,10/7/2019
+MP39512,3/25/1971,Sturgeon,Mack,42,Bar Harbor,Hancock,Maine,Male,White / Caucasian,10/7/2019
+MP39523,3/25/1971,Smith,Donald,40,Bar Harbor,Hancock,Maine,Male,White / Caucasian,2/4/2020
+MP39511,3/25/1971,Murphy,Melvin,49,Bar Harbor,Hancock,Maine,Male,White / Caucasian,10/7/2019
 MP39519,6/19/1982,Robinson,Harmon,75,Harrington,Washington,Maine,Male,White / Caucasian,10/7/2019
 MP39522,11/18/1988,Pettigrow,Gilbert,62,Machiasport,Washington,Maine,Male,White / Caucasian,10/7/2019
 MP3975,6/2/1971,Chapman,Douglas,3,Alfred,York,Maine,Male,White / Caucasian,6/11/2019
 MP19762,5/21/1999,Torres,Angel,21,Biddeford,York,Maine,Male,"White / Caucasian, Hispanic / Latino",8/28/2019
 MP36368,12/4/1995,Dupuis,Roger,39,Biddeford,York,Maine,Male,White / Caucasian,6/27/2019
 MP42750,9/12/2015,Zhou,Feng,48,Biddeford,York,Maine,Male,Asian,6/11/2019
-MP53363,2/1/1982,Danis,Richard,26,Cape Elizabeth,York,Maine,Male,White / Caucasian,6/11/2019
-MP53366,2/1/1982,Lavigne,Darren,21,Cape Elizabeth,York,Maine,Male,White / Caucasian,1/10/2020
-MP53364,2/1/1982,Gregoire,Raymond,22,Cape Elizabeth,York,Maine,Male,White / Caucasian,6/11/2019
+MP53363,2/1/1982,Danis,Richard,26,Cape Elizabeth,Cumberland,Maine,Male,White / Caucasian,6/11/2019
+MP53366,2/1/1982,Lavigne,Darren,21,Cape Elizabeth,Cumberland,Maine,Male,White / Caucasian,1/10/2020
+MP53364,2/1/1982,Gregoire,Raymond,22,Cape Elizabeth,Cumberland,Maine,Male,White / Caucasian,6/11/2019
 MP53234,9/3/2010,Schultze,Robert,63,Eliot,York,Maine,Male,White / Caucasian,6/11/2019
 MP50502,8/1/1964,Desmond,Robert,10,Kennebunk,York,Maine,Male,White / Caucasian,6/11/2019
 MP58672,12/15/1989,McLean,Harrison,48,Kennebunkport,York,Maine,Male,White / Caucasian,7/12/2019
@@ -9411,9 +9411,9 @@ MP51098,6/13/2018,Golemi,Flavio,26,Troy,Oakland,Michigan,Male,Other,12/20/2019
 MP30894,5/23/1985,Moore,Cindy,28,Troy,Oakland,Michigan,Female,White / Caucasian,8/22/2018
 MP10412,10/26/1983,De Arment,Carol,36,Troy,Oakland,Michigan,Female,White / Caucasian,7/11/2019
 MP37385,2/14/2017,Edgett,Brian,55,Waterford,Oakland,Michigan,Male,White / Caucasian,3/4/2020
-MP41232,2/7/1991,Prilepok,Gustav,56,West Bloomfield,Oakland,Michigan,Male,White / Caucasian,10/13/2019
-MP21262,12/26/2008,Adlai,Amanda,7,West Bloomfield,Oakland,Michigan,Female,White / Caucasian,7/19/2019
-MP30056,4/22/1998,Konja,Wissam,32,West Bloomfield Twp,Oakland,Michigan,Male,White / Caucasian,8/21/2019
+MP41232,2/7/1991,Prilepok,Gustav,56,Bloomfield,Oakland,Michigan,Male,White / Caucasian,10/13/2019
+MP21262,12/26/2008,Adlai,Amanda,7,Bloomfield,Oakland,Michigan,Female,White / Caucasian,7/19/2019
+MP30056,4/22/1998,Konja,Wissam,32,Bloomfield,Oakland,Michigan,Male,White / Caucasian,8/21/2019
 MP67526,5/11/2011,Kolenic,Thomas,58,Hart,Oceana,Michigan,Male,White / Caucasian,4/13/2020
 MP40621,9/16/2017,Vazquez,Rene,17,Montague,Oceana,Michigan,Male,"White / Caucasian, Hispanic / Latino",4/13/2020
 MP50920,7/1/2018,Graves,Kevin,28,Rothbury,Oceana,Michigan,Male,White / Caucasian,4/13/2020
@@ -10230,9 +10230,9 @@ MP7841,6/9/2000,Cerney,Eugene,56,Rolla,Phelps,Missouri,Male,White / Caucasian,11
 MP54899,3/24/2018,Shipley,Emilee,16,Rolla,Phelps,Missouri,Female,White / Caucasian,2/13/2019
 MP24166,9/28/2005,Willis,Qutisha,38,Rolla,Phelps,Missouri,Female,White / Caucasian,4/9/2019
 MP30712,4/8/2015,Auten-Metz,Jacquelyn,52,St. James,Phelps,Missouri,Female,White / Caucasian,3/28/2019
-MP59926,2/28/2007,Luzader,David,46,Kansas City,Platte,Missouri,Male,White / Caucasian,1/31/2020
-MP20483,3/15/2006,Combe-Rivas,Chloe,2,Kansas City,Platte,Missouri,Female,White / Caucasian,8/27/2018
-MP248,2/24/1997,Kipper,Crystal,18,Kansas City,Platte,Missouri,Female,White / Caucasian,9/11/2018
+MP59926,2/28/2007,Luzader,David,46,Riverside,Platte,Missouri,Male,White / Caucasian,1/31/2020
+MP20483,3/15/2006,Combe-Rivas,Chloe,2,Riverside,Platte,Missouri,Female,White / Caucasian,8/27/2018
+MP248,2/24/1997,Kipper,Crystal,18,Riverside,Platte,Missouri,Female,White / Caucasian,9/11/2018
 MP2335,6/5/1999,Heese,Charles,44,Parkville,Platte,Missouri,Male,White / Caucasian,9/11/2018
 MP15111,2/16/2001,Webb,Maureen,42,Bolivar,Polk,Missouri,Female,White / Caucasian,3/26/2018
 MP39892,7/30/2017,Valverde,Alex,43,Crocker,Pulaski,Missouri,Male,White / Caucasian,11/19/2018
@@ -10458,9 +10458,9 @@ MP52588,9/13/2018,Johnson,Laura,49,Billings,Yellowstone,Montana,Female,White / C
 MP52378,7/23/2018,Harding,Shacaiah,19,Billings,Yellowstone,Montana,Female,American Indian / Alaska Native,2/26/2019
 MP17080,3/16/2012,Grossman,Jamee,24,Billings,Yellowstone,Montana,Female,White / Caucasian,10/23/2019
 MP60148,7/15/2019,Whitedirt,Evander,25,Muddy Creek,Yellowstone,Montana,Male,American Indian / Alaska Native,10/10/2019
-MP1773,1/6/2001,Holbrook,Victor,66,Omaha,Adams,Nebraska,Male,White / Caucasian,7/17/2018
-MP1972,3/25/1986,Kellar,Allyn,31,Omaha,Adams,Nebraska,Male,White / Caucasian,3/30/2020
-MP4690,2/1/2009,Gallegos-Guzman,Angel,2,Omaha,Adams,Nebraska,Male,Hispanic / Latino,7/21/2016
+MP1773,1/6/2001,Holbrook,Victor,66,Omaha,Douglas,Nebraska,Male,White / Caucasian,7/17/2018
+MP1972,3/25/1986,Kellar,Allyn,31,Omaha,Douglas,Nebraska,Male,White / Caucasian,3/30/2020
+MP4690,2/1/2009,Gallegos-Guzman,Angel,2,Omaha,Douglas,Nebraska,Male,Hispanic / Latino,7/21/2016
 MP19639,6/8/1940,Miller,Joe,42,Cedar Rapids,Boone,Nebraska,Male,White / Caucasian,6/4/2018
 MP4655,1/25/1995,Bechtold,Dean,21,Ainsworth,Brown,Nebraska,Male,White / Caucasian,8/23/2017
 MP64306,11/17/2019,Loupin,Christopher,28,Elm Creek,Buffalo,Nebraska,Male,White / Caucasian,1/15/2020
@@ -10792,7 +10792,7 @@ MP57063,3/28/2019,Elkow,Kathleen,85,Mays Landing,Atlantic,New Jersey,Female,Whit
 MP64223,2/1/2019,Best-Bey,Robin,27,Minotola,Atlantic,New Jersey,Female,Black / African American,3/6/2020
 MP13651,11/30/2011,Herbert,Joseph,64,Mullica Township,Atlantic,New Jersey,Male,White / Caucasian,12/13/2019
 MP26314,5/29/1986,Cropper,Herbert,55,Newtonville,Atlantic,New Jersey,Male,Black / African American,10/26/2018
-MP37179,1/18/1999,Oland,Douglas,21,Ocean,Atlantic,New Jersey,Male,White / Caucasian,4/1/2020
+MP37179,1/18/1999,Oland,Douglas,21,Ocean Heights,Atlantic,New Jersey,Male,White / Caucasian,4/1/2020
 MP30611,10/14/2011,Carroll,Robert,60,Pleasantville,Atlantic,New Jersey,Male,White / Caucasian,2/4/2020
 MP38666,3/26/2016,Molina Orellana,Cristel,16,Pleasantville,Atlantic,New Jersey,Female,Hispanic / Latino,2/3/2020
 MP51082,5/28/2018,Hawkins,LaRece,24,,Atlantic,New Jersey,Female,Black / African American,2/4/2020
@@ -10971,9 +10971,9 @@ MP24054,8/4/1997,Montoya,Maritza,37,West New York,Hudson,New Jersey,Female,"Whit
 MP62513,2/12/2019,Hawkins,Tyrisha,26,Flemington,Hunterdon,New Jersey,Female,Black / African American,2/3/2020
 MP606,5/2/2000,Carroll,Amanda,20,Flemington,Hunterdon,New Jersey,Female,White / Caucasian,1/14/2020
 MP40191,12/5/2016,Green,Charlene,55,Glen Gardener,Hunterdon,New Jersey,Female,Black / African American,2/4/2020
-MP23241,12/7/1983,Dailey,Harold,66,East Windsor,Mercer,New Jersey,Male,White / Caucasian,9/30/2019
-MP21483,10/19/2008,Singh,Najar,50,East Windsor,Mercer,New Jersey,Male,Asian,10/25/2019
-MP766,6/7/2007,Giordano,Amy,27,East Windsor Township,Mercer,New Jersey,Female,White / Caucasian,10/25/2019
+MP23241,12/7/1983,Dailey,Harold,66,Windsor,Mercer,New Jersey,Male,White / Caucasian,9/30/2019
+MP21483,10/19/2008,Singh,Najar,50,Windsor,Mercer,New Jersey,Male,Asian,10/25/2019
+MP766,6/7/2007,Giordano,Amy,27,Windsor,Mercer,New Jersey,Female,White / Caucasian,10/25/2019
 MP4592,10/22/1979,Zendrosky,Karen,16,Hamilton Township,Mercer,New Jersey,Female,White / Caucasian,2/4/2020
 MP28797,7/23/1966,Zapolski,James,15,Princeton,Mercer,New Jersey,Male,White / Caucasian,2/4/2020
 MP66197,8/26/2017,Harris,Stephen,28,Trenton,Mercer,New Jersey,Male,White / Caucasian,4/1/2020
@@ -11026,9 +11026,9 @@ MP32447,12/13/2015,Fernandez,John,22,Middletown,Monmouth,New Jersey,Male,Asian,1
 MP27310,9/14/1979,Schmidt,Francis,36,Neptune,Monmouth,New Jersey,Male,White / Caucasian,1/6/2020
 MP36354,12/2/2016,Stern,Sarah,19,Neptune City,Monmouth,New Jersey,Female,White / Caucasian,12/6/2019
 MP8409,1/19/1997,Trivisonno,Robin,28,Neptune Township,Monmouth,New Jersey,Female,White / Caucasian,12/6/2019
-MP36374,11/7/2016,Derose,Ross,59,Ocean Township,Monmouth,New Jersey,Male,White / Caucasian,1/9/2020
-MP25264,7/2/2014,Johnson,Nicholas,26,Ocean Township,Monmouth,New Jersey,Male,White / Caucasian,1/9/2020
-MP60098,9/11/2019,Terrulli,Jacquelin,65,Ocean Township,Monmouth,New Jersey,Female,White / Caucasian,4/9/2020
+MP36374,11/7/2016,Derose,Ross,59,Ocean Grove,Monmouth,New Jersey,Male,White / Caucasian,1/9/2020
+MP25264,7/2/2014,Johnson,Nicholas,26,Ocean Grove,Monmouth,New Jersey,Male,White / Caucasian,1/9/2020
+MP60098,9/11/2019,Terrulli,Jacquelin,65,Ocean Grove,Monmouth,New Jersey,Female,White / Caucasian,4/9/2020
 MP29447,2/9/2015,Cornejo-Santiago,Martin,4,Red Bank,Monmouth,New Jersey,Male,Hispanic / Latino,5/7/2019
 MP35593,5/1/2016,Caban,Julian,20,Tinton Falls,Monmouth,New Jersey,Male,"White / Caucasian, Hispanic / Latino",5/7/2019
 MP26318,7/24/1997,Fisher,Mary,68,Union Beach,Monmouth,New Jersey,Female,White / Caucasian,1/1/2020
@@ -11430,7 +11430,7 @@ MP60131,2/18/2018,Derosia,Mark,32,Watertown,Jefferson,New York,Male,White / Cauc
 MP2822,5/17/1984,Evans,Sean,2,Watertown,Jefferson,New York,Male,White / Caucasian,5/21/2018
 MP22852,10/14/2013,Ross,Sharon,57,Watertown,Jefferson,New York,Female,White / Caucasian,10/6/2017
 MP7689,9/10/1997,Gordon,Jennifer,29,Watertown,Jefferson,New York,Female,White / Caucasian,5/6/2019
-MP5252,6/15/1996,Perez,Princess,2,Bronx,Kings,New York,Female,"White / Caucasian, Hispanic / Latino",10/23/2018
+MP5252,6/15/1996,Perez,Princess,2,Bronx,Bronx,New York,Female,"White / Caucasian, Hispanic / Latino",10/23/2018
 MP56837,4/13/2019,Nemes,Janos,33,brooklyn,Kings,New York,Male,White / Caucasian,4/22/2019
 MP42633,10/25/2016,Madsen,Steven,58,Brooklyn,Kings,New York,Male,White / Caucasian,4/12/2020
 MP10581,5/4/2011,Mendez,Francisco,84,Brooklyn,Kings,New York,Male,"White / Caucasian, Hispanic / Latino",10/6/2017
@@ -11576,9 +11576,9 @@ MP65189,7/11/2019,Reyes Escoto,Erlin,17,Syosset,Nassau,New York,Male,"Hispanic /
 MP65731,8/9/2019,Taylor,Tanisha,17,Syosset,Nassau,New York,Female,Black / African American,3/11/2020
 MP14252,11/1/1980,Horowitz,Merryl,26,Valley Stream,Nassau,New York,Female,White / Caucasian,3/11/2020
 MP58105,3/20/2019,Rodriguez,Johnanna,16,Westbury,Nassau,New York,Female,Hispanic / Latino,3/11/2020
-MP6597,12/31/2006,Rojas,Anthony,0.5,Bronx,New York,New York,Male,Hispanic / Latino,7/23/2018
-MP11942,5/9/1992,Aviles,Marcos,76,Bronx,New York,New York,Male,Hispanic / Latino,5/22/2018
-MP58120,5/18/2019,Reyes,Ariana,15,Bronx,New York,New York,Female,Hispanic / Latino,4/12/2020
+MP6597,12/31/2006,Rojas,Anthony,0.5,Bronx,Bronx,New York,Male,Hispanic / Latino,7/23/2018
+MP11942,5/9/1992,Aviles,Marcos,76,Bronx,Bronx,New York,Male,Hispanic / Latino,5/22/2018
+MP58120,5/18/2019,Reyes,Ariana,15,Bronx,Bronx,New York,Female,Hispanic / Latino,4/12/2020
 MP57953,2/27/2019,Goree,Darnejeh,16,Brooklyn,New York,New York,Female,Black / African American,4/12/2020
 MP26715,1/18/2010,Morales,Vilma,34,Brooklyn,New York,New York,Female,Hispanic / Latino,7/5/2017
 MP13718,1/13/2012,Contreras,Keyla,18,East Harlem,New York,New York,Female,"Black / African American, Hispanic / Latino",10/6/2017
@@ -11646,9 +11646,9 @@ MP4386,12/10/1967,Lake,John,37,New York,New York,New York,Male,White / Caucasian
 MP4427,3/13/1996,Powell,Owen,40,New York,New York,New York,Male,Black / African American,11/1/2018
 MP65123,2/5/2020,Zawacki,Jerry,69,Niagara Falls,New York,New York,Male,White / Caucasian,3/13/2020
 MP42859,9/29/2017,Amaya Garcia,Kimberli,16,Queens,New York,New York,Female,"White / Caucasian, Hispanic / Latino",4/12/2020
-MP66342,12/10/2018,Soto,Alexander,50,Staten Island,New York,New York,Male,Hispanic / Latino,4/12/2020
-MP21537,3/7/2013,Gu,William,22,Staten Island,New York,New York,Male,Asian,1/17/2020
-MP2863,7/15/1981,Hughes,Holly,7,Staten Island,New York,New York,Female,White / Caucasian,4/12/2020
+MP66342,12/10/2018,Soto,Alexander,50,Staten Island,Richmond,New York,Male,Hispanic / Latino,4/12/2020
+MP21537,3/7/2013,Gu,William,22,Staten Island,Richmond,New York,Male,Asian,1/17/2020
+MP2863,7/15/1981,Hughes,Holly,7,Staten Island,Richmond,New York,Female,White / Caucasian,4/12/2020
 MP61212,10/18/2019,Miller,Sunhee,58,Grand Island,Niagara,New York,Female,Asian,3/13/2020
 MP9258,9/14/1988,Moore,Paul,63,Lewiston,Niagara,New York,Male,White / Caucasian,3/5/2020
 MP745,8/9/2005,Rucci,Sheryl,33,Lockport,Niagara,New York,Female,White / Caucasian,2/6/2020
@@ -12044,9 +12044,9 @@ MP55,3/10/2002,Jacobs,Kent,41,Hope Mills,Cumberland,North Carolina,Male,White / 
 MP12209,7/7/2001,Acus,Frank,42,Hope Mills,Cumberland,North Carolina,Male,White / Caucasian,2/6/2020
 MP5579,7/15/1998,Kelly,Larry,39,Spring Lake,Cumberland,North Carolina,Male,Black / African American,2/6/2020
 MP5135,6/23/1991,Patterson,Jennifer,7,Spring Lake,Cumberland,North Carolina,Female,White / Caucasian,2/14/2020
-MP15557,7/6/2004,COLES,BRADLEY,24,CAPE HATTERAS,Dare,North Carolina,Male,White / Caucasian,8/17/2018
-MP14742,11/13/1980,Mays,Harold,21,Cape Hatteras,Dare,North Carolina,Male,White / Caucasian,9/6/2018
-MP14851,11/13/1980,Wall,Ted,21,Cape Hatteras,Dare,North Carolina,Male,White / Caucasian,3/28/2018
+MP15557,7/6/2004,COLES,BRADLEY,24,Hatteras,Dare,North Carolina,Male,White / Caucasian,8/17/2018
+MP14742,11/13/1980,Mays,Harold,21,Hatteras,Dare,North Carolina,Male,White / Caucasian,9/6/2018
+MP14851,11/13/1980,Wall,Ted,21,Hatteras,Dare,North Carolina,Male,White / Caucasian,3/28/2018
 MP24332,7/5/1989,Davis,Randy,27,Frisco,Dare,North Carolina,Male,White / Caucasian,7/19/2017
 MP39896,9/1/2015,Elder,Sonya,53,Kill devil hills,Dare,North Carolina,Female,White / Caucasian,5/23/2018
 MP17209,2/8/1992,Allen,Debra,32,Kill Devil Hills,Dare,North Carolina,Female,White / Caucasian,2/13/2017
@@ -12735,7 +12735,7 @@ MP24880,5/10/1982,McKown,Clyde,34,Macksburg,Washington,Ohio,Male,White / Caucasi
 MP40180,12/27/2028,Horst,Melvin,4,Orrville,Wayne,Ohio,Male,White / Caucasian,2/27/2019
 MP6853,8/17/2006,Main,Sheila,37,Pemberville,Wood,Ohio,Female,White / Caucasian,6/26/2018
 MP31598,12/5/1991,Shope,Harold,30,Nevada,Wyandot,Ohio,Male,White / Caucasian,10/4/2017
-MP60436,1/18/2019,Miesowitz,Meredith,16,Broken Arrow,Adair,Oklahoma,Female,American Indian / Alaska Native,3/2/2020
+MP60436,1/18/2019,Miesowitz,Meredith,16,Broken Arrow,Tulsa,Oklahoma,Female,American Indian / Alaska Native,3/2/2020
 MP15563,9/5/1999,Morrison,Dennis,53,Stilwell,Adair,Oklahoma,Male,American Indian / Alaska Native,7/31/2019
 MP15566,7/5/1999,Jacquot,Sherryl,42,Stilwell,Adair,Oklahoma,Female,American Indian / Alaska Native,3/17/2020
 MP7552,7/12/1998,Urich,Jackie,38,WESTVILLE,Adair,Oklahoma,Male,White / Caucasian,7/31/2019
@@ -13230,9 +13230,9 @@ MP8285,2/1/1984,Risenhoover,Tammy,19,Tulsa,Tulsa,Oklahoma,Female,White / Caucasi
 MP31371,8/1/1981,Taylor,Patricia,15,Tulsa,Tulsa,Oklahoma,Female,White / Caucasian,3/20/2020
 MP7441,3/23/1979,Henson,Kathleen,30,Tulsa,Tulsa,Oklahoma,Female,White / Caucasian,3/20/2020
 MP20142,5/23/1975,Banning,Shirley,36,Tulsa,Tulsa,Oklahoma,Female,White / Caucasian,4/10/2020
-MP65250,7/15/2019,Richardson,Robert,38,Broken Arrow,Wagoner,Oklahoma,Male,White / Caucasian,3/11/2020
-MP17345,8/10/2012,Cobb,Justin,34,Broken Arrow,Wagoner,Oklahoma,Male,White / Caucasian,3/2/2020
-MP62347,6/23/2019,Ayers,Macaylyn,17,Broken Arrow,Wagoner,Oklahoma,Female,White / Caucasian,3/9/2020
+MP65250,7/15/2019,Richardson,Robert,38,Broken Arrow,Tulsa,Oklahoma,Male,White / Caucasian,3/11/2020
+MP17345,8/10/2012,Cobb,Justin,34,Broken Arrow,Tulsa,Oklahoma,Male,White / Caucasian,3/2/2020
+MP62347,6/23/2019,Ayers,Macaylyn,17,Broken Arrow,Tulsa,Oklahoma,Female,White / Caucasian,3/9/2020
 MP37676,7/11/1986,Fielding,Nichole,27,Porter,Wagoner,Oklahoma,Female,White / Caucasian,4/1/2020
 MP35106,2/27/2007,Gragg Jr,Charlie,64,Wagoner,Wagoner,Oklahoma,Male,White / Caucasian,3/9/2020
 MP51844,8/12/1983,Clark,Wanda,42,Wagoner,Wagoner,Oklahoma,Female,White / Caucasian,4/1/2020
@@ -13265,9 +13265,9 @@ MP55829,7/28/2018,Brawn-McKie,James,17,Milwaukie,Clackamas,Oregon,Male,White / C
 MP35548,8/16/2016,Heinzmann,Laura,21,Milwaukie,Clackamas,Oregon,Female,White / Caucasian,4/10/2019
 MP3105,4/29/2004,Ponomareva,Olga,21,Milwaukie,Clackamas,Oregon,Female,White / Caucasian,2/26/2020
 MP67303,9/17/2019,Harnden,Sakari,14,Oregon City,Clackamas,Oregon,Female,"White / Caucasian, Other",3/25/2020
-MP51354,6/21/2018,Nelson,Larry,84,Portland,Clackamas,Oregon,Male,White / Caucasian,3/31/2020
-MP8654,11/22/1989,Dimick,James,30,Portland,Clackamas,Oregon,Male,White / Caucasian,3/11/2020
-MP65745,11/7/2019,Landry-Silguero,Jayden,15,Portland,Clackamas,Oregon,Male,Hispanic / Latino,2/27/2020
+MP51354,6/21/2018,Nelson,Larry,84,Portland,Multnomah,Oregon,Male,White / Caucasian,3/31/2020
+MP8654,11/22/1989,Dimick,James,30,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
+MP65745,11/7/2019,Landry-Silguero,Jayden,15,Portland,Multnomah,Oregon,Male,Hispanic / Latino,2/27/2020
 MP28332,1/14/2013,Deseranno,Joseph,18,Sandy,Clackamas,Oregon,Male,White / Caucasian,2/26/2020
 MP55529,4/9/2018,Anderson,Terrance,12,Sandy,Clackamas,Oregon,Male,Other,2/26/2020
 MP62447,8/31/2017,Howard,Caleb,32,Welches,Clackamas,Oregon,Male,White / Caucasian,2/26/2020
@@ -13428,7 +13428,7 @@ MP31546,5/1/1998,Talbert,Kattie,16,Klamath Falls,Klamath,Oregon,Female,White / C
 MP28251,5/5/2014,Lester,Delbert,76,LaPine,Klamath,Oregon,Male,White / Caucasian,3/19/2020
 MP887,9/21/2002,McKoen,Jerry,48,Malin,Klamath,Oregon,Male,White / Caucasian,3/19/2020
 MP57863,4/15/2019,Cormie,Glenda,59,Paisley,Lake,Oregon,Female,White / Caucasian,6/12/2019
-MP39920,8/14/2017,Roche,Nikolas,32,Portland,Lake,Oregon,Male,White / Caucasian,12/30/2019
+MP39920,8/14/2017,Roche,Nikolas,32,Portland,Multnomah,Oregon,Male,White / Caucasian,12/30/2019
 MP13485,11/4/2007,Xu,Daming,63,Blue River,Lane,Oregon,Male,Asian,1/30/2020
 MP33920,2/14/2012,Richardson,Robert,60,Cottage Grove,Lane,Oregon,Male,White / Caucasian,3/27/2019
 MP11096,10/15/1973,Tomlinson,Deborah,16,Creswell,Lane,Oregon,Female,White / Caucasian,1/30/2020
@@ -13558,8 +13558,8 @@ MP50719,11/11/2016,Rivas-Galves,Belkis,17,Gresham,Multnomah,Oregon,Female,Hispan
 MP41102,11/10/2016,Lopez Garcia,Julia,17,Gresham,Multnomah,Oregon,Female,Hispanic / Latino,1/15/2020
 MP65214,6/1/1976,Herr,Wanda,19,Gresham,Multnomah,Oregon,Female,White / Caucasian,3/23/2020
 MP13932,6/14/1992,Wikel,Wayne,48,near Hood River,Multnomah,Oregon,Male,White / Caucasian,3/30/2020
-MP25522,4/1/1987,Knauer,Westie,32,North Portland,Multnomah,Oregon,Female,White / Caucasian,3/11/2020
-MP25660,10/5/1982,Pilcher,Rosie,22,North Portland,Multnomah,Oregon,Female,Black / African American,3/11/2020
+MP25522,4/1/1987,Knauer,Westie,32,Portland,Multnomah,Oregon,Female,White / Caucasian,3/11/2020
+MP25660,10/5/1982,Pilcher,Rosie,22,Portland,Multnomah,Oregon,Female,Black / African American,3/11/2020
 MP64123,12/1/2019,Ponto,James,49,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
 MP59907,8/26/2019,Lindberg,Brooke,37,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
 MP55743,12/5/2018,Martin,Cory,26,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
@@ -13643,8 +13643,8 @@ MP14710,11/5/1973,Justis,Suzanne,23,Portland,Multnomah,Oregon,Female,White / Cau
 MP37652,1/1/1967,McCullum Drake,Ellen,22,Portland,Multnomah,Oregon,Female,White / Caucasian,11/7/2018
 MP20623,12/7/1958,Martin,Barbara,15,Portland,Multnomah,Oregon,Female,White / Caucasian,3/30/2020
 MP20624,12/7/1958,Martin,Barbara,48,Portland,Multnomah,Oregon,Female,White / Caucasian,3/30/2020
-MP25539,5/23/1984,Tredway,Luke,10,SE Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
-MP25668,10/26/1980,Jones,David,30,Southeast Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
+MP25539,5/23/1984,Tredway,Luke,10,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
+MP25668,10/26/1980,Jones,David,30,Portland,Multnomah,Oregon,Male,White / Caucasian,3/11/2020
 MP14632,10/30/2026,Clark,Marvin,69,Tigard,Multnomah,Oregon,Male,White / Caucasian,10/3/2018
 MP55955,3/8/2019,Valencia,Natalie,16,Troutdale,Multnomah,Oregon,Female,"Hispanic / Latino, American Indian / Alaska Native",3/30/2020
 MP19634,2/6/2013,Murga-Alejandre,Maria,16,Independence,Polk,Oregon,Female,"White / Caucasian, Hispanic / Latino",7/31/2019
@@ -13702,8 +13702,8 @@ MP58187,4/24/2019,Morales Ramirez,Edilma,17,Hillsboro,Washington,Oregon,Female,H
 MP33259,12/18/2015,Berasis Sherriff,Mina,14,Hillsboro,Washington,Oregon,Female,"White / Caucasian, Hispanic / Latino",1/21/2020
 MP17282,8/26/2012,Bolanos-Rivera,Maria,55,Hillsboro,Washington,Oregon,Female,"White / Caucasian, Hispanic / Latino",1/21/2020
 MP64276,12/22/2019,Watterson,Allyson,20,North Plains,Washington,Oregon,Female,White / Caucasian,3/2/2020
-MP38831,7/24/1988,Housel,Paul,75,Portland,Washington,Oregon,Male,White / Caucasian,3/2/2020
-MP14351,8/31/1996,Huster,Elisabeth,9,Portland,Washington,Oregon,Female,White / Caucasian,3/2/2020
+MP38831,7/24/1988,Housel,Paul,75,Portland,Multnomah,Oregon,Male,White / Caucasian,3/2/2020
+MP14351,8/31/1996,Huster,Elisabeth,9,Portland,Multnomah,Oregon,Female,White / Caucasian,3/2/2020
 MP24658,7/6/1991,Grose,Cheryl,39,Tigard,Washington,Oregon,Female,White / Caucasian,11/7/2018
 MP19911,5/29/1982,Harmon,Karen,26,Timber,Washington,Oregon,Female,White / Caucasian,3/2/2020
 MP4920,9/1/2001,Fairbank,John,54,Tualatin,Washington,Oregon,Male,White / Caucasian,3/2/2020
@@ -14384,9 +14384,9 @@ MP64305,11/10/2018,Grey,Adrian,29,Eastover,Richland,South Carolina,Male,Black / 
 MP575,3/28/2006,Young,Linnell,57,Eastover,Richland,South Carolina,Male,Black / African American,1/28/2020
 MP18565,9/3/2011,Laster,Adriana,27,Elgin,Richland,South Carolina,Female,Black / African American,11/6/2019
 MP281,1/3/1999,Merchant,Paula,25,Forest Acres,Richland,South Carolina,Female,White / Caucasian,4/2/2020
-MP6831,4/23/1972,Woodward,Michael,9,Fort Jackson,Richland,South Carolina,Male,White / Caucasian,1/23/2018
-MP34926,8/19/2016,Qanavizi,Mohammad,27,Fort Jackson,Richland,South Carolina,Male,Asian,4/23/2018
-MP32110,12/7/2015,Johnson,Johnnie,36,Fort Jackson,Richland,South Carolina,Male,Black / African American,1/14/2020
+MP6831,4/23/1972,Woodward,Michael,9,Columbia,Richland,South Carolina,Male,White / Caucasian,1/23/2018
+MP34926,8/19/2016,Qanavizi,Mohammad,27,Columbia,Richland,South Carolina,Male,Asian,4/23/2018
+MP32110,12/7/2015,Johnson,Johnnie,36,Columbia,Richland,South Carolina,Male,Black / African American,1/14/2020
 MP21319,4/8/2012,Harts,Shalonda,30,Northeast Columbia,Richland,South Carolina,Female,Black / African American,1/14/2020
 MP23395,3/28/1982,Parks,John,25,,Richland,South Carolina,Male,White / Caucasian,1/14/2020
 MP11141,8/28/1993,Ponder,William,41,Chesnee,Spartanburg,South Carolina,Male,White / Caucasian,1/28/2020
@@ -15153,9 +15153,9 @@ MP2927,11/1/1975,Berry,Phyllis,21,Terlingua,Brewster,Texas,Female,White / Caucas
 MP58364,5/26/2019,Juarez Muñoz,Jose,20,,Brooks,Texas,Male,Hispanic / Latino,4/6/2020
 MP33404,9/14/2012,Colindres,Edwin,32,,Brooks,Texas,Male,Hispanic / Latino,3/9/2020
 MP64480,11/19/2010,Mancera Reyes,Laura,36,,Brooks,Texas,Female,Hispanic / Latino,3/9/2020
-MP41976,9/17/2017,Lerma,Edgar Eladio,34,Falfurias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
-MP42221,7/13/2017,Hernandez Catalan,Arturo,37,Falfurias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
-MP41293,5/1/2016,Chajon Jolon,Erika,35,Falfurias,Brooks,Texas,Female,"White / Caucasian, Hispanic / Latino",3/9/2020
+MP41976,9/17/2017,Lerma,Edgar Eladio,34,Falfurrias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
+MP42221,7/13/2017,Hernandez Catalan,Arturo,37,Falfurrias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
+MP41293,5/1/2016,Chajon Jolon,Erika,35,Falfurrias,Brooks,Texas,Female,"White / Caucasian, Hispanic / Latino",3/9/2020
 MP38553,10/4/2016,Escamilla-Guerra,Cristian,21,Falfurrias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
 MP37302,6/20/2016,Hernandez-Rodriguez,Jose,26,Falfurrias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/9/2020
 MP32398,2/15/2015,Gonzalez Gomez,Byron,31,Falfurrias,Brooks,Texas,Male,"White / Caucasian, Hispanic / Latino",3/23/2020
@@ -16562,9 +16562,9 @@ MP19371,1/28/1985,Alexander,Craig,23,Burlington,Chittenden,Vermont,Male,White / 
 MP25453,1/21/1971,Nikita,George,40,Burlington,Chittenden,Vermont,Male,White / Caucasian,1/2/2020
 MP4620,3/1/1979,Winegar,Selinda,16,Burlington,Chittenden,Vermont,Female,White / Caucasian,7/30/2019
 MP20111,3/15/1976,Brown,Iris,27,Burlington,Chittenden,Vermont,Female,White / Caucasian,2/13/2018
-MP11678,6/8/2011,Currier,William,50,Essex,Chittenden,Vermont,Male,White / Caucasian,7/19/2019
-MP24348,10/24/1980,King III,Wilfred,37,Essex,Chittenden,Vermont,Male,White / Caucasian,10/31/2019
-MP11677,6/8/2011,Currier,Lorraine,55,Essex,Chittenden,Vermont,Female,White / Caucasian,7/19/2019
+MP11678,6/8/2011,Currier,William,50,Essex Center,Chittenden,Vermont,Male,White / Caucasian,7/19/2019
+MP24348,10/24/1980,King III,Wilfred,37,Essex Center,Chittenden,Vermont,Male,White / Caucasian,10/31/2019
+MP11677,6/8/2011,Currier,Lorraine,55,Essex Center,Chittenden,Vermont,Female,White / Caucasian,7/19/2019
 MP4032,6/7/1978,Reapp,Grace,5,Jericho,Chittenden,Vermont,Female,White / Caucasian,11/10/2017
 MP4031,6/6/1978,Reapp,Grace,32,Jericho,Chittenden,Vermont,Female,White / Caucasian,10/6/2016
 MP35700,11/22/2004,Dumont,Michael,50,South Burlington,Chittenden,Vermont,Male,White / Caucasian,3/13/2019
@@ -16611,10 +16611,10 @@ MP5194,8/30/2003,Northam,Larry,55,Greenbackville,Accomack,Virginia,Male,White / 
 MP1789,9/9/1997,Pryor,Kawan,15,Norfolk,Accomack,Virginia,Male,Black / African American,6/19/2018
 MP14405,12/17/2009,Finn,Daria,55,Onancock,Accomack,Virginia,Female,White / Caucasian,5/31/2017
 MP1801,3/24/1998,Bradley,Amy,23,Richmond,Richmond (city),Virginia,Female,White / Caucasian,1/31/2020
-MP1788,7/4/1998,Woodfolk,Quinn,11,Charlottesville,Albemarle,Virginia,Male,Black / African American,2/20/2020
-MP27751,7/12/2014,Santiago,Bonnie,56,Charlottesville,Albemarle,Virginia,Female,White / Caucasian,2/3/2017
-MP11604,4/6/1985,Britts,Kimberly,21,Charlottesville,Albemarle,Virginia,Female,White / Caucasian,4/18/2018
-MP1189,7/12/1982,Worsky,Katherine,12,Charlottesville,Albemarle,Virginia,Female,White / Caucasian,2/20/2020
+MP1788,7/4/1998,Woodfolk,Quinn,11,Charlottesville,Charlottesville,Virginia,Male,Black / African American,2/20/2020
+MP27751,7/12/2014,Santiago,Bonnie,56,Charlottesville,Charlottesville,Virginia,Female,White / Caucasian,2/3/2017
+MP11604,4/6/1985,Britts,Kimberly,21,Charlottesville,Charlottesville,Virginia,Female,White / Caucasian,4/18/2018
+MP1189,7/12/1982,Worsky,Katherine,12,Charlottesville,Charlottesville,Virginia,Female,White / Caucasian,2/20/2020
 MP54186,12/16/2018,Virdi,Harinderjit,35,Alexandria,Alexandria,Virginia,Male,Asian,4/7/2020
 MP28750,6/14/2013,Zacharia,Julian,6,Alexandria,Alexandria,Virginia,Male,Asian,1/23/2018
 MP1800,6/27/1996,Bell,Shaquita,23,Alexandria,Alexandria,Virginia,Female,Black / African American,6/20/2018
@@ -16798,9 +16798,9 @@ MP40137,8/3/1973,Keyton,John,80,Bridgewater,Rockingham,Virginia,Male,White / Cau
 MP40103,8/3/1973,Helmick,Martha,56,Bridgewater,Rockingham,Virginia,Female,White / Caucasian,2/14/2019
 MP40138,8/3/1973,Helmick,Flora,53,Bridgewater,Rockingham,Virginia,Female,White / Caucasian,2/14/2019
 MP1141,10/18/2003,Good,Rachel,20,Elkton,Rockingham,Virginia,Female,White / Caucasian,9/20/2018
-MP51336,7/7/2018,Whitney,Benjamin,20,Harrisonburg,Rockingham,Virginia,Male,White / Caucasian,8/27/2019
-MP39135,12/31/2016,Alvarez,Genoveba,29,Harrisonburg,Rockingham,Virginia,Female,"White / Caucasian, Hispanic / Latino",12/27/2018
-MP1092,6/18/1982,Dove,Kelly,20,Harrisonburg,Rockingham,Virginia,Female,White / Caucasian,9/14/2018
+MP51336,7/7/2018,Whitney,Benjamin,20,Harrisonburg,Harrisonburg,Virginia,Male,White / Caucasian,8/27/2019
+MP39135,12/31/2016,Alvarez,Genoveba,29,Harrisonburg,Harrisonburg,Virginia,Female,"White / Caucasian, Hispanic / Latino",12/27/2018
+MP1092,6/18/1982,Dove,Kelly,20,Harrisonburg,Harrisonburg,Virginia,Female,White / Caucasian,9/14/2018
 MP5992,7/27/1998,Dalton,Allyson,0.5,Strasburg,Shenandoah,Virginia,Female,White / Caucasian,3/7/2017
 MP931,2/14/1997,Billings,Donald,30,Marion,Smyth,Virginia,Male,White / Caucasian,7/18/2017
 MP934,1/17/1985,Hunt,Barbara,20,Marion,Smyth,Virginia,Female,White / Caucasian,2/14/2020

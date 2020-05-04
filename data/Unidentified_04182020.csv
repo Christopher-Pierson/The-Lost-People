@@ -573,8 +573,8 @@ UP9947,8/25/1977,35,40,,Navajo,Arizona,Male,American Indian / Alaska Native,8/27
 UP9948,5/26/1993,18,99,,Navajo,Arizona,Unsure,Uncertain,3/25/2015
 UP6351,4/6/2009,18,50,Sasabe,Pima,Arizona,Male,Hispanic / Latino,3/17/2020
 UP52756,2/10/2017,17,30,Ajo,Pima,Arizona,Male,Uncertain,1/16/2020
-UP6407,11/3/2009,30,45,North Komelic Village,Pima,Arizona,Male,Uncertain,1/15/2020
-UP6415,11/3/2009,30,45,North Komelic Village,Pima,Arizona,Male,Uncertain,1/15/2020
+UP6407,11/3/2009,30,45,Ak Komelik,Pima,Arizona,Male,Uncertain,1/15/2020
+UP6415,11/3/2009,30,45,Ak Komelik,Pima,Arizona,Male,Uncertain,1/15/2020
 UP12086,8/25/2013,16,23,San Miguel,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
 UP17559,11/1/1993,25,42,Papago Farms,Pima,Arizona,Male,Hispanic / Latino,12/16/2019
 UP16415,4/8/2016,30,45,Cowlic,Pima,Arizona,Male,Hispanic / Latino,4/16/2020
@@ -676,11 +676,11 @@ UP4935,7/12/2007,13,17,Three Points,Pima,Arizona,Female,Hispanic / Latino,11/19/
 UP5463,7/17/2005,34,62,Three Points,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP5523,11/18/2002,25,35,Three Points,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP7188,11/25/2001,17,23,Three Points,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
-UP8647,10/31/2010,35,50,Amado,Pima,Arizona,Male,Hispanic / Latino,11/17/2017
-UP5087,12/6/2008,31,49,Amado,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
-UP5466,7/12/2005,22,34,Amado,Pima,Arizona,Male,White / Caucasian,4/6/2020
+UP8647,10/31/2010,35,50,Amado,Santa Cruz,Arizona,Male,Hispanic / Latino,11/17/2017
+UP5087,12/6/2008,31,49,Amado,Santa Cruz,Arizona,Male,Hispanic / Latino,4/9/2020
+UP5466,7/12/2005,22,34,Amado,Santa Cruz,Arizona,Male,White / Caucasian,4/6/2020
 UP5078,3/8/2008,25,35,ANEGAM,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
-UP11222,3/12/2013,30,50,Anegam Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
+UP11222,3/12/2013,30,50,Anegam,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP11094,2/15/2013,25,45,Arivaca,Pima,Arizona,Male,Hispanic / Latino,1/12/2015
 UP10930,11/17/2012,17,29,Arivaca,Pima,Arizona,Male,American Indian / Alaska Native,1/6/2014
 UP10663,7/23/2012,20,35,Arivaca,Pima,Arizona,Male,Hispanic / Latino,7/16/2018
@@ -707,7 +707,7 @@ UP6922,12/13/2009,30,50,Arizona City vicinity,Pima,Arizona,Male,Hispanic / Latin
 UP6359,6/24/2009,30,50,Avra Valley,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
 UP11668,11/5/1984,50,85,Avra Valley / Marana,Pima,Arizona,Female,White / Caucasian,1/28/2020
 UP5445,6/2/2002,22,36,Avra Valley and Marana,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
-UP5070,8/19/2008,25,35,Baboquivari Village,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
+UP5070,8/19/2008,25,35,Sells,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
 UP6697,9/25/2009,28,40,Between Lukeville and Ajo,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
 UP10792,2/6/2011,26,44,Bewteen Lukeville and Why,Pima,Arizona,Male,Uncertain,1/16/2020
 UP8755,5/2/2011,20,35,Sells,Pima,Arizona,Male,Uncertain,11/19/2019
@@ -718,16 +718,16 @@ UP14183,4/14/2015,25,50,Sells,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP10681,8/26/2012,35,55,Sells,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP5367,1/15/2007,20,40,Sells,Pima,Arizona,Male,Uncertain,1/15/2020
 UP5338,10/29/2007,25,45,Charco,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
-UP6393,10/15/2009,30,44,Charco Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
+UP6393,10/15/2009,30,44,Charco,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP5470,7/4/2005,22,35,Chico Shunie,Pima,Arizona,Male,Hispanic / Latino,10/31/2018
 UP5469,7/4/2005,17,21,Chico Shunie,Pima,Arizona,Male,Hispanic / Latino,2/7/2019
 UP9033,6/5/2010,33,55,CHOULIC,Pima,Arizona,Male,Uncertain,10/20/2017
 UP10862,5/25/2012,25,44,Choulic,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
 UP6542,5/23/2003,26,44,Three Points,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
 UP50672,3/21/2018,25,45,Santa Rosa,Pima,Arizona,Male,Other,1/15/2020
-UP5147,6/22/2008,16,22,Cobabi Village,Pima,Arizona,Female,Hispanic / Latino,4/9/2020
+UP5147,6/22/2008,16,22,San Luis,Pima,Arizona,Female,Hispanic / Latino,4/9/2020
 UP8664,3/5/2010,25,45,Cold Fields,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
-UP7149,5/29/2001,34,62,Coldfields Village vicinity,Pima,Arizona,Female,Hispanic / Latino,3/10/2020
+UP7149,5/29/2001,34,62,Sells,Pima,Arizona,Female,Hispanic / Latino,3/10/2020
 UP17410,9/9/2016,35,60,Comobabi,Pima,Arizona,Male,Other,2/3/2020
 UP5271,11/27/2007,25,35,Comobabi,Pima,Arizona,Male,Hispanic / Latino,1/28/2020
 UP5450,8/27/2005,26,44,Comobabi,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
@@ -761,14 +761,14 @@ UP7187,11/11/2001,19,25,Cowlic,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP6581,10/1/2006,16,22,Cowlic,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
 UP16423,5/30/2016,26,38,Cowlic,Pima,Arizona,Male,Hispanic / Latino,4/16/2020
 UP12076,7/5/2013,25,36,Cowlic,Pima,Arizona,Male,Hispanic / Latino,11/9/2018
-UP10626,8/28/2012,30,45,Crohang Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
-UP4923,6/23/2008,15,20,Crow Hang Village,Pima,Arizona,Female,Hispanic / Latino,2/5/2019
-UP6567,2/10/2003,20,29,Crow Hang Village,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
+UP10626,8/28/2012,30,45,Sells,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
+UP4923,6/23/2008,15,20,Sells,Pima,Arizona,Female,Hispanic / Latino,2/5/2019
+UP6567,2/10/2003,20,29,Sells,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP8870,6/15/2011,23,57,east of Ajo,Pima,Arizona,Male,Hispanic / Latino,10/21/2019
 UP10208,10/17/2011,25,35,East of Papago Farms,Pima,Arizona,Male,Uncertain,11/19/2019
 UP60142,5/25/2019,20,45,east of Pisinemo,Pima,Arizona,Male,Hispanic / Latino,3/20/2020
-UP10549,7/31/2012,18,99,Fresnal Village,Pima,Arizona,Female,Uncertain,11/19/2019
-UP6466,7/3/2003,17,25,Fresnel Village,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
+UP10549,7/31/2012,18,99,Chiuli Shaik,Pima,Arizona,Female,Uncertain,11/19/2019
+UP6466,7/3/2003,17,25,Chiuli Shaik,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP11065,1/10/2013,16,22,Garcia Ranch,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP8752,9/7/2010,37,47,Go Vu,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP13701,3/31/2015,30,60,Green Valley,Pima,Arizona,Male,Hispanic / Latino,9/20/2016
@@ -810,7 +810,7 @@ UP10158,11/22/2011,30,99,Iron Stand Village,Pima,Arizona,Male,Uncertain,11/19/20
 UP13748,8/5/2014,18,23,Itak,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP9107,8/7/2011,35,55,Jack Rabbit Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP11276,3/7/2013,25,45,Kohatk Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
-UP8727,7/20/2010,26,40,KOMELIC VILLAGE,Pima,Arizona,Male,Uncertain,11/19/2019
+UP8727,7/20/2010,26,40,Ak Komelik,Pima,Arizona,Male,Uncertain,11/19/2019
 UP5418,3/26/2006,18,65,Kots Kug,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP5478,5/23/2005,35,55,Kots Kug Village,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
 UP9335,9/9/2011,30,45,Kupt Village,Pima,Arizona,Male,Hispanic / Latino,1/24/2020
@@ -877,7 +877,7 @@ UP10413,6/11/2012,30,50,Marana,Pima,Arizona,Female,Hispanic / Latino,12/11/2014
 UP5396,7/23/2006,22,32,Marana (south of Arizona City),Pima,Arizona,Female,Hispanic / Latino,10/30/2018
 UP58833,2/26/2019,14,20,Menagers Dam Village,Pima,Arizona,Male,"Hispanic / Latino, American Indian / Alaska Native",1/15/2020
 UP10086,11/6/1979,22,26,Mescal,Pima,Arizona,Male,Hispanic / Latino,11/10/2014
-UP6766,6/13/2005,30,99,N Komelic Village,Pima,Arizona,Female,American Indian / Alaska Native,1/15/2020
+UP6766,6/13/2005,30,99,Ak Komelik,Pima,Arizona,Female,American Indian / Alaska Native,1/15/2020
 UP15184,5/15/2016,18,68,N/W of Robles Junction,Pima,Arizona,Male,Hispanic / Latino,12/28/2017
 UP58987,5/7/2019,,,near Ajo,Pima,Arizona,Male,Uncertain,4/9/2020
 UP58755,3/21/2019,40,65,Near Ajo,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
@@ -919,7 +919,7 @@ UP16413,2/21/2016,18,30,near Cocklebur,Pima,Arizona,Male,Hispanic / Latino,11/19
 UP65163,8/16/2019,24,57,Maish Vaya,Pima,Arizona,Male,Hispanic / Latino,3/6/2020
 UP52924,2/14/2017,20,50,Cowlic,Pima,Arizona,Male,Uncertain,11/19/2019
 UP12941,9/12/2014,25,50,Cowlic,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
-UP6398,10/27/2009,28,40,near Crowhang Village,Pima,Arizona,Male,Hispanic / Latino,12/9/2019
+UP6398,10/27/2009,28,40,Sells,Pima,Arizona,Male,Hispanic / Latino,12/9/2019
 UP16738,6/6/2017,30,45,near Dirt Burn Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP17505,3/13/1993,28,45,near Green Valley,Pima,Arizona,Male,Hispanic / Latino,12/16/2019
 UP6341,1/25/2009,15,19,"near Green Valley, north of Calle Uno",Pima,Arizona,Male,Hispanic / Latino,1/16/2020
@@ -971,8 +971,8 @@ UP16967,7/24/1995,19,29,near Sacaton,Pima,Arizona,Male,Hispanic / Latino,11/26/2
 UP14500,7/1/2015,18,30,near San Miguel,Pima,Arizona,Male,Uncertain,11/19/2019
 UP51864,8/15/2018,20,35,near San Miguel,Pima,Arizona,Female,Hispanic / Latino,4/6/2020
 UP12067,6/7/2013,18,88,near San Miguel,Pima,Arizona,Unsure,Uncertain,11/19/2019
-UP16417,5/15/2016,28,40,near Santa Cruz Village,Pima,Arizona,Male,Hispanic / Latino,3/6/2020
-UP17447,11/16/2016,28,44,near Santa Rosa Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
+UP16417,5/15/2016,28,40,Santa Cruz,Pima,Arizona,Male,Hispanic / Latino,3/6/2020
+UP17447,11/16/2016,28,44,Santa Rosa,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP13049,6/14/2014,21,46,near Sasabe,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
 UP10654,7/16/2012,16,20,near Sasabe,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
 UP51752,4/25/2018,25,45,near Sells,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
@@ -1006,8 +1006,8 @@ UP8792,11/10/2010,30,44,,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP4905,1/2/2008,30,60,Newfield,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP6557,5/9/2003,30,45,Newfield Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP5359,5/4/2007,25,35,Nolia,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
-UP10983,12/6/2012,18,25,North Komelik Village,Pima,Arizona,Male,American Indian / Alaska Native,4/14/2020
-UP10498,7/25/2010,16,18,North Komelik Village,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
+UP10983,12/6/2012,18,25,Ak Komelik,Pima,Arizona,Male,American Indian / Alaska Native,4/14/2020
+UP10498,7/25/2010,16,18,Ak Komelik,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
 UP53374,6/18/2018,17,30,Sells,Pima,Arizona,Unsure,Hispanic / Latino,12/2/2019
 UP5409,5/20/2006,21,35,Choulic,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
 UP52899,2/16/2017,,,north of Lukeville,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
@@ -1043,8 +1043,8 @@ UP5419,4/2/2006,18,30,Pisinemo,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP8770,3/17/2011,30,45,Pisinimo,Pima,Arizona,Female,Hispanic / Latino,11/19/2019
 UP10239,2/15/2012,17,35,Pisinemo,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP6865,7/24/2006,19,27,Santa Rosa,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
-UP6573,1/8/2003,25,40,Queen's Well Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
-UP6566,3/13/2003,36,56,Queen's Well Village vicinity,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
+UP6573,1/8/2003,25,40,Queens Well,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
+UP6566,3/13/2003,36,56,Queens Well,Pima,Arizona,Male,Hispanic / Latino,4/6/2020
 UP5358,5/11/2007,18,30,Santa Rosa,Pima,Arizona,Female,Uncertain,1/15/2020
 UP10653,6/23/2012,15,19,Santa Rosa,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP10210,1/5/2012,20,50,Santa Rosa,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
@@ -1087,7 +1087,7 @@ UP17555,7/15/1992,26,46,S/W of Papago Farms,Pima,Arizona,Male,Uncertain,12/13/20
 UP16473,8/6/2016,25,40,Sahuarita,Pima,Arizona,Male,Hispanic / Latino,4/16/2020
 UP10548,8/1/2012,15,18,Sahuarita,Pima,Arizona,Male,Hispanic / Latino,9/30/2019
 UP10163,12/5/2011,25,99,San Javier,Pima,Arizona,Female,Hispanic / Latino,2/5/2020
-UP5356,5/21/2007,18,30,San Luis Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
+UP5356,5/21/2007,18,30,San Luis,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP14180,4/7/2015,18,99,SAN MIGUEL,Pima,Arizona,Male,Uncertain,11/19/2019
 UP13163,7/1/2014,21,31,SAN MIGUEL,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP5144,6/12/2008,30,40,San Miguel,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
@@ -1108,13 +1108,13 @@ UP8741,9/28/2010,23,32,San Simon,Pima,Arizona,Male,Hispanic / Latino,4/2/2020
 UP5401,6/20/2006,20,30,San Pedro,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP5360,4/27/2007,35,45,San Simone Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP7194,3/22/1986,18,24,San Xavier vicinity,Pima,Arizona,Male,Uncertain,1/15/2020
-UP9338,9/20/2011,26,55,Santa Cruz Village,Pima,Arizona,Male,Hispanic / Latino,1/24/2020
+UP9338,9/20/2011,26,55,Santa Cruz,Pima,Arizona,Male,Hispanic / Latino,1/24/2020
 UP5149,5/20/2008,30,50,Santa Rosa,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
 UP17073,5/9/1998,27,47,Santa Rosa,Pima,Arizona,Male,Uncertain,12/16/2019
 UP8144,1/23/2010,20,28,Santa Rosa,Pima,Arizona,Female,Hispanic / Latino,1/6/2016
 UP6344,9/9/2002,18,99,Santa Rosa,Pima,Arizona,Unsure,Uncertain,1/15/2020
 UP10412,4/9/2012,40,65,Santa Rosa Ranch,Pima,Arizona,Male,Hispanic / Latino,7/16/2018
-UP6399,10/28/2009,18,30,Santa Rosa Village,Pima,Arizona,Unsure,Uncertain,1/15/2020
+UP6399,10/28/2009,18,30,Santa Rosa,Pima,Arizona,Unsure,Uncertain,1/15/2020
 UP13814,7/24/2014,15,25,Sasabe,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
 UP6372,7/24/2009,18,30,Sasabe,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
 UP5076,2/25/2008,30,40,Sasabe,Pima,Arizona,Male,Hispanic / Latino,4/9/2020
@@ -1207,8 +1207,8 @@ UP6346,2/23/2009,18,30,Sil Nakya,Pima,Arizona,Male,Uncertain,2/11/2020
 UP56716,1/16/2019,30,60,Silverbell Mountains,Pima,Arizona,Male,Uncertain,1/16/2020
 UP14489,7/30/2015,16,66,Lukeville,Pima,Arizona,Unsure,Uncertain,12/28/2017
 UP11046,12/28/1990,30,45,Sonoita,Santa Cruz,Arizona,Male,Hispanic / Latino,3/30/2020
-UP11023,11/30/2012,35,55,South Komelik Village,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
-UP5391,8/3/2006,26,44,South Komlic Village,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
+UP11023,11/30/2012,35,55,South Komelik,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
+UP5391,8/3/2006,26,44,South Komelik,Pima,Arizona,Male,Hispanic / Latino,1/15/2020
 UP67431,3/8/2020,16,30,South Mountain,Pima,Arizona,Male,"Hispanic / Latino, Other",4/17/2020
 UP13052,7/5/2014,31,65,south of Ajo,Pima,Arizona,Male,Hispanic / Latino,3/18/2020
 UP17720,11/14/1996,20,65,south of Ajo,Pima,Arizona,Male,Uncertain,12/16/2019
@@ -1415,7 +1415,7 @@ UP53098,2/3/2017,30,50,Cowlic,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP58811,2/25/2019,14,18,Cowlic,Pima,Arizona,Female,Hispanic / Latino,1/15/2020
 UP63578,7/22/2019,18,45,west of Marana,Pima,Arizona,Male,Hispanic / Latino,3/20/2020
 UP53387,6/7/2018,30,50,west of Picture Rocks,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
-UP53336,6/2/2018,18,65,west of Queen Well Village,Pima,Arizona,Male,Uncertain,1/15/2020
+UP53336,6/2/2018,18,65,Queens Well,Pima,Arizona,Male,Uncertain,1/15/2020
 UP54646,11/17/2017,,,west of Sells,Pima,Arizona,Male,Hispanic / Latino,11/19/2019
 UP10884,11/27/2012,15,19,West of Tucson,Pima,Arizona,Male,Hispanic / Latino,1/28/2020
 UP52894,2/11/2017,20,40,west of Why,Pima,Arizona,Male,Hispanic / Latino,1/16/2020
@@ -1650,9 +1650,9 @@ UP15974,5/24/1999,40,60,Casa Grande,Pinal,Arizona,Male,"White / Caucasian, Hispa
 UP10091,1/13/1990,25,35,Casa Grande,Pinal,Arizona,Male,Hispanic / Latino,2/11/2019
 UP50316,10/17/2017,,,Casa Grande,Pinal,Arizona,Unsure,Uncertain,8/27/2019
 UP8892,6/8/2011,15,30,Casa Grande,Pinal,Arizona,Female,Hispanic / Latino,1/29/2020
-UP6571,1/19/2003,17,19,Chuichu Village,Pinal,Arizona,Male,Hispanic / Latino,1/15/2020
-UP5142,7/6/2008,30,50,Cocklebur Village,Pinal,Arizona,Male,Uncertain,1/28/2020
-UP6377,8/2/2009,28,45,Cockleburr Village,Pinal,Arizona,Male,Hispanic / Latino,3/5/2020
+UP6571,1/19/2003,17,19,Chuichu,Pinal,Arizona,Male,Hispanic / Latino,1/15/2020
+UP5142,7/6/2008,30,50,Vaiva Vo,Pinal,Arizona,Male,Uncertain,1/28/2020
+UP6377,8/2/2009,28,45,Vaiva Vo,Pinal,Arizona,Male,Hispanic / Latino,3/5/2020
 UP57447,10/11/2018,,,Eloy,Pinal,Arizona,Male,"White / Caucasian, Black / African American, Hispanic / Latino, Asian",1/29/2020
 UP16555,3/25/2017,21,44,Eloy,Pinal,Arizona,Male,Other,2/14/2020
 UP12827,3/30/2014,19,29,Eloy,Pinal,Arizona,Male,Hispanic / Latino,3/17/2020
@@ -1688,7 +1688,7 @@ UP10048,3/15/1978,40,79,Near Arizona City,Pinal,Arizona,Male,Hispanic / Latino,1
 UP17520,6/13/1995,30,45,near Casa Grande,Pinal,Arizona,Male,Hispanic / Latino,2/10/2020
 UP15179,9/30/2015,16,66,near Casa Grande,Pinal,Arizona,Unsure,Uncertain,1/29/2020
 UP67534,5/19/1980,22,27,near casa Grande,Pinal,Arizona,Female,White / Caucasian,3/26/2020
-UP17522,8/8/1995,40,60,near Chui Chu Village,Pinal,Arizona,Male,White / Caucasian,3/26/2020
+UP17522,8/8/1995,40,60,Chuichu,Pinal,Arizona,Male,White / Caucasian,3/26/2020
 UP16476,9/11/2016,25,40,near Eloy,Pinal,Arizona,Male,Uncertain,1/29/2020
 UP12828,4/20/2014,16,30,near Eloy,Pinal,Arizona,Male,Uncertain,1/29/2020
 UP16852,10/16/1995,35,48,near Queen Creek,Pinal,Arizona,Male,Uncertain,1/29/2020
@@ -1758,8 +1758,8 @@ UP5348,7/21/2007,25,45,Amado,Santa Cruz,Arizona,Male,Hispanic / Latino,1/31/2020
 UP6864,3/21/2006,25,45,Amado,Santa Cruz,Arizona,Male,Hispanic / Latino,1/15/2020
 UP11224,1/21/2013,18,30,Amado,Santa Cruz,Arizona,Female,Hispanic / Latino,4/19/2019
 UP6406,11/12/2009,15,22,Amado,Santa Cruz,Arizona,Female,Hispanic / Latino,1/15/2020
-UP5152,11/29/2007,25,39,Amado and Tubac,Santa Cruz,Arizona,Male,"Hispanic / Latino, Uncertain",1/16/2020
-UP6343,2/4/2009,20,40,Amado vicinity,Santa Cruz,Arizona,Male,Hispanic / Latino,1/15/2020
+UP5152,11/29/2007,25,39,Amado,Santa Cruz,Arizona,Male,"Hispanic / Latino, Uncertain",1/16/2020
+UP6343,2/4/2009,20,40,Amado,Santa Cruz,Arizona,Male,Hispanic / Latino,1/15/2020
 UP5438,11/14/2005,18,65,Arivaca,Santa Cruz,Arizona,Male,Uncertain,4/9/2020
 UP10558,2/18/2012,18,69,Coyote Well,Santa Cruz,Arizona,Male,Uncertain,1/17/2019
 UP9048,3/16/2010,30,50,Elgin,Santa Cruz,Arizona,Male,Hispanic / Latino,1/15/2020
@@ -2593,9 +2593,9 @@ UP2996,9/7/1969,19,26,Castaic,Los Angeles,California,Female,White / Caucasian,4/
 UP3712,10/28/1993,25,32,CHATSWORTH,Los Angeles,California,Male,Black / African American,4/5/2019
 UP68172,3/29/2020,20,55,Chatsworth,Los Angeles,California,Unsure,"White / Caucasian, Hispanic / Latino",4/15/2020
 UP60867,9/21/2019,21,57,Chatsworth,Los Angeles,California,Unsure,"Black / African American, Uncertain",4/14/2020
-UP3026,5/29/2006,45,55,CITY OF INDUSTRY,Los Angeles,California,Male,White / Caucasian,4/5/2019
-UP3633,12/19/1994,55,75,CITY OF INDUSTRY,Los Angeles,California,Female,White / Caucasian,4/5/2019
-UP4123,5/17/1987,24,29,City of Industry,Los Angeles,California,Female,White / Caucasian,4/5/2019
+UP3026,5/29/2006,45,55,Industry,Los Angeles,California,Male,White / Caucasian,4/5/2019
+UP3633,12/19/1994,55,75,Industry,Los Angeles,California,Female,White / Caucasian,4/5/2019
+UP4123,5/17/1987,24,29,Industry,Los Angeles,California,Female,White / Caucasian,4/5/2019
 UP4346,3/23/1981,18,34,Claremont,Los Angeles,California,Male,Uncertain,4/5/2019
 UP13339,7/7/2014,45,60,Commerce,Los Angeles,California,Male,"White / Caucasian, Hispanic / Latino",4/5/2019
 UP3615,4/12/1995,45,65,COMMERCE,Los Angeles,California,Male,Asian,4/5/2019
@@ -3731,9 +3731,9 @@ UP17527,6/21/2012,0,0,Newcastle,Placer,California,Male,White / Caucasian,3/2/202
 UP17526,7/8/2013,0,0,Roseville,Placer,California,Female,Uncertain,3/2/2020
 UP55385,2/19/1986,,,Roseville,Placer,California,Unsure,Uncertain,3/2/2020
 UP17564,2/9/1991,30,60,Tahoe City,Placer,California,Male,White / Caucasian,3/2/2020
-UP55231,4/6/1986,25,45,Truckee,Placer,California,Male,White / Caucasian,3/2/2020
-UP17543,11/16/1998,0,0,Truckee,Placer,California,Female,"White / Caucasian, Hispanic / Latino",3/2/2020
-UP55389,5/28/1981,,,Truckee,Placer,California,Unsure,Uncertain,3/2/2020
+UP55231,4/6/1986,25,45,Truckee,Nevada,California,Male,White / Caucasian,3/2/2020
+UP17543,11/16/1998,0,0,Truckee,Nevada,California,Female,"White / Caucasian, Hispanic / Latino",3/2/2020
+UP55389,5/28/1981,,,Truckee,Nevada,California,Unsure,Uncertain,3/2/2020
 UP55070,8/15/2017,26,42,,Placer,California,Male,Black / African American,3/2/2020
 UP17544,7/7/1994,50,60,,Placer,California,Male,Uncertain,3/2/2020
 UP17573,10/31/1976,17,40,,Placer,California,Male,Uncertain,3/2/2020
@@ -5550,9 +5550,9 @@ UP6228,8/6/1987,25,35,Marathon,Monroe,Florida,Male,White / Caucasian,2/4/2020
 UP15704,2/12/1992,15,18,Marathon,Monroe,Florida,Female,White / Caucasian,2/5/2020
 UP6203,8/26/1991,25,35,Stock Island,Monroe,Florida,Male,White / Caucasian,2/4/2020
 UP15418,3/31/1986,20,30,Stock Island,Monroe,Florida,Male,Black / African American,2/4/2020
-UP6232,3/25/2007,,,Sugar Loaf Key,Monroe,Florida,Male,White / Caucasian,2/4/2020
-UP6241,1/1/1974,60,69,Sugar Loaf Key,Monroe,Florida,Male,White / Caucasian,2/4/2020
-UP6177,7/24/1979,35,55,Sugarloaf Key,Monroe,Florida,Male,White / Caucasian,2/4/2020
+UP6232,3/25/2007,,,Sugarloaf Shores,Monroe,Florida,Male,White / Caucasian,2/4/2020
+UP6241,1/1/1974,60,69,Sugarloaf Shores,Monroe,Florida,Male,White / Caucasian,2/4/2020
+UP6177,7/24/1979,35,55,Sugarloaf Shores,Monroe,Florida,Male,White / Caucasian,2/4/2020
 UP148,4/23/2006,25,45,Tavernier,Monroe,Florida,Female,Uncertain,2/4/2020
 UP61056,12/10/1988,,,Tavernier,Monroe,Florida,Unsure,Uncertain,2/5/2020
 UP15402,3/4/1981,0,0,Tavernier,Monroe,Florida,Female,White / Caucasian,2/4/2020
@@ -5669,9 +5669,9 @@ UP833,12/9/1986,25,35,Lake Worth,Palm Beach,Florida,Male,"White / Caucasian, His
 UP12430,2/5/2013,26,59,Lake Worth,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
 UP12559,4/19/2013,60,60,Lantana,Palm Beach,Florida,Male,White / Caucasian,1/17/2018
 UP1128,10/25/1994,21,35,Lantana,Palm Beach,Florida,Male,White / Caucasian,1/17/2018
-UP16715,12/19/1982,22,44,Loxahatchee,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
-UP776,7/14/1982,18,25,Loxahatchee,Palm Beach,Florida,Female,"White / Caucasian, Hispanic / Latino",7/26/2019
-UP771,9/19/1973,22,28,Loxahatchee,Palm Beach,Florida,Female,Black / African American,1/17/2018
+UP16715,12/19/1982,22,44,Loxahatchee Groves,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
+UP776,7/14/1982,18,25,Loxahatchee Groves,Palm Beach,Florida,Female,"White / Caucasian, Hispanic / Latino",7/26/2019
+UP771,9/19/1973,22,28,Loxahatchee Groves,Palm Beach,Florida,Female,Black / African American,1/17/2018
 UP7798,12/10/2005,20,29,North Palm Beach,Palm Beach,Florida,Male,Black / African American,3/3/2020
 UP7761,12/10/2005,20,29,North Palm Beach,Palm Beach,Florida,Female,Black / African American,3/3/2020
 UP16314,6/16/1974,14,25,North Palm Beach,Palm Beach,Florida,Female,White / Caucasian,3/3/2020
@@ -6908,9 +6908,9 @@ UP878,12/24/2006,18,25,College Park,Prince George's,Maryland,Male,"White / Cauca
 UP2324,5/19/1978,30,45,College Park,Prince George's,Maryland,Male,Black / African American,10/12/2017
 UP7314,3/22/2009,0,0,College Park,Prince George's,Maryland,Female,Uncertain,10/12/2017
 UP10605,2/12/1997,0,1,District Heights,Prince George's,Maryland,Female,Black / African American,10/12/2017
-UP949,8/16/2002,18,99,Fairmont Heights,Prince George's,Maryland,Male,Black / African American,10/12/2017
-UP2774,7/4/1999,25,45,Fairmont Heights,Prince George's,Maryland,Male,Black / African American,10/12/2017
-UP17706,12/13/2017,,,Fairmont Heights,Prince George's,Maryland,Unsure,Uncertain,3/31/2020
+UP949,8/16/2002,18,99,Fairmount Heights,Prince George's,Maryland,Male,Black / African American,10/12/2017
+UP2774,7/4/1999,25,45,Fairmount Heights,Prince George's,Maryland,Male,Black / African American,10/12/2017
+UP17706,12/13/2017,,,Fairmount Heights,Prince George's,Maryland,Unsure,Uncertain,3/31/2020
 UP68175,2/21/2020,20,30,Forestville,Prince George's,Maryland,Male,Hispanic / Latino,4/15/2020
 UP902,1/4/2005,15,18,Fort Washington,Prince George's,Maryland,Male,White / Caucasian,10/18/2019
 UP1420,1/23/1995,18,25,Fort Washington,Prince George's,Maryland,Male,Black / African American,10/12/2017
@@ -6945,9 +6945,9 @@ UP1656,2/20/1993,35,55,Oxon Hill,Prince George's,Maryland,Male,Black / African A
 UP13222,2/18/1986,18,30,Oxon Hill,Prince George's,Maryland,Male,Black / African American,10/12/2017
 UP1352,10/9/2007,25,27,Oxon Hill,Prince George's,Maryland,Female,Black / African American,10/12/2017
 UP4836,11/4/1968,35,45,PIscataway,Prince George's,Maryland,Male,Black / African American,10/12/2017
-UP10223,5/9/2009,25,40,Riverdale,Prince George's,Maryland,Male,"White / Caucasian, Hispanic / Latino",10/12/2017
-UP2287,1/21/2008,25,39,Riverdale,Prince George's,Maryland,Male,"White / Caucasian, Hispanic / Latino",10/12/2017
-UP12841,6/5/2012,20,30,Riverdale,Prince George's,Maryland,Female,Uncertain,10/12/2017
+UP10223,5/9/2009,25,40,Riverdale Park,Prince George's,Maryland,Male,"White / Caucasian, Hispanic / Latino",10/12/2017
+UP2287,1/21/2008,25,39,Riverdale Park,Prince George's,Maryland,Male,"White / Caucasian, Hispanic / Latino",10/12/2017
+UP12841,6/5/2012,20,30,Riverdale Park,Prince George's,Maryland,Female,Uncertain,10/12/2017
 UP14616,11/8/2015,35,50,Riverdale Park,Prince George's,Maryland,Male,Uncertain,10/12/2017
 UP877,1/30/2007,17,27,Seat Pleasant,Prince George's,Maryland,Male,Black / African American,11/7/2017
 UP2253,9/11/1980,15,25,Seat Pleasant,Prince George's,Maryland,Male,Black / African American,10/12/2017
@@ -7137,9 +7137,9 @@ UP12972,10/6/1988,15,17,Dorchester,Suffolk,Massachusetts,Male,Black / African Am
 UP12973,10/6/1988,14,16,Dorchester,Suffolk,Massachusetts,Male,Black / African American,4/8/2020
 UP11783,9/27/2013,65,65,Dorchester,Suffolk,Massachusetts,Female,White / Caucasian,3/21/2014
 UP11734,10/14/2005,25,35,Dorchester,Suffolk,Massachusetts,Female,Other,4/8/2020
-UP14798,5/31/1993,,,Dorchester (Boston),Suffolk,Massachusetts,Male,White / Caucasian,4/8/2020
-UP13361,11/16/1992,0,1,Dorchester (Boston),Suffolk,Massachusetts,Male,Black / African American,4/8/2020
-UP14827,3/25/1991,0,0,Dorchester (Boston),Suffolk,Massachusetts,Male,Black / African American,4/8/2020
+UP14798,5/31/1993,,,Dorchester,Suffolk,Massachusetts,Male,White / Caucasian,4/8/2020
+UP13361,11/16/1992,0,1,Dorchester,Suffolk,Massachusetts,Male,Black / African American,4/8/2020
+UP14827,3/25/1991,0,0,Dorchester,Suffolk,Massachusetts,Male,Black / African American,4/8/2020
 UP53220,9/5/2018,,,EAST BOSTON,Suffolk,Massachusetts,Male,White / Caucasian,4/8/2020
 UP14701,3/28/2011,65,70,East Boston,Suffolk,Massachusetts,Male,White / Caucasian,4/8/2020
 UP13198,6/26/1999,10,16,Holbrook,Suffolk,Massachusetts,Unsure,Uncertain,1/5/2016
@@ -7435,9 +7435,9 @@ UP11880,6/17/1990,35,45,Ecorse,Wayne,Michigan,Male,Black / African American,3/19
 UP12101,5/2/1977,35,45,Ecorse,Wayne,Michigan,Male,Black / African American,3/19/2020
 UP12102,6/15/1973,20,35,Ecorse,Wayne,Michigan,Male,White / Caucasian,3/19/2020
 UP11804,4/1/1996,,,Ecorse,Wayne,Michigan,Unsure,Uncertain,3/19/2020
-UP12107,6/6/1968,20,30,Grosse Isle,Wayne,Michigan,Male,White / Caucasian,3/19/2020
-UP12041,6/24/1977,40,60,Grosse Isle,Wayne,Michigan,Female,White / Caucasian,3/19/2020
-UP56129,9/3/1966,,,Grosse Isle,Wayne,Michigan,Unsure,Uncertain,3/19/2020
+UP12107,6/6/1968,20,30,Grosse Ile,Wayne,Michigan,Male,White / Caucasian,3/19/2020
+UP12041,6/24/1977,40,60,Grosse Ile,Wayne,Michigan,Female,White / Caucasian,3/19/2020
+UP56129,9/3/1966,,,Grosse Ile,Wayne,Michigan,Unsure,Uncertain,3/19/2020
 UP11696,1/30/2009,45,60,Hamtramck,Wayne,Michigan,Male,White / Caucasian,3/19/2020
 UP11983,10/18/1986,75,85,Hamtramck,Wayne,Michigan,Male,White / Caucasian,3/19/2020
 UP17205,11/8/2017,35,55,Highland Park,Wayne,Michigan,Male,Black / African American,6/25/2019
@@ -8058,9 +8058,9 @@ UP10356,11/24/2006,15,30,Brigantine,Atlantic,New Jersey,Unsure,Uncertain,10/17/2
 UP10358,7/1/2006,15,23,Brigantine,Atlantic,New Jersey,Female,Uncertain,8/29/2019
 UP10433,4/2/1994,14,20,Brigantine,Atlantic,New Jersey,Unsure,Uncertain,4/14/2020
 UP16707,6/27/1984,14,16,Brigantine,Atlantic,New Jersey,Unsure,Uncertain,4/14/2020
-UP1759,4/13/2003,18,35,Egg Harbor,Atlantic,New Jersey,Male,Uncertain,4/16/2020
-UP9078,4/2/2005,15,15,Egg Harbor,Atlantic,New Jersey,Unsure,Uncertain,4/17/2020
-UP8344,2/9/2008,20,40,Egg Harbor Township,Atlantic,New Jersey,Male,Asian,2/4/2020
+UP1759,4/13/2003,18,35,Egg Harbor City,Atlantic,New Jersey,Male,Uncertain,4/16/2020
+UP9078,4/2/2005,15,15,Egg Harbor City,Atlantic,New Jersey,Unsure,Uncertain,4/17/2020
+UP8344,2/9/2008,20,40,Egg Harbor City,Atlantic,New Jersey,Male,Asian,2/4/2020
 UP5221,12/6/1971,14,18,Galloway Township,Atlantic,New Jersey,Female,White / Caucasian,4/14/2020
 UP10355,1/14/2012,18,99,Hamilton Township,Atlantic,New Jersey,Male,Uncertain,1/28/2020
 UP5225,12/18/1982,60,70,Hamilton Township,Atlantic,New Jersey,Male,White / Caucasian,4/14/2020
@@ -8072,9 +8072,9 @@ UP10431,8/8/1997,18,25,Margate City,Atlantic,New Jersey,Male,White / Caucasian,4
 UP12060,12/18/1983,20,99,Margate City,Atlantic,New Jersey,Male,Uncertain,4/14/2020
 UP10428,3/31/1998,,,Margate City,Atlantic,New Jersey,Unsure,Uncertain,4/16/2020
 UP10357,9/28/2006,16,30,Margate City,Atlantic,New Jersey,Female,Uncertain,8/29/2019
-UP5222,12/12/1981,60,70,Mullica,Atlantic,New Jersey,Male,Black / African American,4/14/2020
-UP1484,10/11/1994,45,55,Mullica Township,Atlantic,New Jersey,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
-UP1763,7/19/1988,27,39,Mullica Township,Atlantic,New Jersey,Female,Black / African American,4/14/2020
+UP5222,12/12/1981,60,70,Hammonton,Atlantic,New Jersey,Male,Black / African American,4/14/2020
+UP1484,10/11/1994,45,55,Hammonton,Atlantic,New Jersey,Male,"White / Caucasian, Hispanic / Latino",4/14/2020
+UP1763,7/19/1988,27,39,Hammonton,Atlantic,New Jersey,Female,Black / African American,4/14/2020
 UP10476,8/18/1987,0,1,Northfield,Atlantic,New Jersey,Female,Black / African American,4/14/2020
 UP14208,7/6/2015,18,99,Pleasantville,Atlantic,New Jersey,Male,Uncertain,1/14/2020
 UP11427,1/14/1992,,,Ventnor,Atlantic,New Jersey,Unsure,Uncertain,4/14/2020
@@ -10997,14 +10997,14 @@ UP12677,5/19/2001,18,40,Lincoln,Providence,Rhode Island,Male,Uncertain,9/12/2018
 UP12657,7/21/1997,50,99,Pawtucket,Providence,Rhode Island,Unsure,Uncertain,9/12/2018
 UP12745,7/22/2000,0,0,Providence,Providence,Rhode Island,Female,Uncertain,9/12/2018
 UP12497,6/18/1987,25,35,Smithfield,Providence,Rhode Island,Male,White / Caucasian,8/22/2019
-UP12680,1/10/1998,,,Block Island,Washington,Rhode Island,Male,White / Caucasian,2/28/2019
-UP12642,4/24/1992,25,40,Block Island,Washington,Rhode Island,Male,White / Caucasian,9/12/2018
-UP12707,1/11/1992,21,26,Block Island,Washington,Rhode Island,Male,White / Caucasian,9/12/2018
+UP12680,1/10/1998,,,New Shoreham,Washington,Rhode Island,Male,White / Caucasian,2/28/2019
+UP12642,4/24/1992,25,40,New Shoreham,Washington,Rhode Island,Male,White / Caucasian,9/12/2018
+UP12707,1/11/1992,21,26,New Shoreham,Washington,Rhode Island,Male,White / Caucasian,9/12/2018
 UP12658,10/25/2002,35,35,Galilee,Washington,Rhode Island,Male,Uncertain,12/18/2019
-UP12643,6/24/1992,30,70,Narragansett,Washington,Rhode Island,Male,Uncertain,9/12/2018
-UP12638,3/28/1991,25,25,Narragansett,Washington,Rhode Island,Male,Uncertain,12/18/2019
-UP12674,12/23/1980,25,99,Narragansett,Washington,Rhode Island,Unsure,Uncertain,9/12/2018
-UP12682,8/28/1994,20,70,Narragansett Bay,Washington,Rhode Island,Female,White / Caucasian,2/28/2019
+UP12643,6/24/1992,30,70,Narragansett Beach,Washington,Rhode Island,Male,Uncertain,9/12/2018
+UP12638,3/28/1991,25,25,Narragansett Beach,Washington,Rhode Island,Male,Uncertain,12/18/2019
+UP12674,12/23/1980,25,99,Narragansett Beach,Washington,Rhode Island,Unsure,Uncertain,9/12/2018
+UP12682,8/28/1994,20,70,Narragansett Beach,Washington,Rhode Island,Female,White / Caucasian,2/28/2019
 UP12763,3/10/1977,30,70,Point Judith,Washington,Rhode Island,Male,Uncertain,12/18/2019
 UP12641,3/2/1992,26,70,Westerly,Washington,Rhode Island,Male,Uncertain,12/20/2019
 UP12636,12/22/1988,50,99,,Washington,Rhode Island,Male,White / Caucasian,12/18/2019
