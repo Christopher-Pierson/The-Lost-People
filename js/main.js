@@ -1,6 +1,8 @@
 //declare map var in global scope
 var map; //Background map
-var mapLayer; // Proportional Symbols
+var mapSymbols; // Proportional Symbols
+var mapFeatures; // Feature enumeration units
+var geojson; //The entire feature json layer
 var LegendControl; // Legend
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
 var centerPoint = [38, -87];
@@ -95,6 +97,7 @@ function createMap(){
 
     // Add easy button to pull up splash screen
     L.easyButton('fa-info-circle', function(){
+        $('#splash-screen').modal('show');
         map.setView([38, -87], 4);
     },'zoom to original extent',{ position: 'topright' }).addTo(map);
 
@@ -111,6 +114,13 @@ function createMap(){
 function getData(map){
     // Depending on what info is clicked, select the correct data
     if (dataSelected[0] === "combined-database" && dataSelected[1] === "state-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/state_polygons.json", function(response){
+            mapFeatures = L.geoJson(response, {
+                style: style,
+                onEachFeature: onEachFeature
+            }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/summary_counts.json", function(response){
             //create an attributes array
@@ -121,6 +131,13 @@ function getData(map){
             createLegend(attributes[0], "combined");
         });
     } else if (dataSelected[0] === "combined-database" && dataSelected[1] === "county-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/county_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/county_counts.json", function(response){
             //create an attributes array
@@ -131,6 +148,13 @@ function getData(map){
             createLegend(attributes[0], "combined");
         });
     } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/state_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
@@ -141,6 +165,13 @@ function getData(map){
             createLegend(attributes[0], "missing");
         });
     } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "state-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/state_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
@@ -151,6 +182,13 @@ function getData(map){
             createLegend(attributes[0], "unidentified");
         });
     } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "state-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/state_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
             //create an attributes array
@@ -161,6 +199,13 @@ function getData(map){
             createLegend(attributes[0], "unclaimed");
         });
     } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "county-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/county_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
             //create an attributes array
@@ -171,6 +216,13 @@ function getData(map){
             createLegend(attributes[0], "missing");
         });
     } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "county-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/county_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
             //create an attributes array
@@ -181,6 +233,13 @@ function getData(map){
             createLegend(attributes[0], "unidentified");
         });
     } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "county-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/county_polygons.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
             //create an attributes array
@@ -191,9 +250,55 @@ function getData(map){
             createLegend(attributes[0], "unclaimed");
         });
     }
-
-
+    // L.control.layers(mapFeatures, mapSymbols).addTo(map);
 };
+
+//Set the intial style of the feature units
+function style(feature) {
+    return {
+        fillColor: 'black',
+        weight: 1,
+        opacity: 1,
+        color: 'none',
+        fillOpacity: 0
+    };
+}
+
+//Highlight feature
+function highlightFeature(e) {
+    var layer = e.target;
+
+    layer.setStyle({
+        weight: 2,
+        color: '#fff',
+        dashArray: '',
+        fillOpacity: 0
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+}
+
+//Remove feature highlight 
+function resetHighlight(e) {
+    mapFeatures.resetStyle(e.target);
+}
+
+function zoomToFeature(e) {
+    // map.fitBounds(e.target.getBounds());
+    console.log(e);
+}
+
+//Event listeners for highlighing the features
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        interactive: false,
+        // click: zoomToFeature
+    });
+}
 
 //Get Data for filtered
 function getDataFiltered(map){
@@ -274,7 +379,7 @@ function processData(data, keyword){
 // Add circle markers for point features to the map
 function createPropSymbols(data, attributes, keyword){
     //create a Leaflet GeoJSON layer and add it to the map
-    mapLayer = L.geoJson(data, {
+    mapSymbols = L.geoJson(data, {
         pointToLayer: function(feature, latlng){
             return pointToLayer(feature, latlng, attributes, keyword);
         }
@@ -1243,7 +1348,8 @@ function resetFilterOptions() {
 //Clear the map and recreate it
 function resetMap(){
     // Remove the Pop symbol layer and the legend
-    map.removeLayer(mapLayer);
+    map.removeLayer(mapSymbols);
+    map.removeLayer(mapFeatures);
     $(".legend-control-container").remove();
 
     // Get data differently depending on if it is filtered or not
@@ -1504,9 +1610,9 @@ $("body").on('click','a.retrieveNames', function(e){
 });
 
 
-//Splash Screen
+//Splash Screen when start
 $(window).on('load',function(){
     $('#splash-screen').modal('show');
 });
-//Create Mape
+//Create Map
 $(document).ready(createMap());
