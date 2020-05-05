@@ -1767,6 +1767,7 @@ function resetMap(){
     // Remove the Pop symbol layer and the legend
     map.removeLayer(mapSymbols);
     map.removeLayer(mapFeatures);
+    $(".secondary").css("display", "none");
     $(".legend-control-container").remove();
 
     // Get data differently depending on if it is filtered or not
@@ -1948,10 +1949,13 @@ function doAdvanceFilter() {
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
 function getNames(){
     console.log(unitSelected);
+    $(".secondary").css("display", "block");
 
     if(dataSelected[0] === "missing-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
+
+        var records = '<h3>Missing Records</h3>';
 
         //Loop through each enumeration area
         for (eachArea in data){
@@ -1959,14 +1963,17 @@ function getNames(){
             for (eachRecord in data[eachArea].properties.missing){
                 if (data[eachArea].name === unitSelected){
                     console.log(data[eachArea].properties.missing[eachRecord]);
+                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.missing[eachRecord]) +"</p>";
                 }
             }
         }
 
-        $('#names-list').html('Test: Missing Names Now Here')
+        $('#names-list').html(records);
     } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
+
+        var records = '<h3>Unclaimed Records</h3>';
 
         //Loop through each enumeration area
         for (eachArea in data){
@@ -1974,14 +1981,17 @@ function getNames(){
             for (eachRecord in data[eachArea].properties.unclaimed){
                 if (data[eachArea].name === unitSelected){
                     console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
                 }
             }
         }
 
-        $('#names-list').html('Test: UnclaimedNames Now Here')
+        $('#names-list').html(records)
     } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
+
+        var records = '<h3>Unidentified Records</h3>';
 
         //Loop through each enumeration area
         for (eachArea in data){
@@ -1989,14 +1999,17 @@ function getNames(){
             for (eachRecord in data[eachArea].properties.unidentified){
                 if (data[eachArea].name === unitSelected){
                     console.log(data[eachArea].properties.unidentified[eachRecord]);
+                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.unidentified[eachRecord]) +"</p>";
                 }
             }
         }
 
-        $('#names-list').html('Test: Unidentified Names Now Here')
-    } else {
+        $('#names-list').html(records)
+    } else { //Filtered records
         // shortand for the filtering below
         data = currentDB.features;
+
+        var records = '<h3>Filtered Records</h3>';
 
         //Loop through each enumeration area
         for (eachArea in data){
@@ -2004,11 +2017,42 @@ function getNames(){
             for (eachRecord in data[eachArea].properties.filtered){
                 if (data[eachArea].name === unitSelected){
                     console.log(data[eachArea].properties.filtered[eachRecord]);
+                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.filtered[eachRecord]) +"</p>";
+
                 }
             }
         }
 
-        $('#names-list').html('Test: Filtered Names Now Here')
+        $('#names-list').html(records)
+    }
+}
+
+// Retrieve and place the record data in the string
+function formatRecords(record){
+    if (dataSelected[0] === "missing-persons") {
+        var caseNumber = record["Case Number"];
+        var firstName = record["First Name"];
+        var lastName = record["Last Name"];
+        var dlc = record["DLC"];
+        
+        return caseNumber + ", " + firstName + " " + lastName + ", " + dlc;
+
+    } else if (dataSelected[0] === "unclaimed-persons") {
+        var caseNumber = record["Case Number"];
+        var firstName = record["First Name"];
+        var lastName = record["Last Name"];
+        var dbf = record["DBF"];
+        
+        return caseNumber + ", " + firstName + " " + lastName + ", " + dbf;
+
+    } else if (dataSelected[0] === "unidentified-persons") {
+        var caseNumber = record["Case Number"];
+        var dbf = record["DBF"];
+        var sex = record["Sex"];
+        var ageF = record["Age From"];
+        var ageT = record["Age To"];
+        
+        return caseNumber + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
     }
 }
 
