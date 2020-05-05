@@ -336,6 +336,7 @@ function resetHighlight(e) {
 // Creates and activates a popup for the polygon feature
 function polyPopup(e) {
     var poly = e.target.feature;
+    unitSelected = poly.name;
     if (dataSelected[0] === "combined-database"){
         var poly = e.target.feature;
 
@@ -361,10 +362,9 @@ function polyPopup(e) {
         }).openPopup();
     } else if (dataSelected[0] === "missing-persons" && dataFiltered == true){
         //Find the  index in filtered database of the currently selected feature
-        var targetPoly = poly.name;
         var targetIndex = 0;
         for (eachState in currentDB.features){
-            if (targetPoly === currentDB.features[eachState].name){
+            if (unitSelected === currentDB.features[eachState].name){
                 break;
             }
             targetIndex = targetIndex + 1;
@@ -391,10 +391,9 @@ function polyPopup(e) {
         }).openPopup();
     } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == true){
         //Find the  index in filtered database of the currently selected feature
-        var targetPoly = poly.name;
         var targetIndex = 0;
         for (eachState in currentDB.features){
-            if (targetPoly === currentDB.features[eachState].name){
+            if (unitSelected === currentDB.features[eachState].name){
                 break;
             }
             targetIndex = targetIndex + 1;
@@ -421,10 +420,9 @@ function polyPopup(e) {
         }).openPopup();
     } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == true){
         //Find the  index in filtered database of the currently selected feature
-        var targetPoly = poly.name;
         var targetIndex = 0;
         for (eachState in currentDB.features){
-            if (targetPoly === currentDB.features[eachState].name){
+            if (unitSelected === currentDB.features[eachState].name){
                 break;
             }
             targetIndex = targetIndex + 1;
@@ -1951,7 +1949,7 @@ function doAdvanceFilter() {
 function getNames(){
     console.log(unitSelected);
 
-    if(dataSelected[0] === "missing-persons"){
+    if(dataSelected[0] === "missing-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
 
@@ -1959,12 +1957,14 @@ function getNames(){
         for (eachArea in data){
             //Loop through each record
             for (eachRecord in data[eachArea].properties.missing){
-                console.log(data[eachArea].properties.missing[eachRecord]);
+                if (data[eachArea].name === unitSelected){
+                    console.log(data[eachArea].properties.missing[eachRecord]);
+                }
             }
         }
 
         $('#names-list').html('Test: Missing Names Now Here')
-    } else if (dataSelected[0] === "unclaimed-persons"){
+    } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
 
@@ -1972,12 +1972,14 @@ function getNames(){
         for (eachArea in data){
             //Loop through each record
             for (eachRecord in data[eachArea].properties.unclaimed){
-                console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                if (data[eachArea].name === unitSelected){
+                    console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                }
             }
         }
 
         $('#names-list').html('Test: UnclaimedNames Now Here')
-    } else if (dataSelected[0] === "unidentified-persons"){
+    } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
         // shortand for the filtering below
         data = currentDB.features;
 
@@ -1985,7 +1987,9 @@ function getNames(){
         for (eachArea in data){
             //Loop through each record
             for (eachRecord in data[eachArea].properties.unidentified){
-                console.log(data[eachArea].properties.unidentified[eachRecord]);
+                if (data[eachArea].name === unitSelected){
+                    console.log(data[eachArea].properties.unidentified[eachRecord]);
+                }
             }
         }
 
@@ -1998,7 +2002,9 @@ function getNames(){
         for (eachArea in data){
             //Loop through each record
             for (eachRecord in data[eachArea].properties.filtered){
-                console.log(data[eachArea].properties.filtered[eachRecord]);
+                if (data[eachArea].name === unitSelected){
+                    console.log(data[eachArea].properties.filtered[eachRecord]);
+                }
             }
         }
 
