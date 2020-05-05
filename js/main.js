@@ -782,28 +782,28 @@ function pointToLayer(feature, latlng, attributes, keyword){
 function createPopupContentExtra(feature, attValue, keyword){
     //add name to popup content string
     if (dataSelected[1] === "city-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + ", " + feature.state_abbr + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + ", " + feature.state_abbr + "</b></p>";
     } else if (dataSelected[1] === "county-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + " County</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + " County</b></p>";
     } else {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + "</b></p>";
     }
 
     //add formatted attribute to panel content string
     if (keyword === "missing") {
-        popupContent += "<p>Number of Missing Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='missing-record-count'>Missing</span> Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unidentified") {
-        popupContent += "<p>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unclaimed") {
-        popupContent += "<p>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "filtered") {
-        popupContent += "<p>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     }
@@ -842,10 +842,10 @@ function createPopupContent(properties, attribute){
         }
 
         //add formatted attribute to panel content string
-        popupContent += "<p><b>Number of Combined Dataset Records: " + combined + "</b></p>";
-        popupContent += "<p>Number of Missing Persons Records: <b>" + missing + "</b></p>";
-        popupContent += "<p>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
-        popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
+        popupContent += "<p class='popup-record-count'><b>Number of Combined Dataset Records: " + combined + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Missing Persons Records: <b>" + missing + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
 
         return popupContent;
 
