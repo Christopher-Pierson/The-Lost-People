@@ -101,9 +101,9 @@ function createMap(){
     },'zoom to original extent',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-	     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-	     subdomains: 'abcd'
+    L.tileLayer('https://api.mapbox.com/styles/v1/pierson/ck9u50mbx0ooj1ik8eb2lok59/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        accessToken: 'pk.eyJ1IjoicGllcnNvbiIsImEiOiJjanp6c2ZvMjIwZWdjM21waXJpNzhsYTdlIn0.WnrNdPyPhiFYUuoYKF1caw'
     }).addTo(map);
 
     getData(map);
@@ -328,7 +328,7 @@ function highlightFeature(e) {
     }
 }
 
-//Remove polygon feature highlight 
+//Remove polygon feature highlight
 function resetHighlight(e) {
     mapFeatures.resetStyle(e.target);
 }
@@ -558,7 +558,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
     // Determine which attribute to visualize with proportional symbols
     //Assign the current attribute based on the first index of the attributes array
     var attribute = attributes[0];
-    
+
     if (keyword == "combined"){
         //create marker options
         var options = {
@@ -980,35 +980,35 @@ function createLegend(attribute, keyword){
                     svg += "</svg>";
                 } else if (dataSelected[1] === "city-scale"){
                     dataStats = {min:5, max:1000, mean:200}; //manually created values for the total combined numbers
-    
+
                     $(container).append('<h3 id="legend-title" ><b>Combined Databases</b></h3>');
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
-    
+
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="270px" height="150px">';
-    
+
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
-    
+
                     //Loop to add each circle and text to svg string
                     for (var i=0; i<circles.length; i++){
                         //Assign the r and cy attributes
                         var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
                         var cy = (180 - radius) -35;
-    
+
                         //circle string
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
-    
+
                         //evenly space out labels
                         var textY = i * 40 + 50; //spacing + y value
-    
+
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
-    
+
                     //close svg string
                     svg += "</svg>";
-                } 
+                }
             } else if (keyword === "missing"){
                 if (dataSelected[1] === "state-scale") {
                     dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
