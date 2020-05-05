@@ -81,7 +81,11 @@ function createMap(){
         minZoom: 3,
         maxZoom: 12,
         maxBounds: [[75, -180], [-30, 180]], // [top, left], [bottom, right]
+        attributionControl: false
     });
+
+    // place attribution bar in bottom left of map, instead of default bottom right
+    L.control.attribution({position: 'bottomleft'}).addTo(map);
 
     // Add place searchbar to map
     L.Control.openCageSearch(options).addTo(map);
@@ -102,7 +106,7 @@ function createMap(){
 
     //Add OSM base tilelayer
     L.tileLayer('https://api.mapbox.com/styles/v1/pierson/ck9u50mbx0ooj1ik8eb2lok59/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        attribution: '<a href="https://www.mapbox.com/">Mapbox</a>',
         accessToken: 'pk.eyJ1IjoicGllcnNvbiIsImEiOiJjanp6c2ZvMjIwZWdjM21waXJpNzhsYTdlIn0.WnrNdPyPhiFYUuoYKF1caw'
     }).addTo(map);
 
@@ -2034,7 +2038,7 @@ function formatRecords(record){
         var firstName = record["First Name"];
         var lastName = record["Last Name"];
         var dlc = record["DLC"];
-        
+
         return caseNumber + ", " + firstName + " " + lastName + ", " + dlc;
 
     } else if (dataSelected[0] === "unclaimed-persons") {
@@ -2042,7 +2046,7 @@ function formatRecords(record){
         var firstName = record["First Name"];
         var lastName = record["Last Name"];
         var dbf = record["DBF"];
-        
+
         return caseNumber + ", " + firstName + " " + lastName + ", " + dbf;
 
     } else if (dataSelected[0] === "unidentified-persons") {
@@ -2051,7 +2055,7 @@ function formatRecords(record){
         var sex = record["Sex"];
         var ageF = record["Age From"];
         var ageT = record["Age To"];
-        
+
         return caseNumber + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
     }
 }
