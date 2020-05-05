@@ -1,8 +1,7 @@
 //declare map var in global scope
 var map; //Background map
 var mapSymbols; // Proportional Symbols
-var mapFeatures; // Feature enumeration units
-var geojson; //The entire feature json layer
+var mapFeatures; // Feature polygon units
 var LegendControl; // Legend
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
 var centerPoint = [38, -87];
@@ -161,11 +160,16 @@ function getData(map){
     // Missing Persons Databases
     } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "state-scale") {
         //Create the enumeration unit boundaries
-        $.getJSON("data/JSON/state_polygons.json", function(response){
+        $.getJSON("data/JSON/state_poly_geojson.json", function(response){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
-                onEachFeature: onEachFeature
-              }).addTo(map);
+                onEachFeature: onEachFeature,
+                // click: polyPopup
+            }).addTo(map);
+            // mapFeatures.eachLayer(function (layer) {
+            //     click: polyPopup
+
+            // });
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -206,7 +210,7 @@ function getData(map){
     // Unidentified Persons Databases
     } else if (dataSelected[0] === "unidentified-persons" && dataSelected[1] === "state-scale") {
         //Create the enumeration unit boundaries
-        $.getJSON("data/JSON/state_polygons.json", function(response){
+        $.getJSON("data/JSON/state_poly_geojson.json", function(response){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
@@ -251,7 +255,7 @@ function getData(map){
     // Unclaimed Databases
     } else if (dataSelected[0] === "unclaimed-persons" && dataSelected[1] === "state-scale") {
         //Create the enumeration unit boundaries
-        $.getJSON("data/JSON/state_polygons.json", function(response){
+        $.getJSON("data/JSON/state_poly_geojson.json", function(response){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
@@ -329,30 +333,96 @@ function resetHighlight(e) {
     mapFeatures.resetStyle(e.target);
 }
 
-function zoomToFeature(e) {
-    // map.fitBounds(e.target.getBounds());
-    console.log(e);
+// Creates and activates a popup for the polygon feature
+function polyPopup(e) {
+    if (dataSelected[0] === "combined-database"){
+        var poly = e.target.feature;
+
+        //For each feature, determine its value for the selected attribute
+        // var attValue = Number(poly.properties[attribute]);
+
+        //Create the popup content for the combined dataset layer
+        // var popupContent = createPopupContent(feature.properties, attribute);
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,0)
+        }).openPopup();
+    } else if (dataSelected[0] === "missing-persons"){
+        var poly = e.target.feature;
+
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(poly.properties.missing.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "missing");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    } else if (dataSelected[0] === "unidentified-persons"){
+        var poly = e.target.feature;
+
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(poly.properties.unidentified.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    } else if (dataSelected[0] === "unclaimed-persons"){
+        var poly = e.target.feature;
+
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(poly.properties.unclaimed.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    }
 }
 
-//Event listeners for highlighing the features
+//Event listeners for highlighing the polygon features
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        interactive: false,
-        // click: zoomToFeature
+        click: polyPopup
     });
 }
 
 //Get Data for filtered
 function getDataFiltered(map){
-    //load the data
-        //create an attributes array
-        var attributes = processData(currentDB, "filtered");
+    // if (dataSelected[1] === "state-scale") {
+    //     //Create the enumeration unit boundaries
+    //     $.getJSON("data/JSON/state_poly_geojson.json", function(response){
+    //         mapFeatures = new L.GeoJSON(response, {
+    //             style: style,
+    //             onEachFeature: onEachFeature
+    //           }).addTo(map);
+    //     });
+    // } else if (dataSelected[1] === "county-scale") {
+    //     //Create the enumeration unit boundaries
+    //     $.getJSON("data/JSON/county_poly_geojson.json", function(response){
+    //         mapFeatures = new L.GeoJSON(response, {
+    //             style: style,
+    //             onEachFeature: onEachFeature
+    //           }).addTo(map);
+    //     });
+    // }
 
-        // calcStats(currentDB, "filtered");
-        createPropSymbols(currentDB, attributes, "filtered");
-        createLegend(currentDB[0], "filtered");
+    //load the data
+    //create an attributes array
+    var attributes = processData(currentDB, "filtered");
+
+    // calcStats(currentDB, "filtered");
+    createPropSymbols(currentDB, attributes, "filtered");
+    createLegend(currentDB[0], "filtered");
 }
 
 //Build an attributes array from the special data
@@ -556,6 +626,8 @@ function createPopupContentExtra(feature, attValue, keyword){
     //add name to popup content string
     if (dataSelected[1] === "city-scale") {
         var popupContent = "<p style='font-size: 20px'><b>" + feature.name + ", " + feature.state_abbr + "</b></p>";
+    } else if (dataSelected[1] === "county-scale") {
+        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + " County</b></p>";
     } else {
         var popupContent = "<p style='font-size: 20px'><b>" + feature.name + "</b></p>";
     }
@@ -587,6 +659,8 @@ function createPopupContent(properties, attribute){
     //add name to popup content string
     if (dataSelected[1] === "city-scale") {
         var popupContent = "<p style='font-size: 20px'><b>" + properties.CITY_NAME + ", " + properties.STUSPS + "</b></p>";
+    } else if (dataSelected[1] === "county-scale") {
+        var popupContent = "<p style='font-size: 20px'><b>" + properties.NAME + " County</b></p>";
     } else {
         var popupContent = "<p style='font-size: 20px'><b>" + properties.NAME + "</b></p>";
     }
@@ -1098,7 +1172,7 @@ function createLegend(attribute, keyword){
                     //close svg string
                     svg += "</svg>";
                 } else if (dataSelected[1] === "county-scale"){
-                    dataStats = {min:5, max:1000, mean:500}; //manually created values for the total combined numbers
+                    dataStats = {min:5, max:1000, mean:300}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b>Unclaimed Persons</b></h3>');
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
@@ -1253,9 +1327,9 @@ function createLegend(attribute, keyword){
                     }
                 } else if (dataSelected[0] === "unidentified-persons"){
                     if (dataSelected[1] === "state-scale") {
-                        dataStats = {min:10, max:600, mean:200}; //manually created values for the total combined numbers
+                        dataStats = {min:10, max:2700, mean:1000}; //manually created values for the total combined numbers
 
-                        $(container).append('<h3 id="legend-title" ><b>Missing Persons</b></h3>');
+                        $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
@@ -1271,7 +1345,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -1375,7 +1449,7 @@ function createLegend(attribute, keyword){
                         //close svg string
                         svg += "</svg>";
                     } else if (dataSelected[1] === "county-scale"){
-                        dataStats = {min:5, max:1000, mean:500}; //manually created values for the total combined numbers
+                        dataStats = {min:5, max:600, mean:100}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b>Unclaimed Persons</b></h3>');
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
@@ -1423,7 +1497,7 @@ function createLegend(attribute, keyword){
                             var cy = (180 - radius) -40;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="0.8" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
                             var textY = i * 40 + 50; //spacing + y value
@@ -1898,7 +1972,6 @@ $("body").on('click','a.retrieveNames', function(e){
     e.preventDefault();
     getNames();
 });
-
 
 //Splash Screen when start
 $(window).on('load',function(){
