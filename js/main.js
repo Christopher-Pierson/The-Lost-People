@@ -105,7 +105,7 @@ function createMap(){
     },'zoom to original extent',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
-    L.tileLayer('https://api.mapbox.com/styles/v1/pierson/ck9u50mbx0ooj1ik8eb2lok59/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    L.tileLayer('https://api.mapbox.com/styles/v1/pierson/ck9uh6fx202ni1io1459nmyht/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: '<a href="https://www.mapbox.com/">Mapbox</a>',
         accessToken: 'pk.eyJ1IjoicGllcnNvbiIsImEiOiJjanp6c2ZvMjIwZWdjM21waXJpNzhsYTdlIn0.WnrNdPyPhiFYUuoYKF1caw'
     }).addTo(map);
@@ -341,10 +341,10 @@ function polyPopup(e) {
         unitSelected = poly.name;
 
         if (dataSelected[0] === "combined-database"){
-    
+
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -352,9 +352,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -368,12 +368,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -381,9 +381,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -397,12 +397,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -410,9 +410,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -426,12 +426,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -441,10 +441,10 @@ function polyPopup(e) {
         unitSelected = poly["COUNTYFP"];
 
         if (dataSelected[0] === "combined-database"){
-        
+
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -452,9 +452,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -468,12 +468,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -481,9 +481,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -497,12 +497,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -510,9 +510,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -526,12 +526,12 @@ function polyPopup(e) {
                 }
                 targetIndex = targetIndex + 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -886,7 +886,7 @@ function createPopupContent(properties, attribute){
     popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
 
     return popupContent;
-    
+
 };
 
 //calculate the radius of each proportional symbol
