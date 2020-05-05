@@ -312,7 +312,7 @@ function style(feature) {
     };
 }
 
-//Highlight feature
+//Highlight polygon feature
 function highlightFeature(e) {
     var layer = e.target;
 
@@ -328,13 +328,14 @@ function highlightFeature(e) {
     }
 }
 
-//Remove feature highlight 
+//Remove polygon feature highlight 
 function resetHighlight(e) {
     mapFeatures.resetStyle(e.target);
 }
 
 // Creates and activates a popup for the polygon feature
 function polyPopup(e) {
+    var poly = e.target.feature;
     if (dataSelected[0] === "combined-database"){
         var poly = e.target.feature;
 
@@ -348,9 +349,7 @@ function polyPopup(e) {
         e.target.bindPopup(popupContent, {
             offset: new L.Point(0,0)
         }).openPopup();
-    } else if (dataSelected[0] === "missing-persons"){
-        var poly = e.target.feature;
-
+    } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
         //For each feature, determine its value for the selected attribute
         var attValue = Number(poly.properties.missing.length);
 
@@ -360,9 +359,27 @@ function polyPopup(e) {
         e.target.bindPopup(popupContent, {
             offset: new L.Point(0,-20)
         }).openPopup();
-    } else if (dataSelected[0] === "unidentified-persons"){
-        var poly = e.target.feature;
+    } else if (dataSelected[0] === "missing-persons" && dataFiltered == true){
+        //Find the  index in filtered database of the currently selected feature
+        var targetPoly = poly.name;
+        var targetIndex = 0;
+        for (eachState in currentDB.features){
+            if (targetPoly === currentDB.features[eachState].name){
+                break;
+            }
+            targetIndex = targetIndex + 1;
+        }
 
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "missing");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
         //For each feature, determine its value for the selected attribute
         var attValue = Number(poly.properties.unidentified.length);
 
@@ -372,11 +389,49 @@ function polyPopup(e) {
         e.target.bindPopup(popupContent, {
             offset: new L.Point(0,-20)
         }).openPopup();
-    } else if (dataSelected[0] === "unclaimed-persons"){
-        var poly = e.target.feature;
+    } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == true){
+        //Find the  index in filtered database of the currently selected feature
+        var targetPoly = poly.name;
+        var targetIndex = 0;
+        for (eachState in currentDB.features){
+            if (targetPoly === currentDB.features[eachState].name){
+                break;
+            }
+            targetIndex = targetIndex + 1;
+        }
 
         //For each feature, determine its value for the selected attribute
+        var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
+        //For each feature, determine its value for the selected attribute
         var attValue = Number(poly.properties.unclaimed.length);
+
+        var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
+
+        //bind the popup to the polygon
+        e.target.bindPopup(popupContent, {
+            offset: new L.Point(0,-20)
+        }).openPopup();
+    } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == true){
+        //Find the  index in filtered database of the currently selected feature
+        var targetPoly = poly.name;
+        var targetIndex = 0;
+        for (eachState in currentDB.features){
+            if (targetPoly === currentDB.features[eachState].name){
+                break;
+            }
+            targetIndex = targetIndex + 1;
+        }
+
+        //For each feature, determine its value for the selected attribute
+        var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
 
         var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
 
@@ -398,23 +453,23 @@ function onEachFeature(feature, layer) {
 
 //Get Data for filtered
 function getDataFiltered(map){
-    // if (dataSelected[1] === "state-scale") {
-    //     //Create the enumeration unit boundaries
-    //     $.getJSON("data/JSON/state_poly_geojson.json", function(response){
-    //         mapFeatures = new L.GeoJSON(response, {
-    //             style: style,
-    //             onEachFeature: onEachFeature
-    //           }).addTo(map);
-    //     });
-    // } else if (dataSelected[1] === "county-scale") {
-    //     //Create the enumeration unit boundaries
-    //     $.getJSON("data/JSON/county_poly_geojson.json", function(response){
-    //         mapFeatures = new L.GeoJSON(response, {
-    //             style: style,
-    //             onEachFeature: onEachFeature
-    //           }).addTo(map);
-    //     });
-    // }
+    if (dataSelected[1] === "state-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/state_poly_geojson.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
+    } else if (dataSelected[1] === "county-scale") {
+        //Create the enumeration unit boundaries
+        $.getJSON("data/JSON/county_poly_geojson.json", function(response){
+            mapFeatures = new L.GeoJSON(response, {
+                style: style,
+                onEachFeature: onEachFeature
+              }).addTo(map);
+        });
+    }
 
     //load the data
     //create an attributes array
