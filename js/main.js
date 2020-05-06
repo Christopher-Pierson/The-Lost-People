@@ -989,10 +989,10 @@ function createLegend(attribute, keyword){
                 if (dataSelected[1] === "state-scale") {
                     dataStats = {min:50, max:7000, mean:2000};
                     $(container).append('<h3 id="legend-title" ><b><span id="combined-record">Combined</span> Database</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="245px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1004,22 +1004,28 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -40;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="85"/>';
 
                         //evenly space out labels
-                        var textY = i * 50 + 32; //spacing + y value
+                        if (i < 1) {
+                          var textY = 25; //spacing + y value
+                        } else if (i == 1) {
+                          var textY = 85; //spacing + y value
+                        } else if (i == 2) {
+                          var textY = 135; //spacing + y value
+                        }
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="160" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
                 } else if (dataSelected[1] === "county-scale"){
                     dataStats = {min:10, max:1700, mean:300}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="combined-record">Combined</span> Databases</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="252px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1031,13 +1037,20 @@ function createLegend(attribute, keyword){
                         var cy = (180 - radius) -35;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="90"/>';
 
                         //evenly space out labels
-                        var textY = i * 50 + 32; //spacing + y value
+                        if (i < 1) {
+                          var textY = 15; //spacing + y value
+                        } else if (i == 1) {
+                          var textY = 100; //spacing + y value
+                        } else if (i == 2) {
+                          var textY = 140; //spacing + y value
+                        }
+
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="170" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
 
                     //close svg string
@@ -1046,10 +1059,10 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:1000, mean:200}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="combined-record">Combined</span> Databases</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1064,10 +1077,16 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 50 + 32; //spacing + y value
+                        if (i < 1) {
+                          var textY = 20; //spacing + y value
+                        } else if (i == 1) {
+                          var textY = 96; //spacing + y value
+                        } else if (i == 2) {
+                          var textY = 140; //spacing + y value
+                        }
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="163" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
 
                     //close svg string
@@ -1078,7 +1097,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1108,7 +1127,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:10, max:600, mean:200}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1138,7 +1157,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:250, mean:100}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="120px">';
@@ -1170,7 +1189,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:10, max:2700, mean:1000}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1200,7 +1219,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:1000, mean:300}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1230,7 +1249,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:500, mean:100}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1262,7 +1281,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:10, max:3000, mean:1500}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1292,7 +1311,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:1000, mean:300}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1322,7 +1341,7 @@ function createLegend(attribute, keyword){
                     dataStats = {min:5, max:600, mean:200}; //manually created values for the total combined numbers
 
                     $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                    $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                    $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
                     var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1355,7 +1374,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:50, max:2500, mean:1000}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing Persons</span></b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1385,7 +1404,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:10, max:600, mean:200}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1415,7 +1434,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:5, max:250, mean:100}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="missing-record">Missing</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="120px">';
@@ -1447,7 +1466,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:10, max:2700, mean:1000}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1477,7 +1496,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:5, max:800, mean:300}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1507,7 +1526,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:5, max:500, mean:100}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unidentified-record">Unidentified</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1539,7 +1558,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:10, max:3000, mean:1500}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1569,7 +1588,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:5, max:600, mean:100}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
@@ -1599,7 +1618,7 @@ function createLegend(attribute, keyword){
                         dataStats = {min:5, max:600, mean:200}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b><span id="unclaimed-record">Unclaimed</span> Persons</b></h3>');
-                        $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
+                        $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
                         var svg = '<svg id="attribute-legend" width="260px" height="150px">';
