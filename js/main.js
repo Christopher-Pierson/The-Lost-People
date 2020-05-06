@@ -697,7 +697,7 @@ function pointToLayer(feature, latlng, attributes, keyword){
     if (dataSelected[1] === "city-scale") {
         layer.bindPopup(popupContent, {
             offset: new L.Point(0,(-options.radius)/2)
-        }).bindTooltip(hoverLabel, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+        }).bindTooltip(hoverLabel, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.9, className: "poly-labels"}  //then add your options
         );
     }
 
