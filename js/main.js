@@ -340,10 +340,10 @@ function polyPopup(e) {
         unitSelected = poly.name;
 
         if (dataSelected[0] === "combined-database"){
-    
+
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -351,9 +351,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -367,12 +367,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -380,9 +380,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -396,12 +396,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -409,9 +409,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -425,12 +425,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -440,10 +440,10 @@ function polyPopup(e) {
         unitSelected = poly["county_FIPS"];
 
         if (dataSelected[0] === "combined-database"){
-        
+
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -451,9 +451,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -468,12 +468,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -481,9 +481,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -497,12 +497,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -510,9 +510,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -526,12 +526,12 @@ function polyPopup(e) {
                 }
                 targetIndex += 1;
             }
-    
+
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-    
+
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-    
+
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -886,7 +886,7 @@ function createPopupContent(properties, attribute){
     popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
 
     return popupContent;
-    
+
 };
 
 //calculate the radius of each proportional symbol
@@ -1722,7 +1722,7 @@ function getDatabase(){
     var container = L.DomUtil.get('map');
 
     if (dataSelected[0] === "missing-persons") {
-        $('.data-header').html("Data: Missing Persons");
+        $('.data-header').html("Data: <span style=\"color:#66A3D9;\">Missing Persons</span>");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1733,7 +1733,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unidentified-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Unidentified Persons");
+        $('.data-header').html("Data: <span style=\"color:#F2B872;\">Unidentified Persons</span>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
@@ -1742,7 +1742,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unclaimed-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Unclaimed Persons");
+        $('.data-header').html("Data: <span style=\"color:#D96A6A;\">Unclaimed Persons</span>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1751,7 +1751,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "combined-database") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Combined Database");
+        $('.data-header').html("Data: <span style=\"color:#78BFA5;\">Combined Database</span>");
         // $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
@@ -2094,9 +2094,9 @@ function getNames(){
         if(dataSelected[0] === "missing-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2112,9 +2112,9 @@ function getNames(){
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Unclaimed Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2125,14 +2125,14 @@ function getNames(){
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Unidentified Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2143,14 +2143,14 @@ function getNames(){
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         } else { //Filtered records
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Filtered Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2158,20 +2158,20 @@ function getNames(){
                     if (data[eachArea].name === unitSelected){
                         console.log(data[eachArea].properties.filtered[eachRecord]);
                         records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
-    
+
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         }
     } else if (dataSelected[1] === "county-scale") {
         if(dataSelected[0] === "missing-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2187,9 +2187,9 @@ function getNames(){
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Unclaimed Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2200,14 +2200,14 @@ function getNames(){
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Unidentified Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2218,14 +2218,14 @@ function getNames(){
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         } else { //Filtered records
             // shortand for the filtering below
             data = currentDB.features;
-    
+
             var records = '<h3>Filtered Records</h3>';
-    
+
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
@@ -2233,11 +2233,11 @@ function getNames(){
                     if (data[eachArea]["county_FIPS"] === unitSelected){
                         console.log(data[eachArea].properties.filtered[eachRecord]);
                         records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
-    
+
                     }
                 }
             }
-    
+
             $('#names-list').html(records)
         }
     } else if (dataSelected[1] === "city-scale"){
