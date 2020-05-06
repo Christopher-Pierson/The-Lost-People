@@ -1993,7 +1993,7 @@ function doAdvanceFilter() {
 }
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
-function getNames(){
+function getRecords(){
     $(".secondary").css("display", "block");
 
     var recordsHTML = '<div class="recordGrid">'
@@ -3572,40 +3572,7 @@ function formatState(data){
     return '<p>' + state + '</p>';
 }
 
-// Retrieve and place the record data in the string
-function formatRecords(data){
-    if (dataSelected[0] === "missing-persons") {
-
-
-        var caseNumber = data["Case Number"];
-        var firstName = data["First Name"];
-        var lastName = data["Last Name"];
-        var dlc = data["DLC"];
-        var caseLink = namusLink("MissingPersons", caseNumber, "MP");
-
-        return caseLink + ", " + firstName + " " + lastName + ", " + dlc;
-
-    } else if (dataSelected[0] === "unclaimed-persons") {
-        var caseNumber = data["Case Number"];
-        var firstName = data["First Name"];
-        var lastName = data["Last Name"];
-        var dbf = data["DBF"];
-        var caseLink = namusLink("UnclaimedPersons", caseNumber, "UCP");
-
-        return caseLink + ", " + firstName + " " + lastName + ", " + dbf;
-
-    } else if (dataSelected[0] === "unidentified-persons") {
-        var caseNumber = data["Case Number"];
-        var dbf = data["DBF"];
-        var sex = data["Sex"];
-        var ageF = data["Age From"];
-        var ageT = data["Age To"];
-        var caseLink = namusLink("UnidentifiedPersons", caseNumber, "UP");
-
-        return caseLink + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
-    }
-}
-
+//Add a link to Case Number to the Namus website
 function namusLink(caseType, caseNumber, caseNumberPrefix) {
     var url = 'https://www.namus.gov/' + caseType + '/Case#/' + caseNumber.replace(caseNumberPrefix, '');
 
@@ -3633,7 +3600,7 @@ $(document).ready(checkAllMonths);
 //Retrieve names from within popup
 $("body").on('click','a.retrieveNames', function(e){
     e.preventDefault();
-    getNames();
+    getRecords();
 });
 
 //Splash Screen when start
