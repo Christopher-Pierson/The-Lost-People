@@ -461,7 +461,11 @@ function getDataFiltered(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              }).addTo(map);
+              })
+              .bindTooltip(function (layer) {
+                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
+               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+              ).addTo(map);
         });
     } else if (dataSelected[1] === "county-scale") {
         //Create the enumeration unit boundaries
@@ -469,7 +473,11 @@ function getDataFiltered(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              }).addTo(map);
+              })
+              .bindTooltip(function (layer) {
+                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
+               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+              ).addTo(map);
         });
     }
 
