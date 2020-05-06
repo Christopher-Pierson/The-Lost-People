@@ -2020,7 +2020,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Missing Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="missing-record">Missing</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -2149,7 +2149,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="unclaimed-record">Unclaimed</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -2266,7 +2266,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Unidentified Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="unidentified-record">Unidentified</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -2384,7 +2384,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Missing Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="missing-record">Missing</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
@@ -2513,7 +2513,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="unclaimed-record">Unclaimed</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
@@ -2630,7 +2630,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Unidentified Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="unidentified-record">Unidentified</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
@@ -2750,7 +2750,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Missing Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="missing-record">Missing</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -2879,7 +2879,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="unclaimed-record">Unclaimed</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -2996,7 +2996,7 @@ function getRecords(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h2 class="recordGrid-Title">Unidentified Persons Records</h2>';
+            recordsHTML += '<h2 class="recordGrid-Title"><span id="unidentified-record">Unidentified</span> Persons Records</h2>';
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
@@ -3114,7 +3114,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Missing Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="missing-record">Missing</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
@@ -3243,7 +3243,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="unclaimed-record">Unclaimed</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
@@ -3360,7 +3360,7 @@ function getRecords(){
                 // shortand for the filtering below
                 data = currentDB.features;
 
-                recordsHTML += '<h2 class="recordGrid-Title">Unidentified Persons Records</h2>';
+                recordsHTML += '<h2 class="recordGrid-Title"><span id="unidentified-record">Unidentified</span> Persons Records</h2>';
 
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
