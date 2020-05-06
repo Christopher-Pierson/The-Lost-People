@@ -39,7 +39,7 @@ var options = {
 
 // declage array of easy buttons for home and non-contiguous states/territories set views
 var buttons = [
-  L.easyButton('fa-home', function(){
+  L.easyButton('<img src="img/noun_Home_731233_blk.svg">', function(){
       map.setView([38, -87], 4);
   },'zoom to original extent',{ position: 'topright' }),
 
@@ -99,7 +99,7 @@ function createMap(){
     L.easyBar(buttons).addTo(map);
 
     // Add easy button to pull up splash screen
-    L.easyButton('fa-info-circle', function(){
+    L.easyButton('<img src="img/noun_Info_1845673_blk.svg">', function(){
         $('#splash-screen').modal('show');
         map.setView([38, -87], 4);
     },'zoom to original extent',{ position: 'topright' }).addTo(map);

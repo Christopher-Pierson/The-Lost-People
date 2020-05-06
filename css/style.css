@@ -196,9 +196,10 @@
 .leaflet-bar button:hover {
   background-color: #fff;
   border: none;
+  padding: 0px;
   border-bottom: 1px solid #ccc;
   width: 26px;
-  height: 26px;
+  height: 27px;
   line-height: 26px;
   display: block;
   text-align: center;
