@@ -182,7 +182,6 @@ function getData(map){
     } else if (dataSelected[0] === "missing-persons" && dataSelected[1] === "county-scale") {
         //Create the enumeration unit boundaries
         $.getJSON("data/JSON/county_poly_geojson.json", function(response){
-            console.log(response);
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
@@ -341,10 +340,10 @@ function polyPopup(e) {
         unitSelected = poly.name;
 
         if (dataSelected[0] === "combined-database"){
-
+    
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -352,9 +351,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -366,14 +365,14 @@ function polyPopup(e) {
                 if (unitSelected === currentDB.features[eachState].name){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -381,9 +380,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -395,14 +394,14 @@ function polyPopup(e) {
                 if (unitSelected === currentDB.features[eachState].name){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -410,9 +409,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -424,27 +423,27 @@ function polyPopup(e) {
                 if (unitSelected === currentDB.features[eachState].name){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
             }).openPopup();
         }
     } else if (dataSelected[1] === "county-scale") {
-        unitSelected = poly["COUNTYFP"];
+        unitSelected = poly["county_FIPS"];
 
         if (dataSelected[0] === "combined-database"){
-
+        
             //Create the popup content for the combined dataset layer
             var popupContent = createPopupContent(poly.properties);
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
@@ -452,9 +451,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -462,18 +461,19 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == true){
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
+
             for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["COUNTYFP"]){
+                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -481,9 +481,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unidentified.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -492,17 +492,17 @@ function polyPopup(e) {
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
             for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["COUNTYFP"]){
+                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -510,9 +510,9 @@ function polyPopup(e) {
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.unclaimed.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -521,17 +521,17 @@ function polyPopup(e) {
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
             for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["COUNTYFP"]){
+                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
                     break;
                 }
-                targetIndex = targetIndex + 1;
+                targetIndex += 1;
             }
-
+    
             //For each feature, determine its value for the selected attribute
             var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
+    
             var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
+    
             //bind the popup to the polygon
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,-20)
@@ -782,28 +782,28 @@ function pointToLayer(feature, latlng, attributes, keyword){
 function createPopupContentExtra(feature, attValue, keyword){
     //add name to popup content string
     if (dataSelected[1] === "city-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + ", " + feature.state_abbr + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + ", " + feature.state_abbr + "</b></p>";
     } else if (dataSelected[1] === "county-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + " County</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + " County</b></p>";
     } else {
-        var popupContent = "<p style='font-size: 20px'><b>" + feature.name + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + feature.name + "</b></p>";
     }
 
     //add formatted attribute to panel content string
     if (keyword === "missing") {
-        popupContent += "<p>Number of Missing Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='missing-record-count'>Missing</span> Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unidentified") {
-        popupContent += "<p>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unclaimed") {
-        popupContent += "<p>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     } else if (keyword === "filtered") {
-        popupContent += "<p>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
 
         popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
     }
@@ -842,10 +842,10 @@ function createPopupContent(properties, attribute){
         }
 
         //add formatted attribute to panel content string
-        popupContent += "<p><b>Number of Combined Dataset Records: " + combined + "</b></p>";
-        popupContent += "<p>Number of Missing Persons Records: <b>" + missing + "</b></p>";
-        popupContent += "<p>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
-        popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
+        popupContent += "<p class='popup-record-count'><b>Number of Combined Dataset Records: " + combined + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Missing Persons Records: <b>" + missing + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
 
         return popupContent;
 
@@ -886,7 +886,7 @@ function createPopupContent(properties, attribute){
     popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
 
     return popupContent;
-
+    
 };
 
 //calculate the radius of each proportional symbol
@@ -2086,109 +2086,190 @@ function doAdvanceFilter() {
 
 // Function to retrieve names from currentDB and print out the selected records of that prop symbol
 function getNames(){
-    console.log(unitSelected);
     $(".secondary").css("display", "block");
 
-    if(dataSelected[0] === "missing-persons" && dataFiltered == false){
-        // shortand for the filtering below
-        data = currentDB.features;
+    var recordsHTML = '<div class="recordGrid">'
 
-        var records = '<h3>Missing Records</h3>';
-
-        //Loop through each enumeration area
-        for (eachArea in data){
-            //Loop through each record
-            for (eachRecord in data[eachArea].properties.missing){
-                if (data[eachArea].name === unitSelected){
-                    console.log(data[eachArea].properties.missing[eachRecord]);
-                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.missing[eachRecord]) +"</p>";
+    if (dataSelected[1] === "state-scale"){
+        if(dataSelected[0] === "missing-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        console.log(data[eachArea].properties.missing[eachRecord]);
+                        recordsHTML += '<p style="font-size: 16px">'+ formatRecords(recordsHTML, data[eachArea].properties.missing[eachRecord]) +'</p>';
+                    }
                 }
             }
-        }
-
-        $('#names-list').html(records);
-    } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
-        // shortand for the filtering below
-        data = currentDB.features;
-
-        var records = '<h3>Unclaimed Records</h3>';
-
-        //Loop through each enumeration area
-        for (eachArea in data){
-            //Loop through each record
-            for (eachRecord in data[eachArea].properties.unclaimed){
-                if (data[eachArea].name === unitSelected){
-                    console.log(data[eachArea].properties.unclaimed[eachRecord]);
-                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
+            recordsHTML +='</div>'
+            $('#names-list').html(recordsHTML);
+        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Unclaimed Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
+                    }
                 }
             }
-        }
-
-        $('#names-list').html(records)
-    } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
-        // shortand for the filtering below
-        data = currentDB.features;
-
-        var records = '<h3>Unidentified Records</h3>';
-
-        //Loop through each enumeration area
-        for (eachArea in data){
-            //Loop through each record
-            for (eachRecord in data[eachArea].properties.unidentified){
-                if (data[eachArea].name === unitSelected){
-                    console.log(data[eachArea].properties.unidentified[eachRecord]);
-                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.unidentified[eachRecord]) +"</p>";
+    
+            $('#names-list').html(records)
+        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Unidentified Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        console.log(data[eachArea].properties.unidentified[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unidentified[eachRecord]) +"</p>";
+                    }
                 }
             }
-        }
-
-        $('#names-list').html(records)
-    } else { //Filtered records
-        // shortand for the filtering below
-        data = currentDB.features;
-
-        var records = '<h3>Filtered Records</h3>';
-
-        //Loop through each enumeration area
-        for (eachArea in data){
-            //Loop through each record
-            for (eachRecord in data[eachArea].properties.filtered){
-                if (data[eachArea].name === unitSelected){
-                    console.log(data[eachArea].properties.filtered[eachRecord]);
-                    records += "<p style='font-size: 16px'>"+ formatRecords(data[eachArea].properties.filtered[eachRecord]) +"</p>";
-
+    
+            $('#names-list').html(records)
+        } else { //Filtered records
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Filtered Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.filtered){
+                    if (data[eachArea].name === unitSelected){
+                        console.log(data[eachArea].properties.filtered[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
+    
+                    }
                 }
             }
+    
+            $('#names-list').html(records)
         }
-
-        $('#names-list').html(records)
+    } else if (dataSelected[1] === "county-scale") {
+        if(dataSelected[0] === "missing-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        console.log(data[eachArea].properties.missing[eachRecord]);
+                        recordsHTML += '<p style="font-size: 16px">'+ formatRecords(recordsHTML, data[eachArea].properties.missing[eachRecord]) +'</p>';
+                    }
+                }
+            }
+            recordsHTML +='</div>'
+            $('#names-list').html(recordsHTML);
+        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Unclaimed Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
+                    }
+                }
+            }
+    
+            $('#names-list').html(records)
+        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Unidentified Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        console.log(data[eachArea].properties.unidentified[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unidentified[eachRecord]) +"</p>";
+                    }
+                }
+            }
+    
+            $('#names-list').html(records)
+        } else { //Filtered records
+            // shortand for the filtering below
+            data = currentDB.features;
+    
+            var records = '<h3>Filtered Records</h3>';
+    
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.filtered){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        console.log(data[eachArea].properties.filtered[eachRecord]);
+                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
+    
+                    }
+                }
+            }
+    
+            $('#names-list').html(records)
+        }
+    } else if (dataSelected[1] === "city-scale"){
+        //Not print able
     }
 }
 
 // Retrieve and place the record data in the string
-function formatRecords(record){
+function formatRecords(recordsHTML, data){
     if (dataSelected[0] === "missing-persons") {
-        var caseNumber = record["Case Number"];
-        var firstName = record["First Name"];
-        var lastName = record["Last Name"];
-        var dlc = record["DLC"];
+        console.log(data);
+        var caseNumber = data["Case Number"];
+        var firstName = data["First Name"];
+        var lastName = data["Last Name"];
+        var dlc = data["DLC"];
 
         return caseNumber + ", " + firstName + " " + lastName + ", " + dlc;
 
     } else if (dataSelected[0] === "unclaimed-persons") {
-        var caseNumber = record["Case Number"];
-        var firstName = record["First Name"];
-        var lastName = record["Last Name"];
-        var dbf = record["DBF"];
+        var caseNumber = data["Case Number"];
+        var firstName = data["First Name"];
+        var lastName = data["Last Name"];
+        var dbf = data["DBF"];
 
         return caseNumber + ", " + firstName + " " + lastName + ", " + dbf;
 
     } else if (dataSelected[0] === "unidentified-persons") {
-        var caseNumber = record["Case Number"];
-        var dbf = record["DBF"];
-        var sex = record["Sex"];
-        var ageF = record["Age From"];
-        var ageT = record["Age To"];
+        var caseNumber = data["Case Number"];
+        var dbf = data["DBF"];
+        var sex = data["Sex"];
+        var ageF = data["Age From"];
+        var ageT = data["Age To"];
 
         return caseNumber + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
     }
