@@ -143,11 +143,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              })
-              .bindTooltip(function (layer) {
-                  return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.NAME
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-              ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.NAME
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_counts.json", function(response){
@@ -197,11 +197,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                })
-                .bindTooltip(function (layer) {
-                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-                ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -229,11 +229,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              })
-              .bindTooltip(function (layer) {
-                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-              ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -250,11 +250,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                })
-                .bindTooltip(function (layer) {
-                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-                ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -282,11 +282,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              })
-              .bindTooltip(function (layer) {
-                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-              ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -303,11 +303,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                })
-                .bindTooltip(function (layer) {
-                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-                ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -461,11 +461,11 @@ function getDataFiltered(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              })
-              .bindTooltip(function (layer) {
-                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-              ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
     } else if (dataSelected[1] === "county-scale") {
         //Create the enumeration unit boundaries
@@ -473,11 +473,11 @@ function getDataFiltered(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              })
-              .bindTooltip(function (layer) {
-                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
-              ).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
     }
 
@@ -557,6 +557,7 @@ function processData(data, keyword){
 
 // Add circle markers for point features to the map
 function createPropSymbols(data, attributes, keyword){
+
     //create a Leaflet GeoJSON layer and add it to the map
     mapSymbols = L.geoJson(data, {
         pointToLayer: function(feature, latlng){
@@ -572,6 +573,9 @@ function pointToLayer(feature, latlng, attributes, keyword){
     var attribute = attributes[0];
 
     if (keyword == "combined"){
+        // create hover label content
+        var hoverLabel = feature.properties.CITY_NAME
+
         //create marker options
         var options = {
             fillColor: "#78BFA5",
@@ -587,6 +591,9 @@ function pointToLayer(feature, latlng, attributes, keyword){
         //Create the popup content for the combined dataset layer
         var popupContent = createPopupContent(feature.properties, attribute);
     } else if (keyword == "missing"){
+        // create hover label content
+        var hoverLabel = feature.name
+
         //create marker options
         var options = {
             fillColor: "#66A3D9",
@@ -600,6 +607,9 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "unidentified"){
+        // create hover label content
+        var hoverLabel = feature.name
+
         //create marker options
         var options = {
             fillColor: "#F2B872",
@@ -613,6 +623,9 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "unclaimed"){
+        // create hover label content
+        var hoverLabel = feature.name
+
         //create marker options
         var options = {
             fillColor: "#D96A6A",
@@ -626,6 +639,9 @@ function pointToLayer(feature, latlng, attributes, keyword){
 
         var popupContent = createPopupContentExtra(feature, attValue, keyword);
     } else if (keyword == "filtered"){
+        // create hover label content
+        var hoverLabel = feature.name
+
         //create marker options
         if (dataSelected[0] === "missing-persons") {
             var options = {
@@ -681,7 +697,8 @@ function pointToLayer(feature, latlng, attributes, keyword){
     if (dataSelected[1] === "city-scale") {
         layer.bindPopup(popupContent, {
             offset: new L.Point(0,(-options.radius)/2)
-        });
+        }).bindTooltip(hoverLabel, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
+        );
     }
 
     //return the circle marker to the L.geoJson pointToLayer option
