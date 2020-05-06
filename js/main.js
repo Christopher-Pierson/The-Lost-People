@@ -348,6 +348,15 @@ function polyPopup(e) {
             e.target.bindPopup(popupContent, {
                 offset: new L.Point(0,0)
             }).openPopup();
+
+            // var tooltip = L.tooltip()
+            //   .setContent(poly.properties.NAME);
+            //
+            // e.target.bindTooltip(tooltip, {
+            //   permanent: False
+            // });
+
+            // e.target.bindTooltip(poly.properties.NAME).openTooltip();
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
