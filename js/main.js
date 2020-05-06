@@ -791,21 +791,21 @@ function createPopupContentExtra(feature, attValue, keyword){
 
     //add formatted attribute to panel content string
     if (keyword === "missing") {
-        popupContent += "<p class='popup-record-count'>Number of <span id='missing-record-count'>Missing</span> Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unidentified") {
-        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unclaimed") {
-        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" +attValue + "</b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "filtered") {
         popupContent += "<p class='popup-record-count'>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#">Click here to Retrieve List of Records</a>';
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     }
 
     return popupContent;
@@ -815,7 +815,7 @@ function createPopupContentExtra(feature, attValue, keyword){
 function createPopupContent(properties, attribute){
     //add name to popup content string
     if (dataSelected[1] === "city-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + properties.CITY_NAME + ", " + properties.STUSPS + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + properties.CITY_NAME + ", " + properties.STUSPS + "</b></p>";
 
         //get combined record number
         var combined = properties[attribute];
@@ -842,17 +842,17 @@ function createPopupContent(properties, attribute){
         }
 
         //add formatted attribute to panel content string
-        popupContent += "<p class='popup-record-count'><b>Number of Combined Dataset Records: " + combined + "</b></p>";
-        popupContent += "<p class='popup-record-count'>Number of Missing Persons Records: <b>" + missing + "</b></p>";
-        popupContent += "<p class='popup-record-count'>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
-        popupContent += "<p class='popup-record-count'>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
+        popupContent += "<p class='popup-record-count'><b>Number of <span id='combined-record'>Combined</span> Dataset Records: <span id='combined-record'>" + combined + "</span></b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" + missing + "</span></b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" + unidentified + "</span></b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" + unclaimed + "</span></b></p>";
 
         return popupContent;
 
     } else if (dataSelected[1] === "county-scale") {
-        var popupContent = "<p style='font-size: 20px'><b>" + properties.NAME + " County</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + properties.NAME + " County</b></p>";
     } else {
-        var popupContent = "<p style='font-size: 20px'><b>" + properties.NAME + "</b></p>";
+        var popupContent = "<p class='popup-feature-name'><b>" + properties.NAME + "</b></p>";
     }
 
     //get combined record number
@@ -880,10 +880,10 @@ function createPopupContent(properties, attribute){
     }
 
     //add formatted attribute to panel content string
-    popupContent += "<p><b>Number of Combined Dataset Records: " + combined + "</b></p>";
-    popupContent += "<p>Number of Missing Persons Records: <b>" + missing + "</b></p>";
-    popupContent += "<p>Number of Unidentified Persons Records: <b>" + unidentified + "</b></p>";
-    popupContent += "<p>Number of Unclaimed Persons Records: <b>" + unclaimed + "</b></p>";
+    popupContent += "<p class='popup-record-count'><b>Number of <span id='combined-record'>Combined</span> Dataset Records: <span id='combined-record'>" + combined + "</span></b></p>";
+    popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" + missing + "</span></b></p>";
+    popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" + unidentified + "</span></b></p>";
+    popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" + unclaimed + "</span></b></p>";
 
     return popupContent;
 

@@ -5,6 +5,11 @@
 }
 
 /*** Splash Screen ***/
+#exampleModalLongTitle {
+  font-family: chandler-42-regular, sans-serif;
+  font-weight: 300;
+  font-size: 1.9vw;
+}
 
 /*** Primary Containers ***/
 /* Sidebar and Map Div */
@@ -39,6 +44,7 @@
   /* box-shadow: inset 0 0 10px #1E2021; */
     /* border: 3px solid rgb(100, 100, 100); */
 }
+
 
 .info-button {
   z-index: 10;
@@ -156,9 +162,22 @@
   line-height: 15px;
 }
 .popup-record-count {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 10px;
 }
+#combined-record {
+  color: #5ea88d; /* #78BFA5 */
+}
+#missing-record {
+  color: #4a8cc7; /* #66A3D9 */
+}
+#unidentified-record {
+  color: #e3a75f; /* #F2B872 */
+}
+#unclaimed-record {
+  color: #D96A6A;
+}
+
 /*** List of Names Div ***/
 .secondary {
   display: none;
