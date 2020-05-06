@@ -222,6 +222,27 @@ body{
 #names-list {
   padding: 20px;
   font-size: 24px;
+  background-color: lightgray;
+}
+
+/* Create three equal columns that floats next to each other */
+.record-col {
+  float: left;
+  width: 10%;
+  padding: 3px;
+  font-size: 1vw;
+  text-align: center;
+  white-space: nowrap;
+  background-color: lightgray;
+}
+.col-title {
+  font-weight: bold;
+}
+/* Clear floats after the columns */
+.recordGrid:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 

@@ -1857,7 +1857,6 @@ function doAdvanceFilter() {
         currentDB.features[eachArea].properties.filtered = [];
     }
 
-    var count =0;
     //Loop through all of the records comparing the filtered options to the record
     if (dataSelected[0]=== "missing-persons") {
         //Loop through each enumeration area
@@ -2004,19 +2003,118 @@ function getNames(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Missing Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.missing){
                     if (data[eachArea].name === unitSelected){
-                        console.log(data[eachArea].properties.missing[eachRecord]);
-                        recordsHTML += '<p style="font-size: 16px">'+ formatRecords(recordsHTML, data[eachArea].properties.missing[eachRecord]) +'</p>';
+                        // console.log(data[eachArea].properties.missing[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.missing[eachRecord])
                     }
                 }
             }
-            recordsHTML +='</div>'
+            recordsHTML += '</div>'; //Close caseNum-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DLC</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close caseNum-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatLastName(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close lastName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatFirstName(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close firstName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
             $('#names-list').html(recordsHTML);
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             // shortand for the filtering below
@@ -2154,10 +2252,84 @@ function getNames(){
     }
 }
 
+function formatCaseNum(data){
+    var caseNumber = data["Case Number"];
+
+    if (dataSelected[0] === "missing-persons") {
+        var caseLink = namusLink("MissingPersons", caseNumber, "MP");
+
+    } else if (dataSelected[0] === "unclaimed-persons") {
+        var caseLink = namusLink("UnclaimedPersons", caseNumber, "UCP");
+
+    } else if (dataSelected[0] === "unidentified-persons") {
+        var caseLink = namusLink("UnidentifiedPersons", caseNumber, "UP");
+
+    }
+    return '<p>' + caseLink + '</p>';
+}
+
+function formatDateLostFound(data) {
+    if (dataSelected[0] === "missing-persons") {
+        var date = data["DLC"];
+
+    } else if (dataSelected[0] === "unclaimed-persons") {
+        var date = data["DBF"];
+
+    } else if (dataSelected[0] === "unidentified-persons") {
+        var date = data["DBF"];
+
+    }
+    return '<p>' + date + '</p>';
+}
+
+function formatFirstName(data){
+    var firstName = data["First Name"];
+
+    return '<p>' + firstName + '</p>';
+
+}
+
+function formatLastName(data){
+    var lastName = data["Last Name"];
+
+    return '<p>' + lastName + '</p>';
+}
+
+function formatSex(data){
+    var sex = data["Sex"];
+
+    return '<p>' + sex + '</p>';
+}
+
+function formatEthnicity(data){
+    var race = data["Race / Ethnicity"];
+
+    return '<p>' + race + '</p>';
+}
+
+function formatCity(data){
+    var city = data["City"];
+
+    return '<p>' + city + '</p>';
+}
+
+function formatCounty(data){
+    var county = data["County"];
+
+    return '<p>' + county + '</p>';
+}
+
+function formatState(data){
+    var state = data["State"];
+
+    return '<p>' + state + '</p>';
+}
+
 // Retrieve and place the record data in the string
 function formatRecords(recordsHTML, data){
     if (dataSelected[0] === "missing-persons") {
-        console.log(data);
+
+
         var caseNumber = data["Case Number"];
         var firstName = data["First Name"];
         var lastName = data["Last Name"];
