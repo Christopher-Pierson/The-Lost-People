@@ -715,7 +715,7 @@ function createPopupContentExtra(feature, attValue, keyword){
     }
     // if the scale is not set to city, allow retrieval
     if (dataSelected[1] !== "city-scale") {
-        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>'
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click to Retrieve List of Records below Map</a>'
     }
     return popupContent;
 };
@@ -2733,81 +2733,737 @@ function getNames(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            recordsHTML += '<h3 class="recordGrid-Title">Missing Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Missing Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.missing){
-                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
-                        console.log(data[eachArea].properties.missing[eachRecord]);
-                        recordsHTML += '<p style="font-size: 16px">'+ formatRecords(recordsHTML, data[eachArea].properties.missing[eachRecord]) +'</p>';
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        // console.log(data[eachArea].properties.missing[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.missing[eachRecord])
                     }
                 }
             }
-            recordsHTML +='</div>'
+            recordsHTML += '</div>'; //Close caseNum-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DLC</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close dateMissing-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatLastName(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close lastName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatFirstName(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close firstName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Missing Age</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatAge(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close missingAge-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close state-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
             $('#names-list').html(recordsHTML);
         } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
 
-            var records = '<h3>Unclaimed Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unclaimed){
-                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
-                        console.log(data[eachArea].properties.unclaimed[eachRecord]);
-                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        // console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.unclaimed[eachRecord])
                     }
                 }
             }
+            recordsHTML += '</div>'; //Close caseNum-Col
 
-            $('#names-list').html(records)
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close datebody-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatLastName(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close lastName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatFirstName(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close firstName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close state-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
+            $('#names-list').html(recordsHTML);
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
 
-            var records = '<h3>Unidentified Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Unidentified Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unidentified){
-                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
-                        console.log(data[eachArea].properties.unidentified[eachRecord]);
-                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unidentified[eachRecord]) +"</p>";
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        // console.log(data[eachArea].properties.unidentified[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.unidentified[eachRecord])
                     }
                 }
             }
+            recordsHTML += '</div>'; //Close caseNum-Col
 
-            $('#names-list').html(records)
-        } else { //Filtered records
-            // shortand for the filtering below
-            data = currentDB.features;
-
-            var records = '<h3>Filtered Records</h3>';
-
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
-                for (eachRecord in data[eachArea].properties.filtered){
-                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
-                        console.log(data[eachArea].properties.filtered[eachRecord]);
-                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
-
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.unidentified[eachRecord])
                     }
                 }
             }
+            recordsHTML += '</div>'; //Close datebody-Col
 
-            $('#names-list').html(records)
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Age From</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatAgeFrom(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close agefrom-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatAgeTo(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ageto-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close state-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
+            $('#names-list').html(recordsHTML);
+        } else { //Filtered records
+            if(dataSelected[0] === "missing-persons"){
+                // shortand for the filtering below
+                data = currentDB.features;
+    
+                recordsHTML += '<h2 class="recordGrid-Title">Missing Records</h2>';
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            // console.log(data[eachArea].properties.filtered[eachRecord]);
+                            recordsHTML += formatCaseNum(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close caseNum-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DLC</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatDateLostFound(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close dateMissing-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatLastName(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close lastName-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatFirstName(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close firstName-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Missing Age</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatAge(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close missingAge-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatSex(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close sex-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatEthnicity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close ethnicty-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close city-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCounty(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close county-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatState(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close state-Col
+    
+                recordsHTML +='</div>'; //Close recordGrid
+                $('#names-list').html(recordsHTML);
+            } else if (dataSelected[0] === "unclaimed-persons"){
+                // shortand for the filtering below
+                data = currentDB.features;
+    
+                recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            // console.log(data[eachArea].properties.filtered[eachRecord]);
+                            recordsHTML += formatCaseNum(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close caseNum-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatDateLostFound(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close datebody-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatLastName(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close lastName-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatFirstName(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close firstName-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatSex(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close sex-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatEthnicity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close ethnicty-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close city-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCounty(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close county-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatState(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close state-Col
+    
+                recordsHTML +='</div>'; //Close recordGrid
+                $('#names-list').html(recordsHTML);
+            } else if (dataSelected[0] === "unidentified-persons"){
+                // shortand for the filtering below
+                data = currentDB.features;
+    
+                recordsHTML += '<h2 class="recordGrid-Title">Unidentified Records</h2>';
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            // console.log(data[eachArea].properties.filtered[eachRecord]);
+                            recordsHTML += formatCaseNum(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close caseNum-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatDateLostFound(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close datebody-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Age From</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatAgeFrom(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close agefrom-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatAgeTo(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close ageto-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatSex(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close sex-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatEthnicity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close ethnicty-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCity(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close city-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatCounty(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close county-Col
+    
+                recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+                //Loop through each enumeration area
+                for (eachArea in data){
+                    //Loop through each record
+                    for (eachRecord in data[eachArea].properties.filtered){
+                        if (data[eachArea]["county_FIPS"] === unitSelected){
+                            recordsHTML += formatState(data[eachArea].properties.filtered[eachRecord])
+                        }
+                    }
+                }
+                recordsHTML += '</div>'; //Close state-Col
+    
+                recordsHTML +='</div>'; //Close recordGrid
+                $('#names-list').html(recordsHTML);
+            }
         }
     } else if (dataSelected[1] === "city-scale"){
         //Not printable
     }
 }
 
+// Retrieve the case number and return it
 function formatCaseNum(data){
     var caseNumber = data["Case Number"];
 
@@ -2824,6 +3480,7 @@ function formatCaseNum(data){
     return '<p>' + caseLink + '</p>';
 }
 
+// Retrieve the date the person was last seen or date the body was found
 function formatDateLostFound(data) {
     if (dataSelected[0] === "missing-persons") {
         var date = data["DLC"];
@@ -2838,6 +3495,7 @@ function formatDateLostFound(data) {
     return '<p>' + date + '</p>';
 }
 
+// Retrieve the first name of person
 function formatFirstName(data){
     var firstName = data["First Name"];
 
@@ -2845,42 +3503,49 @@ function formatFirstName(data){
 
 }
 
+// Retrieve the last name of person
 function formatLastName(data){
     var lastName = data["Last Name"];
 
     return '<p>' + lastName + '</p>';
 }
 
+// Retrieve the missing age of person
 function formatAge(data){
     var age = data["Missing Age"];
 
     return '<p>' + age + '</p>';
 }
 
+// Retrieve the starting age range
 function formatAgeFrom(data){
     var age = data["Age From"];
 
     return '<p>' + Math.round(age) + '</p>';
 }
 
+// Retrieve the end age range
 function formatAgeTo(data){
     var age = data["Age To"];
 
     return '<p>' + Math.round(age) + '</p>';
 }
 
+// Retrieve the sex of the person
 function formatSex(data){
     var sex = data["Sex"];
 
     return '<p>' + sex + '</p>';
 }
 
+// Retrieve the ethnicity
 function formatEthnicity(data){
     var race = data["Race / Ethnicity"];
 
     return '<p>' + race + '</p>';
 }
 
+// Retrieve the city
 function formatCity(data){
     var city = data["City"];
     if (city === "nan"){
@@ -2890,6 +3555,7 @@ function formatCity(data){
     return '<p>' + city + '</p>';
 }
 
+// Retrieve the county
 function formatCounty(data){
     var county = data["County"];
     if (county === "nan"){
@@ -2899,6 +3565,7 @@ function formatCounty(data){
     return '<p>' + county + '</p>';
 }
 
+// Retrieve the state
 function formatState(data){
     var state = data["State"];
 
@@ -2906,7 +3573,7 @@ function formatState(data){
 }
 
 // Retrieve and place the record data in the string
-function formatRecords(recordsHTML, data){
+function formatRecords(data){
     if (dataSelected[0] === "missing-persons") {
 
 
