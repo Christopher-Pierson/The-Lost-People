@@ -2028,7 +2028,7 @@ function getNames(){
                     }
                 }
             }
-            recordsHTML += '</div>'; //Close caseNum-Col
+            recordsHTML += '</div>'; //Close dateMissing-Col
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
             //Loop through each enumeration area
@@ -2053,6 +2053,18 @@ function getNames(){
                 }
             }
             recordsHTML += '</div>'; //Close firstName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Missing Age</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.missing){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatAge(data[eachArea].properties.missing[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close missingAge-Col
 
             recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
             //Loop through each enumeration area
@@ -2112,7 +2124,7 @@ function getNames(){
                     }
                 }
             }
-            recordsHTML += '</div>'; //Close county-Col
+            recordsHTML += '</div>'; //Close state-Col
 
             recordsHTML +='</div>'; //Close recordGrid
             $('#names-list').html(recordsHTML);
@@ -2120,20 +2132,119 @@ function getNames(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            var records = '<h3>Unclaimed Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unclaimed){
                     if (data[eachArea].name === unitSelected){
-                        console.log(data[eachArea].properties.unclaimed[eachRecord]);
-                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
+                        // console.log(data[eachArea].properties.unclaimed[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.unclaimed[eachRecord])
                     }
                 }
             }
+            recordsHTML += '</div>'; //Close caseNum-Col
 
-            $('#names-list').html(records)
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close datebody-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatLastName(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close lastName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatFirstName(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close firstName-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unclaimed){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.unclaimed[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close state-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
+            $('#names-list').html(recordsHTML);
         } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
             // shortand for the filtering below
             data = currentDB.features;
@@ -2293,6 +2404,12 @@ function formatLastName(data){
     var lastName = data["Last Name"];
 
     return '<p>' + lastName + '</p>';
+}
+
+function formatAge(data){
+    var age = data["Missing Age"];
+
+    return '<p>' + age + '</p>';
 }
 
 function formatSex(data){
