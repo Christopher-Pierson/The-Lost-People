@@ -381,7 +381,7 @@ function polyPopup(e) {
     } else {
 	    var featureIdentifier = null;
 
-		if (dataSelected[1] === "state-scale") {
+	    if (dataSelected[1] === "state-scale") {
 	    	featureIdentifier = "name";
 	    } else if (dataSelected[1] === "county-scale") {
 	    	featureIdentifier = "county_FIPS";
@@ -399,12 +399,12 @@ function polyPopup(e) {
 
 	    unitSelected = poly[featureIdentifier];
 
-	 	if (dataFiltered) {
-	    	polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIdentifier)
-	    } else {
-	    	polyPopupFromKeywordUnfiltered(e, poly, keyword)
-	    }
-	}
+      if (dataFiltered) {
+        polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIdentifier)
+      } else {
+        polyPopupFromKeywordUnfiltered(e, poly, keyword)
+      }
+   }
 }
 
 function polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIdentifier) {
@@ -418,7 +418,7 @@ function polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIde
 		) {
 	    	targetIndex = feature;
 	        break;
-	    }
+	  }
 	}
 
 	//For each feature, determine its value for the selected attribute
