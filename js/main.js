@@ -3637,7 +3637,13 @@ $(document).ready(checkAllMonths);
 $("body").on('click','a.retrieveNames', function(e){
     e.preventDefault();
     getRecords();
-    document.getElementById("names-list").scrollIntoView({behavior: "smooth"});
+    // document.getElementById("names-list").scrollTop() -= 100;
+
+    const yOffset = -400; 
+    const element = document.getElementById("names-list");
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
 });
 
 //Splash Screen when start
