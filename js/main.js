@@ -368,211 +368,80 @@ function resetHighlight(e) {
 function polyPopup(e) {
     var poly = e.target.feature;
 
-    if (dataSelected[1] === "state-scale") {
-        unitSelected = poly.name;
+    if (dataSelected[1] === "city-scale") return;
 
-        if (dataSelected[0] === "combined-database"){
+    if (dataSelected[0] === "combined-database"){
+      //Create the popup content for the combined dataset layer
+      var popupContent = createPopupContent(poly.properties);
 
-            //Create the popup content for the combined dataset layer
-            var popupContent = createPopupContent(poly.properties);
+      //bind the popup to the polygon
+      e.target.bindPopup(popupContent, {
+          offset: new L.Point(0,0)
+      }).openPopup();
+    } else {
+	    var featureIdentifier = null;
 
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,0)
-            }).openPopup();
+		if (dataSelected[1] === "state-scale") {
+	    	featureIdentifier = "name";
+	    } else if (dataSelected[1] === "county-scale") {
+	    	featureIdentifier = "county_FIPS";
+	    }
 
-        } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.missing.length);
+    	var keyword = null;
 
-            var popupContent = createPopupContentExtra(poly, attValue, "missing");
+    	if (dataSelected[0] === "missing-persons") {
+	    	keyword = "missing";
+	    } else if (dataSelected[0] === "unidentified-persons") {
+	    	keyword = "unidentified";
+	    } else if (dataSelected[0] === "unclaimed-persons") {
+	    	keyword = "unclaimed";
+	    }
 
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "missing-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-            for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState].name){
-                    break;
-                }
-                targetIndex += 1;
-            }
+	    unitSelected = poly[featureIdentifier];
 
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
+	 	if (dataFiltered) {
+	    	polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIdentifier)
+	    } else {
+	    	polyPopupFromKeywordUnfiltered(e, poly, keyword)
+	    }
+	}
+}
 
-            var popupContent = createPopupContentExtra(poly, attValue, "missing");
+function polyPopupFromKeywordFiltered(e, poly, unitSelected, keyword, featureIdentifier) {
+	//Find the  index in filtered database of the currently selected feature
+	var targetIndex = -1;
 
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.unidentified.length);
+	for (feature in currentDB.features){
+		if (featureIdentifier === "county_FIPS"
+			? Number(unitSelected) === Number(currentDB.features[feature][featureIdentifier])
+			: unitSelected === currentDB.features[feature][featureIdentifier]
+		) {
+	    	targetIndex = feature;
+	        break;
+	    }
+	}
 
-            var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
+	//For each feature, determine its value for the selected attribute
+	var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
 
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-            for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState].name){
-                    break;
-                }
-                targetIndex += 1;
-            }
+	var popupContent = createPopupContentExtra(poly, attValue, keyword);
 
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
+	//bind the popup to the polygon
+	e.target.bindPopup(popupContent, {
+	    offset: new L.Point(0,-20)
+	}).openPopup();
+}
 
-            var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
+function polyPopupFromKeywordUnfiltered(e, poly, keyword){
+	//For each feature, determine its value for the selected attribute
+    var attValue = Number(poly.properties[keyword].length);
 
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.unclaimed.length);
+    var popupContent = createPopupContentExtra(poly, attValue, keyword);
 
-            var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-            for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState].name){
-                    break;
-                }
-                targetIndex += 1;
-            }
-
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        }
-    } else if (dataSelected[1] === "county-scale") {
-        unitSelected = poly["county_FIPS"];
-
-        if (dataSelected[0] === "combined-database"){
-
-            //Create the popup content for the combined dataset layer
-            var popupContent = createPopupContent(poly.properties);
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,0)
-            }).openPopup();
-        } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.missing.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "missing-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-
-            for (eachArea in currentDB.features){
-                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
-                    break;
-                }
-                targetIndex += 1;
-            }
-
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "missing");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.unidentified.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unidentified-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-            for (eachState in currentDB.features){
-                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
-                    break;
-                }
-                targetIndex += 1;
-            }
-
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "unidentified");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == false){
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(poly.properties.unclaimed.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        } else if (dataSelected[0] === "unclaimed-persons" && dataFiltered == true){
-            //Find the  index in filtered database of the currently selected feature
-            var targetIndex = 0;
-            for (eachState in currentDB.features){
-                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
-                    break;
-                }
-                targetIndex += 1;
-            }
-
-            //For each feature, determine its value for the selected attribute
-            var attValue = Number(currentDB.features[targetIndex].properties.filtered.length);
-
-            var popupContent = createPopupContentExtra(poly, attValue, "unclaimed");
-
-            //bind the popup to the polygon
-            e.target.bindPopup(popupContent, {
-                offset: new L.Point(0,-20)
-            }).openPopup();
-        }
-    } else if (dataSelected[1] === "city-scale") {
-        // No polygons for city level
-    }
+    //bind the popup to the polygon
+    e.target.bindPopup(popupContent, {
+        offset: new L.Point(0,-20)
+    }).openPopup();
 }
 
 //Event listeners for highlighing the polygon features
