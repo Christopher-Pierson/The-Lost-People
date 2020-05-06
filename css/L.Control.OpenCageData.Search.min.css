@@ -14,11 +14,11 @@
 
 .leaflet-touch .leaflet-control-ocd-search-form input{font-size:22px}
 
-.leaflet-control-ocd-search-icon{width:26px;height:26px;background-image:url(../img/geocoder.png);background-repeat:no-repeat;background-position:right;float:right;cursor:pointer}
+.leaflet-control-ocd-search-icon{width:26px;height:26px;background-image:url(../img/noun_Search_1233976_blk.svg);background-repeat:no-repeat;background-position:right;float:right;cursor:pointer}
 
 .leaflet-touch .leaflet-control-ocd-search-icon{margin-top:2px;width:30px}
 
-.leaflet-control-ocd-search-spinner 
+.leaflet-control-ocd-search-spinner
 
 .leaflet-control-ocd-search-icon{background-image:url(../img/spinner.gif)}
 
