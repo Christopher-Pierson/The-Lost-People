@@ -125,7 +125,7 @@ function getData(map){
             })
             .bindTooltip(function (layer) {
                 return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.name
-             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
             ).addTo(map);
         });
         //load the data
@@ -146,7 +146,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.NAME
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -179,7 +179,7 @@ function getData(map){
             })
             .bindTooltip(function (layer) {
                 return layer.feature.name; //merely sets the tooltip text layer.feature.name
-             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
             ).addTo(map);
         });
         //load the data
@@ -200,7 +200,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -232,7 +232,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -253,7 +253,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -285,7 +285,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -306,7 +306,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -464,7 +464,7 @@ function getDataFiltered(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
     } else if (dataSelected[1] === "county-scale") {
@@ -476,7 +476,7 @@ function getDataFiltered(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.7, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
     }
