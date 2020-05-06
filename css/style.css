@@ -176,6 +176,18 @@
 #unclaimed-record {
   color: #D96A6A;
 }
+#combined-selection {
+  color: #78BFA5; /* #78BFA5 */
+}
+#missing-selection {
+  color: #66A3D9; /* #66A3D9 */
+}
+#unidentified-selection {
+  color: #F2B872; /* #F2B872 */
+}
+#unclaimed-selection {
+  color: #D96A6A;
+}
 
 /*** List of Names Div ***/
 .secondary {
