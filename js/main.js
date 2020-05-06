@@ -122,7 +122,11 @@ function getData(map){
             mapFeatures = L.geoJson(response, {
                 style: style,
                 onEachFeature: onEachFeature
-            }).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.name
+             }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/summary_counts.json", function(response){
@@ -139,7 +143,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              }).addTo(map);
+              })
+              .bindTooltip(function (layer) {
+                  return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.NAME
+               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+              ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_counts.json", function(response){
@@ -168,7 +176,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature,
-            }).addTo(map);
+            })
+            .bindTooltip(function (layer) {
+                return layer.feature.name; //merely sets the tooltip text layer.feature.name
+             }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+            ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -185,7 +197,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                }).addTo(map);
+                })
+                .bindTooltip(function (layer) {
+                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
+                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -213,7 +229,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              }).addTo(map);
+              })
+              .bindTooltip(function (layer) {
+                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
+               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+              ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -230,7 +250,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                }).addTo(map);
+                })
+                .bindTooltip(function (layer) {
+                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
+                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -258,7 +282,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-              }).addTo(map);
+              })
+              .bindTooltip(function (layer) {
+                  return layer.feature.name; //merely sets the tooltip text layer.feature.name
+               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+              ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/state_geojson.json", function(response){
@@ -275,7 +303,11 @@ function getData(map){
             mapFeatures = new L.GeoJSON(response, {
                 style: style,
                 onEachFeature: onEachFeature
-                }).addTo(map);
+                })
+                .bindTooltip(function (layer) {
+                    return layer.feature.name; //merely sets the tooltip text layer.feature.name
+                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                ).addTo(map);
         });
         //load the data
         $.getJSON("data/JSON/county_geojson.json", function(response){
@@ -349,14 +381,6 @@ function polyPopup(e) {
                 offset: new L.Point(0,0)
             }).openPopup();
 
-            // var tooltip = L.tooltip()
-            //   .setContent(poly.properties.NAME);
-            //
-            // e.target.bindTooltip(tooltip, {
-            //   permanent: False
-            // });
-
-            // e.target.bindTooltip(poly.properties.NAME).openTooltip();
         } else if (dataSelected[0] === "missing-persons" && dataFiltered == false){
             //For each feature, determine its value for the selected attribute
             var attValue = Number(poly.properties.missing.length);
