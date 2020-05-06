@@ -76,6 +76,9 @@ body{
 .card {
   background: black;
 }
+.card a {
+  text-decoration: none;
+}
 .card-header {
   background: black;
   border-top: 6px solid black;
