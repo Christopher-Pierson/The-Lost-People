@@ -163,7 +163,7 @@ body{
 .leaflet-popup-content-wrapper {
   background: rgba(227,227,227,0.95);
   padding: 0.5px;
-  border-radius: calc(.3rem - 1px);
+  border-radius: calc(.3rem - 1.5px);
   font-weight: 300;
   color: #e0e0e0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.1);

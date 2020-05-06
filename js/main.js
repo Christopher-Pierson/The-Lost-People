@@ -992,7 +992,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1007,7 +1007,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 50 + 35; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1019,7 +1019,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1034,7 +1034,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1049,7 +1049,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1064,7 +1064,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#78BFA5" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1081,7 +1081,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1096,7 +1096,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1111,7 +1111,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1126,7 +1126,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1141,7 +1141,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="120px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="120px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1156,7 +1156,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 30 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1173,7 +1173,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1188,7 +1188,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1203,7 +1203,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1218,7 +1218,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1233,7 +1233,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1248,7 +1248,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1265,7 +1265,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1280,7 +1280,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1295,7 +1295,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1310,7 +1310,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1325,7 +1325,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                    var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1340,7 +1340,7 @@ function createLegend(attribute, keyword){
                         svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                         //evenly space out labels
-                        var textY = i * 40 + 50; //spacing + y value
+                        var textY = i * 50 + 32; //spacing + y value
 
                         //text string
                         svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1358,7 +1358,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1373,7 +1373,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1388,7 +1388,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1403,7 +1403,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1418,7 +1418,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="120px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="120px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1433,7 +1433,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 30 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1450,7 +1450,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1465,7 +1465,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1480,7 +1480,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1495,7 +1495,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1510,7 +1510,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1525,7 +1525,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1542,7 +1542,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1557,7 +1557,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1572,7 +1572,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1587,7 +1587,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
@@ -1602,7 +1602,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="250px" height="150px">';
+                        var svg = '<svg id="attribute-legend" width="260px" height="150px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1617,7 +1617,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#D96A6A" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 40 + 50; //spacing + y value
+                            var textY = i * 50 + 32; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
