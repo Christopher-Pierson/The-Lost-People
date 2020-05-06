@@ -703,21 +703,20 @@ function createPopupContentExtra(feature, attValue, keyword){
     if (keyword === "missing") {
         popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unidentified") {
         popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "unclaimed") {
         popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" +attValue + "</span></b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     } else if (keyword === "filtered") {
         popupContent += "<p class='popup-record-count'>Number of Filtered Persons Records: <b>" +attValue + "</b></p>";
 
-        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>';
     }
-
+    // if the scale is not set to city, allow retrieval
+    if (dataSelected[1] !== "city-scale") {
+        popupContent += '<a class="retrieveNames" href="#" style="color: #6e6e6e; font-style: italic">Click here to Retrieve List of Records</a>'
+    }
     return popupContent;
 };
 
