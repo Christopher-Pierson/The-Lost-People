@@ -768,7 +768,7 @@ function createPopupContent(properties, attribute){
         }
 
         //add formatted attribute to panel content string
-        popupContent += "<p class='popup-record-count'><b>Number of <span id='combined-record'>Combined</span> Dataset Records: <span id='combined-record'>" + combined + "</span></b></p>";
+        popupContent += "<p class='popup-record-count'>Number of <span id='combined-record'><b>Combined</b></span> Dataset Records: <b><span id='combined-record'>" + combined + "</span></b></p>";
         popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" + missing + "</span></b></p>";
         popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" + unidentified + "</span></b></p>";
         popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" + unclaimed + "</span></b></p>";
@@ -806,7 +806,7 @@ function createPopupContent(properties, attribute){
     }
 
     //add formatted attribute to panel content string
-    popupContent += "<p class='popup-record-count'><b>Number of <span id='combined-record'>Combined</span> Dataset Records: <span id='combined-record'>" + combined + "</span></b></p>";
+    popupContent += "<p class='popup-record-count'>Number of <span id='combined-record'><b>Combined</b></span> Dataset Records: <b><span id='combined-record'>" + combined + "</span></b></p>";
     popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" + missing + "</span></b></p>";
     popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" + unidentified + "</span></b></p>";
     popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" + unclaimed + "</span></b></p>";
