@@ -1722,7 +1722,7 @@ function getDatabase(){
     var container = L.DomUtil.get('map');
 
     if (dataSelected[0] === "missing-persons") {
-        $('.data-header').html("Data: Missing Persons");
+        $('.data-header').html("Data: <span style=\"color:#66A3D9;\">Missing Persons</span>");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1733,7 +1733,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unidentified-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Unidentified Persons");
+        $('.data-header').html("Data: <span style=\"color:#F2B872;\">Unidentified Persons</span>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
@@ -1742,7 +1742,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unclaimed-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Unclaimed Persons");
+        $('.data-header').html("Data: <span style=\"color:#D96A6A;\">Unclaimed Persons</span>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1751,7 +1751,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "combined-database") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: Combined Database");
+        $('.data-header').html("Data: <span style=\"color:#78BFA5;\">Combined Database</span>");
         // $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
