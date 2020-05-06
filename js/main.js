@@ -2249,20 +2249,119 @@ function getNames(){
             // shortand for the filtering below
             data = currentDB.features;
 
-            var records = '<h3>Unidentified Records</h3>';
+            recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
 
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
             //Loop through each enumeration area
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unidentified){
                     if (data[eachArea].name === unitSelected){
-                        console.log(data[eachArea].properties.unidentified[eachRecord]);
-                        records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unidentified[eachRecord]) +"</p>";
+                        // console.log(data[eachArea].properties.unidentified[eachRecord]);
+                        recordsHTML += formatCaseNum(data[eachArea].properties.unidentified[eachRecord])
                     }
                 }
             }
+            recordsHTML += '</div>'; //Close caseNum-Col
 
-            $('#names-list').html(records)
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatDateLostFound(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close datebody-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Age From</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatAgeFrom(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close agefrom-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatAgeTo(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ageto-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatSex(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close sex-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatEthnicity(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close ethnicty-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCity(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close city-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatCounty(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close county-Col
+
+            recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
+            //Loop through each enumeration area
+            for (eachArea in data){
+                //Loop through each record
+                for (eachRecord in data[eachArea].properties.unidentified){
+                    if (data[eachArea].name === unitSelected){
+                        recordsHTML += formatState(data[eachArea].properties.unidentified[eachRecord])
+                    }
+                }
+            }
+            recordsHTML += '</div>'; //Close state-Col
+
+            recordsHTML +='</div>'; //Close recordGrid
+            $('#names-list').html(recordsHTML);
         } else { //Filtered records
             // shortand for the filtering below
             data = currentDB.features;
@@ -2410,6 +2509,18 @@ function formatAge(data){
     var age = data["Missing Age"];
 
     return '<p>' + age + '</p>';
+}
+
+function formatAgeFrom(data){
+    var age = data["Age From"];
+
+    return '<p>' + Math.round(age) + '</p>';
+}
+
+function formatAgeTo(data){
+    var age = data["Age To"];
+
+    return '<p>' + Math.round(age) + '</p>';
 }
 
 function formatSex(data){
