@@ -2086,7 +2086,7 @@ function getNames(){
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.missing){
-                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
                         console.log(data[eachArea].properties.missing[eachRecord]);
                         recordsHTML += '<p style="font-size: 16px">'+ formatRecords(recordsHTML, data[eachArea].properties.missing[eachRecord]) +'</p>';
                     }
@@ -2104,7 +2104,7 @@ function getNames(){
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unclaimed){
-                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
                         console.log(data[eachArea].properties.unclaimed[eachRecord]);
                         records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unclaimed[eachRecord]) +"</p>";
                     }
@@ -2122,7 +2122,7 @@ function getNames(){
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.unidentified){
-                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
                         console.log(data[eachArea].properties.unidentified[eachRecord]);
                         records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.unidentified[eachRecord]) +"</p>";
                     }
@@ -2140,7 +2140,7 @@ function getNames(){
             for (eachArea in data){
                 //Loop through each record
                 for (eachRecord in data[eachArea].properties.filtered){
-                    if (data[eachArea]["county_FIPS"] === unitSelected){
+                    if (Number(data[eachArea]["county_FIPS"]) === Number(unitSelected)){
                         console.log(data[eachArea].properties.filtered[eachRecord]);
                         records += "<p style='font-size: 16px'>"+ formatRecords(recordsHTML, data[eachArea].properties.filtered[eachRecord]) +"</p>";
 
@@ -2163,16 +2163,18 @@ function formatRecords(recordsHTML, data){
         var firstName = data["First Name"];
         var lastName = data["Last Name"];
         var dlc = data["DLC"];
+        var caseLink = namusLink("MissingPersons", caseNumber, "MP");
 
-        return caseNumber + ", " + firstName + " " + lastName + ", " + dlc;
+        return caseLink + ", " + firstName + " " + lastName + ", " + dlc;
 
     } else if (dataSelected[0] === "unclaimed-persons") {
         var caseNumber = data["Case Number"];
         var firstName = data["First Name"];
         var lastName = data["Last Name"];
         var dbf = data["DBF"];
+        var caseLink = namusLink("UnclaimedPersons", caseNumber, "UCP");
 
-        return caseNumber + ", " + firstName + " " + lastName + ", " + dbf;
+        return caseLink + ", " + firstName + " " + lastName + ", " + dbf;
 
     } else if (dataSelected[0] === "unidentified-persons") {
         var caseNumber = data["Case Number"];
@@ -2180,9 +2182,18 @@ function formatRecords(recordsHTML, data){
         var sex = data["Sex"];
         var ageF = data["Age From"];
         var ageT = data["Age To"];
+        var caseLink = namusLink("UnidentifiedPersons", caseNumber, "UP");
 
-        return caseNumber + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
+        return caseLink + ", " + dbf + ", " + sex + ", " + ageF + ", " + ageT;
     }
+}
+
+function namusLink(caseType, caseNumber, caseNumberPrefix) {
+    var url = 'https://www.namus.gov/' + caseType + '/Case#/' + caseNumber.replace(caseNumberPrefix, '');
+
+    var link = '<a href="' + url + '" target="_blank">' + caseNumber + '</a>';
+
+    return link;
 }
 
 
