@@ -1648,7 +1648,7 @@ function getDatabase(){
     var container = L.DomUtil.get('map');
 
     if (dataSelected[0] === "missing-persons") {
-        $('.data-header').html("Data: <span style=\"color:#66A3D9;\">Missing Persons</span>");
+        $('.data-header').html("Data: <span style=\"color:#66A3D9;\">Missing </span><img id='#dropdown' src='/img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1659,7 +1659,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unidentified-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: <span style=\"color:#F2B872;\">Unidentified Persons</span>");
+        $('.data-header').html("Data: <span style=\"color:#F2B872;\">Unidentified </span><img id='#dropdown' src='/img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', false);
@@ -1668,7 +1668,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "unclaimed-persons") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: <span style=\"color:#D96A6A;\">Unclaimed Persons</span>");
+        $('.data-header').html("Data: <span style=\"color:#D96A6A;\">Unclaimed </span><img id='#dropdown' src='/img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
         $("#gender-other").attr('disabled', true);
@@ -1677,7 +1677,7 @@ function getDatabase(){
     } else if (dataSelected[0] === "combined-database") {
         dataFiltered = false;
         resetFilterOptions();
-        $('.data-header').html("Data: <span style=\"color:#78BFA5;\">Combined Database</span>");
+        $('.data-header').html("Data: <span style=\"color:#78BFA5;\">Combined </span><img id='#dropdown' src='/img/noun_Dropdown.svg' width='25' height='25'>");
         // $('#collapseTwo').collapse('hide');
         $('#collapseThree').collapse('hide');
         $('#date-gone-found').html("...");
