@@ -495,8 +495,8 @@ function polyPopup(e) {
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
 
-            for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
+            for (eachArea in currentDB.features){
+                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
                     break;
                 }
                 targetIndex += 1;
@@ -525,7 +525,7 @@ function polyPopup(e) {
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
             for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
+                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
                     break;
                 }
                 targetIndex += 1;
@@ -554,7 +554,7 @@ function polyPopup(e) {
             //Find the  index in filtered database of the currently selected feature
             var targetIndex = 0;
             for (eachState in currentDB.features){
-                if (unitSelected === currentDB.features[eachState]["county_FIPS"]){
+                if (Number(unitSelected) === Number(currentDB.features[eachArea]["county_FIPS"])){
                     break;
                 }
                 targetIndex += 1;
@@ -1581,7 +1581,7 @@ function createLegend(attribute, keyword){
                         //close svg string
                         svg += "</svg>";
                     } else if (dataSelected[1] === "county-scale"){
-                        dataStats = {min:5, max:1000, mean:300}; //manually created values for the total combined numbers
+                        dataStats = {min:5, max:800, mean:300}; //manually created values for the total combined numbers
 
                         $(container).append('<h3 id="legend-title" ><b>Unidentified Persons</b></h3>');
                         $(container).append('<h3 id="legend-title" ><b>Total Records</b></h3>');
