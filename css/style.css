@@ -1,3 +1,6 @@
+body{
+  font-family: 'Open Sans', arial, sans-serif;
+}
 .search-btn {
   background-color: black;
   color: white;
@@ -148,8 +151,12 @@
   line-height: 5px;
   text-align: center;
   border: solid gray 1px;
-  font-family: "Arial";
 }
+
+#legend-title{
+  font-size: 20px;
+}
+
 .leaflet-popup-content-wrapper {
   background: rgba(227,227,227,0.95); /* #3f4142 #878787*/
   /* border: 1px solid #ffffff; */
