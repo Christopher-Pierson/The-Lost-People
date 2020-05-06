@@ -125,7 +125,7 @@ function getData(map){
             })
             .bindTooltip(function (layer) {
                 return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.name
-             }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
             ).addTo(map);
         });
         //load the data
@@ -146,7 +146,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.properties.NAME; //merely sets the tooltip text layer.feature.properties.NAME
-               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -179,7 +179,7 @@ function getData(map){
             })
             .bindTooltip(function (layer) {
                 return layer.feature.name; //merely sets the tooltip text layer.feature.name
-             }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+             }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
             ).addTo(map);
         });
         //load the data
@@ -200,7 +200,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -232,7 +232,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -253,7 +253,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -285,7 +285,7 @@ function getData(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
         //load the data
@@ -306,7 +306,7 @@ function getData(map){
                 })
                 .bindTooltip(function (layer) {
                     return layer.feature.name; //merely sets the tooltip text layer.feature.name
-                 }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+                 }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
                 ).addTo(map);
         });
         //load the data
@@ -464,7 +464,7 @@ function getDataFiltered(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
     } else if (dataSelected[1] === "county-scale") {
@@ -476,7 +476,7 @@ function getDataFiltered(map){
               })
               .bindTooltip(function (layer) {
                   return layer.feature.name; //merely sets the tooltip text layer.feature.name
-               }, {direction: "center", offset: [1,20],permanent: false, opacity: 0.5, className: "poly-labels"}  //then add your options
+               }, {direction: "center", offset: [0,10],permanent: false, sticky: true, opacity: 0.5, className: "poly-labels"}  //then add your options
               ).addTo(map);
         });
     }
@@ -2366,9 +2366,9 @@ function getRecords(){
             if(dataSelected[0] === "missing-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Missing Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2381,7 +2381,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DLC</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2393,7 +2393,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close dateMissing-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2405,7 +2405,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close lastName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2417,7 +2417,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close firstName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Missing Age</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2429,7 +2429,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close missingAge-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2441,7 +2441,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2453,7 +2453,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2465,7 +2465,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2477,7 +2477,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2489,15 +2489,15 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             } else if (dataSelected[0] === "unclaimed-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2510,7 +2510,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2522,7 +2522,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close datebody-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2534,7 +2534,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close lastName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2546,7 +2546,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close firstName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2558,7 +2558,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2570,7 +2570,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2582,7 +2582,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2594,7 +2594,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2606,15 +2606,15 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             } else if (dataSelected[0] === "unidentified-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Unidentified Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2627,7 +2627,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2639,7 +2639,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close datebody-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Age From</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2651,7 +2651,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close agefrom-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2663,7 +2663,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ageto-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2675,7 +2675,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2687,7 +2687,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2699,7 +2699,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2711,7 +2711,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -2723,7 +2723,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             }
@@ -3096,9 +3096,9 @@ function getRecords(){
             if(dataSelected[0] === "missing-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Missing Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3111,7 +3111,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DLC</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3123,7 +3123,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close dateMissing-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3135,7 +3135,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close lastName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3147,7 +3147,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close firstName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Missing Age</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3159,7 +3159,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close missingAge-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3171,7 +3171,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3183,7 +3183,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3195,7 +3195,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3207,7 +3207,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3219,15 +3219,15 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             } else if (dataSelected[0] === "unclaimed-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Unclaimed Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3240,7 +3240,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3252,7 +3252,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close datebody-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Last Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3264,7 +3264,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close lastName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3276,7 +3276,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close firstName-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3288,7 +3288,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3300,7 +3300,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3312,7 +3312,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3324,7 +3324,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3336,15 +3336,15 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             } else if (dataSelected[0] === "unidentified-persons"){
                 // shortand for the filtering below
                 data = currentDB.features;
-    
+
                 recordsHTML += '<h2 class="recordGrid-Title">Unidentified Records</h2>';
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Case Number</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3357,7 +3357,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close caseNum-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">DBF</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3369,7 +3369,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close datebody-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Age From</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3381,7 +3381,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close agefrom-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">First Name</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3393,7 +3393,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ageto-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Sex</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3405,7 +3405,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close sex-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">Ethnicity</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3417,7 +3417,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close ethnicty-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">City</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3429,7 +3429,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close city-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">County</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3441,7 +3441,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close county-Col
-    
+
                 recordsHTML += '<div class="record-col">' + '<h6 class="col-title">State</h6>';
                 //Loop through each enumeration area
                 for (eachArea in data){
@@ -3453,7 +3453,7 @@ function getRecords(){
                     }
                 }
                 recordsHTML += '</div>'; //Close state-Col
-    
+
                 recordsHTML +='</div>'; //Close recordGrid
                 $('#names-list').html(recordsHTML);
             }
