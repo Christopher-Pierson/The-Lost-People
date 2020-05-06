@@ -3618,6 +3618,7 @@ $(document).ready(checkAllMonths);
 $("body").on('click','a.retrieveNames', function(e){
     e.preventDefault();
     getRecords();
+    document.getElementById("names-list").scrollIntoView({behavior: "smooth"});
 });
 
 //Splash Screen when start
