@@ -1016,7 +1016,7 @@ function createLegend(attribute, keyword){
                         }
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="172" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
                 } else if (dataSelected[1] === "county-scale"){
                     dataStats = {min:10, max:1700, mean:300}; //manually created values for the total combined numbers
@@ -1118,7 +1118,7 @@ function createLegend(attribute, keyword){
                         var textY = i * 50 + 28; //spacing + y value
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="175" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
 
                     //close svg string
@@ -1160,7 +1160,7 @@ function createLegend(attribute, keyword){
                     $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                     //Start attribute legend svg string
-                    var svg = '<svg id="attribute-legend" width="270px" height="120px">'; //188 100
+                    var svg = '<svg id="attribute-legend" width="205px" height="100px">'; //188 100
 
                     //array of circle names to base loop on
                     var circles = ["max", "mean", "min"];
@@ -1169,16 +1169,16 @@ function createLegend(attribute, keyword){
                     for (var i=0; i<circles.length; i++){
                         //Assign the r and cy attributes
                         var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
-                        var cy = (180 - radius) -70;
+                        var cy = (180 - radius) -90;
 
                         //circle string
-                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
+                        svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="53"/>';
 
                         //evenly space out labels
-                        var textY = i * 27 + 48; //spacing + y value
+                        var textY = i * 27 + 28; //spacing + y value
 
                         //text string
-                        svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                        svg += '<text id="' + circles[i] + '-text" x="118" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                     };
 
                     //close svg string
@@ -1395,7 +1395,7 @@ function createLegend(attribute, keyword){
                             var textY = i * 50 + 32; //spacing + y value
 
                             //text string
-                            svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                            svg += '<text id="' + circles[i] + '-text" x="175" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                         };
 
                         //close svg string
@@ -1437,7 +1437,7 @@ function createLegend(attribute, keyword){
                         $(container).append('<h3 id="legend-title-2" ><b>Total Records</b></h3>');
 
                         //Start attribute legend svg string
-                        var svg = '<svg id="attribute-legend" width="270px" height="120px">';
+                        var svg = '<svg id="attribute-legend" width="205px" height="100px">';
 
                         //array of circle names to base loop on
                         var circles = ["max", "mean", "min"];
@@ -1446,16 +1446,16 @@ function createLegend(attribute, keyword){
                         for (var i=0; i<circles.length; i++){
                             //Assign the r and cy attributes
                             var radius = calcPropRadius(dataStats[circles[i]], keyword); //Manually set radius of circles
-                            var cy = (180 - radius) -70;
+                            var cy = (180 - radius) -90;
 
                             //circle string
-                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="88"/>';
+                            svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#66A3D9" fill-opacity="1" stroke="#000000" cx="53"/>';
 
                             //evenly space out labels
-                            var textY = i * 50 + 32; //spacing + y value
+                            var textY = i * 27 + 28; //spacing + y value
 
                             //text string
-                            svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
+                            svg += '<text id="' + circles[i] + '-text" x="118" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
                         };
 
                         //close svg string
