@@ -4,24 +4,24 @@ var mapSymbols; // Proportional Symbols
 var mapFeatures; // Feature polygon units
 var LegendControl; // Legend
 var dataStats = {min:50, max:7000, mean:1000}; //manually created values for the total combined numbers
-var centerPoint = [38, -87];
-var zoomLevel = 4;
+var centerPoint = [38, -87]; //current center of the map
+var zoomLevel = 4; // current map zoom
 
 //Declare Database global variables
 var currentDB; //current json on map
 var currentDBFiltered; //current filtered database if ther is one
 var dataSelected = ["combined-database", "state-scale"]
 //Declare Filter option global variables
-var dataFiltered = false;
-var gender = ["Female", "Male"];
-var ageFrom = 0;
-var ageTo = 120;
+var dataFiltered = false; //if the advance filter has been applied or not
+var gender = ["Female", "Male"]; //stored gender options in the filter
+var ageFrom = 0; //stored start age filter
+var ageTo = 120; //stored end age filter
 var ethnicity = ["American Indian / Alaska Native", "Asian", "Black / African American", "Hawaiian / Pacific Islander", "Hispanic / Latino", "White / Caucasian", "Other", "Uncertain"];
-var yearStart = 1900;
-var yearEnd = 2020;
-var Month = [1,2,3,4,5,6,7,8,9,10,11,12]
+var yearStart = 1900; //stored start year filter
+var yearEnd = 2020; //stored end year for filter
+var Month = [1,2,3,4,5,6,7,8,9,10,11,12] //stored month for filter
 //Retrieve Varaibles
-var unitSelected;
+var unitSelected; //area that was selected
 
 //Declare API key and other options for OpenCageData geocoder
 var options = {
@@ -133,7 +133,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
 
-            // calcStats(response, "combined");
             createPropSymbols(response, attributes, "combined");
             createLegend(attributes[0], "combined");
         });
@@ -154,7 +153,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
 
-            // calcStats(response, "combined");
             createPropSymbols(response, attributes, "combined");
             createLegend(attributes[0], "combined");
         });
@@ -164,7 +162,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "combined"); // attributes = Total Number
 
-            // calcStats(response, "combined");
             createPropSymbols(response, attributes, "combined");
 
             createLegend(attributes[0], "combined");
@@ -187,7 +184,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "missing");
 
-            // calcStats(response, "missing");
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
         });
@@ -208,7 +204,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "missing");
 
-            // calcStats(response, "missing");
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
         });
@@ -218,7 +213,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "missing");
 
-            // calcStats(response, "missing");
             createPropSymbols(response, attributes, "missing");
             createLegend(attributes[0], "missing");
         });
@@ -240,7 +234,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unidentified");
 
-            // calcStats(response, "unidentified");
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
         });
@@ -261,7 +254,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unidentified");
 
-            // calcStats(response, "unidentified");
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
         });
@@ -271,7 +263,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unidentified");
 
-            // calcStats(response, "unidentified");
             createPropSymbols(response, attributes, "unidentified");
             createLegend(attributes[0], "unidentified");
         });
@@ -293,7 +284,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unclaimed");
 
-            // calcStats(response, "unclaimed");
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
@@ -314,7 +304,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unclaimed");
 
-            // calcStats(response, "unclaimed");
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
@@ -324,7 +313,6 @@ function getData(map){
             //create an attributes array
             var attributes = processData(response, "unclaimed");
 
-            // calcStats(response, "unclaimed");
             createPropSymbols(response, attributes, "unclaimed");
             createLegend(attributes[0], "unclaimed");
         });
@@ -485,7 +473,6 @@ function getDataFiltered(map){
     //create an attributes array
     var attributes = processData(currentDB, "filtered");
 
-    // calcStats(currentDB, "filtered");
     createPropSymbols(currentDB, attributes, "filtered");
     createLegend(currentDB[0], "filtered");
 }
@@ -817,86 +804,73 @@ function createPopupContent(properties, attribute){
 
 //calculate the radius of each proportional symbol
 function calcPropRadius(attValue, keyword) {
+    // Picked values that look normal
+    //constant factor adjusts symbol sizes evenly
     if (dataSelected[1] === "state-scale") {
         if (keyword === "combined"){
-            // Picked values that look normal
             var minValue = 10;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         } else if (keyword === "missing") {
-            // Picked values that look normal
             var minValue = 5;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.8;
+
         } else if (keyword === "unidentified") {
-            // Picked values that look normal
             var minValue = 5;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.8;
+
         } else if (keyword === "unclaimed") {
-            // Picked values that look normal
             var minValue = 5;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         } else {
-            // Picked values that look normal
             var minValue = 5;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         }
     } else if (dataSelected[1] === "county-scale") {
         if (keyword === "combined"){
-            // Picked values that look normal
             var minValue = 2;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         } else if (keyword === "missing") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         } else if (keyword === "unidentified") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.3;
+
         } else if (keyword === "unclaimed") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.3;
+
         } else {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         }
     } else if (dataSelected[1] === "city-scale") {
         if (keyword === "combined"){
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.3;
+
         } else if (keyword === "missing") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         } else if (keyword === "unidentified") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.8;
+
         } else if (keyword === "unclaimed") {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.7;
+
         } else {
-            // Picked values that look normal
             var minValue = 1;
-            //constant factor adjusts symbol sizes evenly
             var minRadius = 1.5;
+
         }
     }
 
@@ -1861,13 +1835,11 @@ function resetMap(){
         getData(map);
     }
 
+    // allow spinner to load before work starts
     $("#loadingScreen").css("display", "block");
-    setTimeout(function() { // allow spinner to load before work starts
-        
+    setTimeout(function() { 
         $("#loadingScreen").css("display", "none");
     },700);
-    
-
 }
 
 // Retrieve which advanced filter options are selected
@@ -3525,6 +3497,15 @@ function formatCaseNum(data){
     return '<p>' + caseLink + '</p>';
 }
 
+//Add a link to Case Number to the Namus website
+function namusLink(caseType, caseNumber, caseNumberPrefix) {
+    var url = 'https://www.namus.gov/' + caseType + '/Case#/' + caseNumber.replace(caseNumberPrefix, '');
+
+    var link = '<a href="' + url + '" target="_blank">' + caseNumber + '</a>';
+
+    return link;
+}
+
 // Retrieve the date the person was last seen or date the body was found
 function formatDateLostFound(data) {
     if (dataSelected[0] === "missing-persons") {
@@ -3617,16 +3598,6 @@ function formatState(data){
     return '<p>' + state + '</p>';
 }
 
-//Add a link to Case Number to the Namus website
-function namusLink(caseType, caseNumber, caseNumberPrefix) {
-    var url = 'https://www.namus.gov/' + caseType + '/Case#/' + caseNumber.replace(caseNumberPrefix, '');
-
-    var link = '<a href="' + url + '" target="_blank">' + caseNumber + '</a>';
-
-    return link;
-}
-
-
 /////  Event Listeners  /////
 
 // Database
@@ -3646,7 +3617,6 @@ $(document).ready(checkAllMonths);
 $("body").on('click','a.retrieveNames', function(e){
     e.preventDefault();
     getRecords();
-    // document.getElementById("names-list").scrollTop() -= 100;
 
     const yOffset = -400;
     const element = document.getElementById("names-list");
