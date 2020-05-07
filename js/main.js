@@ -101,7 +101,6 @@ function createMap(){
     // Add easy button to pull up splash screen
     L.easyButton('<img src="img/noun_Info_1845673_blk.svg">', function(){
         $('#splash-screen').modal('show');
-        map.setView([38, -87], 4);
     },'info window',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
