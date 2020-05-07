@@ -1847,26 +1847,26 @@ function resetFilterOptions() {
 
 //Clear the map and recreate it
 function resetMap(){
-    $("#loadingScreen").css({display: "block"});
-    $("#loadingScreen").css("display", "block");
-    // $("#loadingScreen").toggle();
-    // $("#loadingScreen").show();
-    setTimeout(function() { // allow spinner to load before work starts
-        // Remove the Pop symbol layer and the legend
-        map.removeLayer(mapSymbols);
-        map.removeLayer(mapFeatures);
-        $(".secondary").css("display", "none");
-        $(".legend-control-container").remove();
 
-        // Get data differently depending on if it is filtered or not
-        if (dataFiltered){
-            getDataFiltered(map);
-        } else {
-            getData(map);
-        }
-    },2000);
-    // $("#loadingScreen").hide();
-    $("#loadingScreen").css({display: "none"});
+    // Remove the Pop symbol layer and the legend
+    map.removeLayer(mapSymbols);
+    map.removeLayer(mapFeatures);
+    $(".secondary").css("display", "none");
+    $(".legend-control-container").remove();
+
+    // Get data differently depending on if it is filtered or not
+    if (dataFiltered){
+        getDataFiltered(map);
+    } else {
+        getData(map);
+    }
+
+    $("#loadingScreen").css("display", "block");
+    setTimeout(function() { // allow spinner to load before work starts
+        
+        $("#loadingScreen").css("display", "none");
+    },1000);
+    
 
 }
 
