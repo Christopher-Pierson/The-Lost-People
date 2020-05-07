@@ -1709,17 +1709,17 @@ function getMapScale(){
     dataSelected[1] = document.querySelector('.mapScale-check:checked').value;
 
     if (dataSelected[1] === "state-scale") {
-        $('.mapScale-header').html("Map Scale: State");
+        $('.mapScale-header').html("Map Scale: State <img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         dataFiltered = false;
 
         resetMap();
     } else if (dataSelected[1]=== "county-scale") {
-        $('.mapScale-header').html("Map Scale: County");
+        $('.mapScale-header').html("Map Scale: County <img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         dataFiltered = false;
 
         resetMap();
     } else if (dataSelected[1] === "city-scale") {
-        $('.mapScale-header').html("Map Scale: City");
+        $('.mapScale-header').html("Map Scale: City <img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         dataFiltered = false;
 
         resetMap();
