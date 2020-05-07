@@ -1543,7 +1543,7 @@ function createLegend(attribute, keyword){
                             svg += '<circle class="legend-circle" id="' + circles[i] + '" r="' + radius + '"cy="' + cy + '" fill="#F2B872" fill-opacity="1" stroke="#000000" cx="88"/>';
 
                             //evenly space out labels
-                            var textY = i * 50 + 32; //spacing + y value
+                            var textY = i * 45 + 40; //spacing + y value
 
                             //text string
                             svg += '<text id="' + circles[i] + '-text" x="180" y="' + textY + '">' + Math.round(dataStats[circles[i]]*100)/100 + " persons" + '</text>';
