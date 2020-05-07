@@ -717,13 +717,13 @@ function createPopupContentExtra(feature, attValue, keyword){
     }
 
     //add formatted attribute to panel content string
-    if (keyword === "missing") {
+    if (dataSelected[0] === "missing-persons") {
         popupContent += "<p class='popup-record-count'>Number of <span id='missing-record'><b>Missing</b></span> Persons Records: <b><span id='missing-record'>" +attValue + "</span></b></p>";
 
-    } else if (keyword === "unidentified") {
+    } else if (dataSelected[0] === "unidentified-persons") {
         popupContent += "<p class='popup-record-count'>Number of <span id='unidentified-record'><b>Unidentified</b></span> Persons Records: <b><span id='unidentified-record'>" +attValue + "</span></b></p>";
 
-    } else if (keyword === "unclaimed") {
+    } else if (dataSelected[0] === "unclaimed-persons") {
         popupContent += "<p class='popup-record-count'>Number of <span id='unclaimed-record'><b>Unclaimed</b></span> Persons Records: <b><span id='unclaimed-record'>" +attValue + "</span></b></p>";
 
     } else if (keyword === "filtered") {
