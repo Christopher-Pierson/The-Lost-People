@@ -102,7 +102,7 @@ function createMap(){
     L.easyButton('<img src="img/noun_Info_1845673_blk.svg">', function(){
         $('#splash-screen').modal('show');
         map.setView([38, -87], 4);
-    },'zoom to original extent',{ position: 'topright' }).addTo(map);
+    },'info window',{ position: 'topright' }).addTo(map);
 
     //Add OSM base tilelayer
     L.tileLayer('https://api.mapbox.com/styles/v1/pierson/ck9uh6fx202ni1io1459nmyht/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -1863,10 +1863,10 @@ function resetMap(){
 
     $("#loadingScreen").css("display", "block");
     setTimeout(function() { // allow spinner to load before work starts
-        
+
         $("#loadingScreen").css("display", "none");
     },700);
-    
+
 
 }
 
