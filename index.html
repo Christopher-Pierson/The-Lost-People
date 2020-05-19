@@ -39,7 +39,7 @@
                       <p>This interactive webmap was made at the University of Wisconsin-Madison for Interactive Cartography & Geovisualization (GEOG 575, Spring 2020).</p>
                       <p>Created by Hayley Corson-Dosch, Christopher Pierson, and Josh Seibel.</p>
                     </div>
-                    <div class="modal-footer" style="border-top: none; padding-top; justify-content: flex-end; 0.25rem">
+                    <div class="modal-footer" style="border-top: none; justify-content: flex-end;">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -183,36 +183,40 @@
                                                     Male
                                                 </label>
                                             </div>
-                                            <div class="form-check">
-                                                <input class="gender-check" type="radio" name="gender" id="gender-other" value="Other">
-                                                <label class="form-check-label" for="gender-other">
-                                                    Other
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="gender-check" type="radio" name="gender" id="gender-unsure" value="Unsure">
-                                                <label class="form-check-label" for="gender-unsure">
-                                                    Unsure
-                                                </label>
+                                            <div id="special-genders">
+                                                <div class="form-check">
+                                                    <input class="gender-check" type="radio" name="gender" id="gender-other" value="Other">
+                                                    <label class="form-check-label" for="gender-other">
+                                                        Other
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="gender-check" type="radio" name="gender" id="gender-unsure" value="Unsure">
+                                                    <label class="form-check-label" for="gender-unsure">
+                                                        Unsure
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <hr>
 
                                         <!-- Age -->
-                                        <strong class="form-option">Age</strong>
-                                        <div class="form-group row">
-                                            <label for="ageFrom" class="col-sm-6 col-form-label">Age From: </label>
-                                            <div class="col-sm-5">
-                                            <input type="number" class="form-control ageFrom-check" id="ageFrom-check" min="0" max="100" placeholder="0" value="0" style="color: #1E2021; background-color: #e8e8e8; border: #e8e8e8">
+                                        <div id="age-selection">
+                                            <strong class="form-option">Age</strong>
+                                            <div class="form-group row">
+                                                <label for="ageFrom" class="col-sm-6 col-form-label">Age From: </label>
+                                                <div class="col-sm-5">
+                                                <input type="number" class="form-control ageFrom-check" id="ageFrom-check" min="0" max="100" placeholder="0" value="0" style="color: #1E2021; background-color: #e8e8e8; border: #e8e8e8">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="ageTo" class="col-sm-6 col-form-label">Age To: </label>
-                                            <div class="col-sm-5">
-                                            <input type="number" class="form-control ageTo-check" id="ageTo-check" min="1" max="120" placeholder="120" value="120" style="color: #1E2021; background-color: #e8e8e8; border: #e8e8e8">
+                                            <div class="form-group row">
+                                                <label for="ageTo" class="col-sm-6 col-form-label">Age To: </label>
+                                                <div class="col-sm-5">
+                                                <input type="number" class="form-control ageTo-check" id="ageTo-check" min="1" max="120" placeholder="120" value="120" style="color: #1E2021; background-color: #e8e8e8; border: #e8e8e8">
+                                                </div>
                                             </div>
+                                            <hr>
                                         </div>
-                                        <hr>
 
                                         <!-- Ethnicity -->
                                         <strong class="form-option">Ethnicity</strong>

@@ -1669,8 +1669,8 @@ function getDatabase(){
         $('.data-header').html("Data: <span style=\"color:#66A3D9;\">Missing </span><img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Last Seen");
         $('#adv-filt').attr('data-toggle', "collapse");
-        $("#gender-other").attr('disabled', true);
-        $("#gender-unsure").attr('disabled', true);
+        $("#special-genders").hide();
+        $("#age-selection").show();
         dataFiltered = false;
         resetFilterOptions();
 
@@ -1680,8 +1680,8 @@ function getDatabase(){
         $('.data-header').html("Data: <span style=\"color:#F2B872;\">Unidentified </span><img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
-        $("#gender-other").attr('disabled', false);
-        $("#gender-unsure").attr('disabled', false);
+        $("#special-genders").show();
+        $("#age-selection").show();
 
     } else if (dataSelected[0] === "unclaimed-persons") {
         dataFiltered = false;
@@ -1689,8 +1689,8 @@ function getDatabase(){
         $('.data-header').html("Data: <span style=\"color:#D96A6A;\">Unclaimed </span><img id='#dropdown' src='img/noun_Dropdown.svg' width='25' height='25'>");
         $('#date-gone-found').html("Date Body Found");
         $('#adv-filt').attr('data-toggle', "collapse");
-        $("#gender-other").attr('disabled', true);
-        $("#gender-unsure").attr('disabled', true);
+        $("#special-genders").hide();
+        $("#age-selection").hide();
 
     } else if (dataSelected[0] === "combined-database") {
         dataFiltered = false;
@@ -1846,6 +1846,8 @@ function resetFilterOptions() {
 
 //Clear the map and recreate it
 function resetMap(){
+    $("#loadingScreen").css("display", "block");
+    $("#spinner").css("display", "block");
 
     // Remove the Pop symbol layer and the legend
     map.removeLayer(mapSymbols);
@@ -1860,8 +1862,6 @@ function resetMap(){
         getData(map);
     }
 
-    $("#loadingScreen").css("display", "block");
-    $("#spinner").css("display", "block");
     setTimeout(function() { // allow spinner to load before work starts
         $("#spinner").css("display", "none");
         $("#loadingScreen").css("display", "none");
