@@ -1861,8 +1861,9 @@ function resetMap(){
     }
 
     $("#loadingScreen").css("display", "block");
+    $("#spinner").css("display", "block");
     setTimeout(function() { // allow spinner to load before work starts
-
+        $("#spinner").css("display", "none");
         $("#loadingScreen").css("display", "none");
     },1500);
 

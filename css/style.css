@@ -4,13 +4,27 @@ body{
 
 /* Loading Screen */
 
-#loadingScreen,
-#loadingScreen:after {
+#loadingScreen {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: none; /* rgba(192, 192, 192, 0.5) */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-image: url("https://i.stack.imgur.com/MnyxU.gif"); */
+}
+
+#spinner,
+#spinner:after {
   border-radius: 50%;
   width: 10em;
   height: 10em;
 }
-#loadingScreen {
+#spinner {
   display: none;
   z-index: 100;
   margin: 60px auto;
